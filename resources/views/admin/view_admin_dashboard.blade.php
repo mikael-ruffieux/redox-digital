@@ -1,4 +1,4 @@
-@extends('template_admin')
+@extends('admin.template_admin')
 
 @section('title')
     Dashboard

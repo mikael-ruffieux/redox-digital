@@ -22,6 +22,6 @@ Route::get('/admin/', [AdminController::class, 'dashboard']);
 
 Route::get('/admin/projects', [AdminController::class, 'displayAllProjects']);
 
-Route::get('/admin/projects/add', [AdminController::class, 'displayNewProject']);
-Route::post('/admin/projects/add', [AdminController::class, 'addNewProject']);
+Route::get('/admin/projects/new', [AdminController::class, 'displayNewProject']);
+Route::post('/admin/projects/new', [AdminController::class, 'addNewProject']);
 

@@ -55,7 +55,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/admin/projects/add">
+                    <a href="/admin/projects/new">
                         <i class="metismenu-icon pe-7s-eyedropper">
                         </i>Ajouter un projet
                     </a>

@@ -25,7 +25,7 @@ class AdminController extends Controller
             'projects' => $this->projects,
         );
 
-        return view('view_admin_dashboard')->with('data', $data);
+        return view('admin.view_admin_dashboard')->with('data', $data);
     }
 
     public function displayAllProjects() {
@@ -35,14 +35,14 @@ class AdminController extends Controller
             'projects' => $this->projects,
         );
 
-        return view('view_admin_allProjects')->with('data', $data);
+        return view('admin.view_admin_allProjects')->with('data', $data);
     }
 
     public function displayNewProject() {
-
+        return view('admin.form_project')->with('type', 'project');
     }
 
     public function addNewProject() {
-
+        // ...
     }
 }

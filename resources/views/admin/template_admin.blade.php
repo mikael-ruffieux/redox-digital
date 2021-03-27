@@ -21,12 +21,12 @@
 </head>
 <body>
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
-    @include('include_admin_top_menu')
+    @include('admin.include_admin_top_menu')
 
         <!-- Main content --> 
         <div class="app-main">
             
-            @include('include_admin_side_menu')
+            @include('admin.include_admin_side_menu')
 
             @yield('content')
         </div>
