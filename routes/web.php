@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('view_work-in-progress');
 });
+
+Route::get('/admin/', [AdminController::class, 'dashboard']);
+
+Route::get('/admin/projects', [AdminController::class, 'displayAllProjects']);
+
+Route::get('/admin/projects/add', [AdminController::class, 'displayNewProject']);
+Route::post('/admin/projects/add', [AdminController::class, 'addNewProject']);
+
