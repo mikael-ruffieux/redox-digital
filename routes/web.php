@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('view_work-in-progress');
+    return view('view_welcome');
 });
 
 Route::get('/admin/', [AdminController::class, 'dashboard']);
