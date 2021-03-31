@@ -16,7 +16,12 @@ Pour mettre à jour le site, il suffit de se connecter en accès SSH au serveur 
     `git pull`
     `composer install`
     `php artisan migrate`
-    
+
+- Si l'on a modifié la configuration, les routes ou les views : 
+    `php artisan config:cache`
+    `php artisan route:cache`
+    `php artisan view:cache`
+
 - *(optionnel) Relancer FPM : `echo "" | sudo -S service php7.4-fpm reload`*
 - *(optionnel) Relancer la queue : `php artisan queue:restart`*
 - *(optionnel) Nettoyer le cache : `php artisan cache:clear`*
