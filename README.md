@@ -1,16 +1,11 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p align="center"><a href="https://redoxdigital.ch" target="_blank"><img src="http://redoxdigital.ch/assets/img/logo/Redox-Digital_Logotype-slogan-blanc-rouge.png" width="400" alt="Redox Digital"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
 ## À propos du site
 
 Pour mettre à jour le site, il suffit de se connecter en accès SSH au serveur distant `0807j.ftp.infomaniak.com`, et de réaliser les opérations suivantes : 
 
+- Se déplacer dans le dossier du site : `cd nom-du-dossier`
 - Passer le site offline : `php artisan down`
 - Mettre à jour le code :
     `git pull`
