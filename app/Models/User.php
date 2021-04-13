@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Hash;
 
 class User extends Authenticatable
 {
@@ -20,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'admin',
     ];
 
     /**
@@ -40,4 +42,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Permet d'encoder le mot de passe
+     * @param type $password Le mot de passe
+     */
+    public function setPasswordAttribute($password) {
+        $this->attributes['password'] = Hash::make($password);
+    }
 }
