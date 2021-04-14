@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Project;
 
 class HomeController extends Controller
 {
+    protected $nbProjetsParPage = 5;
+
     /**
      * Create a new controller instance.
      *
@@ -23,6 +26,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $projects=Project::orderBy('projects.created_at','desc')
+        ->paginate($this->nbProjetsParPage);
+        $links=$projects->render();
+        return view('admin.dashboard', compact('projects','links'));
     }
 }

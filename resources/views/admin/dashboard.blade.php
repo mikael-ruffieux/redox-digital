@@ -1,29 +1,11 @@
-@extends('admin.template_admin')
+@extends('admin.template')
 
-@section('title')
-    Dashboard
+@section('header')
+<h1>Dashboard</h1>
 @endsection
 
-@section('content')
-<!-- Page content -->
-<div class="app-main__outer">
-    <div class="app-main__inner">
-        <!--<div class="app-page-title">
-            <div class="page-title-wrapper">
-                <div class="page-title-heading">
-                    <div class="page-title-icon">
-                        <i class="pe-7s-car icon-gradient bg-mean-fruit">
-                        </i>
-                    </div>
-                    <div>Analytics Dashboard
-                        <div class="page-title-subheading">This is an example dashboard created using build-in
-                            elements and components.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>-->
-        <!--
+@section('contenu')
+
         <div class="row">
             <div class="col-md-6 col-xl-4">
                 <div class="card mb-3 widget-content">
@@ -34,7 +16,7 @@
                                 <div class="widget-subheading">Sous-titre</div>
                             </div>
                             <div class="widget-content-right">
-                                <div class="widget-numbers text-success">{{$data['nbProjects']}}</div>
+                                <div class="widget-numbers text-success"><?php echo sizeof($projects); ?></div>
                             </div>
                         </div>
                     </div>
@@ -95,7 +77,7 @@
                     </div>
                 </div>
             </div>
-        </div>-->
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="main-card mb-3 card">
@@ -111,39 +93,43 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            @foreach ($data['projects'] as $project)
-                                <tr>
-                                    <td class="text-center text-muted">{{$project['id']}}</td>
-                                    <td>
-                                        <div class="widget-content p-0">
-                                            <div class="widget-content-wrapper">
-                                                <div class="widget-content-left flex2">
-                                                    <div class="widget-heading">{{$project['name']}}</div>
-                                                    <div class="widget-subheading opacity-7">{{$project['desc']}}</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="badge badge-{{ $project['archived'] ? 'danger' : 'success'}}">
-                                            {{ $project['archived'] ? 'Archivé' : 'Actif'}}
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <button class="btn-sm btn btn-success">Afficher</button>
-                                        <button type="button" id="PopoverCustomT-1"
-                                            class="btn btn-primary btn-sm">Modifier</button>
-                                        <button class="mr-2 btn-sm btn-icon btn-icon-only btn btn-danger"><i
-                                        class="pe-7s-trash btn-icon-wrapper"> </i></button>
-                                    </td>
-                                </tr>
-                                @endforeach
+                            @foreach($projects as $project)
+                    <tr>
+                        <td class="text-center text-muted">{{$project->id}}</td>
+                        <td>
+                            <div class="widget-content p-0">
+                                <div class="widget-content-wrapper">
+                                    <div class="widget-content-left flex2">
+                                        <div class="widget-heading">{{$project->titre}}</div>
+                                        <div class="widget-subheading opacity-7">{!! $project->created_at->format('d-m-Y') !!}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="badge badge-{{ $project->archived ? 'danger' : 'success'}}">
+                                {{ $project['archived'] ? 'Archivé' : 'Actif'}}
+                            </div>
+                        </td>
+                        <td>
+                            <button class="btn-sm btn btn-success" title="Afficher"><i class="fas fa-info"></i></button>
+                            <button type="button" id="PopoverCustomT-1"
+                                class="btn btn-primary btn-sm" title="Modifier"><i class="fas fa-edit"></i></button>
+
+                            <form class="d-inline" method="POST" action="{{route('project.destroy', [$project->id])}}" accept-charset="UTF-8">
+                                @csrf
+                                @method('DELETE')
+                                <input class="mr-2 btn-sm btn-icon btn-icon-only btn btn-danger" onclick="return confirm('Vraiment supprimer ce projet ?')" type="submit" value="Supprimer">
+                            </form>
+                        </td>
+                    </tr>
+                    @endforeach
 
                             </tbody>
                         </table>
                     </div>
                     <div class="d-block text-center card-footer">
-                        <a href="/admin/projects">Tous les projets</a>
+                        <a href="/project">Tous les projets</a>
                     </div>
                 </div>
             </div>

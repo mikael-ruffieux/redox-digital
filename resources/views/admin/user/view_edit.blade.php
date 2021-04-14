@@ -1,42 +1,43 @@
 @extends('admin.template')
 
 @section('contenu')
-<br>
-<div class="col-sm-offset-4 col-sm-4">
-    <div class="panel panel-primary">
-        <div class="panel-heading">Modification d'un utilisateur</div>
-        <div class="panel-body">
-            <div class="col-sm-12">
-                <form method="POST" action="{{route('user.update', [$user->id])}}" accept-charset="UTF-8" class="form-horizontalpanel">
-                    @csrf
-                    @method('PUT')
-                    <div class="form-group {!! $errors->has('name') ? 'has-error' : '' !!}">
-                        <input type="text" name="name" value="{{$user->name}}" placeholder="Nom" class="form-control">  
-                        {!! $errors->first('name', '<small class="help-block">:message</small>') !!}
-                    </div>
-                    <div class="form-group {!! $errors->has('email') ? 'has-error' : '' !!}">
-                        <input type="email" name="email" value="{{$user->email}}" placeholder="Email" class="form-control">  
-                        {!! $errors->first('email', '<small class="help-block">:message</small>') !!}
-                    </div>
-                    <div class="form-group">
-                        <div class="checkbox">
-                            <label>
-                                @if($user->admin)
-                                   <input name="admin" value="1" type="checkbox" checked>
-                                @else
-                                   <input name="admin" value="1" type="checkbox">
-                                @endif
-                                Administrateur
-                            </label>
-                        </div>
-                    </div>
-                    <input class="btn btn-primary pull-right" type="submit" value="Envoyer">
-                </form>
-            </div>
+<h5 class="card-title">Création d'un utilisateur</h5>
+
+<form method="POST" action="{{route('user.update', [$user->id])}}" accept-charset="UTF-8">
+    @csrf
+    @method('PUT')
+    <div class="position-relative row form-group {!! $errors->has('name') ? 'has-error' : '' !!}">
+        <label for="name" class="col-sm-2 col-form-label">Nom d'utilisateur</label>
+        <div class="col-sm-10">
+            <input name="name" id="name" type="text" class="form-control" value="{{$user->name}}">
+            {!! $errors->first('name', '<small class="help-block">:message</small>') !!}
         </div>
     </div>
-    <a href="javascript:history.back()" class="btn btn-primary">
-        <span class="glyphicon glyphicon-circle-arrow-left"></span>Retour
-    </a>
-</div>
+
+    <div class="position-relative row form-group {!! $errors->has('email') ? 'has-error' : '' !!}">
+        <label for="email" class="col-sm-2 col-form-label">E-mail</label>
+        <div class="col-sm-10">
+            <input name="email" id="email" type="email" class="form-control" value="{{$user->email}}">
+            {!! $errors->first('email', '<small class="help-block">:message</small>') !!}
+        </div>
+    </div>
+
+    <div class="position-relative row form-group">
+        <div class="col-sm-6 ml-4">
+            @if($user->admin)
+                <input name="admin" id="admin" class="form-check-input" value="1" type="checkbox" checked>
+            @else
+                <input name="admin" id="admin" class="form-check-input" value="1" type="checkbox">
+            @endif
+            <label for="admin" class="form-check-label">Administrateur</label><br/>
+        </div>
+    </div>
+
+    <div class="position-relative row form-check">
+        <a href="javascript:history.back()" class="btn btn-secondary">
+            <span class="glyphicon glyphicon-circle-arrow-left"></span>Retour
+        </a>
+        <input class="btn btn-primary" type="submit" value="Envoyer"></button>
+    </div>
+</form>
 @endsection

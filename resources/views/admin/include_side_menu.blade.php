@@ -36,7 +36,7 @@
             <ul class="vertical-nav-menu">
                 <li class="app-sidebar__heading">Dashboards</li>
                 <li>
-                    <a href="/admin/">
+                    <a href="/home">
                         <i class="metismenu-icon pe-7s-rocket"></i>
                         Dashboard
                     </a>

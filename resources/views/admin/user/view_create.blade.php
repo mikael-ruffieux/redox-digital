@@ -1,44 +1,55 @@
 @extends('admin.template')
 
 @section('contenu')
-<div class="col-sm-offset-4 col-sm-4">
-    <br>
-    <div class="panel panel-primary">
-        <div class="panel-heading">Création d'un utilisateur</div>
-        <div class="panel-body">
-            <div class="col-sm-12">
-                <form method="POST" action="{{route('user.store')}}" accept-charset="UTF-8" class="form-horizontalpanel">
-                    @csrf
-                    <div class="form-group {!! $errors->has('name') ? 'has-error' : '' !!}">
-                        <input type="text" name="name" placeholder="Nom" class="form-control">  
-                        {!! $errors->first('name', '<small class="help-block">:message</small>') !!}
-                    </div>
-                    <div class="form-group {!! $errors->has('email') ? 'has-error' : '' !!}">
-                        <input type="email" name="email" placeholder="Email" class="form-control">  
-                        {!! $errors->first('email', '<small class="help-block">:message</small>') !!}
-                    </div>
-                    <div class="form-group {!! $errors->has('password') ? 'has-error' : '' !!}">
-                        Mot de passe : <input name="password" type="password" value="" class="form-control">
-                        {!! $errors->first('password', '<small class="help-block">:message</small>') !!}
-                    </div>
-                    <div class="form-group">
-                        Confirmation mot de passe <input name="password_confirmation" type="password" value="" class="form-control">
-                        {!! $errors->first('password', '<small class="help-block">:message</small>') !!}
-                    </div>
-                    <div class="form-group">
-                        <div class="checkbox">
-                            <label>
-                                <input name="admin" type="checkbox" value="1">Administrateur
-                            </label>
-                        </div>
-                    </div>
-                    <input class="btn btn-primary pull-right" type="submit" value="Envoyer">
-                </form>
-            </div>
+<h5 class="card-title">Création d'un utilisateur</h5>
+
+<form method="POST" action="{{route('user.store')}}" accept-charset="UTF-8">
+    @csrf
+    <div class="position-relative row form-group {!! $errors->has('name') ? 'has-error' : '' !!}">
+        <label for="name" class="col-sm-2 col-form-label">Nom d'utilisateur</label>
+        <div class="col-sm-10">
+            <input name="name" id="name" type="text" class="form-control">
+            {!! $errors->first('name', '<small class="help-block">:message</small>') !!}
         </div>
     </div>
-    <a href="javascript:history.back()" class="btn btn-primary">
-        <span class="glyphicon glyphicon-circle-arrow-left"></span>Retour
-    </a>
-</div>
+
+    <div class="position-relative row form-group {!! $errors->has('email') ? 'has-error' : '' !!}">
+        <label for="email" class="col-sm-2 col-form-label">E-mail</label>
+        <div class="col-sm-10">
+            <input name="email" id="email" type="email" class="form-control">
+            {!! $errors->first('email', '<small class="help-block">:message</small>') !!}
+        </div>
+    </div>
+
+    <div class="position-relative row form-group {!! $errors->has('password') ? 'has-error' : '' !!}">
+        <label for="password" class="col-sm-2 col-form-label">Mot de passe</label>
+        <div class="col-sm-10">
+            <input name="password" id="password" type="password" class="form-control">
+            {!! $errors->first('password', '<small class="help-block">:message</small>') !!}
+        </div>
+    </div>
+
+    <div class="position-relative row form-group {!! $errors->has('password') ? 'has-error' : '' !!}">
+        <label for="password_confirmation" class="col-sm-2 col-form-label">Confirmer le mot de passe</label>
+        <div class="col-sm-10">
+            <input name="password_confirmation" id="password_confirmation" type="password" class="form-control">
+            {!! $errors->first('password', '<small class="help-block">:message</small>') !!}
+        </div>
+    </div>
+
+    <div class="position-relative row form-group">
+        <div class="col-sm-6 ml-4">
+            <input name="admin" id="admin" type="checkbox" class="form-check-input" value="1">
+            <label for="admin" class="form-check-label">Administrateur</label><br/>
+        </div>
+    </div>
+
+    <div class="position-relative row form-check">
+        <a href="javascript:history.back()" class="btn btn-secondary">
+            <span class="glyphicon glyphicon-circle-arrow-left"></span>Retour
+        </a>
+        <input class="btn btn-primary" type="submit" value="Envoyer"></button>
+    </div>
+</form>
+
 @endsection

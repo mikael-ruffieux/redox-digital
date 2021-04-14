@@ -30,11 +30,6 @@ Route::get('/', function () {
 
 Route::get('/admin/', [AdminController::class, 'dashboard']);
 
-Route::get('/admin/projects', [AdminController::class, 'displayAllProjects']);
-
-Route::get('/admin/projects/new', [AdminController::class, 'displayNewProject']);
-Route::post('/admin/projects/new', [AdminController::class, 'addNewProject']);
-
 Route::resource('user', UserController::class);
 
 Route::resource('project', ProjectController::class);
