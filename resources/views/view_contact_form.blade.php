@@ -21,11 +21,12 @@
     <span class="contact2-form-subtitle">
         Dans le but d'améliorer ses performances, le site <a href="https://redoxdigital.ch">redoxdigital.ch</a> est actuellement en maintenance.
         Merci pour votre compréhension.
-        <br/><br/>
+        <!--<br/><br/>
         Vous pouvez toutefois nous contacter via ce <strong>formulaire de contact</strong>. Nous nous réjouissons de vous lire !
+        -->
     </span>
 
-    <div class="wrap-input2 validate-input">
+    <!--<div class="wrap-input2 validate-input">
         <input class="input2" type="text" name="name" value="{{old('name')}}" required>
         <span class="focus-input2" data-placeholder="Nom"></span>
     </div>
@@ -50,6 +51,6 @@
                 Envoyer
             </button>
         </div>
-    </div>
+    </div>-->
 </form>
 @endsection
