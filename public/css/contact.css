@@ -229,7 +229,27 @@ button:hover {
     width: 100%;
     position: relative;
     border-bottom: 2px solid #adadad;
-    margin-bottom: 37px
+    margin-top: 37px;
+}
+
+.wrap-input2:first-of-type {
+    margin-top: 0;
+}
+
+.admin-menu {
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    z-index: 10;
+}
+
+.admin-menu > a, .admin-menu > a:visited {
+    color : var(--color-primary);
+}
+
+.admin-menu > a:hover {
+    color : var(--text-color);
+    text-decoration: none;
 }
 
 .input2 {
@@ -392,54 +412,14 @@ textarea.input2+.focus-input2::after {
     position: relative
 }
 
-.alert-validate::before {
-    content: attr(data-validate);
-    position: absolute;
-    max-width: 70%;
-    background-color: #fff;
-    border: 1px solid #c80000;
-    border-radius: 2px;
-    padding: 4px 25px 4px 10px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    right: 0;
-    pointer-events: none;
-    font-family: Poppins, sans-serif;
-    color: #c80000;
-    font-size: 13px;
-    line-height: 1.4;
-    text-align: left;
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transition: opacity .4s;
-    -o-transition: opacity .4s;
-    -moz-transition: opacity .4s;
-    transition: opacity .4s
+.has-error {
+    color: #ff0000;
+    font-size: 12px;
+    padding-top: 2px;
 }
 
-.alert-validate::after {
-    content: "\f12a";
-    font-family: FontAwesome;
-    display: block;
-    position: absolute;
-    color: #c80000;
-    font-size: 16px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    right: 8px
-}
-
-.alert-validate:hover:before {
-    visibility: visible;
-    opacity: 1
+.mail-success {
+    color: #28a745;
 }
 
 @media(max-width:576px) {
@@ -451,7 +431,9 @@ textarea.input2+.focus-input2::after {
 @media(max-width:992px) {
     .container-contact2 {
         padding: 15px;
+        padding-top: 50px;
     }
+
     .alert-validate::before {
         visibility: visible;
         opacity: 1
@@ -464,5 +446,9 @@ textarea.input2+.focus-input2::after {
 
     .contact2-form-subtitle {
         text-align: left;
+    }
+
+    .admin-menu {
+        top: 15px;
     }
 }
