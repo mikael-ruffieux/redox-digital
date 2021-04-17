@@ -17,7 +17,7 @@ class ContactController extends Controller
 
         // Envoi du mail
         Mail::send('view_mail_content', $request->all(), function($message){
-            $message->to('info@redox-prod.ch')->subject('Prise de contact | redoxdigital.ch');
+            $message->to('info@redoxdigital.ch')->subject('Prise de contact | redoxdigital.ch');
         });
 
         // Confirmation de réception
