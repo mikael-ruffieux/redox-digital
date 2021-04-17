@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+:root {
+    --color-primary : #C92916;
+    --color-primary-2 : #F54900;
+
+    /* pour les gradients */
+    --accent-color : 191, 21, 45;
+    --accent-color-2 : 245, 73, 0;
+    
+    /* Dark/light mode */
+    color-scheme: light dark;
+}
+
+/* Dark theme adaptation */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --title-color : #fff;
+        --text-color : #fff;
+        --input-color : #999;
+    }
+
+    .wrap-contact2 {
+        background: rgb(59, 59, 59);
+    }
+}
+
+/* Light theme adaptation */
+@media (prefers-color-scheme: light) {
+    :root {
+        --title-color : #333;
+        --text-color : #666;
+        --input-color : #999;
+    }
+
+    .wrap-contact2 {
+        background: #fff;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body, html {
+    height: 100%;
+    font-family: Poppins, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0
+}
+
+p {
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin: 0
+}
+
+a, a:visited, a:focus {
+    color: var(--color-primary);
+}
+
+input {
+    outline: none;
+    border: none
+}
+
+textarea {
+    outline: none;
+    border: none
+}
+
+textarea:focus, input:focus {
+    border-color: transparent!important
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent
+}
+
+input:focus:-moz-placeholder {
+    color: transparent
+}
+
+input:focus::-moz-placeholder {
+    color: transparent
+}
+
+input:focus:-ms-input-placeholder {
+    color: transparent
+}
+
+textarea:focus::-webkit-input-placeholder {
+    color: transparent
+}
+
+textarea:focus:-moz-placeholder {
+    color: transparent
+}
+
+textarea:focus::-moz-placeholder {
+    color: transparent
+}
+
+textarea:focus:-ms-input-placeholder {
+    color: transparent
+}
+
+input::-webkit-input-placeholder {
+    color: var(--input-color)
+}
+
+input:-moz-placeholder {
+    color: var(--input-color)
+}
+
+input::-moz-placeholder {
+    color: var(--input-color)
+}
+
+input:-ms-input-placeholder {
+    color: var(--input-color)
+}
+
+textarea::-webkit-input-placeholder {
+    color: var(--input-color)
+}
+
+textarea:-moz-placeholder {
+    color: var(--input-color)
+}
+
+textarea::-moz-placeholder {
+    color: var(--input-color)
+}
+
+textarea:-ms-input-placeholder {
+    color: var(--input-color)
+}
+
+button {
+    outline: none!important;
+    border: none;
+    background: 0 0
+}
+
+button:hover {
+    cursor: pointer
+}
+
+.bg-contact2 {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container-contact2 {
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: rgba(var(--color-secondary), .8);
+    background: -webkit-linear-gradient(45deg, rgba(var(--accent-color-2), 0.8), rgba(var(--accent-color), 0.8));
+    background: -o-linear-gradient(45deg, rgba(var(--accent-color-2), 0.8), rgba(var(--accent-color), 0.8));
+    background: -moz-linear-gradient(45deg, rgba(var(--accent-color-2), 0.8), rgba(var(--accent-color), 0.8));
+    background: linear-gradient(45deg, rgba(var(--accent-color-2), 0.8), rgba(var(--accent-color), 0.8))
+}
+
+.wrap-contact2 {
+    width: 790px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 55px;
+}
+
+.contact2-form {
+    width: 100%
+}
+
+.contact2-form-img {
+    display: block;
+    width: min(90%, 200px);
+    margin: auto;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.contact2-form-img > img {
+    width: inherit;
+    height: auto;
+}
+
+.contact2-form-title {
+    display: block;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--title-color);
+    line-height: 1.2;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.contact2-form-subtitle {
+    display: block;
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--title-color);
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.wrap-input2 {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 37px
+}
+
+.input2 {
+    display: block;
+    width: 100%;
+    font-family: Poppins, sans-serif;
+    font-size: 15px;
+    color: var(--text-color);
+    line-height: 1.2
+}
+
+.focus-input2 {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none
+}
+
+.focus-input2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    -moz-transition: all .4s;
+    transition: all .4s;
+    background: var(--color-primary-2);;
+    background: -webkit-linear-gradient(45deg, var(--color-primary), var(--color-primary-2));
+    background: -o-linear-gradient(45deg, var(--color-primary), var(--color-primary-2));
+    background: -moz-linear-gradient(45deg, var(--color-primary), var(--color-primary-2));
+    background: linear-gradient(45deg, var(--color-primary), var(--color-primary-2));
+}
+
+.focus-input2::after {
+    content: attr(data-placeholder);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 13px;
+    color: var(--input-color);
+    line-height: 1.2;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    -moz-transition: all .4s;
+    transition: all .4s
+}
+
+input.input2 {
+    height: 45px
+}
+
+
+/* Déplacement du texte au-dessus */ 
+input.input2+.focus-input2::after {
+    top: 16px;
+    left: 0
+}
+
+textarea.input2 {
+    min-height: 115px;
+    padding-top: 13px;
+    padding-bottom: 13px
+}
+
+textarea.input2+.focus-input2::after {
+    top: 16px;
+    left: 0
+}
+
+.input2:focus+.focus-input2::after {
+    top: -13px
+}
+
+.input2:focus+.focus-input2::before {
+    width: 100%
+}
+
+.has-val.input2+.focus-input2::after {
+    top: -13px
+}
+
+.has-val.input2+.focus-input2::before {
+    width: 100%
+}
+
+/* /Déplacement du label */
+
+.container-contact2-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 13px
+}
+
+.wrap-contact2-form-btn {
+    display: block;
+    position: relative;
+    z-index: 1;
+    border-radius: 2px;
+    width: auto;
+    overflow: hidden;
+    margin: 0 auto
+}
+
+.contact2-form-bgbtn {
+    position: absolute;
+    z-index: -1;
+    width: 300%;
+    height: 100%;
+    background: var(--color-primary-2);
+    background: -webkit-linear-gradient(-135deg, var(--color-primary), var(--color-primary-2), var(--color-primary), var(--color-primary-2));
+    background: -o-linear-gradient(-135deg, var(--color-primary), var(--color-primary-2), var(--color-primary), var(--color-primary-2));
+    background: -moz-linear-gradient(-135deg, var(--color-primary), var(--color-primary-2), var(--color-primary), var(--color-primary-2));
+    background: linear-gradient(-135deg, var(--color-primary), var(--color-primary-2), var(--color-primary), var(--color-primary-2));
+    top: 0;
+    left: -100%;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    -moz-transition: all .4s;
+    transition: all .4s
+}
+
+.contact2-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 244px;
+    height: 50px;
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2
+}
+
+.wrap-contact2-form-btn:hover .contact2-form-bgbtn {
+    left: 0
+}
+
+.validate-input {
+    position: relative
+}
+
+.alert-validate::before {
+    content: attr(data-validate);
+    position: absolute;
+    max-width: 70%;
+    background-color: #fff;
+    border: 1px solid #c80000;
+    border-radius: 2px;
+    padding: 4px 25px 4px 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0;
+    pointer-events: none;
+    font-family: Poppins, sans-serif;
+    color: #c80000;
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: left;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .4s;
+    -o-transition: opacity .4s;
+    -moz-transition: opacity .4s;
+    transition: opacity .4s
+}
+
+.alert-validate::after {
+    content: "\f12a";
+    font-family: FontAwesome;
+    display: block;
+    position: absolute;
+    color: #c80000;
+    font-size: 16px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 8px
+}
+
+.alert-validate:hover:before {
+    visibility: visible;
+    opacity: 1
+}
+
+@media(max-width:576px) {
+    .wrap-contact2 {
+        padding: 50px 15px;
+    }
+}
+
+@media(max-width:992px) {
+    .container-contact2 {
+        padding: 15px;
+    }
+    .alert-validate::before {
+        visibility: visible;
+        opacity: 1
+    }
+
+    .contact2-form-title {
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    .contact2-form-subtitle {
+        text-align: left;
+    }
+}
