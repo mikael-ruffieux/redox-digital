@@ -10,8 +10,7 @@ class ProjectController extends Controller
     protected $nbProjetsParPage = 10;
 
     public function __construct() {
-        $this->middleware('auth', ['except'=>'index']);
-        $this->middleware('admin', ['only'=>'destroy']);
+        $this->middleware('auth');
     }
     
     public function index() {

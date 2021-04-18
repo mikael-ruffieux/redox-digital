@@ -9,6 +9,10 @@ use App\Models\User;
 
 class UserController extends Controller
 {
+    // Seuls les utilisateurs authentifiés ont accès à ce controller
+    public function __construct(){
+        $this->middleware('auth');
+    }
 
     private function setAdmin($request) {
         if (!$request->has('admin')) {

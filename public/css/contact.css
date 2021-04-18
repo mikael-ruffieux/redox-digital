@@ -20,7 +20,7 @@
         --input-color : #999;
     }
 
-    .wrap-contact2 {
+    .wrap-contact2, .wrap-login, .navbar {
         background: rgb(59, 59, 59);
     }
 }
@@ -33,7 +33,7 @@
         --input-color : #999;
     }
 
-    .wrap-contact2 {
+    .wrap-contact2, .wrap-login, .navbar {
         background: #fff;
     }
 }
@@ -422,9 +422,40 @@ textarea.input2+.focus-input2::after {
     color: #28a745;
 }
 
+
+/* Auth pages */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar-brand > picture > img {
+    max-height: 35px;
+    
+}
+
+.wrap-login {
+    width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 55px;
+}
+
+.btn-link {
+    display: block;
+    padding-top : 1rem;
+    text-align: center;
+}
+/* /Auth pages */
+
 @media(max-width:576px) {
     .wrap-contact2 {
         padding: 50px 15px;
+    }
+
+    .wrap-login {
+        padding: 30px 15px;
     }
 }
 

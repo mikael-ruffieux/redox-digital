@@ -13,7 +13,6 @@
             alt="Redox Digital"/>
     </picture>
     
-
     <span class="contact2-form-title">
         Site en maintenance
     </span>
@@ -26,13 +25,13 @@
     </span>
 
     <div class="wrap-input2 validate-input">
-        <input class="input2" type="text" name="name" value="{{old('name')}}" required>
+        <input class="input2" type="text" name="name" value="{{old('name')}}">
         <span class="focus-input2" data-placeholder="Nom"></span>
     </div>
     {!! $errors->first('name', '<div class="has-error">:message</div>') !!}
 
     <div class="wrap-input2 validate-input">
-        <input class="input2" type="text" name="email" value="{{old('email')}}" required>
+        <input class="input2" type="text" name="email" value="{{old('email')}}" >
         <span class="focus-input2" data-placeholder="E-mail"></span>
     </div>
     {!! $errors->first('email', '<div class="has-error">:message</div>') !!}

@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProjectController;
@@ -29,17 +28,14 @@ Route::get('/', function () {
 });
 */
 
-Route::get('/admin/', [AdminController::class, 'dashboard']);
-
 Route::resource('user', UserController::class);
-
 Route::resource('project', ProjectController::class);
+
 Auth::routes();
 
 Route::get('logout', [LoginController::class, 'logout']);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Contact Form
 Route::get('contact', [ContactController::class,'returnForm']);
