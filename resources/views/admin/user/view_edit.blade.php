@@ -3,7 +3,7 @@
 @section('contenu')
 <h5 class="card-title">Création d'un utilisateur</h5>
 
-<form method="POST" action="{{route('user.update', [$user->id])}}" accept-charset="UTF-8">
+<form method="POST" action="{{route('users.update', [$user->id])}}" accept-charset="UTF-8">
     @csrf
     @method('PUT')
     <div class="position-relative row form-group {!! $errors->has('name') ? 'has-error' : '' !!}">

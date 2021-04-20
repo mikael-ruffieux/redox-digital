@@ -4,15 +4,10 @@
 @endsection
 
 @section('contenu')
-
-@if(isset($info))
-<div class='row alert alert-info'> {{$info}}</div>
-@endif
-{!!$links!!}
 <div class="row mb-4">
     <div class="col-md-12">
         <div class="btn-group pull-right">
-            <a href='{{route("project.create")}}' class='btn btn-info'>Cr&eacute;er un projet</a>
+            <a href='{{route("projects.create")}}' class='btn btn-info'>Cr&eacute;er un projet</a>
         </div>
     </div>
 </div>
@@ -20,7 +15,7 @@
     <div class="col-md-12">
         <div class="main-card mb-3 card">
             <div class="card-header">
-                Nos projets
+                @if(isset($info)) {{$info}} @else Nos projets @endif
             </div>
             <div class="table-responsive">
                 <table class="align-middle mb-0 table table-borderless table-striped table-hover">
@@ -29,6 +24,7 @@
                             <th class="text-center">#</th>
                             <th>Projets</th>
                             <th>Statut</th>
+                            <th>Catégories</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -36,7 +32,9 @@
 
                     @foreach($projects as $project)
                     <tr>
-                        <td class="text-center text-muted">{{$project->id}}</td>
+                        <td class="text-center text-muted">
+                            {{$project->id}}
+                        </td>
                         <td>
                             <div class="widget-content p-0">
                                 <div class="widget-content-wrapper">
@@ -53,11 +51,16 @@
                             </div>
                         </td>
                         <td>
-                            <button class="btn-sm btn btn-success" title="Afficher"><i class="fas fa-info"></i></button>
-                            <button type="button" id="PopoverCustomT-1"
-                                class="btn btn-primary btn-sm" title="Modifier"><i class="fas fa-edit"></i></button>
+                            @foreach($project->categories as $category)
+                            <a href="{{url('projects/category', [$category->category_url])}}">{{$category->category}}</a>, 
+                            @endforeach
 
-                            <form class="d-inline" method="POST" action="{{route('project.destroy', [$project->id])}}" accept-charset="UTF-8">
+                        </td>
+                        <td>
+                            <a href="{{route('projects.show', [$project->id])}}" class="btn-sm btn btn-success"><i class="fas fa-info mr-1"></i><span class="d-none d-sm-inline"> Afficher</span></a>
+                            <a href="{{route('projects.edit', [$project->id])}}" class="btn btn-primary btn-sm"><i class="fas fa-edit mr-1"></i><span class="d-none d-sm-inline"> Modifier</span></a>
+
+                            <form class="d-inline" method="POST" action="{{route('projects.destroy', [$project->id])}}" accept-charset="UTF-8">
                                 @csrf
                                 @method('DELETE')
                                 <input class="mr-2 btn-sm btn-icon btn-icon-only btn btn-danger" onclick="return confirm('Vraiment supprimer ce projet ?')" type="submit" value="Supprimer">

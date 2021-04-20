@@ -50,13 +50,13 @@
 
                 <li class="app-sidebar__heading">Utilisateurs</li>
                 <li>
-                    <a href="{{route("user.index")}}">
+                    <a href="{{route("users.index")}}">
                         <i class="metismenu-icon pe-7s-mouse">
                         </i>Tous les utilisateurs
                     </a>
                 </li>
                 <li>
-                    <a href='{{route("user.create")}}' ">
+                    <a href='{{route("users.create")}}' ">
                         <i class="metismenu-icon pe-7s-eyedropper">
                         </i>Ajouter un utilisateur
                     </a>
@@ -64,13 +64,13 @@
 
                 <li class="app-sidebar__heading">Projets</li>
                 <li>
-                    <a href="{{route("project.index")}}">
+                    <a href="{{route("projects.index")}}">
                         <i class="metismenu-icon pe-7s-mouse">
                         </i>Tous les projets
                     </a>
                 </li>
                 <li>
-                    <a href='{{route("project.create")}}' ">
+                    <a href='{{route("projects.create")}}' ">
                         <i class="metismenu-icon pe-7s-eyedropper">
                         </i>Ajouter un projet
                     </a>

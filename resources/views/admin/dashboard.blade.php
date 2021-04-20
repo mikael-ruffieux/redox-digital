@@ -112,14 +112,13 @@
                             </div>
                         </td>
                         <td>
-                            <button class="btn-sm btn btn-success" title="Afficher"><i class="fas fa-info"></i></button>
-                            <button type="button" id="PopoverCustomT-1"
-                                class="btn btn-primary btn-sm" title="Modifier"><i class="fas fa-edit"></i></button>
+                            <button class="btn-sm btn btn-success" title="Afficher"><i class="fas fa-info"></i><span class="d-none d-sm-inline"> Afficher</span></button>
+                            <button type="button" class="btn btn-primary btn-sm" title="Modifier"><i class="fas fa-edit"></i><span class="d-none d-sm-inline"> Modifier</span></button>
 
-                            <form class="d-inline" method="POST" action="{{route('project.destroy', [$project->id])}}" accept-charset="UTF-8">
+                            <form class="d-inline" method="POST" action="{{route('projects.destroy', [$project->id])}}" accept-charset="UTF-8">
                                 @csrf
                                 @method('DELETE')
-                                <input class="mr-2 btn-sm btn-icon btn-icon-only btn btn-danger" onclick="return confirm('Vraiment supprimer ce projet ?')" type="submit" value="Supprimer">
+                                <input class="mr-2 btn-sm btn-icon btn-icon-only btn btn-danger" onclick="return confirm('Vraiment supprimer ce projet ?')" type="submit" value="Suppr.">
                             </form>
                         </td>
                     </tr>

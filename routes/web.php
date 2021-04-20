@@ -28,8 +28,8 @@ Route::get('/', function () {
 });
 */
 
-Route::resource('user', UserController::class);
-Route::resource('project', ProjectController::class);
+Route::resource('users', UserController::class);
+Route::resource('projects', ProjectController::class);
 
 Auth::routes();
 
@@ -40,3 +40,6 @@ Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name(
 // Contact Form
 Route::get('contact', [ContactController::class,'returnForm']);
 Route::post('contact', [ContactController::class,'validateAndSendForm']);
+
+// Categories
+Route::get('projects/category/{category}', [ProjectController::class, 'projectsWithCategory']);

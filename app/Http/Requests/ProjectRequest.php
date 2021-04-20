@@ -26,7 +26,9 @@ class ProjectRequest extends FormRequest
         return [
             'titre'=>'required|max:80',
             'contenu'=>'required',
-            'archived'=>'required'
+            'archived'=>'required',
+            // ajout de l'expression régulière de validation des catégories
+            'categories' => ['Regex:/^[A-Za-z0-9-àéèêëïôùû]{1,50}?(,[A-Za-z0-9-àéèêëïôùû]{1,50})*$/']
         ];
     }
 }

@@ -20,7 +20,7 @@
 <div class="row mb-4">
     <div class="col-md-12">
         <div class="btn-group pull-right">
-            <a href='{{route("user.create")}}' class='btn btn-info'>Cr&eacute;er un utilisateur</a>
+            <a href='{{route("users.create")}}' class='btn btn-info'>Cr&eacute;er un utilisateur</a>
         </div>
     </div>
 </div>
@@ -61,11 +61,11 @@
                             </div>
                         </td>
                         <td>
-                            <a href="{{route('user.show', [$user->id])}}" class="btn-sm btn btn-success"><i class="fas fa-info mr-1"></i> Afficher</a>
+                            <a href="{{route('users.show', [$user->id])}}" class="btn-sm btn btn-success"><i class="fas fa-info mr-1"></i><span class="d-none d-sm-inline"> Afficher</span></a>
 
-                            <a href="{{route('user.edit', [$user->id])}}" class="btn btn-primary btn-sm"><i class="fas fa-edit mr-1"></i> Modifier</a>
+                            <a href="{{route('users.edit', [$user->id])}}" class="btn btn-primary btn-sm"><i class="fas fa-edit mr-1"></i><span class="d-none d-sm-inline"> Modifier</span></a>
 
-                            <form class="d-inline" method="POST" action="{{route('user.destroy', [$user->id])}}" accept-charset="UTF-8">
+                            <form class="d-inline" method="POST" action="{{route('users.destroy', [$user->id])}}" accept-charset="UTF-8">
                                 @csrf
                                 @method('DELETE')
                                 <input class="mr-2 btn-sm btn-icon btn-icon-only btn btn-danger" onclick="return confirm('Vraiment supprimer cet utilisateur ?')" type="submit" value="Supprimer">

@@ -20,4 +20,9 @@ class Project extends Model
         'url',
         'archived',
     ];
+
+    // Relation n:n entre un article et les mots-clés
+    public function categories() {
+        return $this->belongsToMany(Category::class);
+    }
 }

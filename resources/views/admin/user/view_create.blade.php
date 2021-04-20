@@ -3,7 +3,7 @@
 @section('contenu')
 <h5 class="card-title">Création d'un utilisateur</h5>
 
-<form method="POST" action="{{route('user.store')}}" accept-charset="UTF-8">
+<form method="POST" action="{{route('users.store')}}" accept-charset="UTF-8">
     @csrf
     <div class="position-relative row form-group {!! $errors->has('name') ? 'has-error' : '' !!}">
         <label for="name" class="col-sm-2 col-form-label">Nom d'utilisateur</label>
@@ -44,7 +44,7 @@
         </div>
     </div>
 
-    <div class="position-relative row form-check">
+    <div class="position-relative">
         <a href="javascript:history.back()" class="btn btn-secondary">
             <span class="glyphicon glyphicon-circle-arrow-left"></span>Retour
         </a>
