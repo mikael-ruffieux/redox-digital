@@ -7,19 +7,24 @@ Pour mettre à jour le site, il suffit de se connecter en accès SSH au serveur 
 
 - Se déplacer dans le dossier du site : `cd nom-du-dossier`
 - Passer le site offline : `php artisan down`
-- Mettre à jour le code :
-    `git pull` 
-    `composer install`
-    `php artisan migrate`
+- Mettre à jour le code : `git pull` 
+- Mettre à jour composer : `composer install`
+- Mettre à jour les bases de données *(si de nouvelles BdD ont été créées)* :`php artisan migrate`
+
+<br/>
 
 - *(dans le futur) Si l'on a modifié la configuration, les routes ou les views : 
     `php artisan config:cache`
     `php artisan route:cache`
     `php artisan view:cache`*
 
+<br/>
+
 - *(dans le futur) Relancer FPM : `echo "" | sudo -S service php7.4-fpm reload`*
 - *(dans le futur) Relancer la queue : `php artisan queue:restart`*
 - *(dans le futur) Nettoyer le cache : `php artisan cache:clear`*
+
+<br/>
 
 - Remettre le site en ligne : `php artisan up`
 
