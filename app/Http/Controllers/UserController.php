@@ -53,7 +53,7 @@ class UserController extends Controller
     public function store(UserCreateRequest $request) {
         $this->setAdmin($request); // permet la gestion de la case à cocher (champ admin)
         $user = User::create($request->all());
-        return redirect('user')->withOk("L'utilisateur " . $user->name . " a été créé.");
+        return redirect('users')->withOk("L'utilisateur " . $user->name . " a été créé.");
      }
 
     /**
@@ -90,7 +90,7 @@ class UserController extends Controller
     {
         $this->setAdmin($request);
         User::findOrFail($id)->update($request->all());
-        return redirect('user')->withOk("L'utilisateur " . $request->input('name') . " a été modifié");
+        return redirect('users')->withOk("L'utilisateur " . $request->input('name') . " a été modifié");
     }
 
     /**

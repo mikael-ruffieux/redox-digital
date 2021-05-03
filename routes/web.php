@@ -3,6 +3,7 @@
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -30,6 +31,7 @@ Route::get('/', function () {
 
 Route::resource('users', UserController::class);
 Route::resource('projects', ProjectController::class);
+Route::resource('categories', CategoryController::class);
 
 Auth::routes();
 

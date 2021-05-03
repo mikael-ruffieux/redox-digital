@@ -36,5 +36,22 @@
             </div>
         </div>
         <script type="text/javascript" src="{{ asset('js/architectui.js') }}"></script>
+        <script>
+            let btn = document.getElementById("archived");
+            let label = document.getElementById("archived-label");
+
+            function toggleLabel(btn) {
+                if(btn.checked) {
+                    label.innerHTML = "<span class='badge badge-danger'>Projet inactif</span>";
+                } else {
+                    label.innerHTML = "<span class='badge badge-success'>Projet actif</span>";
+                }
+            };
+
+            if(btn != null && label != null) {
+                toggleLabel(btn);
+                btn.addEventListener("click", () => toggleLabel(btn));
+            }
+        </script>
     </body>
 </html>

@@ -47,7 +47,7 @@
                         Google Analytics <i class="fas fa-external-link-alt fa-xs"></i>
                     </a>
                 </li>
-
+                <hr>
                 <li class="app-sidebar__heading">Utilisateurs</li>
                 <li>
                     <a href="{{route("users.index")}}">
@@ -61,7 +61,7 @@
                         </i>Ajouter un utilisateur
                     </a>
                 </li>
-
+                <hr>
                 <li class="app-sidebar__heading">Projets</li>
                 <li>
                     <a href="{{route("projects.index")}}">
@@ -73,6 +73,19 @@
                     <a href='{{route("projects.create")}}' ">
                         <i class="metismenu-icon pe-7s-eyedropper">
                         </i>Ajouter un projet
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a href="{{route("categories.index")}}">
+                        <i class="metismenu-icon pe-7s-mouse">
+                        </i>Toutes les catégories
+                    </a>
+                </li>
+                <li>
+                    <a href='{{route("categories.create")}}' ">
+                        <i class="metismenu-icon pe-7s-eyedropper">
+                        </i>Ajouter une catégorie
                     </a>
                 </li>
                 <!--<li>
