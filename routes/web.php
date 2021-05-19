@@ -4,6 +4,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PublicPagesController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -19,29 +20,27 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return redirect('contact');
-});
+// ##### Routes publiques #####
+Route::get('/', function () { return redirect('contact'); });
 
-/*
-Route::get('/', function () {
-    return redirect('user');
-});
-*/
+// Contact Form
+Route::get('contact', [ContactController::class,'returnForm']);
+Route::post('contact', [ContactController::class,'validateAndSendForm']);
+
+// ##### Routes privées pendant le développement #####
+Route::get('nos-services/', [PublicPagesController::class, 'returnDigitalServices']);
+
+
+// ##### Routes privées #####
+Auth::routes();
 
 Route::resource('users', UserController::class);
 Route::resource('projects', ProjectController::class);
 Route::resource('categories', CategoryController::class);
 
-Auth::routes();
-
 Route::get('logout', [LoginController::class, 'logout']);
 
 Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-// Contact Form
-Route::get('contact', [ContactController::class,'returnForm']);
-Route::post('contact', [ContactController::class,'validateAndSendForm']);
 
 // Categories
 Route::get('projects/category/{category}', [ProjectController::class, 'projectsWithCategory']);

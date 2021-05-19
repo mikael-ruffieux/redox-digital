@@ -1,0 +1,95 @@
+/* CSS for small components, like buttons or inputs */ 
+
+/* Color classes */ 
+.red-dot::after {
+    content: ".";
+    color: var(--primary-red);
+}
+
+
+/* Buttons */
+.btn {
+    border: solid 2px;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 20px;
+    width: fit-content;
+    padding: 5px 15px;
+    transition: background 0.8s ease-in-out;
+    transition: color 0.2s linear;
+}
+
+.btn-100 {
+    width: 100%;
+}
+
+.btn-secondary {
+    background: transparent;
+    border-color: var(--primary-red);
+    color: var(--primary-red);
+}
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+    background: var(--primary-red);
+    border-color: var(--primary-red);
+    color: var(--true-white);
+}
+
+.btn-white {
+    background-color: var(--true-white);
+    color: var(--primary-red);
+    border: none;
+}
+
+.btn-white:hover, .btn-white:focus, .btn-white:active {
+    background: rgb(var(--rgb-primary-red));
+    color: var(--true-white);
+    border: none;
+}
+
+#contact-btn {
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    z-index: 100;
+}
+
+#contact-btn>a {
+    background-color: var(--true-white);
+    color: var(--primary-red);
+    width: 60px;
+    height: 60px;
+    display:flex;
+    align-items: center;
+    justify-items: center;
+    font-size: 28px;
+    border-radius: 40px;
+    border: 3px solid var(--primary-red);
+    text-align: center;
+    line-height: 30px;
+    padding: 10px;
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+#contact-btn>a>i {
+    line-height: 35px;
+    padding-left: 4px;
+}
+
+#contact-btn>a:hover {
+    color: var(--true-white);
+    background-color: var(--primary-red);
+    width: 250px;
+    padding: 10px;
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+#contact-btn>a:hover::after {
+    content: "nous contacter ";
+    font-size: 24px;
+    padding-left: 10px;
+}

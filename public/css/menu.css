@@ -1,0 +1,132 @@
+nav {
+    width: 100%;
+    background-color: var(--true-white);
+    height:  var(--main-menu-height);
+    position: fixed;
+    z-index: 100;
+
+}
+
+/* Nav logo */ 
+nav>.container, nav .logo {
+    height: 100%;
+}
+
+nav>.container {
+    display: flex;
+    vertical-align: middle;
+}
+
+nav .logo {
+    width: 25%;
+    display:flex;
+    align-content: center;
+}
+
+nav .logo img {
+    height: auto;
+    max-width: 200px;
+    max-height: 40px;
+    align-self: center;
+}
+
+/* /Nav logo */ 
+
+/* Nav menu */ 
+nav .main-menu {
+    width: 75%;
+    padding-left: 30px;
+}
+
+nav .main-menu>ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+}
+
+nav .main-menu>ul>li {
+    height: 100%;
+    display: flex;
+    align-content: center;
+}
+
+nav .main-menu>ul>li>a {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    display: flex;
+    align-self: center;
+}
+
+nav .main-menu>ul>li:hover>a, nav .main-menu>ul>li>a:active {
+    color: var(--primary-red);
+    text-decoration: none;
+}
+
+/* Sub-menu */
+nav .sub-menu:hover>.sub-menu-box, nav .sub-menu>.sub-menu-box:hover {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s cubic-bezier(0.48, 0.01, 0.5, 0.99),
+        visibility 0.1s linear;
+}
+nav .sub-menu>.sub-menu-box {
+    opacity: 0;
+    display:block;
+    visibility: hidden;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background: var(--true-white);
+}
+
+nav .sub-menu ul {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    /* Inner shadow */ 
+    -moz-box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.1);
+    -webkit-box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.1);
+    box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.1);
+}
+
+nav .sub-menu ul li>a {
+    font-weight: 700;
+}
+
+nav .sub-menu ul li:not(.sub-menu-title) {
+    padding-top: 12px;
+}
+
+nav .sub-menu ul li:not(.sub-menu-title)>a::after {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    content: "\f054";
+    margin-left: 10px;
+    font-size: 75%;
+}
+
+nav .sub-menu .sub-menu-title {
+    text-transform: uppercase;
+    color: var(--secondary-black);
+    border-bottom: 3px solid var(--primary-red);
+    padding-bottom: 3px;
+}
+
+nav .sub-menu .sub-menu-title>a {
+    line-height: 100%;
+}
+
+.sub-menu>a::after {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    content: "\f078";
+    margin-left: 5px;
+    font-size: 75%;
+}
+/* /Nav menu */ 
+

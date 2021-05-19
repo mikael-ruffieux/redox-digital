@@ -1,0 +1,76 @@
+/* Font families */
+
+h1 {
+    font-family: futura-pt, 'Poppins', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 8.4px;
+    font-size: 84px;
+    line-height: 100%;
+}
+
+h2, h4 {
+    font-family: futura-pt-bold, 'Poppins', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h2 {
+    letter-spacing: 2.4px;
+    font-size: 48px;
+    line-height: 110%;
+}
+
+h3 {
+    font-family: futura-pt, 'Poppins', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 1.2px;
+    font-size: 24px;
+    text-transform: uppercase;
+    line-height: 70%;
+}
+
+h4 {
+    letter-spacing: 1.4px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+p, a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+a:hover {
+    color: var(--primary-red);
+    text-decoration: none;
+    transition: color 0.2s linear;
+}
+
+/* Font families mobile */
+@media only screen and (max-width: 576px) {
+    h1 {
+        font-size: 36px;
+    }
+    
+    h2 {
+        font-size: 26px;
+    }
+    
+    h3 {
+        font-size: 18px;
+    }
+    
+    h4 {
+        font-size: 14px;
+    }
+    
+    p, a {
+        font-size: 16px;
+    }
+}
