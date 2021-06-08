@@ -11,6 +11,17 @@ const mix = require('laravel-mix');
  |
  */
 
+ mix.styles([
+    'resources/css/global.css',
+    'resources/css/normalize.css',
+    'resources/css/fonts.css',
+    'resources/css/components.css',
+    'resources/css/dashboard.css',
+    'resources/css/footer.css',
+    'resources/css/menu.css',
+    'resources/css/contact.css',
+], 'public/css/all.css');
+
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sourceMaps();

@@ -21,26 +21,41 @@ use Illuminate\Support\Facades\Auth;
 */
 
 // ##### Routes publiques #####
-Route::get('/', function () { return redirect('contact'); });
+Route::get('/', function () { return redirect(route('maintenance.contact')); });
+
+Auth::routes();
 
 // Contact Form
-Route::get('contact', [ContactController::class,'returnForm']);
+Route::get('contact', [ContactController::class,'returnForm'])->name('maintenance.contact');
 Route::post('contact', [ContactController::class,'validateAndSendForm']);
 
 // ##### Routes privées pendant le développement #####
-Route::get('nos-services/', [PublicPagesController::class, 'returnDigitalServices']);
+Route::prefix('dev')->group(function () {
+    Route::get('nos-services/', [PublicPagesController::class, 'returnDigitalServices']);
+
+    Route::prefix('contact')->group(function () {
+        Route::view('/', 'public.contact.contact-form')->name('contact.intro');
+        Route::view('just-chat', 'public.contact.contact-just-chat')->name('contact.just-chat');
+        Route::view('start-a-project', 'public.contact.contact-start-a-project')->name('contact.start-a-project');
+
+        Route::post('just-chat', [ContactController::class, 'sendChatForm'])->name('contact.send-chat');
+        Route::post('start-a-project', [ContactController::class, 'sendProjectForm'])->name('contact.send-project');
+    });
+    
+});
 
 
 // ##### Routes privées #####
-Auth::routes();
+Route::prefix('admin')->group(function () {
+    Route::resource('users', UserController::class);
+    Route::resource('projects', ProjectController::class);
+    Route::resource('categories', CategoryController::class);
 
-Route::resource('users', UserController::class);
-Route::resource('projects', ProjectController::class);
-Route::resource('categories', CategoryController::class);
+    Route::get('logout', [LoginController::class, 'logout']);
 
-Route::get('logout', [LoginController::class, 'logout']);
+    Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+});
 
-Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Categories
 Route::get('projects/category/{category}', [ProjectController::class, 'projectsWithCategory']);

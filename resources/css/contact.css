@@ -1,0 +1,105 @@
+#contact {
+    background-color: var(--primary-red);
+    background: linear-gradient(135deg, 
+        rgb(var(--rgb-primary-red)) 0%, 
+        rgb(var(--rgb-secondary-red)) 50%, 
+        rgb(var(--rgb-third-red)) 100%
+    );
+
+    height: 100vh;
+    width: 100vw;
+
+    display:flex;
+    align-items: center;
+}
+
+#contact h2, #contact h4, #contact p {
+    color: var(--true-white);
+}
+
+#contact #step4 h4 {
+    color: var(--primary-black);
+}
+
+#contact h2 {
+    font-family: futura-pt, 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+#contact .page {
+    max-width: 50%;
+    margin-left: 80px;
+}
+
+#contact .page input:not([type='submit']), #contact .page textarea {
+    outline: none;
+    border: none;
+    background: transparent;
+    color: var(--true-white);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#contact .page input::placeholder, #contact .page textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.focus-input {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2px;
+    top: 0;
+    left: 2px;
+    pointer-events: none;
+    background: var(--true-white);
+}
+
+.focus-input::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--primary-black);
+    transition: all 0.5s ease-in-out;
+}
+
+#contact .page input:focus+.focus-input::before,
+#contact .page textarea:focus+.focus-input::before {
+    width: 100%;
+}
+
+#contact .slider {
+    width: 100%;
+}
+
+#contact .slider h4 {
+    margin-top: 20px;
+}
+
+#contact .slider>ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0;
+    border-bottom: solid 2px black;
+    z-index: -10;
+}
+
+#contact .slider>ul:after {
+    /*
+    content: "";
+    background: black;
+    position: absolute;
+    height: 2px;
+    width: 100%;*/
+}
+
+#contact .slider>ul>li>a {
+    position: relative;
+    top: 17px;
+}

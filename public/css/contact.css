@@ -67,12 +67,12 @@ a, a:visited, a:focus {
 
 input {
     outline: none;
-    border: none
+    border: none;
 }
 
 textarea {
     outline: none;
-    border: none
+    border: none;
 }
 
 textarea:focus, input:focus {
@@ -268,7 +268,7 @@ button:hover {
     height: 100%;
     top: 0;
     left: 0;
-    pointer-events: none
+    pointer-events: none;
 }
 
 .focus-input2::before {

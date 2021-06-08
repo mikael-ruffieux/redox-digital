@@ -23,4 +23,12 @@ class ContactController extends Controller
         // Confirmation de réception
         return view('view_form_confirmation');
     }
+
+    public function sendChatForm(Request $request) {
+        dd($request->all());
+    }
+
+    public function sendProjectForm(Request $request) {
+        dd($request);
+    }
 }

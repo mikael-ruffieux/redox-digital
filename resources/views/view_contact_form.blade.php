@@ -7,9 +7,9 @@
     @csrf
     <picture class="contact2-form-img">
         <source 
-            srcset="{{ asset('assets/img/logo/Redox-Digital_Logotype-slogan-blanc-rouge.png') }}" 
+            srcset="{{ asset('storage/assets/img/logo/Redox-Digital_Logotype-slogan-blanc-rouge.png') }}" 
             media="(prefers-color-scheme: dark)">
-        <img src="{{ asset('assets/img/logo/Redox-Digital_Logotype-slogan-noir-rouge.png') }}"
+        <img src="{{ asset('storage/assets/img/logo/Redox-Digital_Logotype-slogan-noir-rouge.png') }}"
             alt="Redox Digital"/>
     </picture>
     
