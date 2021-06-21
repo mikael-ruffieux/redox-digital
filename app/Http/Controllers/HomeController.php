@@ -7,28 +7,13 @@ use App\Models\Project;
 
 class HomeController extends Controller
 {
-    protected $nbProjetsParPage = 5;
-
     /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
-     * Show the application dashboard.
+     * Show the homepage.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function home()
     {
-        $projects=Project::orderBy('projects.created_at','desc')
-        ->paginate($this->nbProjetsParPage);
-        $links=$projects->render();
-        return view('admin.dashboard', compact('projects','links'));
+
     }
 }

@@ -1,73 +1,29 @@
-<div class="app-header header-shadow">
-    <div class="app-header__logo">
-        <div class="logo-src">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                Retour au site
-            </a>
-        </div>
-        <div class="header__pane ml-auto">
-            <div>
-                <button type="button" class="hamburger close-sidebar-btn hamburger--elastic"
-                    data-class="closed-sidebar">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="app-header__mobile-menu">
-        <div>
-            <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
-        </div>
-    </div>
-    <div class="app-header__menu">
-        <span>
-            <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
-                <span class="btn-icon-wrapper">
-                    <i class="fa fa-ellipsis-v fa-w-6"></i>
-                </span>
-            </button>
-        </span>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="{{route('public.home')}}">Redox Digital</a>
 
-    <div class="app-header__content">
-        <div class="app-header-right">
-            <ul class="header-menu nav">
-            @guest
-                @if (Route::has('login'))
-                <li class="dropdown nav-item">
-                    <a href="{{ route('login') }}" class="nav-link">
-                        <i class="nav-link-icon fa fa-user"></i>
-                        {{ __('Login') }}
-                    </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Projets</a>
                 </li>
-                @endif
-            @else
-                <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }}
-                    </a>
-
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item nav-link text-danger" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                                            document.getElementById('logout-form').submit();">
-                            <i class="nav-link-icon fa fa-sign-out-alt text-danger"></i>
-                            {{ __('Logout') }}
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
                 </li>
-            @endguest
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Clients</a>
+                </li>
             </ul>
+
+            <form class="form-inline my-2 my-lg-0" action="{{ route('logout') }}" method="POST">
+                @csrf
+                <input class="btn btn-outline-danger my-2 my-sm-0" type="submit" value="Logout">
+            </form>
         </div>
     </div>
-</div>
+</nav>

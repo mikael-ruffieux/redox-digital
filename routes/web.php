@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProjectController;
@@ -21,7 +22,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 // ##### Routes publiques #####
-Route::get('/', function () { return redirect(route('maintenance.contact')); });
+Route::get('/', function () { return redirect(route('maintenance.contact')); })->name('public.home');
 
 Auth::routes();
 
@@ -47,13 +48,13 @@ Route::prefix('dev')->group(function () {
 
 // ##### Routes privées #####
 Route::prefix('admin')->group(function () {
-    Route::resource('users', UserController::class);
-    Route::resource('projects', ProjectController::class);
-    Route::resource('categories', CategoryController::class);
-
+    Route::get('home', [AdminController::class, 'home'])->name('home');
     Route::get('logout', [LoginController::class, 'logout']);
 
-    Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    /*
+    Route::resource('users', UserController::class);
+    Route::resource('projects', ProjectController::class);
+    Route::resource('categories', CategoryController::class);*/
 });
 
 

@@ -9,20 +9,16 @@ class Project extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
-        'titre',
-        'contenu',
-        'url',
+        'title',
+        'client_id',
         'archived',
+        'context',
+        'date',
+        'project_type',
     ];
 
-    // Relation n:n entre un article et les mots-clés
-    public function categories() {
-        return $this->belongsToMany(Category::class);
+    public function client() {
+        $this->belongsTo(Client::class);
     }
 }

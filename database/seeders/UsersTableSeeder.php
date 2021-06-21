@@ -17,15 +17,23 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->delete();
+
         DB::table('users')->insert([
             'name' => 'admin',
-            'email' => 'admin@redoxdigital.ch',
-            'password' => Hash::make('12345678'),
-            'admin' => 1]);
+            'email' => 'info@redoxdigital.ch',
+            'password' => Hash::make('12345678'), // not the production password
+        ]);
+
         DB::table('users')->insert([
             'name' => 'mikael',
             'email' => 'mikael@redoxdigital.ch',
-            'password' => Hash::make('MiRu6618$'),
-            'admin' => 1]);
+            'password' => Hash::make('12345678'), // not the production password
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'etienne',
+            'email' => 'etienne@redoxdigital.ch',
+            'password' => Hash::make('12345678'), // not the production password
+        ]);
     }
 }

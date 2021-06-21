@@ -14,12 +14,6 @@ class UserController extends Controller
         $this->middleware('auth');
     }
 
-    private function setAdmin($request) {
-        if (!$request->has('admin')) {
-           $request->merge(['admin'=>0]);
-        }
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -51,7 +45,6 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(UserCreateRequest $request) {
-        $this->setAdmin($request); // permet la gestion de la case à cocher (champ admin)
         $user = User::create($request->all());
         return redirect('users')->withOk("L'utilisateur " . $user->name . " a été créé.");
      }
