@@ -14,9 +14,16 @@
 
     </head>
     <body class="bg-light">
-        @include('admin.include_top_menu')
+        @include('admin.components.include_top_menu')
 
-        <main class="my-3">
+        <main class="my-5">
+            @if (session('alert'))
+            <div class="container pt-4">
+                <div class="alert alert-info">
+                    {{session('alert')}}
+                </div>
+            </div>
+            @endif
             @yield('header')
             @yield('contenu')
         </main>

@@ -1,10 +1,11 @@
 <?php
 
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProjectController;
-use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\AccordionController;
 use App\Http\Controllers\PublicPagesController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
@@ -48,15 +49,12 @@ Route::prefix('dev')->group(function () {
 
 // ##### Routes privées #####
 Route::prefix('admin')->group(function () {
-    Route::get('home', [AdminController::class, 'home'])->name('home');
+    Route::get('home', [AdminController::class, 'home'])->name('admin.home');
     Route::get('logout', [LoginController::class, 'logout']);
 
-    /*
-    Route::resource('users', UserController::class);
+    Route::resource('clients', ClientController::class);
     Route::resource('projects', ProjectController::class);
-    Route::resource('categories', CategoryController::class);*/
+    Route::resource('services', ServiceController::class);
+    Route::get('services/{service_id}/accordion/create', [AccordionController::class, 'create'])->name('accordions.create');
+    Route::resource('accordions', AccordionController::class)->only('destroy', 'update', 'store');
 });
-
-
-// Categories
-Route::get('projects/category/{category}', [ProjectController::class, 'projectsWithCategory']);

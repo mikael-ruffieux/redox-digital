@@ -8,14 +8,20 @@ use Illuminate\Database\Eloquent\Model;
 class Service extends Model
 {
     use HasFactory;
+    
+    public $timestamps = false;
 
     protected $fillable = ['title', 'isChild', 'description', 'image', 'parent_id'];
 
     public function children() {
-        $this->hasMany(self::class, 'parent_id');
+        return $this->hasMany(self::class, 'parent_id');
     }
 
     public function parent() {
-        $this->belongsTo(self::class, 'parent_id');
+        return $this->belongsTo(self::class, 'parent_id');
+    }
+
+    public function accordions() {
+        return $this->hasMany(Accordion::class);
     }
 }
