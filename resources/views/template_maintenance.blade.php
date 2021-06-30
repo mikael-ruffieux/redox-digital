@@ -29,7 +29,7 @@
     @if (Route::has('login'))
         <div class="admin-menu">
             @auth
-                <a href="{{ url('/home') }}">Home</a>
+                <a href="{{ url('admin.home') }}">Home</a>
             @else
                 <a href="{{ route('login') }}">Login</a>
             @endauth

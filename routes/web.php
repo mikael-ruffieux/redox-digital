@@ -32,7 +32,7 @@ Route::get('contact', [ContactController::class,'returnForm'])->name('maintenanc
 Route::post('contact', [ContactController::class,'validateAndSendForm']);
 
 // ##### Routes privées pendant le développement #####
-Route::prefix('dev')->group(function () {
+Route::prefix('dev')->middleware('auth')->group(function () {
     Route::get('nos-services/', [PublicPagesController::class, 'returnDigitalServices']);
 
     Route::prefix('contact')->group(function () {
@@ -48,7 +48,7 @@ Route::prefix('dev')->group(function () {
 
 
 // ##### Routes privées #####
-Route::prefix('admin')->group(function () {
+Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('home', [AdminController::class, 'home'])->name('admin.home');
     Route::get('logout', [LoginController::class, 'logout']);
 
