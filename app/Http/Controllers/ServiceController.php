@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Service;
+use Illuminate\Support\Facades\DB;
 
 class ServiceController extends Controller
 {
@@ -26,7 +27,7 @@ class ServiceController extends Controller
     public function create()
     {
         $parents = Service::where('isChild', 0)->get();
-        return view('admin.services.create');
+        return view('admin.services.create', compact('parents'));
     }
 
     /**
@@ -37,7 +38,25 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $statement = DB::table('services')->where('id', \DB::raw("(select max(`id`) from services)"))->get();
+        $nextId = $statement[0]->id+1;
+
+        // Saving image
+        $image = $request->file('image');
+        $name = "$nextId.".$image->getClientOriginalExtension();
+        $destinationPath = public_path('storage/services');
+        $image->move($destinationPath, $name);
+
+        $newService = [
+            "title" => $request->title,
+            "description" => $request->description,
+            "image" => "storage/services/" . $name,
+            "isChild" => $request->parent_id != "null",
+            "parent_id" => $request->parent_id == "null" ? null : $request->parent_id,
+        ];
+        
+        Service::create($newService);
+        return redirect(route('services.index'))->with('alert', "Le service " . $newService['title'] . " a été créé.");
     }
 
     /**
@@ -73,23 +92,37 @@ class ServiceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        if($request->input('parent_id') == "null") {
+        if($request->parent_id == "null") {
             $isChild = false;
             $parent_id = null;
         } else {
             $isChild = true;
-            $parent_id = intval($request->input('parent_id'));
+            $parent_id = intval($request->parent_id);
+        }
+
+        $updatedData = [
+            'title' => $request->title,
+            'description' => $request->description,
+            'isChild' => $isChild,
+            'parent_id' => $parent_id
+        ];
+
+        // If new file is uploaded
+        if ($request->hasFile('image')) {
+
+            // Saving image
+            $image = $request->file('image');
+            $name = "$id.".$image->getClientOriginalExtension();
+            $destinationPath = public_path('storage/services');
+            $image->move($destinationPath, $name);
+
+            $updatedData["image"] = "storage/services/" . $name;
         }
         
         $service = Service::find($id);
-        $service->update([
-            'title' => $request->input('title'),
-            'description' => $request->input('description'),
-            'image' => "storage/services/$id.jpg",
-            'isChild' => $isChild,
-            'parent_id' => $parent_id
-        ]);
-        return redirect(route('services.index'))->with('alert', "Le service " . $request->input('title') . " a été modifié avec succès.");
+        $service->update($updatedData);
+
+        return redirect(route('services.edit', [$id]))->with('alert', "Le service " . $request->title . " a été modifié avec succès.");
     }
 
     /**
@@ -100,6 +133,23 @@ class ServiceController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $service = Service::findOrFail($id);
+
+        if(sizeof($service->categories) == 0 && sizeof($service->children) == 0) {
+            // supprimer les accordéons : 
+            foreach ($service->accordions as $accordion) {
+                $accordion->delete();
+            }
+
+            // supprimer le service :
+            $service->delete();
+            return redirect(route('services.index'))->with('alert', "Le service a été supprimé avec succès.");
+
+        } elseif (sizeof($service->categories) == 0 && sizeof($service->children) != 0) {
+            return redirect()->back()->with('alert', "Impossible de supprimer le service, car il est parent d'autres services.");
+        
+        } else {
+            return redirect()->back()->with('alert', "Impossible de supprimer le service, car il est lié à un ou plusieurs projets.");
+        }
     }
 }

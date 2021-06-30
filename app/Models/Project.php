@@ -19,6 +19,10 @@ class Project extends Model
     ];
 
     public function client() {
-        $this->belongsTo(Client::class);
+        return $this->belongsTo(Client::class);
     }
-}
+
+    public function categories() {
+        return $this->hasMany(Category::class);
+    }
+ }

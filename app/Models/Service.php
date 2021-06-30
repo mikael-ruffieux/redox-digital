@@ -24,4 +24,8 @@ class Service extends Model
     public function accordions() {
         return $this->hasMany(Accordion::class);
     }
+
+    public function categories() {
+        return $this->hasMany(Category::class);
+    }
 }

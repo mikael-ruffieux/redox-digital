@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Service;
+use App\Models\Accordion;
 use Illuminate\Http\Request;
 
 class AccordionController extends Controller
@@ -15,8 +16,7 @@ class AccordionController extends Controller
     public function create($service_id)
     {
         $service = Service::find($service_id);
-        dd($service);
-        return view('admin.accordions.create');
+        return view('admin.accordions.create', compact('service'));
     }
 
     /**
@@ -27,7 +27,8 @@ class AccordionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Accordion::create($request->all());
+        return redirect(route('services.edit', [$request->input('service_id')]))->with('alert', "L'accordéon a été créé.");
     }
 
     /**
@@ -39,7 +40,8 @@ class AccordionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Accordion::findOrFail($id)->update($request->all());
+        return redirect(route('services.edit', [$request->input('service_id')]))->with('alert', "L'accordéon a été modifié avec succès.");
     }
 
     /**
@@ -50,6 +52,7 @@ class AccordionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Accordion::findOrFail($id)->delete();
+        return redirect()->back()->with('alert', "L'accordéon a été supprimé avec succès.");
     }
 }

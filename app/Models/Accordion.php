@@ -9,6 +9,8 @@ class Accordion extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     protected $fillable = ['service_id', 'title', 'description'];
 
     public function service() {

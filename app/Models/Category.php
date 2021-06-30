@@ -12,10 +12,10 @@ class Category extends Model
     protected $fillable = ['project_id', 'service_id'];
 
     public function service() {
-        $this->belongsTo(Service::class);
+        return $this->belongsTo(Service::class);
     }
 
     public function project() {
-        $this->belongsTo(Project::class);
+        return $this->belongsTo(Project::class);
     }
 }

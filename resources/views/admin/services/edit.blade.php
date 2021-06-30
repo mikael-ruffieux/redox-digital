@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <form method="POST" action="{{route('services.update', [$service->id])}}" accept-charset="UTF-8">
+    <form method="POST" action="{{route('services.update', [$service->id])}}" accept-charset="UTF-8" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="row">
@@ -38,6 +38,16 @@
                 </select>
                 </div>
             </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="image">Image</label><br>
+                    <img src="{{asset($service->image)}}" alt="{{$service->title}}" style="max-width: 100%; max-height: 200px;"><br><br>
+
+                    <input type="file" id="image" name="image" accept="image/png, image/jpeg">
+            
+                    {!! $errors->first('image', '<small class="help-block">:message</small>') !!}
+                </div>
+            </div>
         </div>
         <input type="submit" value="Enregistrer les modification du service" class="btn btn-primary">
     </form>
@@ -59,6 +69,9 @@
                     <form method="POST" action="{{route('accordions.update', [$accordion->id])}}" accept-charset="UTF-8">
                         @csrf
                         @method('PUT')
+
+                        <input type="hidden" name="service_id" value="{{$service->id}}">
+
                         <div class="form-group row">
                             <label for="title" class="col-sm-2 col-form-label">Titre</label>
                             <div class="col-sm-10">
@@ -72,7 +85,7 @@
                             </div>
                         </div>
                         <small class="d-block pb-3">Pour modifier un accordéon, il faut sauvegarder les modifications pour chaque accordéon, l'une après l'autre.</small>
-                        <input type="submit" value="Modifier" class="btn btn-primary">
+                        <input type="submit" value="Enregistrer les modifications" class="btn btn-primary">
                         
                     </form>
                     <form method="POST" class="mt-3" action="{{route('accordions.destroy', [$accordion->id])}}" accept-charset="UTF-8">
@@ -88,3 +101,4 @@
         </div>
     </div>
 </div>
+@endsection

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Project;
+use App\Models\Client;
+use App\Models\Service;
 
 class ProjectController extends Controller
 {
@@ -13,7 +16,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+        $projects = Project::paginate(10);
+        return view('admin.projects.index', compact('projects'));
     }
 
     /**
@@ -23,7 +27,11 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        $clients = Client::all();
+        $templates = ['web', 'video', 'marketing'];
+        $categories = Service::all();
+
+        return view('admin.projects.create', compact('clients', 'templates', 'categories'));
     }
 
     /**

@@ -39,6 +39,12 @@
                     </select>
                 </div>
             </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="image">Image</label><br>
+                    <img src="{{asset($service->image)}}" alt="{{$service->title}}" style="max-width: 100%; max-height: 200px;">
+                </div>
+            </div>
         </div>
     </form>
     <hr>
@@ -70,3 +76,4 @@
         </div>
     </div>
 </div>
+@endsection
