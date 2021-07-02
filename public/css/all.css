@@ -38,6 +38,15 @@ html {
 
 body {
     background-color: var(--faded-white);
+    min-height: 100vh;
+    margin: 0;
+
+    display:grid;
+    grid-template-rows: 100px 1fr auto;
+}
+
+.color-primary {
+    color: var(--primary-red)!important;
 }
 
 /* Gradient */
@@ -92,7 +101,7 @@ ul, li {
 
 h1 {
     font-family: futura-pt, 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     font-style: normal;
     letter-spacing: 8.4px;
     font-size: 84px;
@@ -118,7 +127,7 @@ h3 {
     letter-spacing: 1.2px;
     font-size: 24px;
     text-transform: uppercase;
-    line-height: 70%;
+    line-height: 100%;
 }
 
 h4 {
@@ -190,10 +199,22 @@ a:hover {
     width: 100%;
 }
 
+.btn-primary {
+    background: var(--primary-red);
+    border-color: var(--primary-red);
+    color: var(--true-white);
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background: var(--true-white);
+    border-color: var(--primary-red);
+    color: var(--primary-red);
+}
+
 .btn-secondary {
     background: transparent;
     border-color: var(--primary-red);
-    color: var(--primary-red);
+    color: var(--primary-black);
 }
 
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
@@ -260,6 +281,37 @@ a:hover {
     font-size: 24px;
     padding-left: 10px;
 }
+
+/* Curves */
+.curve-bottom-container {
+    width: 100%;
+    height: 20vh;
+    margin-top: -20vh;
+    position: relative;
+}
+
+.curve-top-container {
+    width: 100%;
+    height: 20vh;
+    margin-bottom: -20vh;
+    position: relative;
+}
+
+.curve-bottom {
+    z-index: 100;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+}
+
+.curve-top {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
 footer {
     padding-top: 50px;
     padding-bottom: 20px;
@@ -316,8 +368,9 @@ nav {
     width: 100%;
     background-color: var(--true-white);
     height:  var(--main-menu-height);
-    position: fixed;
+    position: sticky;
     z-index: 100;
+    top: 0;
 
 }
 

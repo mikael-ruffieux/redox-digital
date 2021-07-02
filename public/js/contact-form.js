@@ -57,8 +57,13 @@ const changePage = (event) => {
 
 const pressEnter = (event) => {
     if(event.key === 'Enter') {
-        event.preventDefault();
-        //document.getElementById("#step1").click();
+        let newHash = parseInt(window.location.hash.slice(-1)) + 1;
+        if(newHash <= 4) {
+            event.preventDefault();
+            window.location.hash = `#step${newHash}`;
+        } else {
+            document.getElementById("contact-form").submit();
+        }
     }
 }
 

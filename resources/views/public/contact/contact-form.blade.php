@@ -1,7 +1,7 @@
-@extends('template')
+@extends('layouts.contact_layout')
 
 @section('title')
-Nous contacter
+Nous contacter |
 @endsection
 
 @section('content')

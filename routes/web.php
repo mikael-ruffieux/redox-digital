@@ -33,16 +33,31 @@ Route::post('contact', [ContactController::class,'validateAndSendForm']);
 
 // ##### Routes privées pendant le développement #####
 Route::prefix('dev')->middleware('auth')->group(function () {
-    Route::get('nos-services/', [PublicPagesController::class, 'returnDigitalServices']);
+    Route::get('/', [PublicPagesController::class, 'home'])->name('home');
+
+    // à voir si on garde ce système, ou si on fait 2 chemins & méthodes
+    Route::get('nos-services-de-{type}', [PublicPagesController::class, 'services'])->name('services');
+
+    Route::prefix('portfolio')->group(function () {
+        Route::get('/', [PublicPagesController::class, 'portfolio'])->name('portfolio');
+        Route::get('{id}', [PublicPagesController::class, 'portfolio_project'])->name('portfolio.project');
+
+    });
+
+    Route::view('a-propos', 'public.about')->name('about');
 
     Route::prefix('contact')->group(function () {
-        Route::view('/', 'public.contact.contact-form')->name('contact.intro');
+        Route::view('/', 'public.contact.contact')->name('contact');
+        Route::view('intro', 'public.contact.contact-form')->name('contact.intro');
         Route::view('just-chat', 'public.contact.contact-just-chat')->name('contact.just-chat');
         Route::view('start-a-project', 'public.contact.contact-start-a-project')->name('contact.start-a-project');
 
         Route::post('just-chat', [ContactController::class, 'sendChatForm'])->name('contact.send-chat');
         Route::post('start-a-project', [ContactController::class, 'sendProjectForm'])->name('contact.send-project');
     });
+
+    // à enlever à la fin
+    Route::view('example', 'view_example_page');
     
 });
 

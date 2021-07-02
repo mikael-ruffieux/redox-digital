@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Service extends Model
 {
@@ -12,6 +13,10 @@ class Service extends Model
     public $timestamps = false;
 
     protected $fillable = ['title', 'isChild', 'description', 'image', 'parent_id'];
+
+    public function getSlug() {
+        return Str::slug($this->title);
+    }
 
     public function children() {
         return $this->hasMany(self::class, 'parent_id');

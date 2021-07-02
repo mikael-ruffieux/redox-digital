@@ -5,7 +5,7 @@ Nous contacter pour discuter
 @endsection
 
 @section('content')
-<form action="{{route('contact.send-chat')}}" method="post">
+<form id="contact-form" action="{{route('contact.send-chat')}}" method="post">
     @csrf
     <main id="contact">
         <section class="page container" id="step1">
@@ -21,6 +21,7 @@ Nous contacter pour discuter
             <div class="navigation mt-3">
                 <a class="btn btn-white" href="{{url()->previous()}}"><i class="fas fa-arrow-left"></i></a>
                 <a class="btn btn-white" href="#step2"><i class="fas fa-arrow-right"></i></a>
+                <small>ou appuyez sur "Enter".</small>
             </div>
 
             <div class="slider mt-3">
@@ -50,6 +51,12 @@ Nous contacter pour discuter
             </div>
 
             <div class="slider mt-4">
+                <ul>
+                    <li><a href="#step1"><i class="fas fa-circle"></i></a></li>
+                    <li><a href="#step2"><i class="fas fa-circle"></i></a></li>
+                    <li><a href="#step3"><i class="fas fa-circle"></i></a></li>
+                    <li><a href="#step4"><i class="fas fa-circle"></i></a></li>
+                </ul>
                 <h4>02/04</h4>
             </div>
         </section>
@@ -70,6 +77,12 @@ Nous contacter pour discuter
             </div>
 
             <div class="slider mt-4">
+                <ul>
+                    <li><a href="#step1"><i class="fas fa-circle"></i></a></li>
+                    <li><a href="#step2"><i class="fas fa-circle"></i></a></li>
+                    <li><a href="#step3"><i class="fas fa-circle"></i></a></li>
+                    <li><a href="#step4"><i class="fas fa-circle"></i></a></li>
+                </ul>
                 <h4>03/04</h4>
             </div>
         </section>
@@ -94,10 +107,10 @@ Nous contacter pour discuter
 
             <div class="slider mt-4">
                 <ul>
-                    <li><a href="#step1"><i class="far fa-circle"></i></a></li>
-                    <li><a href="#step2"><i class="far fa-circle"></i></a></li>
-                    <li><a href="#step3"><i class="far fa-circle"></i></a></li>
-                    <li><a href="#step4"><i class="far fa-circle"></i></a></li>
+                    <li><a href="#step1"><i class="fas fa-circle"></i></a></li>
+                    <li><a href="#step2"><i class="fas fa-circle"></i></a></li>
+                    <li><a href="#step3"><i class="fas fa-circle"></i></a></li>
+                    <li><a href="#step4"><i class="fas fa-circle"></i></a></li>
                 </ul>
                 <h4 class="text-white">04/04</h4>
             </div>

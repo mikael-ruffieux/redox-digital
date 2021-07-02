@@ -28,12 +28,5 @@
             </button>
         </div>
     </div>
-    @if (Route::has('password.request'))
-    <div class="btn-link">
-        <a href="{{ route('password.request') }}">
-            {{ __('Mot de passe oublié ?') }}
-        </a>
-    </div>
-    @endif
 </form>
 @endsection

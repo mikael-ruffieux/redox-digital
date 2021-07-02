@@ -2,8 +2,9 @@ nav {
     width: 100%;
     background-color: var(--true-white);
     height:  var(--main-menu-height);
-    position: fixed;
+    position: sticky;
     z-index: 100;
+    top: 0;
 
 }
 

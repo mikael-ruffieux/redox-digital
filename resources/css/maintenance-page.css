@@ -1,0 +1,26 @@
+#maintenance-page {
+
+}
+
+#maintenance-page h1 {
+    margin-top:10px;
+    margin-bottom: 100px;
+}
+
+#maintenance-page h2 {
+    margin-top:40px;
+    font-family: futura-pt, 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.map-container {
+    height: 80vh!important;
+}
+
+#map {
+    width: 100vw;
+    height: 80vh!important;
+    position: absolute;
+    left: 0;
+    z-index: 0;
+}

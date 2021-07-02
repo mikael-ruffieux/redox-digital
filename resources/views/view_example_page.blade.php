@@ -1,7 +1,7 @@
 @extends('layouts.main_layout')
 
 @section('title')
- | Page exemple
+Page exemple |
 @endsection
 
 @section('content')

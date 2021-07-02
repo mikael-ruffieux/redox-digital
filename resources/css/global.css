@@ -38,6 +38,15 @@ html {
 
 body {
     background-color: var(--faded-white);
+    min-height: 100vh;
+    margin: 0;
+
+    display:grid;
+    grid-template-rows: 100px 1fr auto;
+}
+
+.color-primary {
+    color: var(--primary-red)!important;
 }
 
 /* Gradient */

@@ -17,14 +17,6 @@
     <title>@yield("title") Redox Digital</title>
 </head>
 <body>
-    <!-- Main menu -->
-    @include('layouts.menu')
-    <!-- /Main menu -->
-
-    <main class="container">
-        @yield("content")
-    </main>
-
-    @include('layouts.footer')
+    @yield("content")
 </body>
 </html>

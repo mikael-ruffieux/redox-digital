@@ -11,7 +11,7 @@
     <!-- light/dark mode switcher-->
     <meta name="color-scheme" content="dark light">
 
-    <link rel="icon" type="image/png" href="{{ asset('assets/img/logo/Redox-Digital_Logotype-pictogramme-blanc-rouge.png') }}" />
+    <link rel="icon" type="image/svg" href="{{ asset('storage/assets/img/logo/Redox-Digital_Logotype-final_Redox-Digital_Logotype-pictogramme-blanc-rouge.svg') }}">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -24,12 +24,12 @@
 </head>
 
 <body>
-    <div class="bg-contact2" style="background-image: url('{{ asset('assets/img/layout/bg-contact.jpg') }}');">
+    <div class="bg-contact2" style="background-image: url('{{ asset('storage/assets/img/layout/bg-contact.jpg') }}');">
     
     @if (Route::has('login'))
         <div class="admin-menu">
             @auth
-                <a href="{{ url('admin.home') }}">Home</a>
+                <a href="{{ route('admin.home') }}">Home</a>
             @else
                 <a href="{{ route('login') }}">Login</a>
             @endauth
