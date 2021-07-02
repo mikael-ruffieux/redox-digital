@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class CategoriesTableSeeder extends Seeder
+class ProjectServiceTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,10 +14,9 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('categories')->delete();
-
-        for ($i=1; $i <= 10; $i++) {
-            DB::table('categories')->insert([
+        DB::table('project_service')->delete();
+        for ($i=1; $i <= 9; $i++) { 
+            DB::table('project_service')->insert([
                 'project_id' => $i,
                 'service_id' => rand(3, 11),
             ]);

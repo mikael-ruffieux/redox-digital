@@ -20,7 +20,7 @@ class CreateProjectsTable extends Migration
             $table->text('context');
             $table->boolean('archived')->default(false);
             $table->date('date');
-            $table->string('project_type');
+            $table->morphs('projectable');
 
             $table->integer('client_id')->unsigned();
             $table->foreign('client_id')

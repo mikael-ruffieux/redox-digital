@@ -42,9 +42,7 @@
             <div class="col-12">
                 <div class="form-group">
                     <label for="image">Image</label><br>
-            
                     <input type="file" id="image" name="image" accept="image/png, image/jpeg">
-            
                     {!! $errors->first('image', '<small class="help-block">:message</small>') !!}
                 </div>
             </div>

@@ -3,9 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Facades\DB;
 
-class CreateCategoriesTable extends Migration
+class CreateProjectServiceTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +13,7 @@ class CreateCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('project_service', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('project_id')->unsigned();
             $table->foreign('project_id')
@@ -38,12 +37,6 @@ class CreateCategoriesTable extends Migration
      */
     public function down()
     {
-        if (DB::getDriverName() !== 'sqlite') {
-            Schema::table('categories', function(Blueprint $table) {
-                $table->dropForeign('category_project_id_foreign');
-                $table->dropForeign('category_service_id_foreign');
-            });
-        }
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('project_service');
     }
 }

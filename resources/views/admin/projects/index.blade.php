@@ -16,6 +16,7 @@
                         <th class="text-center">#</th>
                         <th>Projets</th>
                         <th>Statut</th>
+                        <th>Type</th>
                         <th>Catégories</th>
                         <th>Actions</th>
                     </tr>
@@ -36,8 +37,19 @@
                                 </div>
                             </td>
                             <td>
-                                @foreach($project->categories as $category)
-                                <small class="mr-1">{{$category->service->title}}</small>
+                                <small>
+                                @if ($project->projectable_type == "App\Models\ProjectMarketing")
+                                    marketing
+                                @elseif ($project->projectable_type == "App\Models\ProjectVideo")
+                                    video
+                                @else
+                                    web
+                                @endif
+                                </small>
+                            </td>
+                            <td>
+                                @foreach($project->services as $category)
+                                <small class="mr-1">{{$category->title}}</small>
                                 @endforeach
                             </td>
                             <td>

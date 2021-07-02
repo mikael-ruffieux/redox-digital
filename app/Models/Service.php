@@ -25,7 +25,7 @@ class Service extends Model
         return $this->hasMany(Accordion::class);
     }
 
-    public function categories() {
-        return $this->hasMany(Category::class);
+    public function projects() {
+        return $this->belongsToMany(Project::class);
     }
 }

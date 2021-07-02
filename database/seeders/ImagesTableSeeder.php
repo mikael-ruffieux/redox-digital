@@ -18,7 +18,7 @@ class ImagesTableSeeder extends Seeder
 
         for ($i=1; $i <= 30; $i++) {
             DB::table('images')->insert([
-                'project_id' => rand(1, 10),
+                'project_id' => rand(1, 9),
                 'url' => "storage/img$i.jpg",
             ]);
         }

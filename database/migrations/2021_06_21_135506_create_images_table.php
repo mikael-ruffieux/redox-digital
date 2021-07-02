@@ -21,8 +21,8 @@ class CreateImagesTable extends Migration
             $table->foreign('project_id')
                 ->references('id')
                 ->on('projects')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
         });
     }
 

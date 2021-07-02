@@ -15,10 +15,10 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(UsersTableSeeder::class);           // 3 users
         $this->call(ClientsTableSeeder::class);         // 10 clients
-        $this->call(ProjectsTableSeeder::class);        // 10 projects
+        $this->call(ProjectsTableSeeder::class);        // 9 projects
         $this->call(ImagesTableSeeder::class);          // 30 images
         $this->call(ServicesTableSeeder::class);        // 11 services (2 parents, 9 children)
         $this->call(AccordionsTableSeeder::class);      // 17 accordions
-        $this->call(CategoriesTableSeeder::class);      // 1 services attribution to each project
+        $this->call(ProjectServiceTableSeeder::class);  // 1 services attribution to each project
     }
 }
