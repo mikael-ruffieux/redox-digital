@@ -49,6 +49,7 @@ body {
     color: var(--primary-red)!important;
 }
 
+
 /* Gradient */
 
 /*background: linear-gradient(135deg, 
@@ -182,7 +183,7 @@ a:hover {
 
 /* Curves */
 .curve {
-    z-index: 10;
+    z-index: -1;
 }
 
 .curve-small-top {
@@ -285,6 +286,17 @@ a:hover {
 }
 
 .btn-outline-white:hover, .btn-outline-white:focus, .btn-outline-white:active {
+    background: rgb(var(--rgb-primary-red));
+    color: var(--true-white);
+    border: solid 1px var(--primary-red);
+}
+
+.btn-outline-red {
+    border: solid 1px var(--primary-red);
+    color: var(--primary-red);
+}
+
+.btn-outline-red:hover, .btn-outline-red:focus, .btn-outline-red:active {
     background: rgb(var(--rgb-primary-red));
     color: var(--true-white);
     border: solid 1px var(--primary-red);
@@ -761,3 +773,75 @@ nav .sub-menu .sub-menu-title>a {
 #maintenance-desc {
     padding : 100px 0;
 }
+#service-header {
+    min-height: 90vh;
+}
+
+#service-header h1 {
+    padding-top: 180px;
+    padding-bottom: 100px;
+}
+
+#hero-description a {
+    margin-top : 40px;
+}
+
+#hero-list li {
+    margin-left: 74px;
+    margin-bottom: 15px;
+}
+
+#hero-list li::before {
+    display: block;
+    position: relative;
+    content: "";
+    width: 54px;
+    top: 20px;
+    left: -74px;
+    height: 3px;
+    background-color: var(--primary-red);
+}
+
+#hero-list a {
+    font-size: 24px;
+    font-family: futura-pt, 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+/* Services */ 
+
+.service {
+    padding: 150px 0;
+}
+
+.service h2 {
+    margin-bottom: 40px;
+}
+
+.service .service-image > img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+/* Accordions */
+.accordion {
+    padding: 25px 0;
+    border-bottom: 1px solid;
+}
+
+.accordion > h3 {
+    margin: 0;
+    margin-right: 15px;
+}
+
+.accordion .plus-sign {
+    float: right;
+}
+
+.accordion > p {
+    display: none;
+}
+
+
+/* .Services */

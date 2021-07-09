@@ -2,7 +2,7 @@
 
 /* Curves */
 .curve {
-    z-index: 10;
+    z-index: -1;
 }
 
 .curve-small-top {
@@ -105,6 +105,17 @@
 }
 
 .btn-outline-white:hover, .btn-outline-white:focus, .btn-outline-white:active {
+    background: rgb(var(--rgb-primary-red));
+    color: var(--true-white);
+    border: solid 1px var(--primary-red);
+}
+
+.btn-outline-red {
+    border: solid 1px var(--primary-red);
+    color: var(--primary-red);
+}
+
+.btn-outline-red:hover, .btn-outline-red:focus, .btn-outline-red:active {
     background: rgb(var(--rgb-primary-red));
     color: var(--true-white);
     border: solid 1px var(--primary-red);

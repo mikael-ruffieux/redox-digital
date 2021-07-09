@@ -16,11 +16,13 @@ Bienvenue |
     </div>
 </section>
 
+<!--
 <div class="curve curve-medium-top">
     <svg xmlns="http://www.w3.org/2000/svg" width="100vw" height="auto" viewBox="0 0 1920 360" preserveAspectRatio="none">
         <path fill="#fff" d="M1920,0C1296,360,0,360,0,360H1920Z"/>
     </svg>
-</div>
+</div>-->
+@include('layouts.curves.curve-medium-top-right-white')
 
 <section class="bg-white maintenance-page" id="maintenance-desc">
     <div class="container">
@@ -50,11 +52,7 @@ Bienvenue |
     </div>
 </section>
 
-<div class="curve curve-medium-bottom">
-    <svg class="" xmlns="http://www.w3.org/2000/svg" width="100vw" height="auto" viewBox="0 0 1920 360" preserveAspectRatio="none">
-        <path fill="#fff" d="M1920,360C1296,0,0,0,0,0H1920Z"/>
-    </svg>
-</div>
+@include('layouts.curves.curve-medium-bottom-right-white')
     
 <section id="map-container">    
     <div id="map"></div>
