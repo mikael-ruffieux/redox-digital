@@ -34,6 +34,7 @@ Route::post('contact', [ContactController::class,'validateAndSendForm']);
 // ##### Routes privées pendant le développement #####
 Route::prefix('dev')->middleware('auth')->group(function () {
     Route::get('/', [PublicPagesController::class, 'home'])->name('home');
+    Route::view('maintenance', 'public.maintenance')->name('maintenance');
 
     // à voir si on garde ce système, ou si on fait 2 chemins & méthodes
     Route::get('nos-services-de-{type}', [PublicPagesController::class, 'services'])->name('services');

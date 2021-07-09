@@ -1,12 +1,24 @@
 footer {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    border-top: 5px solid var(--primary-red);
+    padding-top: 80px;
+    padding-bottom: 40px;
     background-color: var(--primary-black);
     color: var(--true-white);
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+footer h4 {
+    font-size: 14px;
+    text-transform: none;
+    margin-bottom: 10px;
+}
+
+footer ul>li, footer ul>li>a {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 0.05em;
 }
 
 /* Footer top */
@@ -27,15 +39,12 @@ footer {
     align-self: center;
 }
 
-#footer-top ul>li {
-    margin-top: 26px;
-}
-
 
 /* Footer bottom */
 
 #footer-bottom {
     padding-top: 30px;
+    align-items: flex-end
 }
 
 #footer-bottom i, #footer-bottom p, #footer-bottom a {
@@ -45,6 +54,11 @@ footer {
 
 #footer-icons-list {
     display: flex;
+    margin: 0;
+}
+
+#footer-icons-list>li {
+    margin: 0;
 }
 
 #footer-icons-list i{

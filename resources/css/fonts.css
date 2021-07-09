@@ -1,11 +1,11 @@
 /* Font families */
 
 h1 {
-    font-family: futura-pt, 'Poppins', sans-serif;
-    font-weight: 500;
+    font-family: futura-pt-bold, 'Poppins', sans-serif;
+    font-weight: 700;
     font-style: normal;
-    letter-spacing: 8.4px;
-    font-size: 84px;
+    letter-spacing: 4px;
+    font-size: 80px;
     line-height: 100%;
 }
 
@@ -50,6 +50,10 @@ a:hover {
     color: var(--primary-red);
     text-decoration: none;
     transition: color 0.2s linear;
+}
+
+.no-cap {
+    text-transform: none!important;
 }
 
 /* Font families mobile */

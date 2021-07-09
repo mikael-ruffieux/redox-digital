@@ -121,6 +121,21 @@
             </div>
         </div>
 
+        <!-- Galerie -->
+        <div class="row">
+            <div class="col-12">
+                <hr>
+                <h3>Galerie photos</h3>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="images">Ajouter des photos</label><br>
+                    <input type="file" id="images" name="images[]" accept="image/png, image/jpeg" multiple>
+                    {!! $errors->first('images', '<small class="help-block text-danger">:message</small>') !!}
+                </div>
+            </div>
+        </div>
+
         <!-- Champs spécifiques au type (gérer l'affichage en JS) -->
         <div class="row section" id="type-none">
             <div class="col-12">

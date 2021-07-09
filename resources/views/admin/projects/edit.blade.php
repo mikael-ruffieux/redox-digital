@@ -122,6 +122,26 @@
             </div>
         </div>
 
+        <!-- Galerie -->
+        <div class="row">
+            <div class="col-12">
+                <hr>
+                <h3>Galerie photos</h3>
+            </div>
+            @foreach ($project->images as $image)
+            <div class="col-md-3 col-sm-6 col-12">
+                <img src="{{asset($image->url)}}"><br>
+            </div>                
+            @endforeach
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="images">Ajouter des photos</label><br>
+                    <input type="file" id="images" name="images[]" accept="image/png, image/jpeg" multiple>
+                    {!! $errors->first('images', '<small class="help-block text-danger">:message</small>') !!}
+                </div>
+            </div>
+        </div>
+
         <!-- Champs spécifiques au type (gérer l'affichage en JS) -->
         @switch($project->projectable_type)
             @case("App\Models\ProjectMarketing")

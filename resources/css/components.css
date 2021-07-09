@@ -1,5 +1,31 @@
 /* CSS for small components, like buttons or inputs */ 
 
+/* Curves */
+.curve {
+    z-index: 10;
+}
+
+.curve-small-top {
+    height: 100px;
+    margin-top: -100px;
+}
+
+.curve-small-bottom {
+    height: 100px;
+    margin-bottom: -100px;
+}
+
+.curve-medium-top {
+    height: 200px;
+    margin-top: -200px;
+}
+
+.curve-medium-bottom {
+    height: 200px;
+    margin-bottom: -200px;
+}
+
+
 /* Color classes */ 
 .red-dot::after {
     content: ".";
@@ -17,6 +43,10 @@
     padding: 5px 15px;
     transition: background 0.8s ease-in-out;
     transition: color 0.2s linear;
+}
+
+.btn-sm {
+    font-size: .875rem;
 }
 
 .btn-100 {
@@ -57,6 +87,41 @@
     background: rgb(var(--rgb-primary-red));
     color: var(--true-white);
     border: none;
+}
+
+.btn-outline-black {
+    border: solid 1px var(--primary-black);
+}
+
+.btn-outline-black:hover, .btn-outline-black:focus, .btn-outline-black:active {
+    background: rgb(var(--rgb-primary-red));
+    color: var(--true-white);
+    border: solid 1px var(--primary-red);
+}
+
+.btn-outline-white {
+    border: solid 1px var(--true-white);
+    color: var(--true-white);
+}
+
+.btn-outline-white:hover, .btn-outline-white:focus, .btn-outline-white:active {
+    background: rgb(var(--rgb-primary-red));
+    color: var(--true-white);
+    border: solid 1px var(--primary-red);
+}
+
+.btn-black {
+    background-color: var(--primary-black);
+    border: solid 1px var(--primary-black);
+    /*padding: 15px 20px;
+    border-radius: 30px;*/
+    color: var(--true-white);   
+}
+
+.btn-black:hover, .btn-black:focus, .btn-black:active {
+    background: rgb(var(--rgb-primary-red));
+    color: var(--true-white)!important;
+    border: solid 1px var(--primary-red);
 }
 
 #contact-btn {

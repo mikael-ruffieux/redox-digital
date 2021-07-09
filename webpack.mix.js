@@ -20,6 +20,8 @@ const mix = require('laravel-mix');
     'resources/css/footer.css',
     'resources/css/menu.css',
     'resources/css/contact.css',
+    'resources/css/map.css',
+    'resources/css/maintenance-page.css',
 ], 'public/css/all.css');
 
 mix.js('resources/js/app.js', 'public/js')

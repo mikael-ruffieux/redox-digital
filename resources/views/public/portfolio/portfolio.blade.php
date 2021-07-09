@@ -6,4 +6,5 @@ Portfolio |
 
 @section("content")
 Portfolio (dynamic)
+{{$projects[0]->title}}
 @endsection

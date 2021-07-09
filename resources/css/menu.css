@@ -43,7 +43,7 @@ nav .main-menu>ul {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin: 0;
 }
 
@@ -54,12 +54,13 @@ nav .main-menu>ul>li {
 }
 
 nav .main-menu>ul>li>a {
+    font-size: 16px;
     font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    letter-spacing: 0.05em;
 
     display: flex;
     align-self: center;
+    margin-left: 25px;
 }
 
 nav .main-menu>ul>li:hover>a, nav .main-menu>ul>li>a:active {
@@ -97,6 +98,7 @@ nav .sub-menu ul {
 
 nav .sub-menu ul li>a {
     font-weight: 700;
+    font-size: 16px;
 }
 
 nav .sub-menu ul li:not(.sub-menu-title) {
@@ -129,5 +131,30 @@ nav .sub-menu .sub-menu-title>a {
     margin-left: 5px;
     font-size: 75%;
 }
+
+/* Social icons */
+#socials {
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    bottom: 25px;
+    right: 25px;
+    flex-direction: column;
+}
+
+#socials > a {
+    margin-bottom: 10px;
+}
+
+#socials .fa-circle {
+    color: var(--primary-black);
+}
+
+#socials>a:hover .fa-circle {
+    color: var(--primary-red);
+}
+
+
+
 /* /Nav menu */ 
 

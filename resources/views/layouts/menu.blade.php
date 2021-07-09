@@ -32,11 +32,41 @@
                 <li><a href="{{route('portfolio')}}">Portfolio</a></li>
                 <li><a href="{{route('about')}}">À propos</a></li>
                 <li><a href="{{route('contact')}}">Contact</a></li>
+                <li><a class="btn btn-black" href="{{route('contact')}}">Un project en tête ?</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
+<div id="socials">
+    <a href="#" target="_blank">
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+    <a href="https://www.instagram.com/redoxdigital.ch/" target="_blank">
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+    <a href="https://www.linkedin.com/company/redox-digital" target="_blank">
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+    <a href="#" target="_blank">
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</div>
+
+<!--
 <div id="contact-btn">
     <a href="{{route('contact.intro')}}"><i class="fas fa-comment-dots"></i></a>
 </div>
+-->

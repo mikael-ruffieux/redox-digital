@@ -1,0 +1,14 @@
+#map-container {
+    width: 100vw;
+    height: 700px;
+}
+
+#map {
+    width: 100vw;
+    height: 700px;
+    z-index: -10;
+}
+
+.leaflet-control-attribution a {
+    font-size: 12px;
+}
