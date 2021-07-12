@@ -22,7 +22,7 @@ Bienvenue |
         <path fill="#fff" d="M1920,0C1296,360,0,360,0,360H1920Z"/>
     </svg>
 </div>-->
-@include('layouts.curves.curve-medium-top-right-white')
+@include('layouts.curves.curve-medium-bottom-right', ['color' => '#fff'])
 
 <section class="bg-white maintenance-page" id="maintenance-desc">
     <div class="container">
@@ -52,7 +52,7 @@ Bienvenue |
     </div>
 </section>
 
-@include('layouts.curves.curve-medium-bottom-right-white')
+@include('layouts.curves.curve-medium-top-right', ['color' => '#fff'])
     
 <section id="map-container">    
     <div id="map"></div>

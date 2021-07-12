@@ -34,6 +34,8 @@
 
 html {
     color: var(--primary-black);
+    scroll-behavior: smooth;
+
 }
 
 body {
@@ -49,6 +51,13 @@ body {
     color: var(--primary-red)!important;
 }
 
+.bg-dark {
+    background-color: var(--primary-black)!important;
+}
+
+.bg-dark p, .bg-dark h2, .bg-dark h3 {
+    color: var(--true-white);
+}
 
 /* Gradient */
 

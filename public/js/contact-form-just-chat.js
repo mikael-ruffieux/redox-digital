@@ -55,6 +55,7 @@ const changePage = (event) => {
 
 }
 
+/*
 const pressEnter = (event) => {
     if(event.key === 'Enter') {
         let newHash = parseInt(window.location.hash.slice(-1)) + 1;
@@ -66,7 +67,9 @@ const pressEnter = (event) => {
         }
     }
 }
+*/
 
 window.addEventListener("hashchange", changePage);
-window.addEventListener("keypress", pressEnter);
+/*
+window.addEventListener("keypress", pressEnter);*/
 changePage();

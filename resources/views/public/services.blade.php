@@ -13,11 +13,11 @@ Nos services |
         <div class="col-12 col-md-6" id="hero-description">
             <p>{{$parent->description}}</p>
 
-            
-
             <a class="btn btn-100 btn-outline-red" href="{{route('services', [$other->getSlug()])}}">
                 Voir les services de {{Illuminate\Support\Str::lower($other->title)}}
             </a>
+
+            <a href="#{{$services->first()->getSlug()}}" id="bouncing-arrow"><i class="fal fa-arrow-down"></i></a>
 
         </div>
         <div class="col-12 col-md-6" id="hero-list">
@@ -30,39 +30,46 @@ Nos services |
     </div>
 </section>
 
-@include('layouts.curves.curve-medium-top-right-dark')
+@include('layouts.curves.curve-medium-bottom-right', ['color' => '#2b2323'])
 
-<div class="container">
+<div class="bg-dark">
 
 <?php $i = 0; ?>
 
 @foreach ($services as $service)
 
     @if($i == ceil((sizeof($services)+1)/2))
-    <hr>
-    <p>change color</p>
-    <hr>
+</div> <!-- end of bg-dark -->
+@include('layouts.curves.curve-medium-top-right', ['color' => '#2b2323'])
+<div class="services-second-part">
     @endif
-
+<div class="container">
     <section id="{{$service->getSlug()}}" class="service row">
     <!-- gauche / droite -->
     @if($i%2) 
-        <div class="col-12 col-md-4 service-image">
+        <div class="col-12 col-md-5 col-lg-4 service-image">
             <img src="{{asset($service->image)}}" alt="{{$service->title}}">
         </div>
 
-        <div class="col-0 col-md-1"><!-- spacer --></div>
+        <div class="col-1 d-none d-lg-block"><!-- spacer --></div>
 
         <div class="col-12 col-md-7">
             <h2 class="red-dot">{{$service->title}}</h2>
             <p>{{$service->description}}</p>
         
             @if(sizeof($service->accordions))
-            <div class="accordion-list">
+            <div class="accordion-list" id="accordion{{$service->id}}">
                 @foreach ($service->accordions as $accordion)
                 <div class="accordion">
-                    <h3>{{$accordion->title}}<span class="plus-sign"><i class="fal fa-plus"></i></span></h3>
-                    <p>{{$accordion->description}}</p>
+                    <h3 class="accordion-title" id="accordion-title-{{$accordion->id}}">
+                        <button data-toggle="collapse" data-target="#accordion-content-{{$accordion->id}}" aria-expanded="true" aria-controls="accordion-content-{{$accordion->id}}">
+                            {{$accordion->title}}<span class="plus-sign"><i class="fal fa-plus"></i></span>
+                        </button>
+                    </h3>
+                
+                    <div id="accordion-content-{{$accordion->id}}" class="collapse" aria-labelledby="accordion-title-{{$accordion->id}}" data-parent="#accordion{{$service->id}}">
+                        <p class="accordion-content">{{$accordion->description}}</p>  
+                    </div>
                 </div>
                 @endforeach
             </div>
@@ -74,31 +81,41 @@ Nos services |
             <p>{{$service->description}}</p>
         
             @if(sizeof($service->accordions))
-            <div class="accordion-list">
+
+            <div class="accordion-list" id="accordion{{$service->id}}">
                 @foreach ($service->accordions as $accordion)
                 <div class="accordion">
-                    <h3>{{$accordion->title}}<span class="plus-sign"><i class="fal fa-plus"></i></span></h3>
-                    <p>{{$accordion->description}}</p>
+                    <h3 class="accordion-title" id="accordion-title-{{$accordion->id}}">
+                        <button data-toggle="collapse" data-target="#accordion-content-{{$accordion->id}}" aria-expanded="true" aria-controls="accordion-content-{{$accordion->id}}">
+                            {{$accordion->title}}<span class="plus-sign"><i class="fal fa-plus"></i></span>
+                        </button>
+                    </h3>
+                
+                    <div id="accordion-content-{{$accordion->id}}" class="collapse" aria-labelledby="accordion-title-{{$accordion->id}}" data-parent="#accordion{{$service->id}}">
+                        <p class="accordion-content">{{$accordion->description}}</p>  
+                    </div>
                 </div>
                 @endforeach
             </div>
+
             @endif
         </div>
         
-        <div class="col-0 col-md-1"><!-- spacer --></div>
+        <div class="col-1 d-none d-lg-block"><!-- spacer --></div>
 
-        <div class="col-12 col-md-4 service-image">
+        <div class="col-12 col-md-5 col-lg-4 service-image">
             <img src="{{asset($service->image)}}" alt="{{$service->title}}">
         </div>
 
     @endif
     </section>
+</div>
 
 <?php $i ++; ?>
 @endforeach
 
 </div>
-
+<script src="{{asset('js/accordions.js')}}"></script>
 @endsection
 
 

@@ -17,9 +17,12 @@
     color: var(--true-white);
 }
 
-#contact #step4 h4 {
-    color: var(--primary-black);
+#contact h4 {
+    text-transform: none;
+    font-size: 20px;
+    letter-spacing: 0.1em;
 }
+
 
 #contact h2 {
     font-family: futura-pt, 'Poppins', sans-serif;
@@ -29,15 +32,53 @@
 #contact .page {
     max-width: 50%;
     margin-left: 80px;
+    z-index: 10;
 }
 
-#contact .page input:not([type='submit']), #contact .page textarea {
+#contact .btn-fa-white, #contact .btn[type="submit"] {
+    background-color: transparent;
+    border: solid 1px var(--true-white);
+    color: var(--true-white);
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    font-size: 28px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+#contact .btn-fa-white:hover, #contact .btn-fa-white:focus {
+    background-color: var(--true-white);
+    color: var(--primary-red);
+    transition: all 0.2s ease-in-out;
+}
+
+#contact .btn[type="submit"] {
+    width: auto;
+    font-size: 20px;
+    padding: 0 40px;
+}
+
+#contact .page input:not([type='submit']) {
     outline: none;
     border: none;
     background: transparent;
     color: var(--true-white);
-    font-size: 32px;
+    font-size: 42px;
     font-weight: bold;
+}
+
+#contact .page textarea {
+    outline: none;
+    border: none;
+    background: transparent;
+    color: var(--true-white);
+    font-size: 20px;
+    width: 100%;
+    min-height: 200px;
 }
 
 #contact .page input::placeholder, #contact .page textarea::placeholder {
@@ -72,12 +113,22 @@
     width: 100%;
 }
 
+#contact .navigation {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
 #contact .slider {
+    display: flex;
     width: 100%;
+    margin-top: 40px;
 }
 
 #contact .slider h4 {
-    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: futura-pt, 'Poppins', sans-serif;
 }
 
 #contact .slider>ul {
@@ -86,20 +137,89 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     margin: 0;
-    border-bottom: solid 2px black;
-    z-index: -10;
+    margin-left: 40px;
+    border-bottom: solid 2px var(--true-white);
+    z-index: 0;
+    width: 100%;
+    height: 10px;
 }
 
-#contact .slider>ul:after {
-    /*
-    content: "";
-    background: black;
-    position: absolute;
-    height: 2px;
-    width: 100%;*/
-}
-
-#contact .slider>ul>li>a {
+#contact .slider > ul > li > a {
+    color: var(--true-white);
+    background-color: var(--primary-red);
+    border-radius: 100%;
     position: relative;
-    top: 17px;
+    font-size: 20px;
+    line-height: 20px;
+    top: -1px;
+}
+
+#contact .slider > ul > li:last-of-type > a {
+    right: -1px;
+}
+
+#return-button > a {
+    background-color: var(--true-white);
+    color: var(--primary-black);
+    font-size: 30px;
+    z-index: 10;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#return-button > a:hover, #return-button > a:focus {
+    background-color: var(--primary-red);
+    color: var(--true-white);
+    transition: all 0.2s ease-in-out;
+}
+
+#curve-top {
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: 20vh;
+}
+
+#curve-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 50vh;
+    z-index: 0;
+}
+
+#step0 a {
+    margin-top: 30px;
+    padding: 8px 30px;
+}
+
+#contact .checkbox input {
+    position: absolute;
+	left: -9999px;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+
+
+#contact .checkbox label {
+    position: relative;
+	display: inline-block;
+    background-color: var(--true-white);
+    color: var(--primary-red);
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#contact .checkbox input:checked + label {
+    background-color: var(--primary-red);
+    color: var(--true-white);
+    transition: all 0.2s ease-in-out;
 }

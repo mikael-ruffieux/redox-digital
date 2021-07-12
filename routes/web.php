@@ -50,21 +50,49 @@ Route::prefix('dev')->middleware('auth')->group(function () {
     Route::prefix('contact')->group(function () {
         Route::view('/', 'public.contact.contact')->name('contact');
         Route::view('intro', 'public.contact.contact-form')->name('contact.intro');
-        Route::view('just-chat', 'public.contact.contact-just-chat')->name('contact.just-chat');
-        Route::view('start-a-project', 'public.contact.contact-start-a-project')->name('contact.start-a-project');
 
-        Route::post('just-chat', [ContactController::class, 'sendChatForm'])->name('contact.send-chat');
-        Route::post('start-a-project', [ContactController::class, 'sendProjectForm'])->name('contact.send-project');
-    });
+        Route::prefix('just-chat')->group(function () {
+            Route::view('step-1', 'public.contact.contact-form-name', ['step' => 1, 'steps' => 4, 'next' => 'chat.mail', 'prev' => false, 'chat' => true])->name('contact.chat.name');
+            Route::post('step-1', [ContactController::class, 'postName'])->name('contact.chat.name.post');
 
-    // à enlever à la fin
-    Route::view('example', 'view_example_page');
-    
+            Route::view('step-2', 'public.contact.contact-form-mail', ['step' => 2, 'steps' => 4, 'next' => 'chat.message', 'prev' => 'chat.name', 'chat' => true])->name('contact.chat.mail');
+            Route::post('step-2', [ContactController::class, 'postMail'])->name('contact.chat.mail.post');
+
+            Route::view('step-3', 'public.contact.contact-form-message', ['step' => 3, 'steps' => 4, 'next' => 'chat.summary', 'prev' => 'chat.mail', 'chat' => true])->name('contact.chat.message');
+            Route::post('step-3', [ContactController::class, 'postMessage'])->name('contact.chat.message.post');
+            
+            Route::get('summary', [ContactController::class, 'showSummary'])->name('contact.chat.summary');
+            Route::post('summary', [ContactController::class, 'send'])->name('contact.send');
+        });
+
+        Route::prefix('start-a-project')->group(function () {
+            Route::view('step-1', 'public.contact.contact-form-name', ['step' => 1, 'steps' => 6, 'next' => 'start.mail', 'prev' => false, 'chat' => false])->name('contact.start.name');
+            Route::post('step-1', [ContactController::class, 'postName'])->name('contact.start.name.post');
+
+            Route::view('step-2', 'public.contact.contact-form-mail', ['step' => 2, 'steps' => 6, 'next' => 'start.project-type', 'prev' => 'start.name', 'chat' => false])->name('contact.start.mail');
+            Route::post('step-2', [ContactController::class, 'postMail'])->name('contact.start.mail.post');
+
+            Route::view('step-3', 'public.contact.contact-form-project-type', ['step' => 3, 'steps' => 6, 'next' => 'start.budget', 'prev' => 'start.mail', 'chat' => false])->name('contact.start.project-type');
+            Route::post('step-3', [ContactController::class, 'postProjectType'])->name('contact.start.project-type.post');
+
+            Route::view('step-4', 'public.contact.contact-form-budget', ['step' => 4, 'steps' => 6, 'next' => 'start.message', 'prev' => 'start.project-type', 'chat' => false])->name('contact.start.budget');
+            Route::post('step-4', [ContactController::class, 'postBudget'])->name('contact.start.budget.post');
+
+            Route::view('step-5', 'public.contact.contact-form-message', ['step' => 5, 'steps' => 6, 'next' => 'start.summary', 'prev' => 'start.budget', 'chat' => false])->name('contact.start.message');
+            Route::post('step-5', [ContactController::class, 'postMessage'])->name('contact.start.message.post');
+            
+            Route::get('summary', [ContactController::class, 'showSummary'])->name('contact.start.summary');
+            Route::post('summary', [ContactController::class, 'send'])->name('contact.send');
+
+        });
+    });    
 });
 
 
 // ##### Routes privées #####
 Route::prefix('admin')->middleware('auth')->group(function () {
+    Route::get('/', function () { return redirect(route('admin.home')); });
+
     Route::get('home', [AdminController::class, 'home'])->name('admin.home');
     Route::get('logout', [LoginController::class, 'logout']);
 

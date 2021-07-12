@@ -1,9 +1,11 @@
+
 <nav>
     <div class="container">
         <a href="{{route('home')}}" class="logo">
             <img src="{{ asset('storage/assets/img/logo/Redox-Digital_Logotype-final_Redox-Digital_Logotype-noir-rouge.svg') }}" alt="Redox Digital">
         </a>
-        <div class="main-menu">
+        <!-- desktop menu -->
+        <div class="main-menu d-none d-lg-block">
             <ul>
                 <li><a href="{{route('home')}}">Accueil</a></li>
                 <li class="sub-menu">
@@ -32,8 +34,14 @@
                 <li><a href="{{route('portfolio')}}">Portfolio</a></li>
                 <li><a href="{{route('about')}}">À propos</a></li>
                 <li><a href="{{route('contact')}}">Contact</a></li>
-                <li><a class="btn btn-black" href="{{route('contact')}}">Un project en tête ?</a></li>
+                <li><a class="btn btn-black" href="{{route('contact.intro')}}">Un project en tête ?</a></li>
             </ul>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="main-menu d-block d-lg-none">
+            hello dis is mobile
+
         </div>
     </div>
 </nav>

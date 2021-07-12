@@ -1,4 +1,4 @@
-@include('layouts.curves.curve-small-bottom-left-dark')
+@include('layouts.curves.curve-small-bottom-left', ['color' => '#2b2323'])
 <footer>
     <div class="container">
         <div id="footer-top" class="row">
@@ -13,7 +13,7 @@
                     <li>Neuchâtel - La Gruyère</li>
                     <li><a href="mailto:info@redoxdigital.ch">info@redoxdigital.ch</a></li>
                 </ul>
-                <a href="#" class="btn btn-sm btn-outline-white mt-3">Un projet en tête ?</a>
+                <a href="{{route('contact.intro')}}" class="btn btn-sm btn-outline-white mt-3">Un projet en tête ?</a>
             </div>
             <div class="col-12 col-md-3">
                 <h4>Navigation</h4>
