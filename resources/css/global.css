@@ -24,12 +24,14 @@
     --rgb-secondary-red: 199, 36, 0;
     --rgb-third-red: 113, 11, 0;
 
+    --rgb-primary-black: 43, 35, 35;
+
     --primary-black: #2B2323;
     --secondary-black: #868686;
 
     --true-black: #000000;
 
-    --main-menu-height: 100px;
+    --main-menu-height: 10vh;
 }
 
 html {
@@ -44,7 +46,7 @@ body {
     margin: 0;
 
     display:grid;
-    grid-template-rows: 100px 1fr auto;
+    grid-template-rows: 10vh 1fr auto;
 }
 
 .color-primary {

@@ -14,7 +14,7 @@ class PublicPagesController extends Controller
 
     public function home() {
         // taking the 3 last active projects
-        $projects = Project::where('archived', 0)->orderBy('date')->take(3);
+        $projects = Project::where('archived', 0)->orderBy('date')->take(3)->get();
 
         return view("public.home", compact('projects'));
     }

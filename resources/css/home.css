@@ -1,0 +1,112 @@
+.fullpage-section {
+    min-height: 80vh;
+}
+
+#home-page h1 {
+    margin-top: 10vh;
+}
+
+#home-page h2 {
+    margin-bottom: 5vh;
+}
+
+#home-page h3 {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+#home-header p {
+    margin: 3vh auto;
+}
+
+#home-page section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+#home-services-cta {
+    padding: 0!important;
+}
+
+#home-services-cta .iframe-container {
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+}
+
+#home-services-cta > .content-container {
+    position: absolute;
+    display: flex;
+    left: 0;
+    right: 0;
+    height: 90vh;
+    background: rgba(var(--rgb-primary-black), 0.5);
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#home-services-cta .iframe-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.btn-home-services {
+    font-size: 24px;
+    font-family: futura-pt-bold, 'Poppins', sans-serif;
+    font-weight: 700;
+    color: white;
+    width: 40vw;
+    transition: all 0.2s ease-in-out;
+    border-width: 1px;
+}
+
+.btn-home-services:hover, .btn-home-services:focus {
+    background-color: var(--true-white);
+    transition: all 0.2s ease-in-out;
+    border-color: var(--true-white);
+}
+
+/* Projects */ 
+
+#home-portfolio h3, #home-portfolio h5, #home-portfolio a {
+    color: var(--true-white);
+}
+
+#home-portfolio .project h3 {
+    font-weight: 500;
+    font-size: 35px;
+    text-transform: none;
+    line-height: 120%;
+    margin: 5vh 0;
+}
+
+#home-portfolio .categories {
+    margin-bottom: 5vh;
+}
+
+#home-portfolio .categories > .category {
+    font-size: 16px;
+    font-family: futura-pt, 'Poppins', sans-serif;
+    opacity: 0.75;
+}
+
+#home-portfolio .categories > .category::after {
+    content: ", ";
+}
+
+#home-portfolio .categories > .category:last-of-type:after {
+    content: "";
+}
+
+#home-portfolio .project {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+#home-portfolio .project img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}

@@ -31,10 +31,22 @@ h3 {
     line-height: 100%;
 }
 
+h3 > .number {
+    font-size: 48px;
+}
+
 h4 {
     letter-spacing: 1.4px;
     font-size: 14px;
     text-transform: uppercase;
+}
+
+h5 {
+    font-family: futura-pt, 'Poppins', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 p, a {
@@ -45,6 +57,10 @@ p, a {
     font-size: 20px;
     line-height: 150%;
 }
+
+button, input, optgroup, select, textarea {
+    font-family: futura-pt, 'Poppins', sans-serif;
+} 
 
 a:hover {
     color: var(--primary-red);
@@ -57,7 +73,7 @@ a:hover {
 }
 
 /* Font families mobile */
-@media only screen and (max-width: 576px) {
+@media (max-width: 991px) {
     h1 {
         font-size: 36px;
     }

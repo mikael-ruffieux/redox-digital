@@ -82,7 +82,7 @@
 
 .service .service-image > img {
     max-width: 100%;
-    border-radius: 15px;
+    border-radius: 20px;
 }
 
 .services-second-part {
@@ -122,13 +122,29 @@
     width: 100%;
 }
 
-.accordion > h3 > button:focus, .accordion > h3 > button:hover {
+.accordion > h3 > button:hover {
     outline: none;
     color: var(--primary-red);
+    transition: color 0.2s ease-in-out;
+}
+
+.accordion > h3 > button:focus {
+    outline: none;
 }
 
 .accordion .plus-sign {
     float: right;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 300;
+}
+
+.accordion .plus-sign::before {
+    content: "\f067";
+}
+
+.accordion button[aria-expanded="true"] .plus-sign::before {
+    content: "\f068";
+    transition: content 0.5s ease-in-out;
 }
 
 .accordion-content {
@@ -136,5 +152,29 @@
     margin: 0;
 }
 
+/* Mobile */
+@media (max-width: 767px) {
+    #bouncing-arrow {
+        display: none;
+    }
+
+    #hero-list > ul {
+        margin: 5vh 0;
+    }
+
+    .service p {
+        margin: 0;
+    }
+
+    .service .accordion-list {
+        margin: 5vh 0;
+    }
+}
+
+/* Tablette */ 
+@media (max-width: 991px) { 
+
+}
 
 /* .Services */
+

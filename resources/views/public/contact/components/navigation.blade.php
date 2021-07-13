@@ -1,7 +1,7 @@
 <div class="navigation">
     <a class="btn btn-fa-white" href="{{$prev == false ? url()->previous() : route('contact.'.$prev)}}"><i class="fas fa-arrow-left"></i></a>
     @if($step == $steps)
-    <button class="btn btn-fa-white" type="submit">
+    <button class="btn btn-fa-white" id="send-btn" type="submit">
         Envoyer
     </button>
     @else

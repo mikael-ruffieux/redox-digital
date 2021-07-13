@@ -62,8 +62,8 @@ Nos services |
                 @foreach ($service->accordions as $accordion)
                 <div class="accordion">
                     <h3 class="accordion-title" id="accordion-title-{{$accordion->id}}">
-                        <button data-toggle="collapse" data-target="#accordion-content-{{$accordion->id}}" aria-expanded="true" aria-controls="accordion-content-{{$accordion->id}}">
-                            {{$accordion->title}}<span class="plus-sign"><i class="fal fa-plus"></i></span>
+                        <button data-toggle="collapse" data-target="#accordion-content-{{$accordion->id}}" aria-expanded="false" aria-controls="accordion-content-{{$accordion->id}}">
+                            {{$accordion->title}}<span class="plus-sign"></span>
                         </button>
                     </h3>
                 
@@ -86,8 +86,8 @@ Nos services |
                 @foreach ($service->accordions as $accordion)
                 <div class="accordion">
                     <h3 class="accordion-title" id="accordion-title-{{$accordion->id}}">
-                        <button data-toggle="collapse" data-target="#accordion-content-{{$accordion->id}}" aria-expanded="true" aria-controls="accordion-content-{{$accordion->id}}">
-                            {{$accordion->title}}<span class="plus-sign"><i class="fal fa-plus"></i></span>
+                        <button data-toggle="collapse" data-target="#accordion-content-{{$accordion->id}}" aria-expanded="false" aria-controls="accordion-content-{{$accordion->id}}">
+                            {{$accordion->title}}<span class="plus-sign"></span>
                         </button>
                     </h3>
                 
@@ -114,8 +114,16 @@ Nos services |
 <?php $i ++; ?>
 @endforeach
 
+<div class="row">
+    <div class="col-0 col-md-6"><!-- spacer --></div>
+    <div class="col-md-6">
+        <a class="btn btn-100 btn-outline-red" href="{{route('services', [$other->getSlug()])}}">
+            Voir les services de {{Illuminate\Support\Str::lower($other->title)}}
+        </a>
+    </div>
 </div>
-<script src="{{asset('js/accordions.js')}}"></script>
+
+</div>
 @endsection
 
 

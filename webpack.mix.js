@@ -22,6 +22,7 @@ const mix = require('laravel-mix');
     'resources/css/contact.css',
     'resources/css/map.css',
     'resources/css/maintenance-page.css',
+    'resources/css/home.css',
     'resources/css/services.css',
 ], 'public/css/all.css');
 
