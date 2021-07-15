@@ -6,6 +6,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\AccordionController;
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PublicPagesController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
@@ -98,6 +99,11 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 
     Route::resource('clients', ClientController::class);
     Route::resource('projects', ProjectController::class);
+
+    Route::get('projects/{project_id}/gallery', [ImageController::class, 'index'])->name('project.gallery');
+    Route::post('projects/{project_id}/gallery', [ImageController::class, 'add'])->name('project.gallery.add');
+    Route::delete('projects/{project_id}/gallery/{image_id}', [ImageController::class, 'destroy'])->name('project.gallery.destroy');
+
     Route::resource('services', ServiceController::class);
     Route::get('services/{service_id}/accordion/create', [AccordionController::class, 'create'])->name('accordions.create');
     Route::resource('accordions', AccordionController::class)->only('destroy', 'update', 'store');

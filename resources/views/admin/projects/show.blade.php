@@ -124,11 +124,17 @@
                 <hr>
                 <h3>Galerie photos</h3>
             </div>
-            @foreach ($project->images as $image)
-            <div class="col-md-3 col-sm-6 col-12">
-                <img src="{{asset($image->url)}}">
-            </div>                
-            @endforeach
+            @if (sizeof($project->images) == 0)
+                <div class="col-12"><i>Ce projet n'a pas de galerie.</i></div>
+            @else
+                @foreach ($project->images as $image)
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="bg-white p-3 mt-3 rounded shadow">
+                        <img src="{{asset($image->url)}}" style="width: 100%; height: auto;">
+                    </div>
+                </div>                
+                @endforeach
+            @endif
         </div>
         
 

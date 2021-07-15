@@ -9,6 +9,8 @@ class Image extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     protected $fillable = ['project_id', 'url'];
 
     public function project() {

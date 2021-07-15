@@ -8,6 +8,7 @@ use App\Models\Project;
 use App\Models\ProjectMarketing;
 use App\Models\ProjectVideo;
 use App\Models\ProjectWeb;
+use App\Models\Image;
 
 use App\Models\Client;
 use App\Models\Service;
@@ -100,6 +101,23 @@ class ProjectController extends Controller
         $newProject['projectable_id'] = $childId;
 
         $project = Project::create($newProject);
+
+        // Gallery
+        $statement = DB::table('images')->where('id', \DB::raw("(select max(`id`) from images)"))->get();
+        $nextId = $statement[0]->id+1;
+
+        foreach ($request->file('images') as $image) {
+            $name = "$nextId.".$image->getClientOriginalExtension();
+            $destinationPath = public_path('storage/projects/'.$project->id);
+            $image->move($destinationPath, $name);
+
+            // Saving object
+            Image::create([
+                'project_id' => $project->id,
+                'url' => "storage/projects/".$project->id."/" . $name,
+            ]);
+            $nextId ++;
+        }
 
         // Saving categories
         foreach ($request->categories as $category_id) {
@@ -246,7 +264,17 @@ class ProjectController extends Controller
 
         $childProject = $project->projectable;
 
+        // Suppression de tous les fichiers d'images
+        foreach ($project->images() as $image) {
+            $image_path = public_path($image->url);
+            // Checking if file exists (for the "files" generated through the Seeders)
+            if(file_exists($image_path)) {
+                unlink($image_path);
+            }
+        }
+
         $project->images()->delete();
+
         $project->services()->detach();
 
         $project->delete();
