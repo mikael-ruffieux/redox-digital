@@ -31,9 +31,14 @@ nav {
     font-size: 28px;
 }
 
-#burger-menu > small {
+#burger-menu::after {
+    content: "menu";
     font-size: 8px;
     text-transform: uppercase;
+}
+
+#burger-menu.open::after {
+    content: "fermer";
 }
 
 #burger-menu.open .fa-times {
@@ -147,7 +152,7 @@ nav .sub-menu ul {
 }
 
 nav .sub-menu ul li>a {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 16px;
 }
 
@@ -166,11 +171,12 @@ nav .sub-menu ul li:not(.sub-menu-title)>a::after {
 nav .sub-menu .sub-menu-title {
     text-transform: uppercase;
     color: var(--secondary-black);
-    border-bottom: 3px solid var(--primary-red);
+    border-bottom: 2px solid var(--primary-red);
     padding-bottom: 3px;
 }
 
 nav .sub-menu .sub-menu-title>a {
+    letter-spacing: 0.1em;
     line-height: 100%;
 }
 
@@ -190,12 +196,12 @@ nav .sub-menu .sub-menu-title>a {
     bottom: 25px;
     right: 25px;
     flex-direction: column;
-    overflow: hidden;
     text-align: right;
 }
 
 #socials > a {
     margin-bottom: 10px;
+    font-size: 20px;
 }
 
 #socials .fa-circle {
@@ -204,7 +210,15 @@ nav .sub-menu .sub-menu-title>a {
    
 }
 
-#socials > a > small {
+#socials > a > .social-text-container {
+    position: absolute;
+    right: 20px;
+    width: 300px;
+    overflow: hidden;
+    margin-top: 2px;
+}
+
+#socials > a small {
     position: relative;
     right: -500px;
     transition: right 0.5s ease-in-out;
@@ -216,8 +230,8 @@ nav .sub-menu .sub-menu-title>a {
     padding: 5px 15px;
 }
 
-#socials > a:hover > small {
-    right: -20px;
+#socials > a:hover small {
+    right: 15px;
     transition: right 0.5s ease-in-out;
     color: var(--primary-black);
 }
@@ -280,10 +294,12 @@ nav .sub-menu .sub-menu-title>a {
         margin: 0;
         border-bottom: 1px #868686 solid;
         background-color: var(--true-white);
+        padding-left: 0;
     }
 
     #menu > li:last-of-type {
         border-bottom: none;
+        padding-top: 20px;
     }
 
     #menu > li > a {

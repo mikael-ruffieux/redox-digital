@@ -10,7 +10,7 @@ Nous contacter
     <main id="contact">
         <section class="page container" id="step1">
             <!-- Step 2 -->
-            <h4>{{$chat === false ? "Débuter un projet" : "Juste discuter"}}</h4>
+            <h3>{{$chat === false ? "Débuter un projet" : "Juste discuter"}}</h3>
             <h2 for="mail"><b>{{session('name')}}</b>, quel est <b>votre adresse e-mail</b> ?</h2>
 
             <input type="mail" name="mail" id="mail" placeholder="Votre e-mail" value="{{!empty(session('mail')) ? session('mail') : ''}}" required>

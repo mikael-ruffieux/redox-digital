@@ -17,7 +17,7 @@ footer h4 {
 footer ul>li, footer ul>li>a {
     margin: 0;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 0.05em;
 }
 
@@ -63,4 +63,42 @@ footer ul>li, footer ul>li>a {
 
 #footer-icons-list i{
     padding-right: 20px;
+}
+
+
+@media (max-width: 991px) {
+    footer h4 {
+        margin-top: 5vh;
+    }
+
+    footer h4:first-of-type {
+        margin-top: 0;
+    }
+
+    #footer-top img {
+        max-width: 60px;
+        margin-bottom: 3vh;
+    }
+
+    #footer-bottom p {
+        opacity: 0.5;
+    }
+
+    #footer-top>div:first-of-type {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #footer-icons-list {
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #footer-icons-list i {
+        padding: 3vh;
+    }
 }

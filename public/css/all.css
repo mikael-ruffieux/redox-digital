@@ -27,7 +27,7 @@
     --rgb-primary-black: 43, 35, 35;
 
     --primary-black: #2B2323;
-    --secondary-black: #868686;
+    --secondary-black: #696969;
 
     --true-black: #000000;
 
@@ -115,31 +115,32 @@ h1 {
     font-family: futura-pt-bold, 'Poppins', sans-serif;
     font-weight: 700;
     font-style: normal;
-    letter-spacing: 4px;
+    letter-spacing: 0.05em;
     font-size: 80px;
-    line-height: 100%;
-}
-
-h2, h4 {
-    font-family: futura-pt-bold, 'Poppins', sans-serif;
-    font-weight: 700;
-    font-style: normal;
+    line-height: 110%;
 }
 
 h2 {
-    letter-spacing: 2.4px;
+    font-family: futura-pt-bold, 'Poppins', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.05em;
     font-size: 48px;
     line-height: 110%;
 }
 
 h3 {
     font-family: futura-pt, 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-style: normal;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.05em;
     font-size: 24px;
-    text-transform: uppercase;
     line-height: 100%;
+}
+
+h3.all-caps {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 h3 > .number {
@@ -147,9 +148,11 @@ h3 > .number {
 }
 
 h4 {
-    letter-spacing: 1.4px;
-    font-size: 14px;
-    text-transform: uppercase;
+    font-family: futura-pt-bold, 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    font-size: 16px;
+    line-height: 21px;
 }
 
 h5 {
@@ -161,12 +164,12 @@ h5 {
 }
 
 p, a {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
     font-style: normal;
-    letter-spacing: 1px;
-    font-size: 20px;
-    line-height: 150%;
+    letter-spacing: 0.05em;
+    font-size: 16px;
+    line-height: 160%;
 }
 
 button, input, optgroup, select, textarea {
@@ -186,23 +189,23 @@ a:hover {
 /* Font families mobile */
 @media (max-width: 991px) {
     h1 {
-        font-size: 36px;
+        font-size: 40px;
     }
     
     h2 {
-        font-size: 26px;
+        font-size: 32px;
     }
     
     h3 {
-        font-size: 18px;
+        font-size: 20px;
     }
     
     h4 {
-        font-size: 14px;
+        font-size: 15px;
     }
     
     p, a {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
@@ -237,6 +240,40 @@ a:hover {
     margin-bottom: -20vh;
 }
 
+/* Contact Curves */
+.curve-bottom-container {
+    width: 100%;
+    height: 20vh;
+    margin-top: -20vh;
+    position: relative;
+}
+
+.curve-top-container {
+    width: 100%;
+    height: 20vh;
+    margin-bottom: -20vh;
+    position: relative;
+}
+
+.curve-bottom {
+    z-index: 100;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+}
+
+.curve-top {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+/* .contact curves */
+/* .Curves */
+
 .dash-black {
     display: block;
     width: 100px;
@@ -266,9 +303,9 @@ a:hover {
     border: solid 2px;
     border-radius: 25px;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 16px;
     width: fit-content;
-    padding: 5px 15px;
+    padding: 10px 20px;
     transition: background 0.8s ease-in-out;
     transition: color 0.2s linear;
 }
@@ -410,35 +447,30 @@ a:hover {
     padding-left: 10px;
 }
 
-/* Curves */
-.curve-bottom-container {
-    width: 100%;
-    height: 20vh;
-    margin-top: -20vh;
-    position: relative;
-}
-
-.curve-top-container {
-    width: 100%;
-    height: 20vh;
-    margin-bottom: -20vh;
-    position: relative;
-}
-
-.curve-bottom {
-    z-index: 100;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-}
-
-.curve-top {
-    z-index: 100;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
+@media (max-width: 991px) {
+    .curve-small-top, .curve-small-bottom {
+        height: 7vh;
+    }
+    
+    .curve-small-bottom {
+        margin-top: -7vh;
+    }
+    
+    .curve-small-top {
+        margin-bottom: -7vh;
+    }
+    
+    .curve-medium-top, .curve-medium-bottom {
+        height: 15vh;
+    }
+    
+    .curve-medium-top {
+        margin-top: -15vh;
+    }
+    
+    .curve-medium-bottom {
+        margin-bottom: -15vh;
+    }
 }
 footer {
     padding-top: 80px;
@@ -459,7 +491,7 @@ footer h4 {
 footer ul>li, footer ul>li>a {
     margin: 0;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 0.05em;
 }
 
@@ -506,6 +538,44 @@ footer ul>li, footer ul>li>a {
 #footer-icons-list i{
     padding-right: 20px;
 }
+
+
+@media (max-width: 991px) {
+    footer h4 {
+        margin-top: 5vh;
+    }
+
+    footer h4:first-of-type {
+        margin-top: 0;
+    }
+
+    #footer-top img {
+        max-width: 60px;
+        margin-bottom: 3vh;
+    }
+
+    #footer-bottom p {
+        opacity: 0.5;
+    }
+
+    #footer-top>div:first-of-type {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #footer-icons-list {
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #footer-icons-list i {
+        padding: 3vh;
+    }
+}
 nav {
     width: 100vw;
     background-color: var(--true-white);
@@ -539,9 +609,14 @@ nav {
     font-size: 28px;
 }
 
-#burger-menu > small {
+#burger-menu::after {
+    content: "menu";
     font-size: 8px;
     text-transform: uppercase;
+}
+
+#burger-menu.open::after {
+    content: "fermer";
 }
 
 #burger-menu.open .fa-times {
@@ -655,7 +730,7 @@ nav .sub-menu ul {
 }
 
 nav .sub-menu ul li>a {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 16px;
 }
 
@@ -674,11 +749,12 @@ nav .sub-menu ul li:not(.sub-menu-title)>a::after {
 nav .sub-menu .sub-menu-title {
     text-transform: uppercase;
     color: var(--secondary-black);
-    border-bottom: 3px solid var(--primary-red);
+    border-bottom: 2px solid var(--primary-red);
     padding-bottom: 3px;
 }
 
 nav .sub-menu .sub-menu-title>a {
+    letter-spacing: 0.1em;
     line-height: 100%;
 }
 
@@ -698,12 +774,12 @@ nav .sub-menu .sub-menu-title>a {
     bottom: 25px;
     right: 25px;
     flex-direction: column;
-    overflow: hidden;
     text-align: right;
 }
 
 #socials > a {
     margin-bottom: 10px;
+    font-size: 20px;
 }
 
 #socials .fa-circle {
@@ -712,7 +788,15 @@ nav .sub-menu .sub-menu-title>a {
    
 }
 
-#socials > a > small {
+#socials > a > .social-text-container {
+    position: absolute;
+    right: 20px;
+    width: 300px;
+    overflow: hidden;
+    margin-top: 2px;
+}
+
+#socials > a small {
     position: relative;
     right: -500px;
     transition: right 0.5s ease-in-out;
@@ -724,8 +808,8 @@ nav .sub-menu .sub-menu-title>a {
     padding: 5px 15px;
 }
 
-#socials > a:hover > small {
-    right: -20px;
+#socials > a:hover small {
+    right: 15px;
     transition: right 0.5s ease-in-out;
     color: var(--primary-black);
 }
@@ -788,10 +872,12 @@ nav .sub-menu .sub-menu-title>a {
         margin: 0;
         border-bottom: 1px #868686 solid;
         background-color: var(--true-white);
+        padding-left: 0;
     }
 
     #menu > li:last-of-type {
         border-bottom: none;
+        padding-top: 20px;
     }
 
     #menu > li > a {
@@ -888,7 +974,7 @@ nav .sub-menu .sub-menu-title>a {
     align-items: center;
 }
 
-#contact h2, #contact h4, #contact p {
+#contact h2, #contact h3, #contact h4, #contact p {
     color: var(--true-white);
 }
 
@@ -1036,7 +1122,7 @@ nav .sub-menu .sub-menu-title>a {
 #return-button > a {
     background-color: var(--true-white);
     color: var(--primary-black);
-    font-size: 30px;
+    font-size: 24px;
     z-index: 10;
     position: absolute;
     bottom: 30px;
@@ -1075,6 +1161,16 @@ nav .sub-menu .sub-menu-title>a {
     padding: 8px 30px;
 }
 
+#contact .checkbox-row {
+    width: 150%;
+    margin-top: 4vh;
+} 
+
+#contact .checkbox {
+    display: flex;
+    align-items: center;
+}
+
 #contact .checkbox input {
     position: absolute;
 	left: -9999px;
@@ -1085,18 +1181,89 @@ nav .sub-menu .sub-menu-title>a {
 
 
 #contact .checkbox label {
+    font-family: 'Poppins', sans-serif;
     position: relative;
 	display: inline-block;
     background-color: var(--true-white);
     color: var(--primary-red);
     padding: 10px 20px;
     cursor: pointer;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70px;
 }
 
-#contact .checkbox input:checked + label {
+#contact .checkbox input:hover + label,
+#contact .checkbox input:focus + label {
     background-color: var(--primary-red);
     color: var(--true-white);
     transition: all 0.2s ease-in-out;
+}
+
+#contact .checkbox input:checked + label {
+    border: solid var(--true-white) 2px;
+    background-color: var(--primary-red);
+    color: var(--true-white);
+    transition: all 0.2s ease-in-out;
+}
+
+
+@media (max-width: 991px) {
+    #contact .page {
+        max-width: inherit;
+        margin-left: 0;
+    }
+
+    #contact .slider {
+        flex-direction: column-reverse;
+    }
+
+    #contact .slider ul {
+        margin-left: 0;
+    }
+
+    #contact .slider h4 {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    #contact .page input:not([type='submit']) {
+        font-size: 32px;
+    }
+
+    #contact .btn-fa-white, #contact .btn[type="submit"] {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    #contact-intro .btn {
+        width: 100%;
+        margin-left: 0!important;
+        margin-bottom: 15px;
+    } 
+
+    #contact .checkbox-row {
+        width: auto;
+    } 
+
+    #curve-top {
+        position:absolute;
+        top: 0;
+        left: 0;
+        height: 15vh;
+    }
+    
+    #curve-bottom {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 20vh;
+        z-index: 0;
+    }
 }
 #map-container {
     width: 100vw;
@@ -1258,6 +1425,42 @@ nav .sub-menu .sub-menu-title>a {
     height: auto;
     border-radius: 20px;
 }
+#services-menu {
+    position: fixed;
+    top: var(--main-menu-height);
+    background-color: var(--true-white);
+    min-width: 100vw;
+    width: 1000px;
+    z-index: 10;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+#services-menu ul {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+#services-menu ul>li {
+    margin-right: 30px;
+} 
+
+#services-menu ul>li>a {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--secondary-black);
+    padding: 0 15px;
+    border-radius: 10px;
+}
+
+#services-menu ul>li>a:hover {
+    background-color: var(--primary-black);
+    color: var(--true-white);
+}
+
 #service-header {
     min-height: 90vh;
     padding-bottom: 15vh;
@@ -1336,13 +1539,30 @@ nav .sub-menu .sub-menu-title>a {
     align-items: center;
 }
 
+.service-even {
+    flex-direction: row;
+}
+
+.service-odd {
+    flex-direction: row-reverse;
+}
+
 .service h2 {
     margin-bottom: 40px;
 }
 
-.service .service-image > img {
-    max-width: 100%;
+
+.service .service-image .image-container {
     border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service .service-image img {
+    width: 100%;
+    height: 100%;
 }
 
 .services-second-part {
@@ -1427,13 +1647,43 @@ nav .sub-menu .sub-menu-title>a {
     }
 
     .service .accordion-list {
-        margin: 5vh 0;
+        margin: 0;
+        margin-top: 5vh;
     }
 }
 
-/* Tablette */ 
+/* Mobile */ 
 @media (max-width: 991px) { 
+    .service-even, .service-odd {
+        flex-direction: column-reverse;
+    }
 
+
+    .service .service-image .image-container {
+        max-height: 50vh;
+        margin-top: 5vh;
+    }
+
+    #hero-list li::before {
+        top: 14px;
+    }
+
+    #hero-list a {
+        font-size: 18px;
+    }
+
+    #service-header {
+        padding-bottom: 5vh;
+    } 
+
+    #service-header h1 {
+        padding-top: 8vh;
+        padding-bottom: 5vh;
+    }
+
+    .service {
+        padding: 10vh 0;
+    }
 }
 
 /* .Services */

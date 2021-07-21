@@ -13,9 +13,9 @@ Nos services |
         <div class="col-12 col-md-6" id="hero-description">
             <p>{{$parent->description}}</p>
 
-            <a class="btn btn-100 btn-outline-red" href="{{route('services', [$other->getSlug()])}}">
-                Voir les services de {{Illuminate\Support\Str::lower($other->title)}}
-            </a>
+            <p>
+                Pour découvrir nos autres prestations, consultez la page de <a href="{{route('services', [$other->getSlug()])}}" class="color-red">nos services de {{Illuminate\Support\Str::lower($other->title)}}</a>. 
+            </p>
 
             <a href="#{{$services->first()->getSlug()}}" id="bouncing-arrow"><i class="fal fa-arrow-down"></i></a>
 
@@ -23,7 +23,7 @@ Nos services |
         <div class="col-12 col-md-6" id="hero-list">
             <ul>
                 @foreach ($services as $service)
-                <li><h3><a href="#{{$service->getSlug()}}">{{$service->title}}</a></h3></li>
+                <li><h3 class="all-caps"><a href="#{{$service->getSlug()}}">{{$service->title}}</a></h3></li>
                 @endforeach
             </ul>
         </div>
@@ -44,11 +44,13 @@ Nos services |
 <div class="services-second-part">
     @endif
 <div class="container">
-    <section id="{{$service->getSlug()}}" class="service row">
+    <section id="{{$service->getSlug()}}" class="service row {{$i%2 ? 'service-odd' : 'service-even' }}">
     <!-- gauche / droite -->
-    @if($i%2) 
         <div class="col-12 col-md-5 col-lg-4 service-image">
-            <img src="{{asset($service->image)}}" alt="{{$service->title}}">
+            <div class="image-container">
+                <img src="{{asset($service->image)}}" alt="{{$service->title}}">
+
+            </div>
         </div>
 
         <div class="col-1 d-none d-lg-block"><!-- spacer --></div>
@@ -61,7 +63,7 @@ Nos services |
             <div class="accordion-list" id="accordion{{$service->id}}">
                 @foreach ($service->accordions as $accordion)
                 <div class="accordion">
-                    <h3 class="accordion-title" id="accordion-title-{{$accordion->id}}">
+                    <h3 class="accordion-title all-caps" id="accordion-title-{{$accordion->id}}">
                         <button data-toggle="collapse" data-target="#accordion-content-{{$accordion->id}}" aria-expanded="false" aria-controls="accordion-content-{{$accordion->id}}">
                             {{$accordion->title}}<span class="plus-sign"></span>
                         </button>
@@ -75,52 +77,21 @@ Nos services |
             </div>
             @endif
         </div>
-    @else
-        <div class="col-12 col-md-7">
-            <h2 class="red-dot">{{$service->title}}</h2>
-            <p>{{$service->description}}</p>
-        
-            @if(sizeof($service->accordions))
-
-            <div class="accordion-list" id="accordion{{$service->id}}">
-                @foreach ($service->accordions as $accordion)
-                <div class="accordion">
-                    <h3 class="accordion-title" id="accordion-title-{{$accordion->id}}">
-                        <button data-toggle="collapse" data-target="#accordion-content-{{$accordion->id}}" aria-expanded="false" aria-controls="accordion-content-{{$accordion->id}}">
-                            {{$accordion->title}}<span class="plus-sign"></span>
-                        </button>
-                    </h3>
-                
-                    <div id="accordion-content-{{$accordion->id}}" class="collapse" aria-labelledby="accordion-title-{{$accordion->id}}" data-parent="#accordion{{$service->id}}">
-                        <p class="accordion-content">{{$accordion->description}}</p>  
-                    </div>
-                </div>
-                @endforeach
-            </div>
-
-            @endif
-        </div>
-        
-        <div class="col-1 d-none d-lg-block"><!-- spacer --></div>
-
-        <div class="col-12 col-md-5 col-lg-4 service-image">
-            <img src="{{asset($service->image)}}" alt="{{$service->title}}">
-        </div>
-
-    @endif
     </section>
 </div>
 
 <?php $i ++; ?>
 @endforeach
 
+<div class="container">
 <div class="row">
     <div class="col-0 col-md-6"><!-- spacer --></div>
     <div class="col-md-6">
         <a class="btn btn-100 btn-outline-red" href="{{route('services', [$other->getSlug()])}}">
-            Voir les services de {{Illuminate\Support\Str::lower($other->title)}}
+            vers les services de {{Illuminate\Support\Str::lower($other->title)}}
         </a>
     </div>
+</div>
 </div>
 
 </div>

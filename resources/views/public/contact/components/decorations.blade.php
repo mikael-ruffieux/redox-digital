@@ -12,5 +12,5 @@
 </div>
 
 <div id="return-button">
-    <a title="Retour à l'accueil" href="{{route('home')}}"><i class="far fa-times"></i></a>
+    <a title="Retour à l'accueil" href="{{route('home')}}"><i class="fas fa-home"></i></a>
 </div>

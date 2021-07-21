@@ -4,31 +4,32 @@ h1 {
     font-family: futura-pt-bold, 'Poppins', sans-serif;
     font-weight: 700;
     font-style: normal;
-    letter-spacing: 4px;
+    letter-spacing: 0.05em;
     font-size: 80px;
-    line-height: 100%;
-}
-
-h2, h4 {
-    font-family: futura-pt-bold, 'Poppins', sans-serif;
-    font-weight: 700;
-    font-style: normal;
+    line-height: 110%;
 }
 
 h2 {
-    letter-spacing: 2.4px;
+    font-family: futura-pt-bold, 'Poppins', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.05em;
     font-size: 48px;
     line-height: 110%;
 }
 
 h3 {
     font-family: futura-pt, 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-style: normal;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.05em;
     font-size: 24px;
-    text-transform: uppercase;
     line-height: 100%;
+}
+
+h3.all-caps {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 h3 > .number {
@@ -36,9 +37,11 @@ h3 > .number {
 }
 
 h4 {
-    letter-spacing: 1.4px;
-    font-size: 14px;
-    text-transform: uppercase;
+    font-family: futura-pt-bold, 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    font-size: 16px;
+    line-height: 21px;
 }
 
 h5 {
@@ -50,12 +53,12 @@ h5 {
 }
 
 p, a {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
     font-style: normal;
-    letter-spacing: 1px;
-    font-size: 20px;
-    line-height: 150%;
+    letter-spacing: 0.05em;
+    font-size: 16px;
+    line-height: 160%;
 }
 
 button, input, optgroup, select, textarea {
@@ -75,22 +78,22 @@ a:hover {
 /* Font families mobile */
 @media (max-width: 991px) {
     h1 {
-        font-size: 36px;
+        font-size: 40px;
     }
     
     h2 {
-        font-size: 26px;
+        font-size: 32px;
     }
     
     h3 {
-        font-size: 18px;
+        font-size: 20px;
     }
     
     h4 {
-        font-size: 14px;
+        font-size: 15px;
     }
     
     p, a {
-        font-size: 16px;
+        font-size: 14px;
     }
 }

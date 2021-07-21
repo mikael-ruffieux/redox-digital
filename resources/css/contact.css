@@ -13,7 +13,7 @@
     align-items: center;
 }
 
-#contact h2, #contact h4, #contact p {
+#contact h2, #contact h3, #contact h4, #contact p {
     color: var(--true-white);
 }
 
@@ -161,7 +161,7 @@
 #return-button > a {
     background-color: var(--true-white);
     color: var(--primary-black);
-    font-size: 30px;
+    font-size: 24px;
     z-index: 10;
     position: absolute;
     bottom: 30px;
@@ -200,6 +200,16 @@
     padding: 8px 30px;
 }
 
+#contact .checkbox-row {
+    width: 150%;
+    margin-top: 4vh;
+} 
+
+#contact .checkbox {
+    display: flex;
+    align-items: center;
+}
+
 #contact .checkbox input {
     position: absolute;
 	left: -9999px;
@@ -210,16 +220,87 @@
 
 
 #contact .checkbox label {
+    font-family: 'Poppins', sans-serif;
     position: relative;
 	display: inline-block;
     background-color: var(--true-white);
     color: var(--primary-red);
     padding: 10px 20px;
     cursor: pointer;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70px;
 }
 
-#contact .checkbox input:checked + label {
+#contact .checkbox input:hover + label,
+#contact .checkbox input:focus + label {
     background-color: var(--primary-red);
     color: var(--true-white);
     transition: all 0.2s ease-in-out;
+}
+
+#contact .checkbox input:checked + label {
+    border: solid var(--true-white) 2px;
+    background-color: var(--primary-red);
+    color: var(--true-white);
+    transition: all 0.2s ease-in-out;
+}
+
+
+@media (max-width: 991px) {
+    #contact .page {
+        max-width: inherit;
+        margin-left: 0;
+    }
+
+    #contact .slider {
+        flex-direction: column-reverse;
+    }
+
+    #contact .slider ul {
+        margin-left: 0;
+    }
+
+    #contact .slider h4 {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    #contact .page input:not([type='submit']) {
+        font-size: 32px;
+    }
+
+    #contact .btn-fa-white, #contact .btn[type="submit"] {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    #contact-intro .btn {
+        width: 100%;
+        margin-left: 0!important;
+        margin-bottom: 15px;
+    } 
+
+    #contact .checkbox-row {
+        width: auto;
+    } 
+
+    #curve-top {
+        position:absolute;
+        top: 0;
+        left: 0;
+        height: 15vh;
+    }
+    
+    #curve-bottom {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 20vh;
+        z-index: 0;
+    }
 }

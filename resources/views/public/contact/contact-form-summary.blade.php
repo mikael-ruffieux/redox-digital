@@ -13,7 +13,7 @@ Nous contacter
             <h2>Résumé de <b>votre demande</b> :</h2>
 
             @foreach ($results as $result)
-            <h4>{{$result['label']}}</h4>
+            <h3>{{$result['label']}}</h3>
             <p>{{$result['value']}}</p>
             @endforeach
 

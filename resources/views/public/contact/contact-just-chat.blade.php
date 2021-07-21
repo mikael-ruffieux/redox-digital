@@ -10,7 +10,7 @@ Nous contacter pour discuter
     <main id="contact">
         <section class="page container" id="step1">
             <!-- Step 1 -->
-            <h4>Juste discuter</h4>
+            <h3>Juste discuter</h3>
             <h2>Quel est <b>votre nom</b> ?</h2>
 
             <input type="text" name="name" id="name" placeholder="Prénom Nom" value="{{old('name')}}" required>

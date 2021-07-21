@@ -29,6 +29,40 @@
     margin-bottom: -20vh;
 }
 
+/* Contact Curves */
+.curve-bottom-container {
+    width: 100%;
+    height: 20vh;
+    margin-top: -20vh;
+    position: relative;
+}
+
+.curve-top-container {
+    width: 100%;
+    height: 20vh;
+    margin-bottom: -20vh;
+    position: relative;
+}
+
+.curve-bottom {
+    z-index: 100;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+}
+
+.curve-top {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+/* .contact curves */
+/* .Curves */
+
 .dash-black {
     display: block;
     width: 100px;
@@ -58,9 +92,9 @@
     border: solid 2px;
     border-radius: 25px;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 16px;
     width: fit-content;
-    padding: 5px 15px;
+    padding: 10px 20px;
     transition: background 0.8s ease-in-out;
     transition: color 0.2s linear;
 }
@@ -202,33 +236,28 @@
     padding-left: 10px;
 }
 
-/* Curves */
-.curve-bottom-container {
-    width: 100%;
-    height: 20vh;
-    margin-top: -20vh;
-    position: relative;
-}
-
-.curve-top-container {
-    width: 100%;
-    height: 20vh;
-    margin-bottom: -20vh;
-    position: relative;
-}
-
-.curve-bottom {
-    z-index: 100;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-}
-
-.curve-top {
-    z-index: 100;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
+@media (max-width: 991px) {
+    .curve-small-top, .curve-small-bottom {
+        height: 7vh;
+    }
+    
+    .curve-small-bottom {
+        margin-top: -7vh;
+    }
+    
+    .curve-small-top {
+        margin-bottom: -7vh;
+    }
+    
+    .curve-medium-top, .curve-medium-bottom {
+        height: 15vh;
+    }
+    
+    .curve-medium-top {
+        margin-top: -15vh;
+    }
+    
+    .curve-medium-bottom {
+        margin-bottom: -15vh;
+    }
 }

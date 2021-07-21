@@ -10,7 +10,7 @@ Nous contacter
     <main id="contact">
         <section class="page container" id="step1">
             <!-- Last step -->
-            <h4>{{$chat === false ? "Débuter un projet" : "Juste discuter"}}</h4>
+            <h3>{{$chat === false ? "Débuter un projet" : "Juste discuter"}}</h3>
             <h2>Dites-nous en plus à propos de <b>votre projet</b> :</h2>
 
             <textarea name="message" id="message" placeholder="Votre message" required>{{!empty(session('message')) ? session('message') : ''}}</textarea>

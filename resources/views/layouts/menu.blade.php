@@ -9,7 +9,6 @@
             <button id="burger-menu" type="button">
                 <i class="far fa-align-right"></i>
                 <i class="fal fa-times"></i>
-                <small>menu</small>
             </button>
             <ul id="menu">
                 <li><a href="{{route('home')}}">Accueil</a></li>
@@ -46,28 +45,28 @@
                 </li>
                 <div id="socials">
                     <a href="#" target="_blank">
-                        <small>Visitez notre page Facebook</small>
+                        <div class="social-text-container"><small>Visitez notre page Facebook</small></div>
                         <span class="fa-stack">
                             <i class="fas fa-circle fa-stack-2x"></i>
                             <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
                         </span>
                     </a>
                     <a href="https://www.instagram.com/redoxdigital.ch/" target="_blank">
-                        <small>Suivez-nous sur Insta</small>
+                         <div class="social-text-container"><small>Suivez-nous sur Insta</small></div>
                         <span class="fa-stack">
                             <i class="fas fa-circle fa-stack-2x"></i>
                             <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
                         </span>
                     </a>
                     <a href="https://www.linkedin.com/company/redox-digital" target="_blank">
-                        <small>Notre entreprise sur LinkedIn</small>
+                         <div class="social-text-container"><small>Notre entreprise sur LinkedIn</small></div>
                         <span class="fa-stack">
                             <i class="fas fa-circle fa-stack-2x"></i>
                             <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
                         </span>
                     </a>
                     <a href="#" target="_blank">
-                        <small>Allez, lâchez un pouce bleu</small>
+                         <div class="social-text-container"><small>Allez, lâchez un pouce bleu</small></div>
                         <span class="fa-stack">
                             <i class="fas fa-circle fa-stack-2x"></i>
                             <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>

@@ -10,7 +10,7 @@ Nous contacter
     <main id="contact">
         <section class="page container" id="step1">
             <!-- Step 1 -->
-            <h4>{{$chat === false ? "Débuter un projet" : "Juste discuter"}}</h4>
+            <h3>{{$chat === false ? "Débuter un projet" : "Juste discuter"}}</h3>
             <h2>Quel est <b>votre nom</b> ?</h2>
 
             <input type="hidden" name="type" value="{{$chat ? 'chat' : 'start'}}">
