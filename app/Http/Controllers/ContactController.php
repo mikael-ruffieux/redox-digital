@@ -31,6 +31,9 @@ class ContactController extends Controller
         ["name" => "Obi-Wan Kenobi", "mail" => "ben-kenobi@tatooine.net"],
         ["name" => "Sherlock Holmes", "mail" => "s.holmes@baker-street.uk"],
         ["name" => "James Bond", "mail" => "bond007@mi6.gov"],
+        ["name" => "Batman", "mail" => "batman@wayne-enterprises.com"],
+        ["name" => "Guillaume Tell", "mail" => "g.tell@admin.ch"],
+        ["name" => "Heidi", "mail" => "heidi@graubuenden.ch"],
     ];
 
     // ######## Formulaire de maintenance !! ########
@@ -59,7 +62,11 @@ class ContactController extends Controller
     }
 
     public function getNameChat() {
-        $rand = rand(0, sizeof($this->randomNamesAndMails)-1);
+        if(!empty(session('rand'))) {
+            $rand = session('rand');
+        } else {
+            $rand = rand(0, sizeof($this->randomNamesAndMails)-1);
+        }
         session(['rand'=> $rand]);
         return view('public.contact.contact-form-name', ['step' => 1, 'steps' => 4, 'next' => 'chat.mail', 'prev' => false, 'chat' => true, 'randomName' => $this->randomNamesAndMails[$rand]['name']]);
     }
@@ -75,7 +82,11 @@ class ContactController extends Controller
     }
 
     public function getNameProject() {
-        $rand = rand(0, sizeof($this->randomNamesAndMails)-1);
+        if(!empty(session('rand'))) {
+            $rand = session('rand');
+        } else {
+            $rand = rand(0, sizeof($this->randomNamesAndMails)-1);
+        }
         session(['rand'=> $rand]);
         return view('public.contact.contact-form-name', ['step' => 1, 'steps' => 6, 'next' => 'start.mail', 'prev' => false, 'chat' => false, 'randomName' => $this->randomNamesAndMails[$rand]['name']]);
     }

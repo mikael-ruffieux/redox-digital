@@ -30,7 +30,7 @@ Bienvenue |
                 <p><b>- L'équipe Redox Digital</b></p>
 
                 <div class="buttons d-none d-md-block">
-                    <a class="btn btn-outline-black" href="{{route('services', ['web-digital'])}}">Découvrez nos services</a>
+                    {{--<a class="btn btn-outline-black" href="{{route('services', ['web-digital'])}}">Découvrez nos services</a>--}}
                     <a class="btn btn-outline-black" href="{{route('contact.intro')}}">Nous contacter</a>
                 </div>
             </div>

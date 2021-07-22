@@ -45,16 +45,15 @@
                     </div>
                 </li>
                 <div id="socials">
-                    {{--
-                    <a href="#" target="_blank">
+                    <a href="https://www.facebook.com/redoxdigital.ch/" target="_blank">
                         <div class="social-text-container"><small>Visitez notre page Facebook</small></div>
                         <span class="fa-stack">
                             <i class="fas fa-circle fa-stack-2x"></i>
                             <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
                         </span>
-                    </a>--}}
+                    </a>
                     <a href="https://www.instagram.com/redoxdigital.ch/" target="_blank">
-                         <div class="social-text-container"><small>Suivez-nous sur Insta</small></div>
+                         <div class="social-text-container"><small>Suivez-nous sur Insta'</small></div>
                         <span class="fa-stack">
                             <i class="fas fa-circle fa-stack-2x"></i>
                             <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
@@ -67,13 +66,13 @@
                             <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
                         </span>
                     </a>
-                    {{--<a href="#" target="_blank">
+                    <a href="https://www.youtube.com/channel/UCVdloB3aP5I2c03IHIOll3g/" target="_blank">
                          <div class="social-text-container"><small>Allez, lâchez un pouce bleu</small></div>
                         <span class="fa-stack">
                             <i class="fas fa-circle fa-stack-2x"></i>
                             <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
                         </span>
-                    </a>--}}
+                    </a>
                 </div>
             </ul>
         </div>

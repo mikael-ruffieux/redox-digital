@@ -64,10 +64,10 @@
                 <img src="{{asset('storage/assets/img/logo/Redox-Digital_Logotype-final_Redox-Digital_Logotype-pictogramme-blanc-rouge.svg')}}" alt="Redox Digital">
                 
                 <ul id="footer-icons-list">
-                    <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.facebook.com/redoxdigital.ch/" target="_blank"><i class="fab fa-facebook"></i></a></li>
                     <li><a href="https://www.instagram.com/redoxdigital.ch/" target="_blank"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="https://www.linkedin.com/company/redox-digital" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCVdloB3aP5I2c03IHIOll3g/" target="_blank"><i class="fab fa-youtube"></i></a></li>
                 </ul>
             </div>
 

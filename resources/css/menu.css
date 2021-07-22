@@ -256,6 +256,9 @@ nav .sub-menu .sub-menu-title>a {
 
 /* ############ Mobile ############# */
 @media (max-width: 991px) { 
+    #socials > a > .social-text-container {
+        display: none;
+    }
     nav .logo {
         width: 100%;
     }

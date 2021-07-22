@@ -24,19 +24,58 @@ use Illuminate\Support\Facades\Auth;
 */
 
 // ##### Routes publiques #####
-Route::get('/', function () { return redirect(route('maintenance.contact')); })->name('public.home');
+Route::get('home', function () { return redirect(route('maintenance')); })->name('home');
+//Route::get('home', [PublicPagesController::class, 'home'])->name('home');
+Route::view('/', 'public.maintenance')->name('maintenance');
+
+Route::prefix('contact')->group(function () {
+    Route::view('/', 'public.contact.contact')->name('contact');
+    Route::get('intro', [ContactController::class, 'getIntro'])->name('contact.intro');
+
+    Route::prefix('just-chat')->group(function () {
+        Route::get('step-1', [ContactController::class, 'getNameChat'])->name('contact.chat.name');
+        Route::post('step-1', [ContactController::class, 'postName'])->name('contact.chat.name.post');
+
+        Route::get('step-2', [ContactController::class, 'getMailChat'])->name('contact.chat.mail');
+        Route::post('step-2', [ContactController::class, 'postMail'])->name('contact.chat.mail.post');
+
+        Route::view('step-3', 'public.contact.contact-form-message', ['step' => 3, 'steps' => 4, 'next' => 'chat.summary', 'prev' => 'chat.mail', 'chat' => true])->name('contact.chat.message');
+        Route::post('step-3', [ContactController::class, 'postMessage'])->name('contact.chat.message.post');
+        
+        Route::get('summary', [ContactController::class, 'showSummary'])->name('contact.chat.summary');
+        Route::post('summary', [ContactController::class, 'send'])->name('contact.send');
+    });
+
+    Route::prefix('start-a-project')->group(function () {
+        Route::get('step-1', [ContactController::class, 'getNameProject'])->name('contact.start.name');
+        Route::post('step-1', [ContactController::class, 'postName'])->name('contact.start.name.post');
+
+        Route::get('step-2', [ContactController::class, 'getMailProject'])->name('contact.start.mail');
+        Route::post('step-2', [ContactController::class, 'postMail'])->name('contact.start.mail.post');
+
+        Route::view('step-3', 'public.contact.contact-form-project-type', ['step' => 3, 'steps' => 6, 'next' => 'start.budget', 'prev' => 'start.mail', 'chat' => false])->name('contact.start.project-type');
+        Route::post('step-3', [ContactController::class, 'postProjectType'])->name('contact.start.project-type.post');
+
+        Route::view('step-4', 'public.contact.contact-form-budget', ['step' => 4, 'steps' => 6, 'next' => 'start.message', 'prev' => 'start.project-type', 'chat' => false])->name('contact.start.budget');
+        Route::post('step-4', [ContactController::class, 'postBudget'])->name('contact.start.budget.post');
+
+        Route::view('step-5', 'public.contact.contact-form-message', ['step' => 5, 'steps' => 6, 'next' => 'start.summary', 'prev' => 'start.budget', 'chat' => false])->name('contact.start.message');
+        Route::post('step-5', [ContactController::class, 'postMessage'])->name('contact.start.message.post');
+        
+        Route::get('summary', [ContactController::class, 'showSummary'])->name('contact.start.summary');
+        Route::post('summary', [ContactController::class, 'send'])->name('contact.send');
+
+    });
+});   
 
 Auth::routes();
 
 // Contact Form
-Route::get('contact', [ContactController::class,'returnForm'])->name('maintenance.contact');
-Route::post('contact', [ContactController::class,'validateAndSendForm']);
+//Route::get('contact', [ContactController::class,'returnForm'])->name('maintenance.contact');
+//Route::post('contact', [ContactController::class,'validateAndSendForm']);
 
 // ##### Routes privées pendant le développement #####
 Route::prefix('dev')->middleware('auth')->group(function () {
-    Route::get('home', function () { return redirect(route('maintenance')); })->name('home');
-    //Route::get('home', [PublicPagesController::class, 'home'])->name('home');
-    Route::view('/', 'public.maintenance')->name('maintenance');
 
     // à voir si on garde ce système, ou si on fait 2 chemins & méthodes
     Route::get('nos-services-de-{type}', [PublicPagesController::class, 'services'])->name('services');
@@ -47,47 +86,7 @@ Route::prefix('dev')->middleware('auth')->group(function () {
 
     });
 
-    Route::view('a-propos', 'public.about')->name('about');
-
-    Route::prefix('contact')->group(function () {
-        Route::view('/', 'public.contact.contact')->name('contact');
-        Route::get('intro', [ContactController::class, 'getIntro'])->name('contact.intro');
-
-        Route::prefix('just-chat')->group(function () {
-            Route::get('step-1', [ContactController::class, 'getNameChat'])->name('contact.chat.name');
-            Route::post('step-1', [ContactController::class, 'postName'])->name('contact.chat.name.post');
-
-            Route::get('step-2', [ContactController::class, 'getMailChat'])->name('contact.chat.mail');
-            Route::post('step-2', [ContactController::class, 'postMail'])->name('contact.chat.mail.post');
-
-            Route::view('step-3', 'public.contact.contact-form-message', ['step' => 3, 'steps' => 4, 'next' => 'chat.summary', 'prev' => 'chat.mail', 'chat' => true])->name('contact.chat.message');
-            Route::post('step-3', [ContactController::class, 'postMessage'])->name('contact.chat.message.post');
-            
-            Route::get('summary', [ContactController::class, 'showSummary'])->name('contact.chat.summary');
-            Route::post('summary', [ContactController::class, 'send'])->name('contact.send');
-        });
-
-        Route::prefix('start-a-project')->group(function () {
-            Route::get('step-1', [ContactController::class, 'getNameProject'])->name('contact.start.name');
-            Route::post('step-1', [ContactController::class, 'postName'])->name('contact.start.name.post');
-
-            Route::get('step-2', [ContactController::class, 'getMailProject'])->name('contact.start.name');
-            Route::post('step-2', [ContactController::class, 'postMail'])->name('contact.start.mail.post');
-
-            Route::view('step-3', 'public.contact.contact-form-project-type', ['step' => 3, 'steps' => 6, 'next' => 'start.budget', 'prev' => 'start.mail', 'chat' => false])->name('contact.start.project-type');
-            Route::post('step-3', [ContactController::class, 'postProjectType'])->name('contact.start.project-type.post');
-
-            Route::view('step-4', 'public.contact.contact-form-budget', ['step' => 4, 'steps' => 6, 'next' => 'start.message', 'prev' => 'start.project-type', 'chat' => false])->name('contact.start.budget');
-            Route::post('step-4', [ContactController::class, 'postBudget'])->name('contact.start.budget.post');
-
-            Route::view('step-5', 'public.contact.contact-form-message', ['step' => 5, 'steps' => 6, 'next' => 'start.summary', 'prev' => 'start.budget', 'chat' => false])->name('contact.start.message');
-            Route::post('step-5', [ContactController::class, 'postMessage'])->name('contact.start.message.post');
-            
-            Route::get('summary', [ContactController::class, 'showSummary'])->name('contact.start.summary');
-            Route::post('summary', [ContactController::class, 'send'])->name('contact.send');
-
-        });
-    });    
+    Route::view('a-propos', 'public.about')->name('about'); 
 });
 
 
