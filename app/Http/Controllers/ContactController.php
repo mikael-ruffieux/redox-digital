@@ -27,11 +27,7 @@ class ContactController extends Controller
     ];
 
     private $randomNamesAndMails = [
-        ["name" => "Yoda", "mail" => "maitre.yoda@conseil-jedi.org"],
-        ["name" => "Obi-Wan Kenobi", "mail" => "ben-kenobi@tatooine.net"],
-        ["name" => "Sherlock Holmes", "mail" => "s.holmes@baker-street.uk"],
-        ["name" => "James Bond", "mail" => "bond007@mi6.gov"],
-        ["name" => "Batman", "mail" => "batman@wayne-enterprises.com"],
+        ["name" => "Henri Guisan", "mail" => "general.guisan@armee-suisse.ch"],
         ["name" => "Guillaume Tell", "mail" => "g.tell@admin.ch"],
         ["name" => "Heidi", "mail" => "heidi@graubuenden.ch"],
     ];
