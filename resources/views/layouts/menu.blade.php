@@ -12,12 +12,13 @@
             </button>
             <ul id="menu">
                 <li><a href="{{route('home')}}">Accueil</a></li>
-                <li class="sub-menu">
+                
+                {{--<li class="sub-menu">
                     <a id="sub-menu-btn" href="{{route('services', ['web-digital'])}}">Services</a>
                     <div class="sub-menu-box">
                         <div class="container">
                             <ul class="row">
-                                <div class="col-12 col-sm-6">
+                                <div class="col-12 col-md-6">
                                     <li class="sub-menu-title"><a href="{{route('services', ['web-digital'])}}">Web digital</a></li>
                                     <li><a href="{{route('services', ['web-digital']) . '#creation-refonte-de-site-web'}}">Création & refonte de site web</a></li>
                                     <li><a href="{{route('services', ['web-digital']) . '#e-commerce'}}">E-commerce</a></li>
@@ -25,7 +26,7 @@
                                     <li><a href="{{route('services', ['web-digital',]) . '#maintenance-web'}}">Maintenance web</a></li>
                                     <li><a href="{{route('services', ['web-digital',]) . '#strategie'}}">Stratégie</a></li>
                                 </div>
-                                <div class="col-12 col-sm-6">
+                                <div class="col-12 col-md-6">
                                     <li class="sub-menu-title"><a href="{{route('services', ["creation-de-contenus-digitaux"])}}">Création de contenus digitaux</a></li>
                                     <li><a href="{{route('services', ["creation-de-contenus-digitaux"]) . '#production-video'}}">Production & captation vidéo</a></li>
                                     <li><a href="{{route('services', ["creation-de-contenus-digitaux"]) . '#photographie'}}">Photographie</a></li>
@@ -34,23 +35,24 @@
                             </ul>
                         </div>
                     </div>
-                </li>
-                <li><a href="{{route('portfolio')}}">Portfolio</a></li>
+                </li>--}}
+                {{--<li><a href="{{route('portfolio')}}">Portfolio</a></li>
                 <li><a href="{{route('about')}}">À propos</a></li>
-                <li><a href="{{route('contact')}}">Contact</a></li>
+                <li><a href="{{route('contact')}}">Contact</a></li>--}}
                 <li>
                     <div class="menu-cta">
                         <a class="btn btn-black" href="{{route('contact.intro')}}">Un project en tête ?</a>
                     </div>
                 </li>
                 <div id="socials">
+                    {{--
                     <a href="#" target="_blank">
                         <div class="social-text-container"><small>Visitez notre page Facebook</small></div>
                         <span class="fa-stack">
                             <i class="fas fa-circle fa-stack-2x"></i>
                             <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
                         </span>
-                    </a>
+                    </a>--}}
                     <a href="https://www.instagram.com/redoxdigital.ch/" target="_blank">
                          <div class="social-text-container"><small>Suivez-nous sur Insta</small></div>
                         <span class="fa-stack">
@@ -65,13 +67,13 @@
                             <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
                         </span>
                     </a>
-                    <a href="#" target="_blank">
+                    {{--<a href="#" target="_blank">
                          <div class="social-text-container"><small>Allez, lâchez un pouce bleu</small></div>
                         <span class="fa-stack">
                             <i class="fas fa-circle fa-stack-2x"></i>
                             <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
                         </span>
-                    </a>
+                    </a>--}}
                 </div>
             </ul>
         </div>

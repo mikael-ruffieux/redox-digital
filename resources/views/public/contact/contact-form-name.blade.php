@@ -1,7 +1,7 @@
-@extends('template')
+@extends('layouts.contact_layout')
 
 @section('title')
-Nous contacter
+Nous contacter |
 @endsection
 
 @section('content')
@@ -15,7 +15,7 @@ Nous contacter
 
             <input type="hidden" name="type" value="{{$chat ? 'chat' : 'start'}}">
 
-            <input type="text" name="name" id="name" placeholder="Prénom Nom" value="{{!empty(session('name')) ? session('name') : ''}}" required>
+            <input type="text" name="name" id="name" placeholder="{{$randomName}}" value="{{!empty(session('name')) ? session('name') : ''}}" required>
             <span class="focus-input"></span>
 
             {!! $errors->first('name', '<small class="contact-form-error">:message</small>') !!}

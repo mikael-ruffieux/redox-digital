@@ -1,7 +1,7 @@
-@extends('template')
+@extends('layouts.contact_layout')
 
 @section('title')
-Nous contacter
+Nous contacter |
 @endsection
 
 @section('content')
@@ -13,7 +13,7 @@ Nous contacter
             <h3>{{$chat === false ? "Débuter un projet" : "Juste discuter"}}</h3>
             <h2 for="mail"><b>{{session('name')}}</b>, quel est <b>votre adresse e-mail</b> ?</h2>
 
-            <input type="mail" name="mail" id="mail" placeholder="Votre e-mail" value="{{!empty(session('mail')) ? session('mail') : ''}}" required>
+            <input type="mail" name="mail" id="mail" placeholder="{{$randomMail}}" value="{{!empty(session('mail')) ? session('mail') : ''}}" required>
             <span class="focus-input"></span>
 
             {!! $errors->first('mail', '<small class="contact-form-error">:message</small>') !!}

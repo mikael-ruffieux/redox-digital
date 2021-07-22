@@ -243,13 +243,21 @@ nav .sub-menu .sub-menu-title>a {
 
 /* /Nav menu */ 
 
+/* Tablette */ 
+@media (max-width: 1199px) {
+    nav .logo {
+        width: 20%;
+    }
+    nav .logo img {
+        max-height: 30px;
+    }
+
+}
+
 /* ############ Mobile ############# */
 @media (max-width: 991px) { 
     nav .logo {
         width: 100%;
-    }
-    nav .logo img {
-        max-height: 30px;
     }
 
     #menu>li>a:not(.btn) {

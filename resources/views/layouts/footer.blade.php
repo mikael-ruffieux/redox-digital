@@ -19,18 +19,29 @@
                 <h4>Navigation</h4>
                 <ul>
                     <li><a href="{{route('home')}}">Accueil</a></li>
+                    {{--
                     <li><a href="{{route('portfolio')}}">Portfolio</a></li>
                     <li><a href="{{route('about')}}">À propos</a></li>
-                    <li><a href="{{route('contact')}}">Contact</a></li>
+                    <li><a href="{{route('contact')}}">Contact</a></li>--}}
                 </ul>
             </div>
+
+            {{-- Uniquement pour la v 1.0--}}
+            <div class="col-12 col-md-3">
+                <h4>Administration</h4>
+                <ul>
+                    <li><a href="{{route('login')}}">Login</a></li>
+                </ul>
+            </div>
+
+            {{--
             <div class="col-12 col-md-3">
                 <h4>Services</h4>
                 <ul>
                     <li><a href="{{route('services', ["web-digital"])}}">Web digital</a></li>
                     <li><a href="{{route('services', ["creation-de-contenu"])}}">Création de contenus digitaux</a></li>
                 </ul>
-            </div>
+            </div>--}}
         </div>
         <div id="footer-bottom" class="row">
             <div class="col-0 col-sm-2"><!-- spacer --></div>
@@ -71,16 +82,22 @@
                 <h4>Navigation</h4>
                 <ul>
                     <li><a href="{{route('home')}}">Accueil</a></li>
-                    <li><a href="{{route('portfolio')}}">Portfolio</a></li>
+                    {{--<li><a href="{{route('portfolio')}}">Portfolio</a></li>
                     <li><a href="{{route('about')}}">À propos</a></li>
-                    <li><a href="{{route('contact')}}">Contact</a></li>
+                    <li><a href="{{route('contact')}}">Contact</a></li>--}}
                 </ul>
 
-                <h4>Services</h4>
+                {{-- Uniquement pour la v 1.0--}}
+                <h4>Administration</h4>
+                <ul>
+                    <li><a href="route('login')">Login</a></li>
+                </ul>
+
+                {{--<h4>Services</h4>
                 <ul>
                     <li><a href="{{route('services', ["web-digital"])}}">Web digital</a></li>
                     <li><a href="{{route('services', ["creation-de-contenu"])}}">Création de contenus digitaux</a></li>
-                </ul>
+                </ul>--}}
 
                 <div id="footer-bottom">
                     <p>© Redox Digital 2021</p>

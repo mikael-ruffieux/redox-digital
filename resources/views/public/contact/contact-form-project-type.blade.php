@@ -1,7 +1,7 @@
-@extends('template')
+@extends('layouts.contact_layout')
 
 @section('title')
-Nous contacter
+Nous contacter |
 @endsection
 
 @section('content')
@@ -15,19 +15,19 @@ Nous contacter
 
             <div class="row checkbox-row">
                 <div class="col-md-3 col-6 checkbox">
-                    <input type="radio" name="project_type" id="project_web" value="1">
+                    <input type="radio" name="project_type" id="project_web" value="1" {{!empty(session('project_type')) && session('project_type') == 1 ? "checked" : ""}}>
                     <label for="project_web">Web</label>
                 </div>
                 <div class="col-md-3 col-6 checkbox">
-                    <input type="radio" name="project_type" id="project_video" value="2">
+                    <input type="radio" name="project_type" id="project_video" value="2" {{!empty(session('project_type')) && session('project_type') == 2 ? "checked" : ""}}>
                     <label for="project_video">Vidéo</label>
                 </div>
                 <div class="col-md-3 col-6 checkbox">
-                    <input type="radio" name="project_type" id="project_marketing" value="3">
+                    <input type="radio" name="project_type" id="project_marketing" value="3" {{!empty(session('project_type')) && session('project_type') == 3 ? "checked" : ""}}>
                     <label for="project_marketing">Marketing</label>
                 </div>
                 <div class="col-md-3 col-6 checkbox">
-                    <input type="radio" name="project_type" id="project_no-idea" value="4">
+                    <input type="radio" name="project_type" id="project_no-idea" value="4" {{!empty(session('project_type')) && session('project_type') == 4 ? "checked" : ""}}>
                     <label for="project_no-idea">Je ne sais pas encore trop ...</label>
                 </div>
             </div>

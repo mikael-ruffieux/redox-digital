@@ -1,7 +1,7 @@
-@extends('template')
+@extends('layouts.contact_layout')
 
 @section('title')
-Nous contacter
+Nous contacter |
 @endsection
 
 @section('content')
@@ -10,7 +10,7 @@ Nous contacter
     <main id="contact">
         <section class="page container">
             <!-- Last step -->
-            <h2>Résumé de <b>votre demande</b> :</h2>
+            <h2>Résumé de <b>votre demande</b>&nbsp;:</h2>
 
             @foreach ($results as $result)
             <h3>{{$result['label']}}</h3>

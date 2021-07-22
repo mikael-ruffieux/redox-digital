@@ -1,7 +1,7 @@
-@extends('template')
+@extends('layouts.contact_layout')
 
 @section('title')
-Nous contacter
+Nous contacter |
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@ Nous contacter
         <section class="page container" id="step1">
             <!-- Last step -->
             <h3>{{$chat === false ? "Débuter un projet" : "Juste discuter"}}</h3>
-            <h2>Dites-nous en plus à propos de <b>votre projet</b> :</h2>
+            <h2>Dites-nous en plus à propos de <b>votre projet</b>&nbsp;:</h2>
 
             <textarea name="message" id="message" placeholder="Votre message" required>{{!empty(session('message')) ? session('message') : ''}}</textarea>
             <span class="focus-input"></span>

@@ -18,5 +18,21 @@
 </head>
 <body>
     @yield("content")
+<script>
+    let dots = document.querySelectorAll(".nav-dot");
+    let myStep = 1;
+    if(dots.length != 0) {
+        dots.forEach(dot => {
+            dot.addEventListener('click', evt => {
+                if(dot.dataset.accessible == "0") {
+                    evt.preventDefault();
+                    document.getElementById('send-button').click();
+                }
+            })
+        })
+    }
+    
+
+</script>
 </body>
 </html>

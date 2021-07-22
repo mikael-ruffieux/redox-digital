@@ -34,8 +34,9 @@ Route::post('contact', [ContactController::class,'validateAndSendForm']);
 
 // ##### Routes privées pendant le développement #####
 Route::prefix('dev')->middleware('auth')->group(function () {
-    Route::get('/', [PublicPagesController::class, 'home'])->name('home');
-    Route::view('maintenance', 'public.maintenance')->name('maintenance');
+    Route::get('home', function () { return redirect(route('maintenance')); })->name('home');
+    //Route::get('home', [PublicPagesController::class, 'home'])->name('home');
+    Route::view('/', 'public.maintenance')->name('maintenance');
 
     // à voir si on garde ce système, ou si on fait 2 chemins & méthodes
     Route::get('nos-services-de-{type}', [PublicPagesController::class, 'services'])->name('services');
@@ -50,13 +51,13 @@ Route::prefix('dev')->middleware('auth')->group(function () {
 
     Route::prefix('contact')->group(function () {
         Route::view('/', 'public.contact.contact')->name('contact');
-        Route::view('intro', 'public.contact.contact-form')->name('contact.intro');
+        Route::get('intro', [ContactController::class, 'getIntro'])->name('contact.intro');
 
         Route::prefix('just-chat')->group(function () {
-            Route::view('step-1', 'public.contact.contact-form-name', ['step' => 1, 'steps' => 4, 'next' => 'chat.mail', 'prev' => false, 'chat' => true])->name('contact.chat.name');
+            Route::get('step-1', [ContactController::class, 'getNameChat'])->name('contact.chat.name');
             Route::post('step-1', [ContactController::class, 'postName'])->name('contact.chat.name.post');
 
-            Route::view('step-2', 'public.contact.contact-form-mail', ['step' => 2, 'steps' => 4, 'next' => 'chat.message', 'prev' => 'chat.name', 'chat' => true])->name('contact.chat.mail');
+            Route::get('step-2', [ContactController::class, 'getMailChat'])->name('contact.chat.mail');
             Route::post('step-2', [ContactController::class, 'postMail'])->name('contact.chat.mail.post');
 
             Route::view('step-3', 'public.contact.contact-form-message', ['step' => 3, 'steps' => 4, 'next' => 'chat.summary', 'prev' => 'chat.mail', 'chat' => true])->name('contact.chat.message');
@@ -67,10 +68,10 @@ Route::prefix('dev')->middleware('auth')->group(function () {
         });
 
         Route::prefix('start-a-project')->group(function () {
-            Route::view('step-1', 'public.contact.contact-form-name', ['step' => 1, 'steps' => 6, 'next' => 'start.mail', 'prev' => false, 'chat' => false])->name('contact.start.name');
+            Route::get('step-1', [ContactController::class, 'getNameProject'])->name('contact.start.name');
             Route::post('step-1', [ContactController::class, 'postName'])->name('contact.start.name.post');
 
-            Route::view('step-2', 'public.contact.contact-form-mail', ['step' => 2, 'steps' => 6, 'next' => 'start.project-type', 'prev' => 'start.name', 'chat' => false])->name('contact.start.mail');
+            Route::get('step-2', [ContactController::class, 'getMailProject'])->name('contact.start.name');
             Route::post('step-2', [ContactController::class, 'postMail'])->name('contact.start.mail.post');
 
             Route::view('step-3', 'public.contact.contact-form-project-type', ['step' => 3, 'steps' => 6, 'next' => 'start.budget', 'prev' => 'start.mail', 'chat' => false])->name('contact.start.project-type');

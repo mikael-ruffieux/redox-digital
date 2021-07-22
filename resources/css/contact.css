@@ -29,6 +29,10 @@
     font-weight: 400;
 }
 
+#contact-intro {
+    margin-left: 80px;
+}
+
 #contact .page {
     max-width: 50%;
     margin-left: 80px;
@@ -146,7 +150,8 @@
 
 #contact .slider > ul > li > a {
     color: var(--true-white);
-    background-color: var(--primary-red);
+    display: block;
+    background-color: var(--secondary-red);
     border-radius: 100%;
     position: relative;
     font-size: 20px;
@@ -201,7 +206,7 @@
 }
 
 #contact .checkbox-row {
-    width: 150%;
+    width: 180%;
     margin-top: 4vh;
 } 
 
@@ -279,12 +284,6 @@
         font-size: 24px;
     }
 
-    #contact-intro .btn {
-        width: 100%;
-        margin-left: 0!important;
-        margin-bottom: 15px;
-    } 
-
     #contact .checkbox-row {
         width: auto;
     } 
@@ -303,4 +302,16 @@
         height: 20vh;
         z-index: 0;
     }
+}
+
+@media (max-width: 767px) {
+    #contact-intro {
+        margin-left: auto;
+    }
+
+    #contact-intro .btn {
+        width: 100%;
+        margin-left: 0!important;
+        margin-bottom: 15px;
+    } 
 }

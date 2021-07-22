@@ -11,7 +11,7 @@ Nos services |
             <h1 class="red-dot">{{$parent->title}}</h1>
         </div>
         <div class="col-12 col-md-6" id="hero-description">
-            <p>{{$parent->description}}</p>
+            <p>{!! $parent->description!!}</p>
 
             <p>
                 Pour découvrir nos autres prestations, consultez la page de <a href="{{route('services', [$other->getSlug()])}}" class="color-red">nos services de {{Illuminate\Support\Str::lower($other->title)}}</a>. 
@@ -38,7 +38,7 @@ Nos services |
 
 @foreach ($services as $service)
 
-    @if($i == ceil((sizeof($services)+1)/2))
+@if($i == ceil((sizeof($services)+1)/2))
 </div> <!-- end of bg-dark -->
 @include('layouts.curves.curve-medium-top-right', ['color' => '#2b2323'])
 <div class="services-second-part">
@@ -57,7 +57,7 @@ Nos services |
 
         <div class="col-12 col-md-7">
             <h2 class="red-dot">{{$service->title}}</h2>
-            <p>{{$service->description}}</p>
+            <p>{!!$service->description!!}</p>
         
             @if(sizeof($service->accordions))
             <div class="accordion-list" id="accordion{{$service->id}}">
@@ -70,7 +70,7 @@ Nos services |
                     </h3>
                 
                     <div id="accordion-content-{{$accordion->id}}" class="collapse" aria-labelledby="accordion-title-{{$accordion->id}}" data-parent="#accordion{{$service->id}}">
-                        <p class="accordion-content">{{$accordion->description}}</p>  
+                        <p class="accordion-content">{!!$accordion->description!!}</p>  
                     </div>
                 </div>
                 @endforeach
@@ -85,8 +85,8 @@ Nos services |
 
 <div class="container">
 <div class="row">
-    <div class="col-0 col-md-6"><!-- spacer --></div>
-    <div class="col-md-6">
+    <div class="col-0 col-md-4"><!-- spacer --></div>
+    <div class="col-md-8 col-12">
         <a class="btn btn-100 btn-outline-red" href="{{route('services', [$other->getSlug()])}}">
             vers les services de {{Illuminate\Support\Str::lower($other->title)}}
         </a>

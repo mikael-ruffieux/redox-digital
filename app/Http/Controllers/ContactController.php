@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Requests\ContactRequest;
 use App\Http\Requests\ContactNameRequest;
 use App\Http\Requests\ContactMailRequest;
@@ -27,6 +26,13 @@ class ContactController extends Controller
         "Je ne sais pas encore trop ..."
     ];
 
+    private $randomNamesAndMails = [
+        ["name" => "Yoda", "mail" => "maitre.yoda@conseil-jedi.org"],
+        ["name" => "Obi-Wan Kenobi", "mail" => "ben-kenobi@tatooine.net"],
+        ["name" => "Sherlock Holmes", "mail" => "s.holmes@baker-street.uk"],
+        ["name" => "James Bond", "mail" => "bond007@mi6.gov"],
+    ];
+
     // ######## Formulaire de maintenance !! ########
     public function returnForm() {
         return view('view_contact_form');
@@ -46,6 +52,43 @@ class ContactController extends Controller
     // ######## .Formulaire de maintenance !! ########
 
     // ##### New Contact Form #####
+    public function getIntro () {
+        // Vider la session
+        session()->flush();
+        return view('public.contact.contact-form');
+    }
+
+    public function getNameChat() {
+        $rand = rand(0, sizeof($this->randomNamesAndMails)-1);
+        session(['rand'=> $rand]);
+        return view('public.contact.contact-form-name', ['step' => 1, 'steps' => 4, 'next' => 'chat.mail', 'prev' => false, 'chat' => true, 'randomName' => $this->randomNamesAndMails[$rand]['name']]);
+    }
+
+    public function getMailChat() {
+        if(!empty(session('rand'))) {
+            $rand = session('rand');
+        } else {
+            $rand = rand(0, sizeof($this->randomNamesAndMails)-1);
+        }
+        session(['rand'=> $rand]);
+        return view('public.contact.contact-form-mail', ['step' => 2, 'steps' => 4, 'next' => 'chat.message', 'prev' => 'chat.name', 'chat' => true, 'randomMail' => $this->randomNamesAndMails[$rand]['mail']]);
+    }
+
+    public function getNameProject() {
+        $rand = rand(0, sizeof($this->randomNamesAndMails)-1);
+        session(['rand'=> $rand]);
+        return view('public.contact.contact-form-name', ['step' => 1, 'steps' => 6, 'next' => 'start.mail', 'prev' => false, 'chat' => false, 'randomName' => $this->randomNamesAndMails[$rand]['name']]);
+    }
+
+    public function getMailProject() {
+        if(!empty(session('rand'))) {
+            $rand = session('rand');
+        } else {
+            $rand = rand(0, sizeof($this->randomNamesAndMails)-1);
+        }
+        session(['rand'=> $rand]);
+        return view('public.contact.contact-form-mail', ['step' => 2, 'steps' => 6, 'next' => 'start.project-type', 'prev' => 'start.name', 'chat' => false, 'randomMail' => $this->randomNamesAndMails[$rand]['mail']]);
+    }
 
     public function postName(ContactNameRequest $request) {
         session(['type'=> $request->type]);

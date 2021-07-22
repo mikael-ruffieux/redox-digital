@@ -1,7 +1,7 @@
-@extends('template')
+@extends('layouts.contact_layout')
 
 @section('title')
-Votre message a bien été envoyé
+Votre message a bien été envoyé |
 @endsection
 
 @section('content')
