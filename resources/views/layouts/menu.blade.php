@@ -41,7 +41,7 @@
                 <li><a href="{{route('contact')}}">Contact</a></li>--}}
                 <li>
                     <div class="menu-cta">
-                        <a class="btn btn-black" href="{{route('contact.intro')}}">Un project en tête ?</a>
+                        <a class="btn btn-black" href="{{route('contact.intro')}}">Un projet en tête ?</a>
                     </div>
                 </li>
                 <div id="socials">
