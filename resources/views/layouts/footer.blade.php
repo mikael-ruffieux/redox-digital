@@ -31,7 +31,11 @@
             <div class="col-12 col-md-3">
                 <h4>Administration</h4>
                 <ul>
+                    @if(Auth::check())
+                    <li><a href="{{route('admin.home')}}">Dashboard</a></li>
+                    @else
                     <li><a href="{{route('login')}}">Login</a></li>
+                    @endif
                 </ul>
             </div>
 
@@ -93,7 +97,11 @@
                 {{-- Uniquement pour la v 1.0--}}
                 <h4>Administration</h4>
                 <ul>
-                    <li><a href="route('login')">Login</a></li>
+                    @if(Auth::check())
+                    <li><a href="{{route('admin.home')}}">Dashboard</a></li>
+                    @else
+                    <li><a href="{{route('login')}}">Login</a></li>
+                    @endif
                 </ul>
 
                 {{--<h4>Services</h4>

@@ -70,12 +70,12 @@
                 <div class="col-md-6">
                     <img src="{{asset('storage/about/etienne.jpg')}}" alt="Etienne Wildi">
                     <h3 class="name red-dot">Etienne Wildi</h3>
-                    <p>Entrepreneur digital & cofondateur<br><a href="mailto:etienne@redoxdigital.ch">etienne@redoxdigital.ch</a></p>
+                    <p>Photographe, vidéaste & graphiste<br><a href="mailto:etienne@redoxdigital.ch">etienne@redoxdigital.ch</a></p>
                 </div>
                 <div class="col-md-6">
                     <img src="{{asset('storage/about/mikael.jpg')}}" alt="Mikaël Ruffieux">
                     <h3 class="name red-dot">Mikaël Ruffieux</h3>
-                    <p>Ingénieur des médias & cofondateur<br><a href="mailto:mikael@redoxdigital.ch">mikael@redoxdigital.ch</a></p>
+                    <p>Ingénieur des médias & développeur web<br><a href="mailto:mikael@redoxdigital.ch">mikael@redoxdigital.ch</a></p>
                 </div>
             </div>
         </div>
