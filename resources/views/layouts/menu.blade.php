@@ -12,8 +12,8 @@
             </button>
             <ul id="menu">
                 <li><a href="{{route('home')}}">Accueil</a></li>
-                
-                {{--<li class="sub-menu">
+            @if(Auth::check())
+                <li class="sub-menu">
                     <a id="sub-menu-btn" href="{{route('services', ['web-digital'])}}">Services</a>
                     <div class="sub-menu-box">
                         <div class="container">
@@ -35,10 +35,13 @@
                             </ul>
                         </div>
                     </div>
-                </li>--}}
-                {{--<li><a href="{{route('portfolio')}}">Portfolio</a></li>
+                </li>
+                <li><a href="{{route('portfolio')}}">Portfolio</a></li>
+            @endif
+            @if(Auth::check())
                 <li><a href="{{route('about')}}">À propos</a></li>
-                <li><a href="{{route('contact')}}">Contact</a></li>--}}
+                <li><a href="{{route('contact')}}">Contact</a></li>
+            @endif
                 <li>
                     <div class="menu-cta">
                         <a class="btn btn-black" href="{{route('contact.intro')}}">Un projet en tête ?</a>
@@ -79,8 +82,8 @@
     </div>
 </nav>
 
-<!--
+{{--
 <div id="contact-btn">
     <a href="{{route('contact.intro')}}"><i class="fas fa-comment-dots"></i></a>
 </div>
--->
+--}}

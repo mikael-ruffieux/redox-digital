@@ -19,10 +19,11 @@
                 <h4>Navigation</h4>
                 <ul>
                     <li><a href="{{route('home')}}">Accueil</a></li>
-                    {{--
+                @if(Auth::check())
                     <li><a href="{{route('portfolio')}}">Portfolio</a></li>
                     <li><a href="{{route('about')}}">À propos</a></li>
-                    <li><a href="{{route('contact')}}">Contact</a></li>--}}
+                    <li><a href="{{route('contact')}}">Contact</a></li>
+                @endif
                 </ul>
             </div>
 
@@ -82,9 +83,11 @@
                 <h4>Navigation</h4>
                 <ul>
                     <li><a href="{{route('home')}}">Accueil</a></li>
-                    {{--<li><a href="{{route('portfolio')}}">Portfolio</a></li>
+                @if(Auth::check())
+                    <li><a href="{{route('portfolio')}}">Portfolio</a></li>
                     <li><a href="{{route('about')}}">À propos</a></li>
-                    <li><a href="{{route('contact')}}">Contact</a></li>--}}
+                    <li><a href="{{route('contact')}}">Contact</a></li>
+                @endif
                 </ul>
 
                 {{-- Uniquement pour la v 1.0--}}

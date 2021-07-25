@@ -236,6 +236,22 @@ a:hover {
     z-index: -1;
 }
 
+.curve-small-top, .curve-small-bottom,
+.curve-medium-top, .curve-medium-bottom {
+    position: relative;
+    z-index: 1;
+}
+
+.curve-small-top,
+.curve-medium-top {
+    top: -1px;
+}
+
+.curve-small-bottom,
+.curve-medium-bottom {
+    bottom: -1px;
+}
+
 .curve-small-top, .curve-small-bottom {
     height: 10vh;
 }
@@ -253,12 +269,44 @@ a:hover {
 }
 
 .curve-medium-top {
-    margin-top: -20vh;
+    margin-bottom: -20vh;
 }
 
 .curve-medium-bottom {
-    margin-bottom: -20vh;
+    margin-top: -20vh;
 }
+
+/* Curves animations */
+@keyframes comeFromLeft {
+    0% {
+        transform: translateX(-1000px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes comeFromRight {
+    0% {
+        transform: translateX(1000px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.enters-from-right > svg {
+    display: block;
+    transform-origin: right;
+    animation: comeFromRight 1000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.enters-from-left > svg {
+    display: block;
+    transform-origin: left  ;
+    animation: comeFromLeft 1000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+/* .Curves animations */
 
 /* Contact Curves */
 .curve-bottom-container {
@@ -485,11 +533,11 @@ a:hover {
     }
     
     .curve-medium-top {
-        margin-top: -15vh;
+        margin-bottom: -15vh;
     }
     
     .curve-medium-bottom {
-        margin-bottom: -15vh;
+        margin-top: -15vh;
     }
 }
 footer {
@@ -1785,3 +1833,33 @@ nav .sub-menu .sub-menu-title>a {
 
 /* .Services */
 
+
+#about-header {
+    padding-top: 10vh;
+    padding-bottom: 15vh;
+}
+
+#about-header h1, #about-page h2 {
+    margin-bottom: 5vh;
+}
+
+#about-values, #about-team, #about-clients {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+#about-values-list > div {
+    margin-bottom: 3vh;
+}
+
+#about-team h3.name {
+    margin-top: 5vh;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+#about-team img {
+    max-height: 60vh;
+    border-radius: 25px;
+    max-width: 66%;
+}

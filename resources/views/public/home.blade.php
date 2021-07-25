@@ -6,7 +6,7 @@ Bienvenue |
 
 @section("content")
 <div id="home-page">
-<section class="bg-white fullpage-section" id="home-header">
+<section class="fullpage-section" id="home-header">
     <div class="container">
         <div class="row">
             <div class="col-12">

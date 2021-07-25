@@ -5,6 +5,22 @@
     z-index: -1;
 }
 
+.curve-small-top, .curve-small-bottom,
+.curve-medium-top, .curve-medium-bottom {
+    position: relative;
+    z-index: 1;
+}
+
+.curve-small-top,
+.curve-medium-top {
+    top: -1px;
+}
+
+.curve-small-bottom,
+.curve-medium-bottom {
+    bottom: -1px;
+}
+
 .curve-small-top, .curve-small-bottom {
     height: 10vh;
 }
@@ -22,12 +38,44 @@
 }
 
 .curve-medium-top {
-    margin-top: -20vh;
+    margin-bottom: -20vh;
 }
 
 .curve-medium-bottom {
-    margin-bottom: -20vh;
+    margin-top: -20vh;
 }
+
+/* Curves animations */
+@keyframes comeFromLeft {
+    0% {
+        transform: translateX(-1000px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes comeFromRight {
+    0% {
+        transform: translateX(1000px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.enters-from-right > svg {
+    display: block;
+    transform-origin: right;
+    animation: comeFromRight 1000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.enters-from-left > svg {
+    display: block;
+    transform-origin: left  ;
+    animation: comeFromLeft 1000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+/* .Curves animations */
 
 /* Contact Curves */
 .curve-bottom-container {
@@ -254,10 +302,10 @@
     }
     
     .curve-medium-top {
-        margin-top: -15vh;
+        margin-bottom: -15vh;
     }
     
     .curve-medium-bottom {
-        margin-bottom: -15vh;
+        margin-top: -15vh;
     }
 }

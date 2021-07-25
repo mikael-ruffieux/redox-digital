@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Auth;
 
 // ##### Routes publiques #####
 Route::get('home', function () { return redirect(route('maintenance')); })->name('home');
-//Route::get('home', [PublicPagesController::class, 'home'])->name('home');
+
 Route::view('/', 'public.maintenance')->name('maintenance');
 
 Route::prefix('contact')->group(function () {
@@ -76,6 +76,7 @@ Auth::routes();
 
 // ##### Routes privées pendant le développement #####
 Route::prefix('dev')->middleware('auth')->group(function () {
+    Route::get('home', [PublicPagesController::class, 'home'])->name('dev.home');
 
     // à voir si on garde ce système, ou si on fait 2 chemins & méthodes
     Route::get('nos-services-de-{type}', [PublicPagesController::class, 'services'])->name('services');
@@ -86,7 +87,7 @@ Route::prefix('dev')->middleware('auth')->group(function () {
 
     });
 
-    Route::view('a-propos', 'public.about')->name('about'); 
+    Route::get('a-propos', [PublicPagesController::class, 'about'])->name('about');
 });
 
 

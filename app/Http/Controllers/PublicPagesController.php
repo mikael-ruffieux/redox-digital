@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Client;
 use App\Models\Project;
 use App\Models\Service;
 
@@ -17,6 +18,11 @@ class PublicPagesController extends Controller
         $projects = Project::where('archived', 0)->orderBy('date')->take(3)->get();
 
         return view("public.home", compact('projects'));
+    }
+
+    public function about() {
+        $clients = Client::all();
+        return view('public.about', compact('clients'));
     }
     
     public function services($type) {

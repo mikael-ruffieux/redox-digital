@@ -1,0 +1,29 @@
+#about-header {
+    padding-top: 10vh;
+    padding-bottom: 15vh;
+}
+
+#about-header h1, #about-page h2 {
+    margin-bottom: 5vh;
+}
+
+#about-values, #about-team, #about-clients {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+#about-values-list > div {
+    margin-bottom: 3vh;
+}
+
+#about-team h3.name {
+    margin-top: 5vh;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+#about-team img {
+    max-height: 60vh;
+    border-radius: 25px;
+    max-width: 66%;
+}

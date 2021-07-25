@@ -16,7 +16,7 @@ Bienvenue |
     </div>
 </section>
 
-@include('layouts.curves.curve-medium-bottom-right', ['color' => '#fafafa'])
+@include('layouts.curves.curve-medium-bottom-right', ['color' => '#fafafa', 'class' => 'enters-from-right'])
 
 <section class="maintenance-page" id="maintenance-desc">
     <div class="container">

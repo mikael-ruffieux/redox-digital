@@ -20,7 +20,7 @@
                 </li>
             </ul>
 
-            <a href="{{route('public.home')}}" class="btn btn-link">Retour au site</a>
+            <a href="{{route('home')}}" class="btn btn-link">Retour au site</a>
 
             <form class="form-inline my-2 my-lg-0" action="{{ route('logout') }}" method="POST">
                 @csrf
