@@ -27,3 +27,27 @@
     border-radius: 25px;
     max-width: 66%;
 }
+
+#about-clients .client {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5vh;
+}
+
+#about-clients .client img {
+    max-width: 150px;
+    max-height: 100px;
+    filter: grayscale(100%);
+    padding: 15px;
+    width: auto;
+    height: auto;
+    opacity: 0.6;
+    transition: all 0.3s ease-in-out;
+}
+
+#about-clients .client a:hover > img {
+    opacity: 1;
+    filter: grayscale(0%);
+    transition: all 0.3s ease-in-out;
+}

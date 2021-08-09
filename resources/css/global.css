@@ -71,17 +71,16 @@ body {
 
 /* Boostrap edits */ 
 .container {
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 0 15px;
 }
 
-@media (min-width: 576px) {.container {max-width: 700px;}}
+@media (min-width: 576px) {.container {max-width: 700px; padding: 0 30px;}}
 
-@media (min-width: 768px) {.container {max-width: 920px;}}
+@media (min-width: 768px) {.container {max-width: 920px; padding: 0 50px;}}
 
-@media (min-width: 992px) {.container {max-width: 1040px;}}
+@media (min-width: 992px) {.container {max-width: 1040px; padding: 0 50px;}}
 
-@media (min-width: 1200px) {.container {max-width: 1320px;}}
+@media (min-width: 1200px) {.container {max-width: 1320px; padding: 0 50px;}}
 
 
 .row {

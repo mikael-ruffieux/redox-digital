@@ -4,7 +4,7 @@
 <div class="container pt-5">
     <div class="row">
         <div class="col-lg-6 col-12">
-            <h1>Nos clients</h1>
+            <h1><b>Nos clients</b> [{{sizeof($clients)}}]</h1>
         </div>
         <div class="col-lg-6 col-12">
             <a href='{{ route('clients.create') }}' class='btn btn-info float-lg-right'>Enregistrer un nouveau client</a>

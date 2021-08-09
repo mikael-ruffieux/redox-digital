@@ -12,6 +12,8 @@
         <!-- Internal styles -->
         <link rel="stylesheet" href="{{ asset('css/redox-digital.css') }}">
 
+        <link rel="icon" type="image/svg" href="{{ asset('storage/assets/img/logo/Redox-Digital_Logotype-final_Redox-Digital_Logotype-pictogramme-noir-rouge.svg') }}">
+
     </head>
     <body class="bg-light">
         @include('admin.components.include_top_menu')

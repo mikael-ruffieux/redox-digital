@@ -95,9 +95,9 @@
 
             <div class="row">
                 @foreach ($clients as $client)
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 client">
                     <a href="{{$client->link}}" target="_blank" rel="noopener noreferrer">
-                        <img src="{{asset('clients/1.jpg')}}" alt="{{$client->name}}">
+                        <img src="{{asset($client->logo)}}" alt="{{$client->name}}">
                     </a>
                 </div>
                 @endforeach

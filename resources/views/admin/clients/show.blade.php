@@ -28,6 +28,12 @@
                 </div>
                 
             </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="logo">Logo</label><br>
+                    <img src="{{asset($client->logo)}}" alt="{{$client->name}}" style="max-width: 100%; max-height: 200px;"><br><br>
+                </div>
+            </div>
         </div>
     </form>
 </div>

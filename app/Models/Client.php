@@ -11,7 +11,7 @@ class Client extends Model
 
     public $timestamps = false;
 
-    protected $fillable=['name','link'];
+    protected $fillable=['name','link', 'logo'];
 
     public function projects() {
         return $this->hasMany(Project::class);

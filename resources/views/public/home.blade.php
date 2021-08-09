@@ -11,7 +11,7 @@ Bienvenue |
         <div class="row">
             <div class="col-12">
                 <h1 class="color-red">Agence digitale</h1>
-                <h2 class="color-red"><span class="black-dot">créatrice d’expériences web & vidéo</span></h2>
+                <h2 class="color-red"><span class="black-dot">créatrice d’expériences <span id="typewriter"></span></span></h2>
             </div>
         </div>
 
@@ -108,6 +108,16 @@ Bienvenue |
 </section>
 </div>
 
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<script type="text/javascript">
+    
+        new Typewriter('#typewriter', {
+        strings: ['web', 'vidéo'],
+        autoStart: true,
+        loop: true,
+        });
+    
+</script>
 @endsection
 
 

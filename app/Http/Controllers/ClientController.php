@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ClientController extends Controller
 {
@@ -47,7 +48,22 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        $client = Client::create($request->all());
+        $statement = DB::table('clients')->where('id', \DB::raw("(select max(`id`) from clients)"))->get();
+        $nextId = $statement[0]->id+1;
+
+        // Saving image
+        $image = $request->file('logo');
+        $name = "$nextId.".$image->getClientOriginalExtension();
+        $destinationPath = public_path('storage/clients');
+        $image->move($destinationPath, $name);
+
+        $newClient = [
+            'name' => $request->name,
+            'link' => $request->link,
+            'logo' => "storage/clients/" . $name,
+        ];
+
+        $client = Client::create($newClient);
         return redirect(route('clients.index'))->with('alert', "Le client " . $client->name . " a été créé.");
     }
 
@@ -71,7 +87,24 @@ class ClientController extends Controller
      */
     public function update(Request $request, $id)
     {
-        Client::findOrFail($id)->update($request->all());
+        $updatedData = [
+            'name' => $request->name,
+            'link' => $request->link,
+        ];
+
+        // If new file is uploaded
+        if ($request->hasFile('logo')) {
+
+            // Saving image
+            $image = $request->file('logo');
+            $name = "$id.".$image->getClientOriginalExtension();
+            $destinationPath = public_path('storage/clients');
+            $image->move($destinationPath, $name);
+
+            $updatedData["logo"] = "storage/clients/" . $name;
+        }
+
+        Client::find($id)->update($updatedData);
         return redirect(route('clients.index'))->with('alert', "Le client " . $request->input('name') . " a été modifié avec succès.");
     }
 

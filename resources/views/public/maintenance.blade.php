@@ -10,7 +10,7 @@ Bienvenue |
         <div class="row">
             <div class="col-12">
                 <h2>comme on dit ...</h2>
-                <h1><span class="red-dot">«Les cordonniers sont les plus mal chaussés</span>»</h1>
+                <h1 id="maintenance-title"><span class="red-dot">«Les cordonniers sont les plus mal chaussés</span>»</h1>
             </div>
         </div>
     </div>

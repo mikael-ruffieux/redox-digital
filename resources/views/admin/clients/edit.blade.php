@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <form method="POST" action="{{route('clients.update', [$client->id])}}" accept-charset="UTF-8">
+    <form method="POST" action="{{route('clients.update', [$client->id])}}" accept-charset="UTF-8" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="row">
@@ -28,6 +28,17 @@
                     <input type="text" class="form-control mb-3" name="link" value="{{$client->link}}">
                     {!! $errors->first('link', '<small class="help-block text-danger">:message</small>') !!}
                     <small>Le lien doit débuter par "https://..."<br><a href="{{$client->link}}" target="_blank" rel="noopener noreferrer">Vers le site</a></small>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="logo">Logo</label><br>
+                    <img src="{{asset($client->logo)}}" alt="{{$client->name}}" style="max-width: 100%; max-height: 200px;"><br><br>
+
+                    <input type="file" id="logo" name="logo" accept="image/png, image/jpeg">
+            
+                    {!! $errors->first('logo', '<small class="help-block">:message</small>') !!}
                 </div>
             </div>
 
