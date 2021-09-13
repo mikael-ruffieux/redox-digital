@@ -71,7 +71,7 @@ Bienvenue |
 
 @include('layouts.curves.curve-medium-bottom-right', ['color' => '#2b2323'])
 
-<section id="home-portfolio" class="bg-dark">
+<section id="home-portfolio" class="portfolio bg-dark">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-12">

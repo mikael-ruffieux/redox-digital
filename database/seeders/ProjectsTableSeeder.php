@@ -9,7 +9,7 @@ use Faker\Provider\Lorem;
 
 class ProjectsTableSeeder extends Seeder
 {
-    private $type = ['Video', 'Web', 'Marketing'];
+    private $type = ['Video', 'Web','Web','Web', 'Marketing'];
 
     private function randDate() {
         $nbJours = rand(-2800, 0);
@@ -53,10 +53,10 @@ class ProjectsTableSeeder extends Seeder
             DB::table('projects')->insert([
                 'title' => 'Projet '. $i,
                 'client_id' => rand(1, 10),
-                'archived' => rand(0, 1),
+                'archived' => 0,
                 'context' => "Description $i, lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque tempore porro ducimus laboriosam, rem dolores non neque, reiciendis quibusdam labore voluptate, pariatur sed molestiae. Incidunt necessitatibus consequuntur delectus officiis sunt!",
                 'date' => $this->randDate(),
-                'projectable_type' => 'App\Models\Project' . $this->type[rand(0, 2)],
+                'projectable_type' => 'App\Models\Project' . $this->type[rand(0, 3)],
                 'projectable_id' => rand(1, 3),
             ]);
         }

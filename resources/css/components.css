@@ -183,33 +183,39 @@
     background-color: var(--true-white);
     color: var(--primary-red);
     border: none;
+    transition: all 0.2s ease-in-out;
 }
 
 .btn-white:hover, .btn-white:focus, .btn-white:active {
     background: rgb(var(--rgb-primary-red));
     color: var(--true-white);
     border: none;
+    transition: all 0.2s ease-in-out;
 }
 
 .btn-outline-black {
     border: solid 1px var(--primary-black);
+    transition: all 0.2s ease-in-out;
 }
 
 .btn-outline-black:hover, .btn-outline-black:focus, .btn-outline-black:active {
     background: rgb(var(--rgb-primary-red));
     color: var(--true-white);
     border: solid 1px var(--primary-red);
+    transition: all 0.2s ease-in-out;
 }
 
 .btn-outline-white {
     border: solid 1px var(--true-white);
     color: var(--true-white);
+    transition: all 0.2s ease-in-out;
 }
 
 .btn-outline-white:hover, .btn-outline-white:focus, .btn-outline-white:active {
     background: rgb(var(--rgb-primary-red));
     color: var(--true-white);
     border: solid 1px var(--primary-red);
+    transition: all 0.2s ease-in-out;
 }
 
 .btn-outline-red {
@@ -228,13 +234,15 @@
     border: solid 1px var(--primary-black);
     /*padding: 15px 20px;
     border-radius: 30px;*/
-    color: var(--true-white);   
+    color: var(--true-white); 
+    transition: all 0.3s ease-in-out;  
 }
 
 .btn-black:hover, .btn-black:focus, .btn-black:active {
     background: rgb(var(--rgb-primary-red));
     color: var(--true-white)!important;
     border: solid 1px var(--primary-red);
+    transition: all 0.3s ease-in-out;  
 }
 
 #contact-btn {

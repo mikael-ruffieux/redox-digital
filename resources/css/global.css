@@ -45,6 +45,8 @@ body {
     min-height: 100vh;
     margin: 0;
 
+    overflow-x: hidden;
+
     display:grid;
     grid-template-rows: 10vh 1fr auto;
 }

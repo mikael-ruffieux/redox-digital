@@ -1,0 +1,10 @@
+#portfolio h3, #portfolio h5, #portfolio a {
+    color: var(--primary-dark);
+}
+
+#portfolio-header {
+    padding-top: 10vh;
+    padding-bottom: 15vh;
+    display:block;
+    position: relative;
+}

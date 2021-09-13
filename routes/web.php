@@ -26,6 +26,8 @@ use Illuminate\Support\Facades\Auth;
 // ##### Routes publiques #####
 Route::get('home', function () { return redirect(route('maintenance')); })->name('home');
 
+Route::view('redox-prod', 'redox-prod');
+
 Route::view('/', 'public.maintenance')->name('maintenance');
 
 Route::prefix('contact')->group(function () {

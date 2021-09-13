@@ -1,0 +1,32 @@
+#project-header {
+    padding-top: 10vh;
+    padding-bottom: 20vh;
+}
+
+#project-header h1, #project-header .categories, #project-header p, #project-header .section-title {
+    margin-bottom: 5vh;
+}
+
+#project-header .categories > a {
+    color: var(--secondary-black)!important;
+}
+
+#project-main {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+#project-main h3, #project-main p {
+    margin-bottom: 5vh;
+}
+
+#project-main img {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+
+#project-others {
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+}

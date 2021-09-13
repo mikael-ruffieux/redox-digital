@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Client;
 use App\Models\Project;
@@ -44,14 +45,21 @@ class PublicPagesController extends Controller
 
     public function portfolio() {
         $projects = Project::where('archived', 0)->orderBy('date')->get();
+        $services = Service::all();
 
-        return view("public.portfolio.portfolio", compact('projects'));
+        return view("public.portfolio.portfolio", compact('projects', 'services'));
     }
 
     public function portfolio_project($id) {
         $project = Project::findOrFail($id);
         $project_type = $project->projectable_type;
 
-        dd($project_type, $project);
+        if($project_type == "App\Models\ProjectWeb") {
+            return view('public.portfolio.projects.web', compact('project'));
+        } elseif ($project_type == "App\Models\ProjectVideo") {
+            return view('public.portfolio.projects.video', compact('project'));
+        } else {
+            return view('public.portfolio.projects.marketing', compact('project'));
+        }
     }
 }

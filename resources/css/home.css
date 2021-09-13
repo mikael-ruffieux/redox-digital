@@ -69,11 +69,11 @@
 
 /* Projects */ 
 
-#home-portfolio h3, #home-portfolio h5, #home-portfolio a {
+.portfolio h3, .portfolio h5, .portfolio a {
     color: var(--true-white);
 }
 
-#home-portfolio .project h3 {
+.portfolio .project h3 {
     font-weight: 500;
     font-size: 35px;
     text-transform: none;
@@ -81,31 +81,31 @@
     margin: 5vh 0;
 }
 
-#home-portfolio .categories {
+.portfolio .categories {
     margin-bottom: 5vh;
 }
 
-#home-portfolio .categories > .category {
+.portfolio .categories > .category {
     font-size: 16px;
     font-family: futura-pt, 'Poppins', sans-serif;
     opacity: 0.75;
 }
 
-#home-portfolio .categories > .category::after {
+.portfolio .categories > .category::after {
     content: ", ";
 }
 
-#home-portfolio .categories > .category:last-of-type:after {
+.portfolio .categories > .category:last-of-type:after {
     content: "";
 }
 
-#home-portfolio .project {
+.portfolio .project {
     min-height: 80vh;
     display: flex;
     align-items: center;
 }
 
-#home-portfolio .project img {
+.portfolio .project img {
     width: 100%;
     height: auto;
     border-radius: 20px;
