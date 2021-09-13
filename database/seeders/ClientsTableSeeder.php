@@ -54,8 +54,8 @@ class ClientsTableSeeder extends Seeder
             'logo' => 'storage/clients/9.png'
         ],
         [
-            'name' => 'Client 10',
-            'link' => 'https://test.ch/fr',
+            'name' => "l'Alpée de Vaulruz",
+            'link' => 'http://alpee-vaulruz.ch/',
             'logo' => 'storage/clients/10.png'
         ],
     ];

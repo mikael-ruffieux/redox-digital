@@ -18,7 +18,7 @@ class ServicesTableSeeder extends Seeder
         ],
         [
             'title' => 'Création de contenus digitaux',
-            'description' => 'Le contenu est au centre de toutes bonnes communications, il se doit d’être structuré et impactant pour toucher son public cible. Du texte à l’image, nous vous proposons de créer vos contenus digitaux.',
+            'description' => 'Le contenu est au centre de toutes bonnes communications; il se doit d’être structuré et impactant pour toucher son public cible. Du texte à l’image, nous vous proposons de créer vos contenus digitaux.',
             'image' => 'storage/services/2.jpg',
             'isChild' => false,
             'parent_id' => null
@@ -54,14 +54,14 @@ class ServicesTableSeeder extends Seeder
         ],
         [
             'title' => 'Marketing digital',
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+            'description' => 'Notre agence digitale analyse vos besoins et vous propose un accompagnement sur l’ensemble des outils digitaux. <b>Réseaux sociaux</b>, <b>référencement SEO</b> (la façon dont votre site apparaît sur un moteur de recherche), <b>campagne SEA</b> (publicités sur les moteurs de recherche): nous vous conseillons et mettons en place les dispositifs adaptés et propices à l\'augmentation du trafic sur vos plateformes.',
             'image' => 'storage/services/7.jpg',
             'isChild' => true,
             'parent_id' => 1
         ],
         [
             'title' => 'Stratégie',
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+            'description' => 'Vous souhaitez créer une image de marque puissante afin de développer votre activité ? Affiner votre stratégie digitale donnera une identité bien définie à votre entreprise. Vos utilisateurs et consommateurs se souviendront ainsi de vous, de vos produits et de vos services.',
             'image' => 'storage/services/8.jpg',
             'isChild' => true,
             'parent_id' => 1
@@ -69,21 +69,21 @@ class ServicesTableSeeder extends Seeder
         // Children of 2
         [
             'title' => 'Production vidéo',
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+            'description' => 'La vidéo est ajourd\'hui l\'un des médias les plus utilisés et est devenue un vecteur essentiel pour communiquer. Que cela soit pour transmettre l\'histoire de votre entreprise, expliquer vos produits, vos services, votre offre ou établir des relations avec vos clients et vos prospects, Redox Digital vous aide à réaliser votre projet de vidéos.',
             'image' => 'storage/services/9.jpg',
             'isChild' => true,
             'parent_id' => 2
         ],
         [
             'title' => 'Photographie',
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+            'description' => 'Avec une image de qualité, capturez l\'essence de votre entreprise ! Pour mettre en valeur vos services et vos produits, nous vous proposons diverses prestations.',
             'image' => 'storage/services/10.jpg',
             'isChild' => true,
             'parent_id' => 2
         ],
         [
             'title' => 'Design graphique',
-            'description' => 'L\'identité visuelle de votre entreprise est autant unique que vous, et mérite le même soin ! Redox Digital est là pour vous, et nous serons très heureux de mettre nos compétences créatives à contributions de vos projets.',
+            'description' => 'L\'identité visuelle de votre entreprise est autant unique que vous, et mérite le même soin ! Redox Digital est là pour vous, et nous serons très heureux de mettre nos compétences créatives à contribution de vos projets.',
             'image' => 'storage/services/11.jpg',
             'isChild' => true,
             'parent_id' => 2
