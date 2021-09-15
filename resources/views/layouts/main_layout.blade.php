@@ -26,6 +26,9 @@
     <!-- Internal styles -->
     <link rel="stylesheet" href="{{ asset('css/all.css') }}">
 
+    <!-- Internal scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
+
     <link rel="icon" type="image/svg" href="{{ asset('storage/assets/img/logo/Redox-Digital_Logotype-final_Redox-Digital_Logotype-pictogramme-blanc-rouge.svg') }}">
 
     <title>@yield("title") Redox Digital</title>

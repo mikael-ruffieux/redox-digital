@@ -106,7 +106,7 @@
     </section>
 
     <section id="cta">
-        @include('layouts.curves.curve-medium-top-right', ['color' => '#2b2323'])
+        @include('layouts.curves.curve-small-top-right', ['color' => '#2b2323'])
         <div class="cta-content container">
             <h2>Parlons maintenant de votre projet</h2>
             <h3>Ne soyez pas timide</h3>
