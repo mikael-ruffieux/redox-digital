@@ -7,6 +7,7 @@ Bienvenue |
 @section("content")
 <div id="home-page">
 
+<div id="particles-cache"></div>
 <div id="particles-js"></div>
 
 {{--

@@ -40,6 +40,16 @@
     opacity: 0.5;
 }
 */
+#particles-cache {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -9;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(135deg, rgba(250,250,250,1) 40%, rgba(255,0,0,0) 90%);
+}
+
 #particles-js canvas {
     display: block;
     vertical-align: bottom;
