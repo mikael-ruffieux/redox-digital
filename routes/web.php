@@ -8,6 +8,7 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\AccordionController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PublicPagesController;
+use App\Http\Controllers\CurriculumController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -25,8 +26,6 @@ use Illuminate\Support\Facades\Auth;
 
 // ##### Routes publiques #####
 Route::get('home', function () { return redirect(route('maintenance')); })->name('home');
-
-Route::view('redox-prod', 'redox-prod');
 
 Route::view('/', 'public.maintenance')->name('maintenance');
 
@@ -73,9 +72,6 @@ Route::prefix('contact')->group(function () {
 Auth::routes();
 
 // Contact Form
-//Route::get('contact', [ContactController::class,'returnForm'])->name('maintenance.contact');
-//Route::post('contact', [ContactController::class,'validateAndSendForm']);
-
 // ##### Routes privées pendant le développement #####
 Route::prefix('dev')->middleware('auth')->group(function () {
     Route::get('home', [PublicPagesController::class, 'home'])->name('dev.home');
@@ -111,3 +107,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('services/{service_id}/accordion/create', [AccordionController::class, 'create'])->name('accordions.create');
     Route::resource('accordions', AccordionController::class)->only('destroy', 'update', 'store');
 });
+
+
+// Curriculum vitae
+Route::get('mikael', [CurriculumController::class, 'cv'])->name('cv.mikael');
