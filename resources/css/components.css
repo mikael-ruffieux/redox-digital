@@ -221,12 +221,14 @@
 .btn-outline-red {
     border: solid 1px var(--primary-red);
     color: var(--primary-red);
+    transition: all 0.2s ease-in-out;
 }
 
 .btn-outline-red:hover, .btn-outline-red:focus, .btn-outline-red:active {
     background: rgb(var(--rgb-primary-red));
     color: var(--true-white);
     border: solid 1px var(--primary-red);
+    transition: all 0.2s ease-in-out;
 }
 
 .btn-black {

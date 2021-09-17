@@ -151,7 +151,7 @@
 
 /* Projects */ 
 
-.portfolio h3, .portfolio h5, .portfolio a {
+.portfolio h3, .portfolio h5, .portfolio a:not(.btn-outline-red) {
     color: var(--primary-black);
 }
 
