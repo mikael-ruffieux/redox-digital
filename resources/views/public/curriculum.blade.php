@@ -27,11 +27,11 @@ Mikaël Ruffieux |
                 <p>Vous trouverez sur cette page mes <b>informations personnelles</b>, un aperçu de mon <b>parcours étudiant</b> et <b>professionnel</b>, ainsi que mes <b>réalisations</b> dans le domaine du digital.</p>
                 <p>Bonne lecture, et n’hésitez pas à me contacter en cas de question !</p>
 
-                <a href="#about-me" id="bouncing-arrow" style="z-index:100;"><i class="fal fa-arrow-down"></i></a>
+                <a href="#about-me" id="bouncing-arrow"><i class="fal fa-arrow-down"></i></a>
             </div>
 
             <div class="col-lg-4 col-12">
-                <img src="" alt="">
+                <img src="{{asset('storage/assets/img/cv/mikael.jpg')}}" alt="Mikaël" id="profile-picture">
             </div>
         </div>
     </div>
@@ -49,13 +49,17 @@ Mikaël Ruffieux |
         </div>
         <div class="row">
             <div class="col-lg-6 col-12">
-                <i class="fas fa-birthday-cake"></i>05.10.1996 (25 ans)<br/>
-                <i class="fas fa-map-marker-alt"></i>
-                Rte de Duvillard 23<br/>
-                1663 Epagny
+                <p>
+                    <i class="fas fa-birthday-cake mr-3"></i>05.10.1996 (25 ans)
+                </p>
+                <p>
+                    <i class="fas fa-map-marker-alt mr-3"></i>
+                    Rte de Duvillard 23,<br/>
+                    CH-1663 Epagny
+                </p>
             </div>
             <div class="col-lg-6 col-12">
-                <i class="far fa-envelope"></i>ruffieux.mikael@gmail.com
+                <p><i class="far fa-envelope mr-3"></i><a href="mailto:ruffieux.mikael@gmail.com">ruffieux.mikael@gmail.com</a></p>
             </div>
         </div>
     </div>
@@ -73,21 +77,129 @@ Mikaël Ruffieux |
         </div>
 
         <div class="row">
-            <div class="col-md-6 col-12">
+            <div class="col-md-6 col-12 mb-5">
                 <h3 class="all-caps"><span class="number">01</span> - Langues</h3>
-                <p>Nous créons des produits digitaux qui vous démarquent.</p>
+
+                <p class="progress-title">Français</p>
+                <div class="progress-bg">
+                    <div class="progress-bar" style="width: 99%;"><small>Langue maternelle</small></div>
+                </div>
+
+                <p class="progress-title">Anglais</p>
+                <div class="progress-bg">
+                    <div class="progress-bar" style="width: 83%;"><small>C1</small></div>
+                </div>
+
+                <p class="progress-title">Allemand</p>
+                <div class="progress-bg">
+                    <div class="progress-bar" style="width: 66%;"><small>B2</small></div>
+                </div>
+                
             </div>
-            <div class="col-md-6 col-12">
+
+            <div class="col-md-6 col-12 mb-5" id="office">
                 <h3 class="all-caps"><span class="number">02</span> - Bureautique</h3>
-                <p>Nous créons des produits digitaux qui vous démarquent.</p>
+                <div class="row text-center">
+                    <div class="col-6">
+                        <i class="fab fa-google-drive fa-3x color-red"></i>
+                        <p>G Suite</p>
+                    </div>
+                    <div class="col-6">
+                        <i class="fab fa-microsoft fa-3x color-red"></i>
+                        <p>Microsoft Office</p>
+                    </div>
+                </div>
+                
             </div>
-            <div class="col-md-6 col-12">
+
+            <div class="col-md-6 col-12 mb-5">
                 <h3 class="all-caps"><span class="number">03</span> - Graphisme</h3>
-                <p>Nous créons des produits digitaux qui vous démarquent.</p>
+
+                <div class="row bullet-list">
+                    <div class="col-6">
+                        <p>Lightroom / Premiere&nbsp;Pro</p>
+                    </div>
+                    <div class="col-6">
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle full"></i>
+                    </div>
+
+                    <div class="col-6">
+                        <p>Photoshop / InDesign</p>
+                    </div>
+                    <div class="col-6">
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle"></i>
+                    </div>
+
+                    <div class="col-6">
+                        <p>Illustrator / After&nbsp;Effects</p>
+                    </div>
+                    <div class="col-6">
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle"></i>
+                        <i class="fad fa-circle"></i>
+                    </div>
+                </div>
+                
             </div>
-            <div class="col-md-6 col-12">
+
+            <div class="col-md-6 col-12 mb-5">
                 <h3 class="all-caps"><span class="number">04</span> - Informatique</h3>
-                <p>Nous créons des produits digitaux qui vous démarquent.</p>
+                
+                <div class="row bullet-list">
+                    <div class="col-6">
+                        <p>HTML / CSS / PHP</p>
+                    </div>
+                    <div class="col-6">
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle full"></i>
+                    </div>
+
+                    <div class="col-6">
+                        <p>Laravel / JavaScript</p>
+                    </div>
+                    <div class="col-6">
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle"></i>
+                    </div>
+
+                    <div class="col-6">
+                        <p>WordPress / Drupal / CakePHP</p>
+                    </div>
+                    <div class="col-6">
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle"></i>
+                        <i class="fad fa-circle"></i>
+                    </div>
+
+                    <div class="col-6">
+                        <p>Java / Python</p>
+                    </div>
+                    <div class="col-6">
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle full"></i>
+                        <i class="fad fa-circle"></i>
+                        <i class="fad fa-circle"></i>
+                        <i class="fad fa-circle"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -104,26 +216,26 @@ Mikaël Ruffieux |
             </div>
         </div>
 
-        <div class="row">
+        <div class="row my-4">
             <div class="col-lg-3 col-12">
-                <img src="" alt="">
+                <img src="{{asset('storage/assets/img/cv/heig.svg')}}" alt="HEIG-VD">
                 <p>2019 - 2022</p>
             </div>
             <div class="col-lg-9 col-12">
                 <h3>HEIG-VD <small>- Yverdon-les-Bains (VD)</small></h3>
-                <h4>Bachelor of Science</h4>
+                <h4 class="color-red">Bachelor of Science</h4>
                 <p>Filière Ingénierie des Médias, à la Haute École d’Ingénierie et de Gestion du Canton de Vaud.</p>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row my-4">
             <div class="col-lg-3 col-12">
-                <img src="" alt="">
+                <img src="{{asset('storage/assets/img/cv/csud.svg')}}" alt="Collège du Sud">
                 <p>2012 - 2016</p>
             </div>
             <div class="col-lg-9 col-12">
                 <h3>Collège du Sud <small>- Bulle (FR)</small></h3>
-                <h4>Maturité gymnasiale</h4>
+                <h4 class="color-red">Maturité gymnasiale</h4>
                 <p>Formation bilingue (F/D), Mathématiques renforcés, Option spécifique : Biologie / Chimie</p>
             </div>
         </div>
@@ -172,14 +284,14 @@ Mikaël Ruffieux |
             <div class="col-lg-4 col-12">
                 <h3 class="name red-dot">Etienne Wildi</h3>
                 <p>
-                    Redox Digital, associé</br>
+                    Redox Digital, associé<br/>
                     <a href="mailto:etienne@redoxdigital.ch">etienne@redoxdigital.ch</a>
                 </p>
 
-                <p><i>(il vous assurera que je travaille bien)</i></p>
+                <p><small>(il vous assurera que je travaille bien)</small></p>
             </div>
 
-            <div class="col-12 color-white"><small><i>Si vous souhaitez contacter ces personnes par téléphone, je vous transmets volontiers leurs contacts, à votre demande.</i></small></div>
+            <div class="col-12 color-white mt-3" id="note"><small><i>Si vous souhaitez contacter ces personnes par téléphone, je vous transmets volontiers leurs contacts, à votre demande.</i></small></div>
         </div>
     </div>
 </section>
@@ -254,29 +366,29 @@ Mikaël Ruffieux |
                 <h2 class="red-dot">Mes intérêts</h2>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-                <i class="fas fa-bike"></i><br/>
+        <div class="row text-center" id="icons-row">
+            <div class="col-lg-2 col-md-4 col-6">
+                <i class="fa-2x fad fa-biking-mountain" style="--fa-secondary-color: #AE0000; --fa-secondary-opacity: 0.8;"></i><br/>
                 <p>VTT</p>
             </div>
 
-            <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-                <i class="fas fa-mountain"></i><br/>
+            <div class="col-lg-2 col-md-4 col-6">
+                <i class="fa-2x fad fa-mountain" style="--fa-secondary-color: #AE0000; --fa-secondary-opacity: 0.8;"></i><br/>
                 <p>Randonnée</p>
             </div>
 
-            <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-                <i class="fas fa-camera"></i><br/>
+            <div class="col-lg-2 col-md-4 col-6">
+                <i class="fa-2x fad fa-camera" style="--fa-secondary-color: #AE0000; --fa-secondary-opacity: 0.8;"></i><br/>
                 <p>Photographie</p>
             </div>
 
-            <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-                <i class="fas fa-music"></i><br/>
+            <div class="col-lg-2 col-md-4 col-6">
+                <i class="fa-2x fad fa-music" style="--fa-secondary-color: #AE0000; --fa-secondary-opacity: 0.8;"></i><br/>
                 <p>Musique</p>
             </div>
 
-            <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-                <i class="fas fa-movie"></i><br/>
+            <div class="col-lg-2 col-md-4 col-6">
+                <i class="fa-2x fad fa-film" style="--fa-secondary-color: #AE0000; --fa-secondary-opacity: 0.8;"></i><br/>
                 <p>Cinéma</p>
             </div>
         </div>
