@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateClientsTable extends Migration
+class CreateCvexperiencesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateClientsTable extends Migration
      */
     public function up()
     {
-        Schema::create('clients', function (Blueprint $table) {
+        Schema::create('c_v_experiences', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('link');
-            $table->string('logo');
-            $table->boolean('public')->default(false);
+            $table->string('job');
+            $table->string('period');
+            $table->string('company');
+            $table->string('place');
+            $table->text('desc');
         });
     }
 
@@ -29,6 +30,6 @@ class CreateClientsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clients');
+        Schema::dropIfExists('c_v_experiences');
     }
 }

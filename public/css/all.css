@@ -2250,3 +2250,55 @@ nav .sub-menu .sub-menu-title>a {
 #cv #competences #office .col-6 {
     margin-top: 5vh;
 }
+
+#work-history h3 {
+    margin-top : 0;
+}
+
+#work-history .exp-data, #work-history .exp-period {
+    padding-bottom: 5vh;
+}
+
+#work-history .exp-data {
+    border-left: solid 3px var(--primary-red);
+    padding-left: 30px;
+}
+
+#work-history .exp-period {
+    padding-right: 30px;
+}
+
+#work-history .fa-circle {
+    position: relative;
+    top: -28px;
+    right: -48px;
+    z-index: 10;
+    --fa-primary-color: var(--primary-red);
+    --fa-secondary-color: #fafafa;
+    --fa-secondary-opacity: 1;
+}
+
+#cv #portfolio h5 {
+    margin: 0;
+}
+
+#cv #portfolio h3 {
+    margin: 3vh 0;
+}
+
+#cv #portfolio p {
+    margin-bottom: 5vh;
+}
+
+#cv #portfolio img {
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}
+
+#cv #portfolio .btn-outline-black:hover, #cv #portfolio .btn-outline-red:hover {
+    color: var(--true-white);
+}
+
+#cv #portfolio {
+    padding: 10vh 0;
+}

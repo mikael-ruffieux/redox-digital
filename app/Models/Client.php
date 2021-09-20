@@ -11,9 +11,13 @@ class Client extends Model
 
     public $timestamps = false;
 
-    protected $fillable=['name','link', 'logo'];
+    protected $fillable=['name','link', 'logo', 'public'];
 
     public function projects() {
         return $this->hasMany(Project::class);
+    }
+
+    public function cv_projects() {
+        return $this->hasMany(CVProject::class);
     }
 }

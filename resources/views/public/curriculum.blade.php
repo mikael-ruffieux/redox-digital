@@ -25,7 +25,7 @@ Mikaël Ruffieux |
                 <span class="dash-black"></span>
                 <p>Bienvenue sur mon curriculum vitæ !</p>
                 <p>Vous trouverez sur cette page mes <b>informations personnelles</b>, un aperçu de mon <b>parcours étudiant</b> et <b>professionnel</b>, ainsi que mes <b>réalisations</b> dans le domaine du digital.</p>
-                <p>Bonne lecture, et n’hésitez pas à me contacter en cas de question !</p>
+                <p>Bonne lecture, et n’hésitez pas à me contacter en cas de questions !</p>
 
                 <a href="#about-me" id="bouncing-arrow"><i class="fal fa-arrow-down"></i></a>
             </div>
@@ -252,6 +252,23 @@ Mikaël Ruffieux |
                 <h2 class="red-dot">Expériences professionnelles</h2>
             </div>
         </div>
+        <div id="work-history">
+            @foreach ($experiences as $exp)
+            <div class="row">
+                <div class="col-4 exp-period text-right">
+                    <h3 class="all-caps">{!! $exp->period !!}</h3>
+                    <i class="fad fa-2x fa-circle"></i>
+                </div>
+                <div class="col-8 exp-data">
+                    <h3 class="all-caps">{{$exp->job}}</h3>
+
+                    <p class="mt-3"><span class="color-red">{{$exp->company}} -</span> <small>{{$exp->place}}</small></p>
+
+                    <p>{{$exp->desc}}</p>
+                </div>
+            </div>
+            @endforeach
+        </div>
     </div>
 </section>
 
@@ -303,55 +320,40 @@ Mikaël Ruffieux |
         <div class="row">
             <div class="col-12">
                 <h3 class="all-caps color-red">Ce que j'ai fait</h3>
-                <h2 class="red-dot">Portfolio</h2>
+                <h2 class="red-dot">Mes dernières réalisations</h2>
             </div>
         </div>
 
-        <!-- Exemple -->
-        <div class="row project">
-            <div class="col-6">
-                <h5>Cremo</h5>
-                <h3>Vidéo d'animation pour le raclette MAZOT</h3>
-
-                <div class="categories">
-                    <a href="#" class="category">Vidéo</a>
-                    <a href="#" class="category">Motion-design</a>
-                </div>
-            </div>
-            <div class="col-4">
-                <img src="" alt="">
-            </div>
-        </div>
-
-        <!-- .exemple -->
-        {{--
         @foreach ($projects as $project)
         <div class="row project">
-            <div class="col-6">
-                <h5>{{$project->client->name}}</h5>
+            <div class="col-lg-7 col-md-6 col-12">
+                <h5><a href="{{$project->client->link}}">{{$project->client->name}}</a></h5>
                 <h3>{{$project->title}}</h3>
 
                 <div class="categories">
-                    @foreach ($project->services as $service)
-                    <a href="#" class="category">{{$service->title}}</a>
-                    @endforeach
+                    <p class="category">{{$project->categories}}</p>
                 </div>
-                <a class="btn btn-outline-dark" href="#">En savoir plus</a>
+
+                <p>{!! $project->desc !!}</p>
+                @if (!empty($project->project_url))
+                <a class="btn btn-outline-black" href="{{$project->project_url}}">Découvrir le projet entier</a>
+                @endif
             </div>
-            <div class="col-4">
-                <img src="{{asset($project->images->first()->url)}}" alt="{{$project->title}}">
+            <div class="col-lg-5 col-md-6 col-12">
+                @if (file_exists(public_path($project->image)))
+                <img src="{{asset($project->image)}}" alt="{{$project->title}}">
+                @endif
             </div>
         </div>
         @endforeach
-        --}}
 
-        {{--
-        <div class="row">
+        
+        <div class="row mb-5">
             <div class="col-lg-6 col-12">
-                <a href="{{route('portfolio')}}" class="btn btn-outline-red btn-100">Parcourez notre portfolio</a>
+                <a href="{{route('cv.mikael.portfolio')}}" class="btn btn-outline-red btn-100">Parcourez toutes mes réalisations</a>
             </div>
         </div>
-        --}}
+        
 
     </div>
 </section>

@@ -106,8 +106,12 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::resource('services', ServiceController::class);
     Route::get('services/{service_id}/accordion/create', [AccordionController::class, 'create'])->name('accordions.create');
     Route::resource('accordions', AccordionController::class)->only('destroy', 'update', 'store');
+
+    // CV Specifics
+    Route::resource('cv-projects', CurriculumController::class);
 });
 
 
 // Curriculum vitae
 Route::get('mikael', [CurriculumController::class, 'cv'])->name('cv.mikael');
+Route::get('mikael/portfolio', [CurriculumController::class, 'portfolio'])->name('cv.mikael.portfolio');

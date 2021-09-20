@@ -20,5 +20,9 @@ class DatabaseSeeder extends Seeder
         $this->call(ServicesTableSeeder::class);        // 11 services (2 parents, 9 children)
         $this->call(AccordionsTableSeeder::class);      // 17 accordions
         $this->call(ProjectServiceTableSeeder::class);  // 1 services attribution to each project
+
+        // #### CV ####
+        $this->call(CVExperiencesSeeder::class);
+        $this->call(CVProjectsSeeder::class);
     }
 }

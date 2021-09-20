@@ -18,6 +18,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('clients.index')}}">Clients</a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('cv-projects.index')}}">CV</a>
+                </li>
             </ul>
 
             <a href="{{route('home')}}" class="btn btn-link">Retour au site</a>
