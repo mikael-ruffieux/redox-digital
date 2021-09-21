@@ -51,7 +51,7 @@ class ClientsTableSeeder extends Seeder
             'public' => true
         ],
         [
-            'name' => 'Bullshop',
+            'name' => 'Bullshop SA',
             'link' => 'https://bullshop.ch/',
             'logo' => 'storage/clients/8.png',
             'public' => true
@@ -69,7 +69,7 @@ class ClientsTableSeeder extends Seeder
             'public' => true
         ],
         [
-            'name' => "Redox Digital",
+            'name' => "Redox Digital SNC",
             'link' => 'https://redoxdigital.ch',
             'logo' => '',
             'public' => false
@@ -105,7 +105,7 @@ class ClientsTableSeeder extends Seeder
             'public' => false
         ],
         [
-            'name' => "Etucom",
+            'name' => "Etucom Sàrl",
             'link' => 'https://www.etucom.com/',
             'logo' => '',
             'public' => false

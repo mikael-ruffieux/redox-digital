@@ -211,17 +211,17 @@ Mikaël Ruffieux |
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h3 class="all-caps color-red">Où est-ce que j'ai appris tout ça ?</h3>
+                <h3 class="all-caps color-red">Où est-ce que j'ai appris tout ça&nbsp;?</h3>
                 <h2 class="red-dot">Formations</h2>
             </div>
         </div>
 
         <div class="row my-4">
-            <div class="col-lg-3 col-12">
+            <div class="col-sm-3 col-12">
                 <img src="{{asset('storage/assets/img/cv/heig.svg')}}" alt="HEIG-VD">
                 <p>2019 - 2022</p>
             </div>
-            <div class="col-lg-9 col-12">
+            <div class="col-sm-9 col-12">
                 <h3>HEIG-VD <small>- Yverdon-les-Bains (VD)</small></h3>
                 <h4 class="color-red">Bachelor of Science</h4>
                 <p>Filière Ingénierie des Médias, à la Haute École d’Ingénierie et de Gestion du Canton de Vaud.</p>
@@ -229,11 +229,11 @@ Mikaël Ruffieux |
         </div>
 
         <div class="row my-4">
-            <div class="col-lg-3 col-12">
+            <div class="col-sm-3 col-12">
                 <img src="{{asset('storage/assets/img/cv/csud.svg')}}" alt="Collège du Sud">
                 <p>2012 - 2016</p>
             </div>
-            <div class="col-lg-9 col-12">
+            <div class="col-sm-9 col-12">
                 <h3>Collège du Sud <small>- Bulle (FR)</small></h3>
                 <h4 class="color-red">Maturité gymnasiale</h4>
                 <p>Formation bilingue (F/D), Mathématiques renforcés, Option spécifique : Biologie / Chimie</p>
@@ -255,11 +255,12 @@ Mikaël Ruffieux |
         <div id="work-history">
             @foreach ($experiences as $exp)
             <div class="row">
-                <div class="col-4 exp-period text-right">
+                <div class="col-4 exp-period">
                     <h3 class="all-caps">{!! $exp->period !!}</h3>
-                    <i class="fad fa-2x fa-circle"></i>
+                    <!--<i class="fad fa-2x fa-circle"></i>-->
                 </div>
                 <div class="col-8 exp-data">
+                    <i class="fad fa-2x fa-circle"></i>
                     <h3 class="all-caps">{{$exp->job}}</h3>
 
                     <p class="mt-3"><span class="color-red">{{$exp->company}} -</span> <small>{{$exp->place}}</small></p>
@@ -283,14 +284,14 @@ Mikaël Ruffieux |
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-12">
+            <div class="col-md-4 col-12">
                 <h3 class="name red-dot">Salvatore Pizza</h3>
                 <p>
                     Cinéma “Le Prado”, gérant
                 </p>
             </div>
 
-            <div class="col-lg-4 col-12">
+            <div class="col-md-4 col-12">
                 <h3 class="name red-dot">Alex Herren</h3>
                 <p>
                     Kesako Sàrl, président<br/>
@@ -298,14 +299,12 @@ Mikaël Ruffieux |
                 </p>
             </div>
 
-            <div class="col-lg-4 col-12">
+            <div class="col-md-4 col-12">
                 <h3 class="name red-dot">Etienne Wildi</h3>
                 <p>
                     Redox Digital, associé<br/>
                     <a href="mailto:etienne@redoxdigital.ch">etienne@redoxdigital.ch</a>
                 </p>
-
-                <p><small>(il vous assurera que je travaille bien)</small></p>
             </div>
 
             <div class="col-12 color-white mt-3" id="note"><small><i>Si vous souhaitez contacter ces personnes par téléphone, je vous transmets volontiers leurs contacts, à votre demande.</i></small></div>
@@ -326,7 +325,7 @@ Mikaël Ruffieux |
 
         @foreach ($projects as $project)
         <div class="row project">
-            <div class="col-lg-7 col-md-6 col-12">
+            <div class="col-md-7 col-12">
                 <h5><a href="{{$project->client->link}}">{{$project->client->name}}</a></h5>
                 <h3>{{$project->title}}</h3>
 
@@ -339,7 +338,7 @@ Mikaël Ruffieux |
                 <a class="btn btn-outline-black" href="{{$project->project_url}}">Découvrir le projet entier</a>
                 @endif
             </div>
-            <div class="col-lg-5 col-md-6 col-12">
+            <div class="col-md-5 col-12">
                 @if (file_exists(public_path($project->image)))
                 <img src="{{asset($project->image)}}" alt="{{$project->title}}">
                 @endif
@@ -348,8 +347,8 @@ Mikaël Ruffieux |
         @endforeach
 
         
-        <div class="row mb-5">
-            <div class="col-lg-6 col-12">
+        <div class="row my-5">
+            <div class="col-md-6 col-12">
                 <a href="{{route('cv.mikael.portfolio')}}" class="btn btn-outline-red btn-100">Parcourez toutes mes réalisations</a>
             </div>
         </div>

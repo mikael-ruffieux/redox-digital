@@ -9,25 +9,32 @@ class CVExperiencesSeeder extends Seeder
 {
     private $experiences = [
         [
-            'job' => 'Indépendant',
-            'period' => '2016 - à&nbsp;ce&nbsp;jour',
+            'job' => 'Vidéaste & développeur web indépendant',
+            'period' => '2016 - à ce jour',
             'company' => 'Redox Digital SNC',
             'place' => 'Epagny (FR)',
             'desc' => 'Réalisation de mandats freelance en parallèle de mes études et projets professionnels, comme développeur web et vidéaste.'
         ],
         [
             'job' => 'Chargé de cours',
-            'period' => '2020 - à&nbsp;ce&nbsp;jour',
+            'period' => '2020 - à ce jour',
             'company' => 'FutureKids',
             'place' => 'Lausanne (VD)',
             'desc' => 'Création et/ou préparation de cours dans le domaine de la technologie pour des jeunes âgés entre 9 et 17 ans. Il s\'agit de cours hebdomadaires, ou de cours d\'une semaine durant les vacances scolaires.'
         ],
         [
             'job' => 'Développeur web',
-            'period' => '2019 - à&nbsp;ce&nbsp;jour',
+            'period' => '2019 - à ce jour',
             'company' => 'Kesako Sàrl',
             'place' => 'Bussigny (VD)',
             'desc' => 'Assistant au développement web front- et back-end sur des projets ponctuels.'
+        ],
+        [
+            'job' => 'Sergent-major d\'unité',
+            'period' => '2016 - à ce jour',
+            'company' => 'École de cadres',
+            'place' => 'Armée suisse',
+            'desc' => 'Responsable logistique et RH d’une compagnie de 130 hommes durant 4 mois, en région alémanique. Je continue à tenir cette fonction en cours de répétition.'
         ],
         [
             'job' => 'Graphiste',
@@ -56,13 +63,6 @@ class CVExperiencesSeeder extends Seeder
             'company' => 'Fondation Clos Fleuri',
             'place' => 'Bulle (FR)',
             'desc' => 'Travail avec des personnes en situation de handicap, pour assurer leurs déplacements, et livraisons diverses au sein de la fondation.'
-        ],
-        [
-            'job' => 'Sergent-major d\'unité',
-            'period' => '2016 - 2017',
-            'company' => 'École de cadres',
-            'place' => 'Armée suisse',
-            'desc' => 'Responsable logistique et RH d’une compagnie de 130 hommes durant 4 mois, en région alémanique.'
         ],
         [
             'job' => 'Opérateur',
