@@ -14,7 +14,7 @@ Nos services |
             <p>{!! $parent->description!!}</p>
 
             <p>
-                Pour découvrir nos autres prestations, consultez la page de <a href="{{route('services', [$other->getSlug()])}}" class="color-red">nos services de {{Illuminate\Support\Str::lower($other->title)}}</a>. 
+                Pour découvrir nos autres prestations, consultez la page <a href="{{route('services', [$other->getSlug()])}}" class="color-red">{{Illuminate\Support\Str::lower($other->title)}}</a>. 
             </p>
 
             <a href="#{{$services->first()->getSlug()}}" id="bouncing-arrow"><i class="fal fa-arrow-down"></i></a>
@@ -88,7 +88,7 @@ Nos services |
     <div class="col-0 col-md-4"><!-- spacer --></div>
     <div class="col-md-8 col-12">
         <a class="btn btn-100 btn-outline-red" href="{{route('services', [$other->getSlug()])}}">
-            vers les services de {{Illuminate\Support\Str::lower($other->title)}}
+            voir les services de {{Illuminate\Support\Str::lower($other->title)}}
         </a>
     </div>
 </div>
@@ -96,5 +96,3 @@ Nos services |
 
 </div>
 @endsection
-
-

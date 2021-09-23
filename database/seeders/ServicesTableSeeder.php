@@ -33,7 +33,7 @@ class ServicesTableSeeder extends Seeder
         ],
         [
             'title' => 'E-commerce',
-            'description' => 'Avec un taux de croissance supérieur à 10% par an, le e-commerce est une composante incontournable de la « transformation digitale ». Bénéficiez de l\'accompagnement complet d\'une agence avec une vraie compréhension business pour réussir votre révolution e-commerce.',
+            'description' => 'Avec un taux de croissance supérieur à 10% par an, le e-commerce <i>(commerce en ligne)</i> est une composante incontournable de la « transformation digitale ». Bénéficiez de l\'accompagnement complet d\'une agence avec une vraie compréhension business pour réussir votre révolution e-commerce.',
             'image' => 'storage/services/4.jpg',
             'isChild' => true,
             'parent_id' => 1
@@ -47,14 +47,14 @@ class ServicesTableSeeder extends Seeder
         ],
         [
             'title' => 'Maintenance web',
-            'description' => 'Après la création de votre site web, nous ne vous laissons pas tout seul. Nous vous proposons des contrats de maintenance annuel pour gérer les mises à jour, le référencement, l\'hébergement, ...<br><br>Un pack tout-en-un, adapté à vos besoins et votre budget !',
+            'description' => 'Une fois votre site web terminé, nous ne vous laissons pas tomber. Nous vous proposons des contrats annuels de maintenance pour gérer les mises à jour, le référencement, l’hébergement de votre site, ainsi que les éventuels dépannages tout au long de l\'année.<br><br>Un pack tout-en-un, adapté à vos besoins et à votre budget !',
             'image' => 'storage/services/6.jpg',
             'isChild' => true,
             'parent_id' => 1
         ],
         [
             'title' => 'Marketing digital',
-            'description' => 'Notre agence digitale analyse vos besoins et vous propose un accompagnement sur l’ensemble des outils digitaux. <b>Réseaux sociaux</b>, <b>référencement SEO</b> (la façon dont votre site apparaît sur un moteur de recherche), <b>campagne SEA</b> (publicités sur les moteurs de recherche): nous vous conseillons et mettons en place les dispositifs adaptés et propices à l\'augmentation du trafic sur vos plateformes.',
+            'description' => 'Notre agence digitale analyse vos besoins et vous propose un accompagnement sur l’ensemble des outils digitaux. <br><br><b>Réseaux sociaux</b>, <b>référencement SEO</b> (la façon dont votre site apparaît sur un moteur de recherche), <b>campagne SEA</b> (publicités sur les moteurs de recherche): nous vous conseillons et mettons en place les dispositifs adaptés et propices à l\'augmentation du trafic sur vos plateformes.',
             'image' => 'storage/services/7.jpg',
             'isChild' => true,
             'parent_id' => 1
