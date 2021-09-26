@@ -822,7 +822,7 @@ nav .sub-menu ul li:not(.sub-menu-title) {
 }
 
 nav .sub-menu ul li:not(.sub-menu-title)>a::after {
-    font-family: "Font Awesome 5 Free"; 
+    font-family: "Font Awesome 5 Pro"; 
     font-weight: 900;
     content: "\f054";
     margin-left: 10px;
@@ -842,7 +842,7 @@ nav .sub-menu .sub-menu-title>a {
 }
 
 .sub-menu>a::after {
-    font-family: "Font Awesome 5 Free"; 
+    font-family: "Font Awesome 5 Pro"; 
     font-weight: 900;
     content: "\f078";
     margin-left: 5px;
@@ -2057,6 +2057,13 @@ nav .sub-menu .sub-menu-title>a {
     filter: grayscale(0%);
     transition: all 0.3s ease-in-out;
 }
+
+@media (max-width: 991px) {
+    #about-team h3.name {
+        font-size: 24px;
+    }
+
+}
 #portfolio h3, #portfolio h5, #portfolio a {
     color: var(--primary-dark);
 }
@@ -2147,10 +2154,6 @@ nav .sub-menu .sub-menu-title>a {
 #intro .dash-black {
     margin-bottom: 5vh;
     margin-top: 5vh;
-}
-
-#about-me {
-
 }
 
 #studies h4 {

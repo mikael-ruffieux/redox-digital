@@ -165,7 +165,7 @@ nav .sub-menu ul li:not(.sub-menu-title) {
 }
 
 nav .sub-menu ul li:not(.sub-menu-title)>a::after {
-    font-family: "Font Awesome 5 Free"; 
+    font-family: "Font Awesome 5 Pro"; 
     font-weight: 900;
     content: "\f054";
     margin-left: 10px;
@@ -185,7 +185,7 @@ nav .sub-menu .sub-menu-title>a {
 }
 
 .sub-menu>a::after {
-    font-family: "Font Awesome 5 Free"; 
+    font-family: "Font Awesome 5 Pro"; 
     font-weight: 900;
     content: "\f078";
     margin-left: 5px;

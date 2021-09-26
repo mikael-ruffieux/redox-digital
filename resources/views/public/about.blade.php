@@ -75,7 +75,9 @@
                 <div class="col-md-6">
                     <img src="{{asset('storage/about/mikael.jpg')}}" alt="Mikaël Ruffieux">
                     <h3 class="name red-dot">Mikaël Ruffieux</h3>
-                    <p>Ingénieur des médias & développeur web<br><a href="mailto:mikael@redoxdigital.ch">mikael@redoxdigital.ch</a></p>
+                    <!--<p>Ingénieur des médias & développeur web<br/>-->
+                    <p>Développeur web & vidéaste<br/>
+                    <a href="mailto:mikael@redoxdigital.ch">mikael@redoxdigital.ch</a></p>
                 </div>
             </div>
         </div>
@@ -95,11 +97,13 @@
 
             <div class="row">
                 @foreach ($clients as $client)
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 client">
-                    <a href="{{$client->link}}" target="_blank" rel="noopener noreferrer">
-                        <img src="{{asset($client->logo)}}" alt="{{$client->name}}">
-                    </a>
-                </div>
+                    @if ($client->public)
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6 client">
+                            <a href="{{$client->link}}" target="_blank" rel="noopener noreferrer">
+                                <img src="{{asset($client->logo)}}" alt="{{$client->name}}">
+                            </a>
+                        </div>
+                    @endif
                 @endforeach
             </div>
         </div>
