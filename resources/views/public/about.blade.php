@@ -96,7 +96,7 @@
             </div>
 
             <div class="row">
-                @foreach ($clients as $client)
+                @foreach ($clients->shuffle() as $client)
                     @if ($client->public)
                         <div class="col-lg-2 col-md-3 col-sm-4 col-6 client">
                             <a href="{{$client->link}}" target="_blank" rel="noopener noreferrer">
