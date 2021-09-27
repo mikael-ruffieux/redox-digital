@@ -1,7 +1,7 @@
 @extends('layouts.main_layout')
 
 @section('title')
-Agence digital, créatrice d'expériences web & vidéo | 
+Agence digitale, créatrice d'expériences web & vidéo | 
 @endsection
 
 @section('meta-description')
