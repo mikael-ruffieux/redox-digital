@@ -64,7 +64,7 @@
         </div>
     </div>
 
-    <div class="container d-block d-md-none">
+    <div class="container d-block d-md-none vcard">
         <div id="footer-top" class="row">
             <div class="col-4">
                 <img src="{{asset('storage/assets/img/logo/Redox-Digital_Logotype-final_Redox-Digital_Logotype-pictogramme-blanc-rouge.svg')}}" alt="Redox Digital">
@@ -80,9 +80,9 @@
             <div class="col-8">
                 <h4>Contact</h4>
                 <ul>
-                    <li>Redox Digital SNC</li>
-                    <li>Neuchâtel - La Gruyère</li>
-                    <li><a href="mailto:info@redoxdigital.ch">info@redoxdigital.ch</a></li>
+                    <li class="org">Redox Digital SNC</li>
+                    <li class="adr">Neuchâtel - La Gruyère</li>
+                    <li class="email"><a href="mailto:info@redoxdigital.ch">info@redoxdigital.ch</a></li>
                 </ul>
 
                 <h4>Navigation</h4>
@@ -114,7 +114,7 @@
                 </ul>
 
                 <div id="footer-bottom">
-                    <p>© Redox Digital 2021</p>
+                    <p>© <a class="url" href="https://redoxdigital.ch" target="_blank" rel="noopener noreferrer">Redox Digital</a> 2021</p>
                 </div>
             </div>
         </div>

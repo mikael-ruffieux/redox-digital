@@ -1,7 +1,11 @@
 @extends('layouts.main_layout')
 
 @section('title')
-Bienvenue | 
+Agence digital, créatrice d'expériences web & vidéo | 
+@endsection
+
+@section('meta-description')
+
 @endsection
 
 @section("content")
@@ -49,7 +53,7 @@ Bienvenue |
         </div>
         <div class="row">
             <div class="col-lg-8 col-12">
-                <p>La différenciation entre le <b>contenu</b> et le <b>contenant</b>, le <b>fond</b> et la <b>forme</b>, est pour nous très importante. C’est pourquoi nous avons séparé nous services en deux partie.</p>
+                <p>La différenciation entre le <b>contenu</b> et le <b>contenant</b>, le <b>fond</b> et la <b>forme</b>, est pour nous très importante. C’est pourquoi nous avons séparé nos services en deux parties.</p>
                 
                 <p>Les services de <b>Web digital</b> ont pour but de mettre en avant votre contenu et les services de <b>Création de contenus digitaux</b> ont pour but de vous créer un contenu de qualité.</p>
             </div>
