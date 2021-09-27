@@ -11,7 +11,7 @@
                 <ul>
                     <li>Redox Digital SNC</li>
                     <li>Neuchâtel - La Gruyère</li>
-                    <li><a href="mailto:info@redoxdigital.ch">info@redoxdigital.ch</a></li>
+                    <li><a href="mailto:info@redoxdigital.ch"><span id="mail-info"></span></a></li>
                 </ul>
                 <a href="{{route('contact.intro')}}" class="btn btn-sm btn-outline-white mt-3">Un projet en tête ?</a>
             </div>
@@ -60,7 +60,7 @@
                     <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
                 </ul>
             </div>
-            <div class="col-12 col-sm-3"><p>© Redox Digital 2021</p></div>
+            <div class="col-12 col-sm-3"><p>© Redox Digital {{date("Y")}}</p></div>
         </div>
     </div>
 
@@ -82,7 +82,7 @@
                 <ul>
                     <li class="org">Redox Digital SNC</li>
                     <li class="adr">Neuchâtel - La Gruyère</li>
-                    <li class="email"><a href="mailto:info@redoxdigital.ch">info@redoxdigital.ch</a></li>
+                    <li class="email"><a href="mailto:info@redoxdigital.ch"><span id="mail-info"></span></a></li>
                 </ul>
 
                 <h4>Navigation</h4>
@@ -114,7 +114,7 @@
                 </ul>
 
                 <div id="footer-bottom">
-                    <p>© <a class="url" href="https://redoxdigital.ch" target="_blank" rel="noopener noreferrer">Redox Digital</a> 2021</p>
+                    <p>© <a class="url" href="https://redoxdigital.ch" target="_blank" rel="noopener noreferrer">Redox Digital</a> {{date("Y")}}</p>
                 </div>
             </div>
         </div>

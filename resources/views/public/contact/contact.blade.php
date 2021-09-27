@@ -42,7 +42,7 @@ Nous contacter |
                 <p>Rte de Duvillard 23, 1663 Epagny</p>
 
                 <h3>E-mail</h3>
-                <p><a href="mailto:info@redoxdigital.ch">info@redoxdigital.ch</a></p>
+                <p><a href="mailto:info@redoxdigital.ch"><span id="mail-info"></span></a></p>
             </div>
 
             <div class="buttons d-block d-md-none col-12">

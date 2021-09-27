@@ -41,15 +41,15 @@
                 </div>
                 <div class="col-md-6 col-12">
                     <h3 class="all-caps"><span class="number">02</span> - Approche omnicanale</h3>
-                    <p>Nous créons des produits digitaux qui vous démarquent.</p>
+                    <p>Nous concevons votre communication digitale de A à Z.</p>
                 </div>
                 <div class="col-md-6 col-12">
                     <h3 class="all-caps"><span class="number">03</span> - Prix avantageux</h3>
-                    <p>Nous créons des produits digitaux qui vous démarquent.</p>
+                    <p>Notre jeunesse et notre agilité nous le permettent.</p>
                 </div>
                 <div class="col-md-6 col-12">
                     <h3 class="all-caps"><span class="number">04</span> - 100% digital</h3>
-                    <p>Nous créons des produits digitaux qui vous démarquent.</p>
+                    <p>Le web est notre lieu de travail.</p>
                 </div>
             </div>
         </div>
@@ -67,17 +67,25 @@
             </div>
 
             <div class="row">
+                <div class="col-md-8 col-12 my-5">
+                    <p>Les 2 cofondateurs, Mikael Ruffieux & Etienne Wildi se sont rencontrés pendant leurs études d’Ingénieur des Médias à la Haute École d'Ingénierie et de Gestion du Canton de Vaud.</p>
+                    
+                    <p>Les deux étudiants, passionnés par le domaine du digital et travaillant comme indépendant depuis plusieurs années, ont décidé de s’associer et de créer l’entreprise Redox Digital.</p>
+                    
+                    <p>Plus fort à deux, cette association leur permet de travailler sur de plus gros projets digitaux et de se professionnaliser dans ce domaine.</p>
+
+                </div>
                 <div class="col-md-6">
                     <img src="{{asset('storage/about/redox-digital-fondateur-etienne.jpg')}}" alt="L'équipe Redox Digital : Etienne Wildi">
                     <h3 class="name red-dot">Etienne Wildi</h3>
-                    <p>Photographe, vidéaste & graphiste<br><a href="mailto:etienne@redoxdigital.ch">etienne@redoxdigital.ch</a></p>
+                    <p>Photographe, vidéaste & graphiste<br><a href="mailto:etienne@redoxdigital.ch"><span id="mail-etienne"></span></a></p>
                 </div>
                 <div class="col-md-6">
                     <img src="{{asset('storage/about/redox-digital-fondateur-mikael.jpg')}}" alt="L'équipe Redox Digital : Mikaël Ruffieux">
                     <h3 class="name red-dot">Mikaël Ruffieux</h3>
                     <!--<p>Ingénieur des médias & développeur web<br/>-->
                     <p>Développeur web & vidéaste<br/>
-                    <a href="mailto:mikael@redoxdigital.ch">mikael@redoxdigital.ch</a></p>
+                    <a href="mailto:mikael@redoxdigital.ch"><span id="mail-mikael"></span></a></p>
                 </div>
             </div>
         </div>

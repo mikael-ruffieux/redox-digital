@@ -303,7 +303,7 @@ Mikaël Ruffieux |
                 <h3 class="name red-dot">Etienne Wildi</h3>
                 <p>
                     Redox Digital, associé<br/>
-                    <a href="mailto:etienne@redoxdigital.ch">etienne@redoxdigital.ch</a>
+                    <a href="mailto:etienne@redoxdigital.ch"><span id="mail-etienne"></span></a>
                 </p>
             </div>
 

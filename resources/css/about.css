@@ -52,6 +52,21 @@
     transition: all 0.3s ease-in-out;
 }
 
+#mail-mikael:after {
+    content: 'mikael@redoxdigital.ch';
+    display: block;
+}
+
+#mail-etienne:after {
+    content: 'etienne@redoxdigital.ch';
+    display: block;
+}
+
+#mail-info:after {
+    content: 'info@redoxdigital.ch';
+    display: block;
+}
+
 @media (max-width: 991px) {
     #about-team h3.name {
         font-size: 24px;
