@@ -141,7 +141,7 @@ Bienvenue |
             <div class="col-lg-8 col-12">   
                 <p>Redox Digital est une agence dynamique qui regroupe deux jeunes entrepreneurs aux compétences variées et complémentaires.</p>
 
-                <p>Issue du terroir neuchâtelois et fribourgeois, mais ayant grandi dans un monde toujours plus digital, l'équipe de Redox Digital se positionne dans une communication traditionnelle, mais qui sait s'affranchir des codes pour créer les siens, tout en profitant des dernières nouveautés du monde numérique.</p>             
+                <p>Issue du terroir neuchâtelois et fribourgeois, mais ayant grandi dans un monde en constante évolution digitale, l'équipe de Redox Digital se positionne dans une communication traditionnelle, mais qui sait s'affranchir des codes pour créer les siens, tout en profitant des dernières nouveautés du monde numérique.</p>             
             </div>
         </div>
 
