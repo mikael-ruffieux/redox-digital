@@ -25,9 +25,12 @@ use Illuminate\Support\Facades\Auth;
 */
 
 // ##### Routes publiques #####
-Route::get('home', function () { return redirect(route('maintenance')); })->name('home');
 
-Route::view('/', 'public.maintenance')->name('maintenance');
+Route::get('/', [PublicPagesController::class, 'home'])->name('home');
+Route::get('a-propos', [PublicPagesController::class, 'about'])->name('about');
+
+// à voir si on garde ce système, ou si on fait 2 chemins & méthodes
+Route::get('nos-services-de-{type}', [PublicPagesController::class, 'services'])->name('services');
 
 Route::prefix('contact')->group(function () {
     Route::view('/', 'public.contact.contact')->name('contact');
@@ -74,18 +77,14 @@ Auth::routes();
 // Contact Form
 // ##### Routes privées pendant le développement #####
 Route::prefix('dev')->middleware('auth')->group(function () {
-    Route::get('home', [PublicPagesController::class, 'home'])->name('dev.home');
-
-    // à voir si on garde ce système, ou si on fait 2 chemins & méthodes
-    Route::get('nos-services-de-{type}', [PublicPagesController::class, 'services'])->name('services');
+    // Page de maintenance
+    Route::view('/', 'public.maintenance')->name('maintenance');
 
     Route::prefix('portfolio')->group(function () {
         Route::get('/', [PublicPagesController::class, 'portfolio'])->name('portfolio');
         Route::get('{id}', [PublicPagesController::class, 'portfolio_project'])->name('portfolio.project');
 
     });
-
-    Route::get('a-propos', [PublicPagesController::class, 'about'])->name('about');
 });
 
 

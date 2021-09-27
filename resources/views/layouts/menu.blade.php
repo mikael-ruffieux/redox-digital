@@ -12,7 +12,6 @@
             </button>
             <ul id="menu">
                 <li><a href="{{route('home')}}">Accueil</a></li>
-            @if(Auth::check())
                 <li class="sub-menu">
                     <a id="sub-menu-btn" href="{{route('services', ['web-digital'])}}">Services</a>
                     <div class="sub-menu-box">
@@ -36,10 +35,11 @@
                         </div>
                     </div>
                 </li>
+            @if(Auth::check())
                 <li><a href="{{route('portfolio')}}">Portfolio</a></li>
             @endif
-            @if(Auth::check())
                 <li><a href="{{route('about')}}">À propos</a></li>
+            @if(Auth::check())
                 <li><a href="{{route('contact')}}">Contact</a></li>
             @endif
                 <li>
