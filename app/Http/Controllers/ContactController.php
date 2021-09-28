@@ -150,7 +150,6 @@ class ContactController extends Controller
         Mail::send('public.contact.components.mail-content', ['results' => $results], function($message) use ($results){
             $message->from($results['mail']['value'], $results['name']['value']);
             $message->to('info@redoxdigital.ch')->subject('Prise de contact | redoxdigital.ch');
-     
         });
 
         // Vider la session

@@ -32,7 +32,7 @@
     <!-- Internal scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 
-    <link rel="icon" type="image/svg" href="{{ asset('storage/assets/img/logo/Redox-Digital_Logotype-final_Redox-Digital_Logotype-pictogramme-blanc-rouge.svg') }}">
+    <link rel="icon" type="image/svg" href="{{ asset('storage/assets/img/layout/favicon.svg') }}">
 
     <title>@yield("title") Redox Digital</title>
 </head>

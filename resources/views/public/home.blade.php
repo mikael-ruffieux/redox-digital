@@ -14,18 +14,12 @@ Agence digitale, créatrice d'expériences web & vidéo |
 <div id="particles-cache"></div>
 <div id="particles-js"></div>
 
-{{--
-<div id="animated-bg">
-    <img id="layer1" src="{{asset('storage/layout/layer1.svg') }}" alt="background">
-    <img id="layer2" src="{{asset('storage/layout/layer2.svg') }}" alt="background">
-</div>
---}}
 <section class="fullpage-section" id="home-header">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <h1 class="color-red">Agence digitale</h1>
-                <h2 class="color-red"><span class="black-dot">créatrice d’expériences <span id="typewriter"></span></span></h2>
+                <h2 class="color-red"><span class="black-dot">créatrice d’expériences <span class="d-none">web & vidéo</span><span id="typewriter"></span></span></h2>
             </div>
         </div>
 
@@ -34,8 +28,11 @@ Agence digitale, créatrice d'expériences web & vidéo |
                 <span class="dash-black"></span>
                 <p>Chez Redox Digital, nous concevons votre communication digitale de A à Z en créant des produits digitaux qui vous démarquent.</p>
             </div>
+            
             <div class="col-lg-6 col-12">
-                <a href="{{route('about')}}" class="btn btn-outline-black btn-100">En savoir plus</a>
+                {{--<a href="{{route('about')}}" class="btn btn-outline-black btn-100">En savoir plus</a>--}}
+
+                <a href="#home-services" id="bouncing-arrow"><i class="fal fa-arrow-down"></i></a>
             </div>
         </div>
     </div>

@@ -78,13 +78,13 @@
                 <div class="col-md-6">
                     <img src="{{asset('storage/about/redox-digital-fondateur-etienne.jpg')}}" alt="L'équipe Redox Digital : Etienne Wildi">
                     <h3 class="name red-dot">Etienne Wildi</h3>
-                    <p>Photographe, vidéaste & graphiste<br><a href="mailto:etienne@redoxdigital.ch"><span id="mail-etienne"></span></a></p>
+                    <p>Cofondateur - Interactive Media Designer<br><a href="mailto:etienne@redoxdigital.ch"><span id="mail-etienne"></span></a></p>
                 </div>
                 <div class="col-md-6">
                     <img src="{{asset('storage/about/redox-digital-fondateur-mikael.jpg')}}" alt="L'équipe Redox Digital : Mikaël Ruffieux">
                     <h3 class="name red-dot">Mikaël Ruffieux</h3>
                     <!--<p>Ingénieur des médias & développeur web<br/>-->
-                    <p>Développeur web & vidéaste<br/>
+                    <p>Cofondateur - Développeur web & vidéaste<br/>
                     <a href="mailto:mikael@redoxdigital.ch"><span id="mail-mikael"></span></a></p>
                 </div>
             </div>

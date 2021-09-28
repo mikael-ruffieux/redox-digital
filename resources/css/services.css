@@ -83,6 +83,7 @@
     width: 40px;
     height: 40px;
     transition: color 0.2s ease-in-out;
+    z-index: 100;
 }
 
 #bouncing-arrow>i {
