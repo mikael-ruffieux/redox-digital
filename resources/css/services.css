@@ -150,6 +150,10 @@
     border-bottom: 1px solid var(--primary-black);
 }
 
+.accordion > h3 > button {
+    color: var(--primary-black);
+}
+
 .bg-dark .accordion {
     border-color: var(--true-white);
 }

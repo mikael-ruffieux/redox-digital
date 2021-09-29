@@ -3,7 +3,7 @@ nav {
     background-color: var(--true-white);
     height:  var(--main-menu-height);
     position: sticky;
-    z-index: 100;
+    z-index: 101;
     top: 0;
 }
 

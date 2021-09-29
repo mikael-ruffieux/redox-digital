@@ -87,7 +87,7 @@ Nos services |
 <div class="row">
     <div class="col-0 col-md-4"><!-- spacer --></div>
     <div class="col-md-8 col-12">
-        <a class="btn btn-100 btn-outline-red" href="{{route('services', [$other->getSlug()])}}">
+        <a class="btn btn-100 btn-primary" href="{{route('services', [$other->getSlug()])}}">
             voir les services de {{Illuminate\Support\Str::lower($other->title)}}
         </a>
     </div>

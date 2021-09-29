@@ -10,12 +10,6 @@ Mikaël Ruffieux |
 <div id="particles-cache"></div>
 <div id="particles-js"></div>
 
-{{--
-<div id="animated-bg">
-    <img id="layer1" src="{{asset('storage/layout/layer1.svg') }}" alt="background">
-    <img id="layer2" src="{{asset('storage/layout/layer2.svg') }}" alt="background">
-</div>
---}}
 <section class="fullpage-section" id="intro">
     <div class="container" id="">
         <div class="row">
@@ -212,7 +206,7 @@ Mikaël Ruffieux |
         <div class="row">
             <div class="col-12">
                 <h3 class="all-caps color-red">Où est-ce que j'ai appris tout ça&nbsp;?</h3>
-                <h2 class="red-dot">Formations</h2>
+                <h2 class="red-dot">Certifications</h2>
             </div>
         </div>
 

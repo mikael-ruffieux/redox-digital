@@ -660,7 +660,7 @@ nav {
     background-color: var(--true-white);
     height:  var(--main-menu-height);
     position: sticky;
-    z-index: 100;
+    z-index: 101;
     top: 0;
 }
 
@@ -1889,6 +1889,10 @@ nav .sub-menu .sub-menu-title>a {
 .accordion {
     padding: 25px 0;
     border-bottom: 1px solid var(--primary-black);
+}
+
+.accordion > h3 > button {
+    color: var(--primary-black);
 }
 
 .bg-dark .accordion {

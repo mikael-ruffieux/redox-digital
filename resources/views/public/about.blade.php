@@ -86,6 +86,8 @@
                     <!--<p>Ingénieur des médias & développeur web<br/>-->
                     <p>Cofondateur - Développeur web & vidéaste<br/>
                     <a href="mailto:mikael@redoxdigital.ch"><span id="mail-mikael"></span></a></p>
+
+                    <a href="{{route('cv.mikael')}}" class="btn btn-outline-red">CV</a>
                 </div>
             </div>
         </div>
