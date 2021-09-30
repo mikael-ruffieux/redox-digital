@@ -343,6 +343,21 @@ a:hover {
 /* .contact curves */
 /* .Curves */
 
+/* Particles JS */
+#particles-js-cta {
+    position: absolute;
+    width: 100%;
+    z-index: -10;
+    background: #ae0000;
+}
+
+#particles-cta-cache {
+    background-image: linear-gradient(
+        0deg, rgba(250,250,250,1) 20%, rgba(255,0,0,0) 90%);
+    z-index: -9;
+}
+/* .Particles JS */
+
 .dash-black {
     display: block;
     width: 100px;
@@ -1580,7 +1595,11 @@ nav .sub-menu .sub-menu-title>a {
     z-index: -9;
     top: 0;
     left: 0;
-    background-image: linear-gradient(135deg, rgba(250,250,250,1) 40%, rgba(255,0,0,0) 90%);
+    background: rgb(250,250,250);
+    background: -moz-linear-gradient(90deg, rgba(250,250,250,1) 40%, rgba(255,0,0,0) 90%);
+    background: -webkit-linear-gradient(90deg, rgba(250,250,250,1) 40%, rgba(255,0,0,0) 90%);
+    background: linear-gradient(90deg, rgba(250,250,250,1) 40%, rgba(255,0,0,0) 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fafafa",endColorstr="#ff0000",GradientType=1); 
 }
 
 #particles-js canvas {
@@ -2078,6 +2097,14 @@ nav .sub-menu .sub-menu-title>a {
     display: block;
 }
 
+#about-page #cta {
+    background: rgb(174,0,0)!important;
+    background: -moz-radial-gradient(circle, rgba(174,0,0,1) 20%, rgba(174,0,0,0) 100%)!important;
+    background: -webkit-radial-gradient(circle, rgba(174,0,0,1) 20%, rgba(174,0,0,0) 100%)!important;
+    background: radial-gradient(circle, rgba(174,0,0,1) 20%, rgba(174,0,0,0) 100%)!important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ae0000",endColorstr="#ae0000",GradientType=1); 
+}
+
 @media (max-width: 991px) {
     #about-team h3.name {
         font-size: 24px;
@@ -2360,8 +2387,11 @@ nav .sub-menu .sub-menu-title>a {
         z-index: -9;
         top: 0;
         left: 0;
-        background-image: linear-gradient(
-    0deg, rgba(250,250,250,1) 20%, rgba(255,0,0,0) 90%);
+        background: rgb(250,250,250);
+        background: -moz-linear-gradient(0deg, rgba(250,250,250,1) 20%, rgba(255,0,0,0) 90%);
+        background: -webkit-linear-gradient(0deg, rgba(250,250,250,1) 20%, rgba(255,0,0,0) 90%);
+        background: linear-gradient(0deg, rgba(250,250,250,1) 20%, rgba(255,0,0,0) 90%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fafafa",endColorstr="#ff0000",GradientType=1); 
     }
 
     #cv .name {
