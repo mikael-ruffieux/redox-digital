@@ -111,6 +111,42 @@
 /* .contact curves */
 /* .Curves */
 
+/* CTA */
+#cta {
+    color: var(--true-white);
+    background: rgb(174,0,0)!important;
+    background: -moz-radial-gradient(circle, rgba(174,0,0,1) 20%, rgba(174,0,0,0) 100%)!important;
+    background: -webkit-radial-gradient(circle, rgba(174,0,0,1) 20%, rgba(174,0,0,0) 100%)!important;
+    background: radial-gradient(circle, rgba(174,0,0,1) 20%, rgba(174,0,0,0) 100%)!important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ae0000",endColorstr="#ae0000",GradientType=1);
+}
+
+#cta .cta-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 30vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+}
+
+.cta-content h2,
+.cta-content h3  {
+    margin-bottom: 3vh;
+}
+
+#cta .btn-outline-white:hover,
+#cta .btn-outline-white:focus {
+    background-color: var(--true-white);
+    border: 1px solid;
+    color: var(--primary-red);
+    transition: all 0.2s ease-in-out;
+}
+
+/* .CTA */
+
 /* Particles JS */
 #particles-js-cta {
     position: absolute;
@@ -123,6 +159,12 @@
     background-image: linear-gradient(
         0deg, rgba(250,250,250,1) 20%, rgba(255,0,0,0) 90%);
     z-index: -9;
+}
+
+@media (max-width: 991px) {
+    #particles-js-cta {
+        height: 60%;
+    }
 }
 /* .Particles JS */
 

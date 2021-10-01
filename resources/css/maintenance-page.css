@@ -43,35 +43,6 @@
     margin-top: 5vh;
 }
 
-#cta {
-    background-color: var(--primary-red);
-    color: var(--true-white);
-}
-
-#cta .cta-content {
-    display: flex;
-    flex-direction: column;
-    min-height: 30vh;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15vh;
-    margin-bottom: 10vh;
-}
-
-.cta-content h2,
-.cta-content h3  {
-    margin-bottom: 3vh;
-}
-
-#cta .btn-outline-white:hover,
-#cta .btn-outline-white:focus {
-    background-color: var(--true-white);
-    border: 1px solid;
-    color: var(--primary-red);
-    transition: all 0.2s ease-in-out;
-}
-
 /* Mobile */ 
 @media (max-width: 991px) {
     #maintenance-header {

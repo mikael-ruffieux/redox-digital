@@ -1,4 +1,3 @@
-require('./bootstrap');
 import 'particles.js/particles';
 const particlesJS = window.particlesJS;
 

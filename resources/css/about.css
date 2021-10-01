@@ -67,14 +67,6 @@
     display: block;
 }
 
-#about-page #cta {
-    background: rgb(174,0,0)!important;
-    background: -moz-radial-gradient(circle, rgba(174,0,0,1) 20%, rgba(174,0,0,0) 100%)!important;
-    background: -webkit-radial-gradient(circle, rgba(174,0,0,1) 20%, rgba(174,0,0,0) 100%)!important;
-    background: radial-gradient(circle, rgba(174,0,0,1) 20%, rgba(174,0,0,0) 100%)!important;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ae0000",endColorstr="#ae0000",GradientType=1); 
-}
-
 @media (max-width: 991px) {
     #about-team h3.name {
         font-size: 24px;
