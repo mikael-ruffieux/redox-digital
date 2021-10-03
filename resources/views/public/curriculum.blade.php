@@ -13,7 +13,7 @@ Mikaël Ruffieux |
 <section class="fullpage-section" id="intro">
     <div class="container" id="">
         <div class="row">
-            <div class="col-lg-8 col-12">
+            <div class="col-lg-8 col-12" style="z-index: 10;">
                 <h1 class="red-dot">Mikaël Ruffieux</h1>
                 <h3 class="color-red all-caps">Développeur web & vidéaste</h3>
                 <span class="dash-black"></span>
@@ -21,7 +21,9 @@ Mikaël Ruffieux |
                 <p>Vous trouverez sur cette page mes <b>informations personnelles</b>, un aperçu de mon <b>parcours étudiant</b> et <b>professionnel</b>, ainsi que mes <b>réalisations</b> dans le domaine du digital.</p>
                 <p>Bonne lecture, et n’hésitez pas à me contacter en cas de questions !</p>
 
-                <a href="#about-me" id="bouncing-arrow"><i class="fal fa-arrow-down"></i></a>
+                <a class="btn btn-outline-red" href="#">Imprimer ce CV</a>
+
+                {{--<a href="#about-me" id="bouncing-arrow"><i class="fal fa-arrow-down"></i></a>--}}
             </div>
 
             <div class="col-lg-4 col-12">

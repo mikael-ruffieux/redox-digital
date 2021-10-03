@@ -9,11 +9,11 @@ class CVExperiencesSeeder extends Seeder
 {
     private $experiences = [
         [
-            'job' => 'Vidéaste & développeur web indépendant',
-            'period' => '2016 - à ce jour',
+            'job' => 'Fondateur, Chef de projet digital',
+            'period' => '2021 - à ce jour',
             'company' => 'Redox Digital SNC',
             'place' => 'Epagny (FR)',
-            'desc' => 'Réalisation de mandats freelance en parallèle de mes études et projets professionnels, comme développeur web et vidéaste.'
+            'desc' => 'Création et gestion de campagne de communication en ligne, développement et maintenance web, réalisations vidéographiques, photographie. Emploi à temps partiel en parallèle de mes études.'
         ],
         [
             'job' => 'Chargé de cours',
@@ -35,6 +35,13 @@ class CVExperiencesSeeder extends Seeder
             'company' => 'École de cadres',
             'place' => 'Armée suisse',
             'desc' => 'Responsable logistique et RH d’une compagnie de 130 hommes durant 4 mois, en région alémanique. Je continue à tenir cette fonction en cours de répétition.'
+        ],
+        [
+            'job' => 'Vidéaste & développeur web indépendant',
+            'period' => '2016 - 2021',
+            'company' => 'Redox Prod (Raison individuelle)',
+            'place' => 'Epagny (FR)',
+            'desc' => 'Réalisation de mandats freelance en parallèle de mes études et projets professionnels, comme développeur web et vidéaste.'
         ],
         [
             'job' => 'Graphiste',

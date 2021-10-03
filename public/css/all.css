@@ -2164,6 +2164,10 @@ nav .sub-menu .sub-menu-title>a {
     }
 }
 
+#cv #home-page #intro {
+    padding-top: 5vh;
+}
+
 
 #cv h3 {
     margin-bottom: 0;
@@ -2365,6 +2369,10 @@ nav .sub-menu .sub-menu-title>a {
     margin: 10vh 0;
 }
 
+#cv #cta {
+    background: #AE0000!important;
+}
+
 @media (max-width: 991px) {
     #cv #intro .row {
         flex-direction: column-reverse;
@@ -2418,4 +2426,37 @@ nav .sub-menu .sub-menu-title>a {
         border-left: solid 3px var(--primary-red);
         padding-left: 20px;
     }
+}
+
+@media print {
+    #cv-nav, .curve, #cta, #portfolio, #intro p, #intro span, #intro a, #particles-cache, #particles-js {
+        display: none!important;
+    }
+
+    .fullpage-section {
+        min-height: auto;
+    }
+
+    .bg-dark {
+        background: none!important;
+    }
+
+    .bg-dark p, .bg-dark h2, .bg-dark h3, #references #note {
+        color: var(--primary-dark);
+    }
+
+    #cv #hobbies i {
+        color: var(--primary-dark);
+    }
+
+    #studies img {
+        filter: invert(100%) hue-rotate(180deg) brightness(120%) contrast(150%);
+    }
+
+    section {
+        display: block!important;
+        padding-top: 0!important;
+        padding-bottom: 0!important;
+    }
+
 }
