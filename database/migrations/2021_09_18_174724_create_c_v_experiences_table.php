@@ -18,6 +18,7 @@ class CreateCvexperiencesTable extends Migration
             $table->string('job');
             $table->string('period');
             $table->string('company');
+            $table->string('company_url')->nullable();
             $table->string('place');
             $table->text('desc');
         });

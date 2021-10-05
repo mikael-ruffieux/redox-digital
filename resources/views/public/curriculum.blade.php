@@ -232,7 +232,7 @@ Mikaël Ruffieux |
             <div class="col-sm-9 col-12">
                 <h3>Collège du Sud <small>- Bulle (FR)</small></h3>
                 <h4 class="color-red">Maturité gymnasiale</h4>
-                <p>Formation bilingue (F/D), Mathématiques renforcés, Option spécifique : Biologie / Chimie</p>
+                <p>Formation bilingue (F/D), Mathématiques renforcés, Option spécifique : Biologie / Chimie.</p>
             </div>
         </div>
     </div>
@@ -259,7 +259,15 @@ Mikaël Ruffieux |
                     <i class="fad fa-2x fa-circle"></i>
                     <h3 class="all-caps">{{$exp->job}}</h3>
 
-                    <p class="mt-3"><span class="color-red">{{$exp->company}} -</span> <small>{{$exp->place}}</small></p>
+                    <p class="mt-3">
+                        @if ($exp->company_url)
+                            <a href="{{$exp->company_url}}" target="_blank">
+                        @endif
+                            <span class="color-red">{{$exp->company}} - </span>
+                        @if ($exp->company_url)
+                        </a>
+                        @endif
+                        <small>{{$exp->place}}</small></p>
 
                     <p>{{$exp->desc}}</p>
                 </div>
