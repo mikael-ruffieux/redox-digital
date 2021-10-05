@@ -9,7 +9,7 @@ class CVExperiencesSeeder extends Seeder
 {
     private $experiences = [
         [
-            'job' => 'Fondateur, Chef de projet digital',
+            'job' => 'Cofondateur, Chef de projet digital',
             'period' => '2021 - à ce jour',
             'company' => 'Redox Digital SNC',
             'company_url' => 'https://redoxdigital.ch',
@@ -26,11 +26,11 @@ class CVExperiencesSeeder extends Seeder
         ],
         [
             'job' => 'Développeur web',
-            'period' => '2019 - à ce jour',
+            'period' => '2018 - à ce jour',
             'company' => 'Kesako Sàrl',
             'company_url' => 'https://kesako.net/',
             'place' => 'Bussigny (VD)',
-            'desc' => 'Assistant au développement web front- et back-end sur des projets ponctuels.'
+            'desc' => 'Stage pré-HES, puis assistant au développement web front- et back-end sur des projets ponctuels.'
         ],
         [
             'job' => 'Sergent-major d\'unité',
@@ -43,7 +43,6 @@ class CVExperiencesSeeder extends Seeder
             'job' => 'Vidéaste & développeur web indépendant',
             'period' => '2016 - 2021',
             'company' => 'Redox Prod (Raison individuelle)',
-            
             'place' => 'Epagny (FR)',
             'desc' => 'Réalisation de mandats freelance en parallèle de mes études et projets professionnels, comme développeur web et vidéaste.'
         ],
@@ -54,14 +53,6 @@ class CVExperiencesSeeder extends Seeder
             'company_url' => 'https://evolys.ch',
             'place' => 'Villars-sur-Glâne (FR)',
             'desc' => 'Chargé de création de contenus visuels pour les réseaux sociaux de l’entreprise.'
-        ],
-        [
-            'job' => 'Stagiaire',
-            'period' => '2018 - 2019',
-            'company' => 'Kesako Sàrl',
-            'company_url' => 'https://kesako.net/',
-            'place' => 'Bussigny (VD)',
-            'desc' => 'Stage professionnel d’une année en tant que graphiste et développeur web, dans le but d\'intégrer la HEIG-VD, filière Ingénierie des médias.'
         ],
         [
             'job' => 'Aide de cuisine',
