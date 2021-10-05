@@ -21,7 +21,7 @@ Mikaël Ruffieux |
                 <p>Vous trouverez sur cette page mes <b>informations personnelles</b>, un aperçu de mon <b>parcours étudiant</b> et <b>professionnel</b>, ainsi que mes <b>réalisations</b> dans le domaine du digital.</p>
                 <p>Bonne lecture, et n’hésitez pas à me contacter en cas de questions !</p>
 
-                <a class="btn btn-outline-red" href="#">Imprimer ce CV</a>
+                <a class="btn btn-outline-red" target="_blank" href="{{asset('storage/assets/docs/CV_MikaelRuffieux_2021.pdf')}}">Imprimer ce CV</a>
 
                 {{--<a href="#about-me" id="bouncing-arrow"><i class="fal fa-arrow-down"></i></a>--}}
             </div>
