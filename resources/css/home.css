@@ -3,43 +3,6 @@
 }
 
 /* Animated background */
-
-/*
-#animated-bg {
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -100;
-    overflow: hidden;
-}
-
-#animated-bg > img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-@keyframes appear {
-    0% {
-        transform: translateX(100vw);
-    }
-    100% {
-        transform: translateX(100px);
-    }
-}
-
-#animated-bg > #layer1 {
-    animation: appear 1.5s ease-in-out forwards;
-}
-
-#animated-bg > #layer2 {
-    animation: appear 1s ease-in-out forwards;
-    opacity: 0.5;
-}
-*/
 #particles-cache {
     width: 100%;
     height: 100vh;

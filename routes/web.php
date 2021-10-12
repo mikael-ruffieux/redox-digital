@@ -80,6 +80,8 @@ Route::prefix('dev')->middleware('auth')->group(function () {
     // Page de maintenance
     Route::view('/', 'public.maintenance')->name('maintenance');
 
+    Route::view('immo', 'public.landing-pages.immo')->name('immo');
+
     Route::prefix('portfolio')->group(function () {
         Route::get('/', [PublicPagesController::class, 'portfolio'])->name('portfolio');
         Route::get('{id}', [PublicPagesController::class, 'portfolio_project'])->name('portfolio.project');
