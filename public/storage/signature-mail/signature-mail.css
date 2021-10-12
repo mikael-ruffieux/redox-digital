@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/* CSS Document */
+.boutons-socials {text-align: center;
+	}
+
+@media screen and (max-width: 600px) {
+	.boutons-socials {text-align: left;
+	}
+}
