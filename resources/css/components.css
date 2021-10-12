@@ -151,6 +151,7 @@
 #particles-js-cta {
     position: absolute;
     width: 100%;
+    height: 60%;
     z-index: -10;
     background: #ae0000;
 }
@@ -161,9 +162,9 @@
     z-index: -9;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
     #particles-js-cta {
-        height: 60%;
+        height: 100vh;
     }
 }
 /* .Particles JS */

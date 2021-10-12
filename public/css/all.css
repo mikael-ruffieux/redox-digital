@@ -28,6 +28,7 @@
 
     --primary-black: #2B2323;
     --secondary-black: #696969;
+    --dark-theme-black: #121212;
 
     --true-black: #000000;
 
@@ -37,7 +38,6 @@
 html {
     color: var(--primary-black);
     scroll-behavior: smooth;
-
 }
 
 body {
@@ -89,6 +89,46 @@ body {
     margin-right: -15px;
     margin-left: -15px;
 }
+
+/*
+@media (prefers-color-scheme: dark) {
+    html {
+        color: var(--true-white);
+    }
+
+    body {
+        background-color: var(--dark-theme-black);
+    }
+
+    img {
+        filter: brightness(.9) contrast(1.1);
+    }
+
+    .color-primary, .color-red {
+        color: var(--secondary-red)!important;
+    }
+
+    nav {
+        background-color: var(--primary-black);
+    }
+
+    #burger-menu {
+        color: var(--true-white);
+    }
+
+    h1, h2, h3, h4, h5, h6, p {
+        color: var(--true-white);
+    }
+
+    #particles-cache {
+        background: rgb(18, 18, 18);
+        background: -moz-linear-gradient(90deg, rgba(18, 18, 18,1) 40%, rgba(255,0,0,0) 90%);
+        background: -webkit-linear-gradient(90deg, rgba(18, 18, 18,1) 40%, rgba(255,0,0,0) 90%);
+        background: linear-gradient(90deg, rgba(18, 18, 18,1) 40%, rgba(255,0,0,0) 90%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#121212",endColorstr="#ff0000",GradientType=1); 
+    }
+}
+*/
 /* 
  * General display corrections and adaptations
  */
@@ -229,7 +269,6 @@ a:hover {
         font-size: 14px;
     }
 }
-
 /* CSS for small components, like buttons or inputs */ 
 
 /* Curves */
@@ -383,6 +422,7 @@ a:hover {
 #particles-js-cta {
     position: absolute;
     width: 100%;
+    height: 60%;
     z-index: -10;
     background: #ae0000;
 }
@@ -393,9 +433,9 @@ a:hover {
     z-index: -9;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
     #particles-js-cta {
-        height: 60%;
+        height: 100vh;
     }
 }
 /* .Particles JS */
@@ -722,6 +762,7 @@ nav {
 }
 
 #burger-menu {
+    color: var(--primary-black);
     display: none;
     flex-direction: column;
     align-items: center;
@@ -730,7 +771,6 @@ nav {
     height: 50px;
     background: none;
     border: none;
-    color: var(--true-black);
 }
 
 #burger-menu .fa-times {
@@ -1154,7 +1194,6 @@ nav .sub-menu .sub-menu-title>a {
     #socials > a > small {
         display: none;
     }
-
 }
 #contact {
     background-color: var(--primary-red);
@@ -1564,43 +1603,6 @@ nav .sub-menu .sub-menu-title>a {
 }
 
 /* Animated background */
-
-/*
-#animated-bg {
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -100;
-    overflow: hidden;
-}
-
-#animated-bg > img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-@keyframes appear {
-    0% {
-        transform: translateX(100vw);
-    }
-    100% {
-        transform: translateX(100px);
-    }
-}
-
-#animated-bg > #layer1 {
-    animation: appear 1.5s ease-in-out forwards;
-}
-
-#animated-bg > #layer2 {
-    animation: appear 1s ease-in-out forwards;
-    opacity: 0.5;
-}
-*/
 #particles-cache {
     width: 100%;
     height: 100vh;

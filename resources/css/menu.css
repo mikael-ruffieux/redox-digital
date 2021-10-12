@@ -8,6 +8,7 @@ nav {
 }
 
 #burger-menu {
+    color: var(--primary-black);
     display: none;
     flex-direction: column;
     align-items: center;
@@ -16,7 +17,6 @@ nav {
     height: 50px;
     background: none;
     border: none;
-    color: var(--true-black);
 }
 
 #burger-menu .fa-times {
@@ -440,5 +440,4 @@ nav .sub-menu .sub-menu-title>a {
     #socials > a > small {
         display: none;
     }
-
 }

@@ -11,3 +11,5 @@ particlesJS.load('particles-js', '../js/particlesjs-config.json', function() {
 particlesJS.load('particles-js-cta', '../js/particlesjscta-config.json', function() {
     console.log('callback - particles.js CTA config loaded');
 });
+
+// #### Dark theme switch ####
