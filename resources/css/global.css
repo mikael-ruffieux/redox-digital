@@ -55,11 +55,16 @@ body {
     color: var(--primary-red)!important;
 }
 
+.color-white {
+    color: var(--true-white)!important;
+}
+
+
 .bg-dark {
     background-color: var(--primary-black)!important;
 }
 
-.bg-dark p, .bg-dark h2, .bg-dark h3 {
+.bg-dark p, .bg-dark h1, .bg-dark h2, .bg-dark h3 {
     color: var(--true-white);
 }
 
