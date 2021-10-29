@@ -26,6 +26,7 @@
                 @if(Auth::check())
                     <li><a href="{{route('contact')}}">Contact</a></li>
                 @endif
+                    <li><a href="{{route('cg')}}">Conditions générales</a></li>
                 </ul>
             </div>
 

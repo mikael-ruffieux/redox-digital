@@ -1,0 +1,71 @@
+#cg-content {
+    padding-top: 10vh;
+    padding-bottom: 15vh;
+}
+
+#cg-content ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+#cg-content a {
+    color: var(--primary-red);
+}
+
+#cg-content ul>li {
+    padding-bottom: 10px;
+    display: list-item;
+    list-style-type:disc;
+}
+
+#cg-content blockquote {
+    padding-left: 20px;
+    border-left: solid 2px var(--primary-red);
+}
+
+body {
+    counter-reset: h2counter;
+}
+
+#cg-content h1 {
+    counter-reset: h2counter;
+}
+
+#cg-content h2 {
+    counter-reset: h3counter;
+    padding-top : 2vh;
+    padding-bottom : 2vh;
+}
+
+#cg-content h3 {
+    counter-reset: h4counter;
+    font-weight: bold;
+    padding-top : 1vh;
+    padding-bottom : 1vh;
+}
+
+#cg-content h3 {
+
+}
+
+
+#cg-content h2::before {
+    content: counter(h2counter) ".\0000a0\0000a0";
+    counter-increment: h2counter;
+}
+
+#cg-content h3::before {
+    content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
+    counter-increment: h3counter;
+}
+
+#cg-content h4::before {
+    content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) ".\0000a0\0000a0";
+    counter-increment: h4counter;
+}
+
