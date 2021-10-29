@@ -3,7 +3,7 @@
     <div class="container d-md-block d-none">
         <div id="footer-top" class="row">
             <div class="col-4 col-md-2">
-                <img src="{{asset('storage/assets/img/logo/Redox-Digital_Logotype-final_Redox-Digital_Logotype-pictogramme-blanc-rouge.svg')}}" alt="Redox Digital">
+                <img src="{{asset('storage/assets/img/logo/Redox-Digital_Logotype-pictogramme-blanc-rouge.svg')}}" alt="Redox Digital">
             </div>
 
             <div class="col-8 col-md-4">
@@ -68,7 +68,7 @@
     <div class="container d-block d-md-none vcard">
         <div id="footer-top" class="row">
             <div class="col-4">
-                <img src="{{asset('storage/assets/img/logo/Redox-Digital_Logotype-final_Redox-Digital_Logotype-pictogramme-blanc-rouge.svg')}}" alt="Redox Digital">
+                <img src="{{asset('storage/assets/img/logo/Redox-Digital_Logotype-pictogramme-blanc-rouge.svg')}}" alt="Redox Digital">
                 
                 <ul id="footer-icons-list">
                     <li><a href="https://www.facebook.com/redoxdigital.ch/" target="_blank"><i class="fab fa-facebook"></i></a></li>
@@ -96,6 +96,7 @@
                 @if(Auth::check())
                     <li><a href="{{route('contact')}}">Contact</a></li>
                 @endif
+                    <li><a href="{{route('cg')}}">Conditions générales</a></li>
                 </ul>
 
                 {{-- Uniquement pour la v 1.0

@@ -28,7 +28,11 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', [PublicPagesController::class, 'home'])->name('home');
 Route::get('a-propos', [PublicPagesController::class, 'about'])->name('about');
-Route::view('cg', 'public.cg')->name('cg');
+
+Route::view('conditions-generales', 'public.cg')->name('cg');
+Route::get('cg', function() {
+    return redirect('/conditions-generales');
+});
 
 // à voir si on garde ce système, ou si on fait 2 chemins & méthodes
 Route::get('nos-services-de-{type}', [PublicPagesController::class, 'services'])->name('services');
