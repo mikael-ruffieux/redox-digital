@@ -2538,3 +2538,58 @@ body {
     counter-increment: h4counter;
 }
 
+
+.card {
+    background-color: inherit;
+    border: 3px solid var(--primary-black);
+    border-radius: 25px;
+    height: 100%;
+}
+
+.bg-dark .card {
+    border-color: var(--true-white);
+}
+
+.card-header, .card-footer {
+    border: none;
+    background-color: transparent;
+}
+
+.card-header {
+    padding-top: 3vh; 
+    padding-bottom: 0;
+}
+
+.card-body {
+    padding: 0 1.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.card ul {
+    width: 100%;
+}
+
+.card ul > li {
+    border-top : solid 1px var(--primary-black);
+    padding: 1.5vh 0;
+}
+
+.bg-dark .card ul > li {
+    border-top : solid 1px var(--true-white);
+    color: var(--true-white)
+}
+
+.card ul > li:first-of-type {
+    border : none;
+}
+
+#web-prices {
+    padding-top: 10vh;
+    padding-bottom: 15vh;
+}
+
+#maintenance-prices {
+    padding-top: 15vh;
+    padding-bottom: 10vh;
+}

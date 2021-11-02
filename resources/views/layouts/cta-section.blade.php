@@ -1,5 +1,5 @@
 <section id="cta">
-    @include('layouts.curves.curve-small-top-right', ['color' => '#2b2323'])
+    @include('layouts.curves.curve-small-top-right', ['color' => isset($curve_color) ? $curve_color : "#2b2323"])
     <div id="particles-cta-cache"></div>
     <div id="particles-js-cta"></div>
 

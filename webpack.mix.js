@@ -29,6 +29,7 @@ const mix = require('laravel-mix');
     'resources/css/projects.css',
     'resources/css/curriculum.css',
     'resources/css/cg.css',
+    'resources/css/landing-pages.css',
 ], 'public/css/all.css');
 
 mix.js('resources/js/app.js', 'public/js')

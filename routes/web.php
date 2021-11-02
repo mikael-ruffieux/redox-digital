@@ -82,6 +82,7 @@ Auth::routes();
 // Contact Form
 // ##### Routes privées pendant le développement #####
 Route::prefix('dev')->middleware('auth')->group(function () {
+    Route::view('services-web', 'public.landing-pages.web-services')->name('web-services');
     // Page de maintenance
     Route::view('/', 'public.maintenance')->name('maintenance');
 
