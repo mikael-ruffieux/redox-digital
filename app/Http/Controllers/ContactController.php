@@ -152,7 +152,7 @@ class ContactController extends Controller
 
         // Envoi du mail
         Mail::send('public.contact.components.mail-content', ['results' => $results], function($message) use ($results){
-            $message->from($results['mail']['value'], $results['name']['value']);
+            $message->from(env('MAIL_FROM_ADDRESS'), $results['name']['value']);
             $message->to('info@redoxdigital.ch')->subject('Prise de contact | redoxdigital.ch');
         });
 
