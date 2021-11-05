@@ -8,7 +8,9 @@ use App\Http\Requests\ContactMailRequest;
 use App\Http\Requests\ContactProjectTypeRequest;
 use App\Http\Requests\ContactBudgetRequest;
 use App\Http\Requests\ContactMessageRequest;
+use Exception;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Storage;
 
 class ContactController extends Controller
 {
@@ -146,6 +148,8 @@ class ContactController extends Controller
             $results['project_type'] = ['label' => "Type de projet", 'value' => $this->project_types[session('project_type') - 1]];
         }
 
+        $this->saveLog($results);
+
         // Envoi du mail
         Mail::send('public.contact.components.mail-content', ['results' => $results], function($message) use ($results){
             $message->from($results['mail']['value'], $results['name']['value']);
@@ -157,5 +161,14 @@ class ContactController extends Controller
 
         // Confirmation de réception
         return view('public.contact.contact-form-confirmation');
+    }
+
+    private function saveLog($mail_content) {
+        try {
+            $json = json_encode($mail_content);
+            Storage::put('mail-log/'.time().".json", $json);
+        } catch (Exception $e) {
+            dd($e);
+        }
     }
 }
