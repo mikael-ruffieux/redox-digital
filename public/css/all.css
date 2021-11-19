@@ -2537,8 +2537,6 @@ body {
     content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) ".\0000a0\0000a0";
     counter-increment: h4counter;
 }
-
-
 .card {
     background-color: inherit;
     border: 3px solid var(--primary-black);
@@ -2592,4 +2590,12 @@ body {
 #maintenance-prices {
     padding-top: 15vh;
     padding-bottom: 10vh;
+}
+
+.price-title {
+    font-size: 2.5rem;
+}
+
+.price-subtitle {
+    font-size: 1.2rem;
 }

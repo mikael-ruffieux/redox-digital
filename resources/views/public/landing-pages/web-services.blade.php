@@ -49,8 +49,8 @@ Création de site web |
                         </ul>
                     </div>
                     <div class="card-footer text-center">
-                        <h3 class="all-caps">à partir de</h3>
-                        <h2 class="red-dot">600 CHF</h2>
+                        <h3 class="all-caps price-subtitle">à partir de</h3>
+                        <h2 class="red-dot price-title">600 CHF</h2>
                     </div>
                 </div>
 
@@ -70,8 +70,8 @@ Création de site web |
                         </ul>
                     </div>
                     <div class="card-footer text-center">
-                        <h3 class="all-caps">à partir de</h3>
-                        <h2 class="red-dot">1'500 CHF</h2>
+                        <h3 class="all-caps price-subtitle">à partir de</h3>
+                        <h2 class="red-dot price-title">1'500 CHF</h2>
                     </div>
                 </div>
 
@@ -91,8 +91,8 @@ Création de site web |
                         </ul>
                     </div>
                     <div class="card-footer text-center">
-                        <h3 class="all-caps">tarif</h3>
-                        <h2 class="red-dot">sur demande</h2>
+                        <h3 class="all-caps price-subtitle">tarif</h3>
+                        <h2 class="red-dot price-title">sur demande</h2>
                     </div>
                 </div>
 
@@ -103,7 +103,7 @@ Création de site web |
             <div class="col">
                 <p>*<strong>CMS</strong> : Un CMS est un Content Management System, ou système de gestion de contenu. Les CMS les plus connus et les plus utilisés sont Wordpress, Wix ou encore Drupal.</p>
 
-                <p><i>Les tarifs indiqués sont à titre indicatif, et peuvent varier selon la taille et la compléxité de votre projet.</i></p>
+                <p><i>Les tarifs indiqués sont à titre indicatif, et peuvent varier selon la taille et la complexité de votre projet.</i></p>
             </div>
         </div>
     </div>
@@ -116,7 +116,7 @@ Création de site web |
             <div class="col-12">
                 <h2>Vous n’êtes pas seul<span class="color-red">.</span>e<span class="color-red">.</span>s !</h2>
             </div>
-            <div class="col-12 col-md-8" id="hero-description">
+            <div class="col-12 col-md-8 my-5">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, suscipit fugit? Voluptate, vitae velit quam quod et repudiandae nisi eos aperiam, provident ratione voluptatem exercitationem voluptas mollitia error, libero dolor.</p>
             </div>
         </div>
@@ -129,7 +129,7 @@ Création de site web |
                     </div>
                     <div class="card-body">
                         <ul >
-                            <li>Sauvegardes bimestrielles de votre site et des bases de données liées.</li>
+                            <li><strong title="Tous les 2 mois">Sauvegardes bimestrielles</strong> de votre site et des bases de données liées.</li>
                             <li>Mises à jour du CMS et des extensions utilisées sur votre site.</li>
                             <li>Support ponctuel, sur appel.<br><br>
                                 <small>En cas de travaux conséquents, facturés au tarif horaire de 90.00 CHF.</small>
@@ -137,8 +137,8 @@ Création de site web |
                         </ul>
                     </div>
                     <div class="card-footer text-center">
-                        <h3 class="all-caps">Tarif annuel</h3>
-                        <h2 class="red-dot">480 CHF</h2>
+                        <h3 class="all-caps price-subtitle">Tarif annuel</h3>
+                        <h2 class="red-dot price-title">480 CHF</h2>
                     </div>
                 </div>
 
@@ -151,13 +151,14 @@ Création de site web |
                     <div class="card-body">
                         <ul >
                             <li>Services du pack "<strong>maintenance technique</strong>".</li>
-                            <li>Aide à la mise en place du site.</li>
+                            <li><b>Reporting bimestriel standard</b> : nous vous fournissons un rapport sur le trafic de votre site, ainsi que les comportements de vos utilisateurs.</li>
+                            <li>Aide à la mise en place du site <i>(mise en place de nouvelles pages, installation d'extensions, etc.)</i>.</li>
                             <li>Aide à la gestion du site, de l’hébergement et du nom de domaine <i>(frais externes non-compris)</i>.</li>
                         </ul>
                     </div>
                     <div class="card-footer text-center">
-                        <h3 class="all-caps">Tarif annuel, à partir de</h3>
-                        <h2 class="red-dot">660 CHF</h2>
+                        <h3 class="all-caps price-subtitle">Tarif annuel, à partir de</h3>
+                        <h2 class="red-dot price-title">880 CHF</h2>
                     </div>
                 </div>
 
@@ -169,14 +170,14 @@ Création de site web |
                     </div>
                     <div class="card-body">
                         <ul >
-                            <li>Services du pack "<strong>support fonctionnel</strong>"".</li>
-                            <li>Veille technologique : nous vous conseillons sur les nouveautés à adopter.</li>
-                            <li>Support non plus uniquement sur votre site, mais sur votre écosystème digital complet <i>(référencement,  réseaux  sociaux, etc.)</i></li>
+                            <li>Services du pack "<strong>support fonctionnel</strong>".</li></li>
+                            <li><b>Veille technologique</b> : nous vous conseillons sur les nouveautés à adopter.</li>
+                            <li>Support étendu à tout votre écosystème digital <i>(référencement,  réseaux  sociaux, etc.)</i></li>
                         </ul>
                     </div>
                     <div class="card-footer text-center">
-                        <h3 class="all-caps">Tarif annuel, à partir de</h3>
-                        <h2 class="red-dot">1'200 CHF</h2>
+                        <h3 class="all-caps price-subtitle">Tarif annuel, à partir de</h3>
+                        <h2 class="red-dot price-title">1'390 CHF</h2>
                     </div>
                 </div>
 

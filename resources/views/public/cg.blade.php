@@ -23,6 +23,7 @@ Conditions générales |
                     <a href="#cg-content" id="bouncing-arrow"><i class="fal fa-arrow-down color-white"></i></a>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -32,7 +33,7 @@ Conditions générales |
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h2 id="1">Implication des parties</h2>
+                    <h2 class="red-dot" id="1">Implication des parties</h2>
                     <p>Dans chaque mandat, le Client et Redox Digital s’engagent à collaborer activement afin d’atteindre les buts fixés par le contrat. Chacun se doit de communiquer les éventuelles difficultés rencontrées au fur et à mesure du projet pour permettre à l’autre d’agir en conséquence.</p>
                     
                     <h3>Redox Digital</h3>
@@ -56,7 +57,7 @@ Conditions générales |
                             documents remis à Redox Digital.</li>
                     </ul>
                     <hr/>
-                    <h2 id="2">Offres et facturation</h2>
+                    <h2 class="red-dot" id="2">Offres et facturation</h2>
                     <p>Le prix qui est proposé au Client se base sur les
                         indications transmises afin de ne pas pouvoir induire en erreur sur le travail à réaliser. Les
                         modifications conséquentes de ces données entrainera un nouveau devis.</p>
@@ -111,7 +112,7 @@ Conditions générales |
                     <p>Les documents originaux créés et utilisés par Redox
                         Digital ne peuvent être revendiqués par le Client sans une contribution financière (<a href="#3.3">c.f. point 3.3</a>).</p>
                     <hr/>
-                    <h2 id="3">Livrables, propriété intellectuelle & droits d’auteur</h2>
+                    <h2 class="red-dot" id="3">Livrables, propriété intellectuelle & droits d’auteur</h2>
                     <p>Conformément aux prescriptions légales suisses, tout
                         élément créé dans le cadre d'un mandat <i>(stratégies, créations graphiques ou digitales, fichiers
                         sources, livrables etc.)</i> et transmis au Client restent la propriété de Redox Digital. Toutes
@@ -149,7 +150,7 @@ Conditions générales |
                         droits d'auteur des contenus utilisés pour modifier le livrable. Redox Digital ne pourra en aucun
                         cas être tenue responsable de tout type de violation ou d'expiration de licences.</p>
                     <hr>
-                    <h2 id="4">Droit applicable et for juridique</h2>
+                    <h2 class="red-dot" id="4">Droit applicable et for juridique</h2>
                     <p>Au sein de l’agence Redox Digital SNC, nous
                         privilégions avant tout des valeurs telles que le bon sens, la bonne foi, le dialogue et la sincérité.
                         Nous espérons qu’il en est de même de la part de tous nos clients, partenaires et fournisseurs.</p>
@@ -161,7 +162,7 @@ Conditions générales |
                         de la facture impliquent la reconnaissance par le Client des présentes conditions générales.</p>
                     <p>Le for juridique est Fribourg.</p>
                     <hr>
-                    <h2 id="5">Renseignements &amp; contact</h2>
+                    <h2 class="red-dot" id="5">Renseignements &amp; contact</h2>
                     <p>Pour toutes question, demande ou réclamation, nous
                         vous prions de bien vouloir nous contacter via <a href="{{route('contact.intro')}}">notre formulaire de contact</a>, ou à l'adresse suivante : </p>
                     <blockquote>

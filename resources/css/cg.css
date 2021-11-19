@@ -68,4 +68,3 @@ body {
     content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) ".\0000a0\0000a0";
     counter-increment: h4counter;
 }
-

@@ -52,3 +52,11 @@
     padding-top: 15vh;
     padding-bottom: 10vh;
 }
+
+.price-title {
+    font-size: 2.5rem;
+}
+
+.price-subtitle {
+    font-size: 1.2rem;
+}
