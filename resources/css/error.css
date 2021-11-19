@@ -1,0 +1,8 @@
+#error-header {
+    padding-top : 10vh;
+    padding-bottom: 15vh;
+}
+
+#error-header h1 {
+    margin-bottom: 5vh;
+}
