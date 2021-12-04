@@ -18,9 +18,10 @@ class PublicPagesController extends Controller
 
     public function home() {
         // taking the 3 last active projects
-        $projects = Project::where('archived', 0)->orderBy('date')->take(3)->get();
+        $projects = Project::where('archived', 0)->orderBy('date', 'desc')->take(3)->get();
+        $tags = Service::where('isChild', 1)->get();
 
-        return view("public.home", compact('projects'));
+        return view("public.home", compact('projects', 'tags'));
     }
 
     public function about() {
@@ -46,22 +47,17 @@ class PublicPagesController extends Controller
     }
 
     public function portfolio() {
-        $projects = Project::where('archived', 0)->orderBy('date')->get();
-        $services = Service::all();
+        $projects = Project::where('archived', 0)->orderBy('date', 'desc')->get();
+        $services = Service::where('isChild', 1)->get();
 
         return view("public.portfolio.portfolio", compact('projects', 'services'));
     }
 
+    /**
+     * Display 1 project.
+     */
     public function portfolio_project($id) {
         $project = Project::findOrFail($id);
-        $project_type = $project->projectable_type;
-
-        if($project_type == "App\Models\ProjectWeb") {
-            return view('public.portfolio.projects.web', compact('project'));
-        } elseif ($project_type == "App\Models\ProjectVideo") {
-            return view('public.portfolio.projects.video', compact('project'));
-        } else {
-            return view('public.portfolio.projects.marketing', compact('project'));
-        }
+        return view('public.portfolio.project', compact('project'));
     }
 }

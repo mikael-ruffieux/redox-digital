@@ -8,3 +8,37 @@
     display:block;
     position: relative;
 }
+
+#projects-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin: 5vh 0;
+}
+
+#portfolio .tag {
+    display: flex;
+}
+
+#portfolio .tag > input {
+    position: absolute!important;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+#portfolio .tag > label {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 0px 10px;
+    margin: 5px 10px;
+    border-radius: 25px;
+}
+
+
+#portfolio .tag >input:checked + label {
+    background-color: var(--primary-black);
+    color: var(--true-white);
+}
+

@@ -94,13 +94,8 @@ Agence digitale, créatrice d'expériences web & vidéo |
                 <h2 class="red-dot">Nos réalisations</h2>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col">
-                <i>Notre portfolio sera disponible prochainement.</i>
-            </div>
-        </div>
-        {{--@foreach ($projects as $project)
+        @if(Auth::check())
+        @foreach ($projects as $project)
         <div class="row project">
             <div class="col-6">
                 <h5>{{$project->client->name}}</h5>
@@ -111,7 +106,10 @@ Agence digitale, créatrice d'expériences web & vidéo |
                     <a href="#" class="category">{{$service->title}}</a>
                     @endforeach
                 </div>
-                <a class="btn btn-outline-dark" href="#">En savoir plus</a>
+                @if($project->custom_summary)
+                <p>{{$project->custom_summary}}</p>
+                @endif
+                <a class="btn btn-outline-dark" href="{{route('portfolio.project', [$project->id])}}">En savoir plus</a>
             </div>
             <div class="col-4">
                 <img src="{{asset($project->images->first()->url)}}" alt="{{$project->title}}">
@@ -123,7 +121,14 @@ Agence digitale, créatrice d'expériences web & vidéo |
             <div class="col-lg-6 col-12">
                 <a href="{{route('portfolio')}}" class="btn btn-outline-red btn-100">Parcourez notre portfolio</a>
             </div>
-        </div>--}}
+        </div>
+        @else
+        <div class="row">
+            <div class="col">
+                <i>Notre portfolio sera disponible prochainement.</i>
+            </div>
+        </div>
+        @endif
 
     </div>
 </section>
@@ -186,6 +191,7 @@ Agence digitale, créatrice d'expériences web & vidéo |
         });
     
 </script>
+
 @endsection
 
 

@@ -16,10 +16,20 @@ class Project extends Model
         'title',
         'client_id',
         'archived',
-        'context',
         'date',
-        'projectable_id',
-        'projectable_type'
+        'custom_summary',
+        'external_link',
+
+        'context_title',
+        'context_desc',
+
+        'video_source',
+        'video_url',
+
+        'design_desc',
+
+        'solution_title',
+        'solution_desc'
     ];
 
     public function dateValue() {
@@ -44,9 +54,5 @@ class Project extends Model
             array_push($ids, $category->id);
         }
         return $ids;
-    }
-
-    public function projectable() {
-        return $this->morphTo();
     }
 }

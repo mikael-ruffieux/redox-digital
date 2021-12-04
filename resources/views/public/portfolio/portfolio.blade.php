@@ -19,6 +19,20 @@ Portfolio |
 
 <section id="portfolio" class="portfolio bg-white">
     <div class="container">
+        <div class="row">
+            <div class="col" id="projects-tags">
+                <div class="tag">
+                    <input type="checkbox" name="all" id="all">
+                    <label for="all">tous</label>
+                </div>
+                @foreach ($services as $service)
+                <div class="tag">
+                    <input type="checkbox" name="{{$service->id}}" id="{{$service->id}}">
+                    <label for="{{$service->id}}">{{$service->title}}</label>
+                </div>
+                @endforeach
+            </div>
+        </div>
         @foreach ($projects as $project)
         <div class="row project">
             <div class="col-6">
@@ -27,17 +41,38 @@ Portfolio |
 
                 <div class="categories">
                     @foreach ($project->services as $service)
-                    <a href="#" class="category">{{$service->title}}</a>
+                    <a href="#{{$service->id}}" class="category">{{$service->title}}</a>
                     @endforeach
                 </div>
                 <a class="btn btn-outline-black" href="{{route('portfolio.project', [$project->id])}}">En savoir plus</a>
             </div>
             <div class="col-4">
-                <img src="{{--asset($project->images->first()->url)}}" alt="{{$project->title--}}">
+                <img src="{{asset($project->images->first()->url)}}" alt="{{$project->title}}">
             </div>
         </div>
         @endforeach
 
     </div>
 </section>
+<script type="text/javascript">
+const cbs = document.querySelectorAll('.tag');
+function check(checked = true, cbs) {
+    cbs.forEach((cb) => {
+        cb.checked = checked;
+    });
+
+    document.getElementById("all").checked = true;
+}
+
+check(false, cbs);
+
+cbs.forEach(cb => cb.onclick = () => {
+    if(cb.id != "all") {
+        document.getElementById("all").checked = false;
+    } else {
+        check(false, cbs);
+    }
+    console.log(cb.id)
+});
+</script>
 @endsection

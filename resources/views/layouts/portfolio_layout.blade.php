@@ -25,8 +25,6 @@
     @include('layouts.menu')
     <!-- /Main menu -->
 
-    @include('layouts.portfolio-categories')
-
     @yield("content")
 
     @include('layouts.footer')

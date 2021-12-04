@@ -11,7 +11,7 @@ class Image extends Model
 
     public $timestamps = false;
 
-    protected $fillable = ['project_id', 'url'];
+    protected $fillable = ['project_id', 'type', 'url'];
 
     public function project() {
         $this->belongsTo(Project::class);

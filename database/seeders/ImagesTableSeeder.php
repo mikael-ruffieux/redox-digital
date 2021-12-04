@@ -17,9 +17,13 @@ class ImagesTableSeeder extends Seeder
         DB::table('images')->delete();
 
         for ($i=1; $i <= 30; $i++) {
+            $type = $i%2 ? "image" : "gallery";
+            $project_id = rand(1,9);
+
             DB::table('images')->insert([
-                'project_id' => rand(1, 9),
-                'url' => "storage/img$i.jpg",
+                'project_id' => $project_id,
+                'type' => $type,
+                'url' => "storage/projects/$project_id/". ($type == "gallery" ? "gallery/" : "")  ."$i.jpg"
             ]);
         }
     }

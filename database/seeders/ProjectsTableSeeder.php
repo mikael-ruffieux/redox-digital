@@ -9,8 +9,6 @@ use Faker\Provider\Lorem;
 
 class ProjectsTableSeeder extends Seeder
 {
-    private $type = ['Video', 'Web','Web','Web', 'Marketing'];
-
     private function randDate() {
         $nbJours = rand(-2800, 0);
         return Carbon::now()->addDays($nbJours);
@@ -24,40 +22,26 @@ class ProjectsTableSeeder extends Seeder
     public function run()
     {
         DB::table('projects')->delete();
-        DB::table('project_videos')->delete();
-        DB::table('project_webs')->delete();
-        DB::table('project_marketings')->delete();
-
-        for ($i = 1; $i <= 3; $i ++) {
-            DB::table('project_videos')->insert([
-                'vid_link' => 'https://www.youtube.com/embed/hc9fAKjfzmQ',
-                'vid_desc' => $i .' : Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates earum, assumenda amet quos incidunt consectetur, sunt sint saepe ex ducimus repellat debitis velit ea quo pariatur perferendis, culpa tempore vel.',
-            ]);
-        }
-
-        for ($i = 1; $i <= 3; $i ++) {
-            DB::table('project_webs')->insert([
-                'site_screenshot' => "storage/projects/web/$i.jpg",
-                'site_url' => 'https://test'. $i . '.com',
-                'site_desc' => $i .' : Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates earum, assumenda amet quos incidunt consectetur, sunt sint saepe ex ducimus repellat debitis velit ea quo pariatur perferendis, culpa tempore vel.',
-            ]);
-        }
-
-        for ($i = 1; $i <= 3; $i ++) {
-            DB::table('project_marketings')->insert([
-                'mark_desc' => $i .' : Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates earum, assumenda amet quos incidunt consectetur, sunt sint saepe ex ducimus repellat debitis velit ea quo pariatur perferendis, culpa tempore vel.',
-            ]);
-        }
 
         for ($i=1; $i <= 9; $i++) {
             DB::table('projects')->insert([
                 'title' => 'Projet '. $i,
                 'client_id' => rand(1, 10),
                 'archived' => 0,
-                'context' => "Description $i, lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque tempore porro ducimus laboriosam, rem dolores non neque, reiciendis quibusdam labore voluptate, pariatur sed molestiae. Incidunt necessitatibus consequuntur delectus officiis sunt!",
+                'custom_summary' => "Résumé $i, lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                'external_url' => null,
                 'date' => $this->randDate(),
-                'projectable_type' => 'App\Models\Project' . $this->type[rand(0, 3)],
-                'projectable_id' => rand(1, 3),
+
+                'context_title' => "Contexte customisé",
+                'context_desc' => "Contexte Description $i, lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque tempore porro ducimus laboriosam, rem dolores non neque, reiciendis quibusdam labore voluptate, pariatur sed molestiae. Incidunt necessitatibus consequuntur delectus officiis sunt!",
+
+                'video_source' => "youtube",
+                'video_url' => "https://player.vimeo.com/video/247694127?h=13121eee51",
+
+                'design_desc' => "Design Description $i, lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque tempore porro ducimus laboriosam, rem dolores non neque, reiciendis quibusdam labore voluptate, pariatur sed molestiae. Incidunt necessitatibus consequuntur delectus officiis sunt!",
+
+                'solution_title' => null,
+                'solution_desc' => "Solutions Description $i, lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque tempore porro ducimus laboriosam, rem dolores non neque, reiciendis quibusdam labore voluptate, pariatur sed molestiae. Incidunt necessitatibus consequuntur delectus officiis sunt!",
             ]);
         }
     }

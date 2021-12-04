@@ -17,17 +17,28 @@ class CreateProjectsTable extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->text('context');
-            $table->boolean('archived')->default(false);
-            $table->date('date');
-            $table->morphs('projectable');
-
             $table->integer('client_id')->unsigned();
             $table->foreign('client_id')
                 ->references('id')
                 ->on('clients')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
+
+            $table->boolean('archived')->default(false);
+            $table->text('custom_summary')->nullable();
+            $table->text('external_url')->nullable();
+            $table->date('date');
+
+            $table->text('context_title')->nullable();
+            $table->text('context_desc');
+
+            $table->text('video_source')->nullable();
+            $table->text('video_url')->nullable();
+
+            $table->text('design_desc')->nullable();
+
+            $table->text('solution_title')->nullable();
+            $table->text('solution_desc');
         });
     }
 

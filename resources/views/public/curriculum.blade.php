@@ -248,6 +248,7 @@ Mikaël Ruffieux |
                 <h2 class="red-dot">Expériences professionnelles</h2>
             </div>
         </div>
+
         <div id="work-history">
             @foreach ($experiences as $exp)
             <div class="row">
