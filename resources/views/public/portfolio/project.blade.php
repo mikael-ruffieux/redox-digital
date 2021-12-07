@@ -66,13 +66,8 @@
                 <h3 class="all-caps"><span class="number">0{{$section}}</span> - Design</h3>
 
                 <p>{{$project->design_desc}}</p>
-
-                GRANDES IMAGES
-
-                @foreach ($project->images as $image)
-                    @if ($image->type == "image")
-                        <img src="{{asset($image->url)}}" alt="{{$project->title}}">
-                    @endif
+                @foreach ($images as $image)
+                    <img src="{{asset($image->url)}}" alt="{{$project->title}}">
                 @endforeach
             </div>
         </div>
@@ -93,10 +88,8 @@
                 <div class="gallery">
                     GALERIE
 
-                    @foreach ($project->images as $image)
-                        @if ($image->type == "galery")
-                            <img src="{{asset($image->url)}}" alt="{{$project->title}}">
-                        @endif
+                    @foreach ($gallery as $image)
+                        <img src="{{asset($image->url)}}" alt="{{$project->title}}">
                     @endforeach
                 </div>
             </div>
@@ -109,9 +102,16 @@
 <section id="similar-projects" class="project-section {{$section%2 ? 'bg-white' : 'bg-dark'}}">
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-12">
                 <h3 class="all-caps"><span class="number">0{{$section}}</span> - Projets similaires</h3>
             </div>
+
+            @foreach ($similar_projects as $project)
+            <div class="col-4">
+                <h3>{{$project->title}}</h3>
+                <a href="{{route('portfolio.project', [$project->id])}}">Découvrir le projet</a>
+            </div>
+            @endforeach
         </div>
     </div>
 </section>

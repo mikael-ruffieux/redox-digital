@@ -34,22 +34,7 @@ Portfolio |
             </div>
         </div>
         @foreach ($projects as $project)
-        <div class="row project">
-            <div class="col-6">
-                <h5>{{$project->client->name}}</h5>
-                <h3>{{$project->title}}</h3>
-
-                <div class="categories">
-                    @foreach ($project->services as $service)
-                    <a href="#{{$service->id}}" class="category">{{$service->title}}</a>
-                    @endforeach
-                </div>
-                <a class="btn btn-outline-black" href="{{route('portfolio.project', [$project->id])}}">En savoir plus</a>
-            </div>
-            <div class="col-4">
-                <img src="{{asset($project->images->first()->url)}}" alt="{{$project->title}}">
-            </div>
-        </div>
+            @include('components.include_project_preview', compact('project'))
         @endforeach
 
     </div>

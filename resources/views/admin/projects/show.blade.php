@@ -181,6 +181,7 @@
                 <div class="form-group">
                     <label for="design_desc">Description de la section "Design"</label>
                     <textarea name="design_desc" id="design_desc" rows="6" class="form-control" disabled>{{$project->design_desc}}</textarea>
+                    <small>Si ce champ de description n'est pas rempli, <b>les grandes images ne seront pas affichées</b>. Il est toutefois nécessaire de mettre une image comme aperçu du projet.</small>
                 </div>
             </div>
             @endif

@@ -181,7 +181,7 @@
                     <label for="design_desc">Description de la section "Design"</label>
                     <textarea name="design_desc" id="design_desc" rows="6" class="form-control">{{old('design_desc')}}</textarea>
                     {!! $errors->first('design_desc', '<small class="help-block text-danger">:message</small>') !!}
-                    <small>Il n'est pas nécessaire de remplir ce champ pour que les grandes images s'affichent.</small>
+                    <small>Si ce champ de description n'est pas rempli, <b>les grandes images ne seront pas affichées</b>. Il est toutefois nécessaire de mettre une image comme aperçu du projet.</small>
                 </div>
             </div>
 

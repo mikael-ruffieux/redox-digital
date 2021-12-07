@@ -58,6 +58,22 @@ class PublicPagesController extends Controller
      */
     public function portfolio_project($id) {
         $project = Project::findOrFail($id);
-        return view('public.portfolio.project', compact('project'));
+        $images = $project->images->where('type', 'image');
+        $gallery = $project->images->where('type', 'gallery');
+
+        $similar_projects = Project::where([
+            ['archived', 0],
+            ['id', '!=', $project->id]
+        ])->orderBy('date', 'desc')->take(3)->get();
+
+        /*
+        // Similar projects - pas encore prêt, algo assez complexe
+        $all_similar_projects = [];
+        foreach ($project->services->all() as $service) {
+            $all_similar_projects = array_merge($all_similar_projects, $service->projects->where('id', '!=', $project->id)->all());
+        }
+        dd($all_similar_projects);
+        */
+        return view('public.portfolio.project', compact('project', 'images', 'gallery', 'similar_projects'));
     }
 }
