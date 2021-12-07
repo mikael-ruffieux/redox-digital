@@ -112,7 +112,9 @@ Agence digitale, créatrice d'expériences web & vidéo |
                 <a class="btn btn-outline-dark" href="{{route('portfolio.project', [$project->id])}}">En savoir plus</a>
             </div>
             <div class="col-4">
+                @if(sizeof($project->images) != 0)
                 <img src="{{asset($project->images->first()->url)}}" alt="{{$project->title}}">
+                @endif
             </div>
         </div>
         @endforeach
