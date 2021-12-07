@@ -10,8 +10,7 @@
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
         <!-- Internal styles -->
-        <link rel="stylesheet" href="{{ asset('css/redox-digital.css') }}">
-
+        <link rel="stylesheet" href="{{ asset('css/admin-style.css') }}">
         <link rel="icon" type="image/svg" href="{{ asset('storage/assets/img/logo/Redox-Digital_Logotype-final_Redox-Digital_Logotype-pictogramme-noir-rouge.svg') }}">
 
     </head>

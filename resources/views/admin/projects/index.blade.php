@@ -13,10 +13,9 @@
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th class="text-center">#</th>
+                        <th>Date</th>
                         <th>Projets</th>
                         <th>Statut</th>
-                        <th>Type</th>
                         <th>Catégories</th>
                         <th>Actions</th>
                     </tr>
@@ -26,7 +25,7 @@
                     @foreach ($projects as $project)
                         <tr>
                             <td scope="row">
-                                {{$project->id}}
+                                {{date('Y-m', strtotime($project->date))}}
                             </td>
                             <td>
                                 {{ $project->title }}
@@ -35,17 +34,6 @@
                                 <div class="badge badge-{{ $project->archived ? 'danger' : 'success'}}">
                                     {{ $project['archived'] ? 'Archivé' : 'Actif'}}
                                 </div>
-                            </td>
-                            <td>
-                                <small>
-                                @if ($project->projectable_type == "App\Models\ProjectMarketing")
-                                    marketing
-                                @elseif ($project->projectable_type == "App\Models\ProjectVideo")
-                                    video
-                                @else
-                                    web
-                                @endif
-                                </small>
                             </td>
                             <td>
                                 @foreach($project->services as $category)

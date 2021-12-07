@@ -52,7 +52,16 @@
     -ms-transform: translateX(26px);
     transform: translateX(26px);
   }
-  
+
+  input:required, textarea:required, select:required {
+    border : solid 1px orange;
+  }
+
+  .required::after {
+    content: "*";
+    color: orange;
+  }
+
   /* Rounded sliders */
   .slider.round {
     border-radius: 34px;

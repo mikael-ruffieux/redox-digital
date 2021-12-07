@@ -106,9 +106,9 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::resource('clients', ClientController::class);
     Route::resource('projects', ProjectController::class);
 
-    Route::get('projects/{project_id}/gallery', [ImageController::class, 'index'])->name('project.gallery');
-    Route::post('projects/{project_id}/gallery', [ImageController::class, 'add'])->name('project.gallery.add');
-    Route::delete('projects/{project_id}/gallery/{image_id}', [ImageController::class, 'destroy'])->name('project.gallery.destroy');
+    Route::get('projects/{project_id}/gallery/{type}', [ImageController::class, 'index'])->name('project.gallery');
+    Route::post('projects/{project_id}/gallery/{type}', [ImageController::class, 'add'])->name('project.gallery.add');
+    Route::delete('projects/{project_id}/gallery/{type}/{image_id}', [ImageController::class, 'destroy'])->name('project.gallery.destroy');
 
     Route::resource('services', ServiceController::class);
     Route::get('services/{service_id}/accordion/create', [AccordionController::class, 'create'])->name('accordions.create');

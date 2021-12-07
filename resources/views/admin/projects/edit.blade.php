@@ -55,32 +55,33 @@
                 </div>
             </div>
 
+            <!-- External URL -->
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="external_url">URL externe vers le projet</label>
+                    <input type="text" class="form-control" name="external_url" id="external_url" value="{{$project->external_url}}">
+                    {!! $errors->first('external_url', '<small class="help-block text-danger">:message</small>') !!}
+                    <small>Indiquez l'adresse absolue. Si rempli, un bouton s'affichera dans l'entête du projet.</small>
+                </div>
+            </div>
+
             <!-- Date -->
             <div class="col-12">
                 <div class="form-group">
                     <label for="date">Date du projet</label>
                     <input type="date" class="form-control" name="date" id="date" value="{{$project->dateValue()}}" >
                     {!! $errors->first('date', '<small class="help-block text-danger">:message</small>') !!}
+                    <small>Si la date exacte n'est pas connue, mettre une date estimée. Seuls le mois et l'année seront affichés.</small>
                 </div>
             </div>
+        </div>
 
-            <!-- Template (project_type) -->
-            <div class="col-12">
-                <div class="form-group">
-                    <label>Type de projet</label>
-                    <select id="selectType" name="project_type" class="form-control" disabled>
-                        <option value="not-selected">-- Choisir le type --</option>
-                        <option {{$project->projectable_type == "App\Models\ProjectMarketing" ? "selected" : ""}} value="marketing">Marketing</option>
-                        <option {{$project->projectable_type == "App\Models\ProjectVideo" ? "selected" : ""}} value="video">Vidéo</option>
-                        <option {{$project->projectable_type == "App\Models\ProjectWeb" ? "selected" : ""}} value="web">Web</option>
-                    </select>
-                    <small><i>Il n'est pas possible de modifier le type d'un projet existant. Il faut <a href="{{route('projects.create')}}">créer un nouveau projet</a>.</i></small>
-                </div>
-            </div>
+        <hr>
+
+        <div class="row">
 
             <div class="col-12">
-                <hr>
-                <h3>Le projet</h3>
+                <h3>Entête</h3>
             </div>
 
             <!-- Title -->
@@ -89,15 +90,6 @@
                     <label for="title">Titre du projet</label>
                     <input type="text" class="form-control" name="title" id="title" value="{{$project->title}}" >
                     {!! $errors->first('title', '<small class="help-block text-danger">:message</small>') !!}
-                </div>
-            </div>
-
-            <!-- Context -->
-            <div class="col-12">
-                <div class="form-group">
-                    <label for="context">Contexte du projet</label>
-                    <textarea name="context" id="context" rows="6" class="form-control" >{{$project->context}}</textarea>
-                    {!! $errors->first('context', '<small class="help-block text-danger">:message</small>') !!}
                 </div>
             </div>
 
@@ -120,18 +112,92 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Custom Summary -->
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="custom_summary">Résumé personnalisé</label>
+                    <textarea name="custom_summary" id="custom_summary" rows="6" class="form-control">{{$project->custom_summary}}</textarea>
+                    {!! $errors->first('custom_summary', '<small class="help-block text-danger">:message</small>') !!}
+                    <small>Laisser vide pour automatiquement utiliser la première partie du contexte.</small>
+                </div>
+            </div>
         </div>
 
-        <!-- Galerie -->
         <div class="row">
             <div class="col-12">
-                <hr>
-                <h3>Galerie photos</h3>
+                <h3>Contexte</h3>
             </div>
-            @if (sizeof($project->images) == 0)
+
+            <!-- Context custom title -->
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="context_title">Section "Contexte" - Titre personnalisé</label>
+                    <input type="text" class="form-control" name="context_title" id="context_title" value="{{$project->context_title}}">
+                    {!! $errors->first('context_title', '<small class="help-block text-danger">:message</small>') !!}
+                    <small>Si laissé vide, "Contexte".</small>
+                </div>
+            </div>
+
+            <!-- Context -->
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="context_desc" class="required">Contexte du projet</label>
+                    <textarea name="context_desc" id="context_desc" rows="6" class="form-control" required>{{$project->context_desc}}</textarea>
+                    {!! $errors->first('context_desc', '<small class="help-block text-danger">:message</small>') !!}
+                </div>
+            </div>
+
+            <div class="col-12">
+                <h4>Vidéo</h4>
+
+                <div class="form-group">
+                    <label for="video_source">Source de la vidéo</label>
+                    <select name="video_source" class="form-control">
+                        <option value="youtube" {{$project->video_source == "youtube" ? "selected" : ""}}>YouTube</option>
+                        <option value="vimeo" {{$project->video_source == "vimeo" ? "selected" : ""}}>Vimeo</option>
+                        <option value="other" {{$project->video_source == "other" ? "selected" : ""}}>Autre</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="video_url">URL de la vidéo</label>
+                    <input type="text" class="form-control" name="video_url" id="video_url" value="{{$project->video_url}}">
+                    {!! $errors->first('video_url', '<small class="help-block text-danger">:message</small>') !!}
+                    <small>Laisser vide si le projet n'a pas de vidéo.</small>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-12">
+                <h3>Section Design</h3>
+            </div>
+
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="design_desc">Description de la section "Design"</label>
+                    <textarea name="design_desc" id="design_desc" rows="6" class="form-control">{{$project->design_desc}}</textarea>
+                    {!! $errors->first('design_desc', '<small class="help-block text-danger">:message</small>') !!}
+                    <small>Il n'est pas nécessaire de remplir ce champ pour que les grandes images s'affichent.</small>
+                </div>
+            </div>
+
+            <!-- Big images -->
+            <div class="col-12">
+                <h4 class="required">Grandes images</h4>
+                <p>Ces images seront affichées en pleine largeur dans la section "Design".
+                    <b class="text-danger">Il est nécessaire d'ajouter au moins une image dans le projet.</b>
+                    <i>(1ère image = image d'aperçu)</i>
+                </p>
+            </div>
+
+            @if (sizeof($images) == 0)
                 <div class="col-12"><i>Ce projet n'a pas de galerie.</i></div>
             @else
-                @foreach ($project->images as $image)
+                @foreach ($images as $image)
                 <div class="col-md-4 col-sm-6 col-12">
                     <div class="bg-white p-3 mt-3 rounded shadow">
                         <img src="{{asset($image->url)}}" style="width: 100%; height: auto;">
@@ -140,118 +206,60 @@
                 @endforeach
             @endif
             <div class="col-12 mt-3">
-                <a href="{{route('project.gallery', [$project->id])}}" class="btn btn-info">Modifier la galerie</a>
+                <a href="{{route('project.gallery', [$project->id, 'image'])}}" class="btn btn-info">Modifier les grandes images</a>
                 <small>Attention, les autres modifications en cours ne seront pas enregistrées.</small>
             </div>
         </div>
 
-        <!-- Champs spécifiques au type (gérer l'affichage en JS) -->
-        @switch($project->projectable_type)
-            @case("App\Models\ProjectMarketing")
-            <div class="row section" id="type-marketing">
-                <div class="col-12">
-                    <hr>
-                    <h3>Champs spécifiques : <b>projet marketing</b></h3>
-                </div>
-    
-                <!-- Description -->
-                <div class="col-12">
-                    <div class="form-group">
-                        <label for="mark_desc">Description</label>
-                        <textarea name="mark_desc" id="mark_desc" rows="6" class="form-control" >{{$project->projectable->mark_desc}}</textarea>
-                        {!! $errors->first('mark_desc', '<small class="help-block text-danger">:message</small>') !!}
-                    </div>
-                </div>
-            </div>
-                
-                @break
-            @case("App\Models\ProjectVideo")
-            <div class="row section" id="type-video">
-                <div class="col-12">
-                    <hr>
-                    <h3>Champs spécifiques : <b>projet vidéo</b></h3>
-                </div>
-    
-                <!-- Site URL -->
-                <div class="col-12">
-                    <div class="form-group">
-                        <label for="vid_link">Lien de la vidéo</label>
-                        <input type="text" name="vid_link" id="vid_link" class="form-control" value="{{$project->projectable->vid_link}}">
-                        <!--<small>Entrez le lien absolu pour intégration : <i>http://www.youtube.com/embed/vid_id</i></small>-->
-                        {!! $errors->first('vid_link', '<small class="help-block text-danger">:message</small>') !!}
-                    </div>
-                </div>
+        <hr>
 
-                <div class="col-12">
-                    <label>Aperçu de la vidéo</label><br>
-                    <iframe id="video-player" type="text/html"
-                        width="640" height="360" 
-                        src="{{$project->projectable->vid_link}}" 
-                        frameborder="0"
-                        title="{{$project->title}}"
-                        allowfullscreen></iframe>
-                </div>
-    
-                <!-- Description -->
-                <div class="col-12">
-                    <div class="form-group">
-                        <label for="vid_desc">Description</label>
-                        <textarea name="vid_desc" id="vid_desc" rows="6" class="form-control" >{{$project->projectable->vid_desc}}</textarea>
-                        {!! $errors->first('vid_desc', '<small class="help-block text-danger">:message</small>') !!}
-                    </div>
+        <div class="row">
+            <div class="col-12">
+                <h3>Section "Solution"</h3>
+            </div>
+
+            <!-- Solution custom title -->
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="solution_title">Titre personnalisé</label>
+                    <input type="text" class="form-control" name="solution_title" id="solution_title" value="{{$project->solution_title}}">
+                    {!! $errors->first('solution_title', '<small class="help-block text-danger">:message</small>') !!}
+                    <small>Si laissé vide, "Solutions proposées".</small>
                 </div>
             </div>
-                
-                @break
-            @case("App\Models\ProjectWeb")
-            <div class="row section" id="type-web">
-                <div class="col-12">
-                    <hr>
-                    <h3>Champs spécifiques : <b>projet web</b></h3>
-                </div>
-    
-                <!-- Site URL -->
-                <div class="col-12">
-                    <div class="form-group">
-                        <label for="site_url">URL du site</label>
-                        <input type="text" name="site_url" id="site_url" class="form-control" value="{{$project->projectable->site_url}}" >
-                        <small><a href="{{$project->projectable->site_url}}" target="_blank">Vers le site</a></small>
-                        <!--<small>Entrez l'adresse absolue : <i>https://...</i></small>-->
-                        {!! $errors->first('site_url', '<small class="help-block text-danger">:message</small>') !!}
-                    </div>
-                </div>
-    
-                <!-- Description -->
-                <div class="col-12">
-                    <div class="form-group">
-                        <label for="site_desc">Description</label>
-                        <textarea name="site_desc" id="site_desc" rows="6" class="form-control" >{{$project->projectable->site_desc}}</textarea>
-                        {!! $errors->first('site_desc', '<small class="help-block text-danger">:message</small>') !!}
-                    </div>
-                </div>
-    
-                <!-- Site Screenshot -->
-                <div class="col-12">
-                    <div class="form-group">
-                        <label for="site_screenshot">Screenshot du site</label><br>
-                        <input type="file" id="site_screenshot" name="site_screenshot" accept="image/png, image/jpeg" value="{{$project->projectable->site_screenshot}}" >
-                        {!! $errors->first('site_screenshot', '<small class="help-block text-danger">:message</small>') !!}
-                        <img src="{{asset($project->projectable->site_screenshot)}}" alt="{{$project->title}}" style="max-width: 100%;">
-                    </div>
+
+            <!-- Solutions -->
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="solution_desc" class="required">Solutions apportées au projet</label>
+                    <textarea name="solution_desc" id="solution_desc" rows="6" class="form-control" required>{{$project->solution_desc}}</textarea>
+                    {!! $errors->first('solution_desc', '<small class="help-block text-danger">:message</small>') !!}
                 </div>
             </div>
-                
-                @break
-        
-            @default
-            <div class="row section" id="type-none">
-                <div class="col-12">
-                    <hr>
-                    <h3>Champs spécifiques : <i>type indéfini</i></h3>
-                    <p><i>Sélectionnez un type de projet.</i></p>
-                </div>
+
+            <!-- Gallery -->
+            <div class="col-12">
+                <h4>Galerie</h4>
+                <p>Ces photos seront affichées sous forme de galerie dans la section "Solutions".</p>
             </div>
-        @endswitch
+            @if (sizeof($gallery) == 0)
+                <div class="col-12"><i>Ce projet n'a pas de galerie.</i></div>
+            @else
+                @foreach ($gallery as $image)
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="bg-white p-3 mt-3 rounded shadow">
+                        <img src="{{asset($image->url)}}" style="width: 100%; height: auto;">
+                    </div>
+                </div>                
+                @endforeach
+            @endif
+            <div class="col-12 mt-3">
+                <a href="{{route('project.gallery', ['project_id' => $project->id, 'type' => 'gallery'])}}" class="btn btn-info">Modifier la galerie</a>
+                <small>Attention, les autres modifications en cours ne seront pas enregistrées.</small>
+            </div>
+        </div>
+
+        <hr>
 
         <input type="submit" value="Enregistrer les modifications" class="btn btn-primary">
     </form>

@@ -15,11 +15,12 @@ class ImageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($project_id)
+    public function index($project_id, $type)
     {
         $project = Project::find($project_id);
+        $images = $project->images->where('type', $type);
 
-        return view('admin.projects.gallery.index', compact('project'));
+        return view('admin.projects.gallery.index', compact('project', 'images', 'type'));
     }
 
     /**
@@ -45,11 +46,12 @@ class ImageController extends Controller
             Image::create([
                 'project_id' => $project->id,
                 'url' => "storage/projects/".$project->id."/" . $name,
+                'type' => $request->type,
             ]);
             $nextId ++;
         }
 
-        return redirect(route('project.gallery', [$project->id]))->with('alert', "Les images ont été ajoutées avec succès !");
+        return redirect(route('project.gallery', [$project->id, $request->type]))->with('alert', "Les images ont été ajoutées avec succès !");
     }
 
     /**
@@ -58,7 +60,7 @@ class ImageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($project_id, $image_id)
+    public function destroy($project_id, $image_id, $type)
     {
         $project = Project::find($project_id);
         $image = Image::find($image_id);
@@ -73,6 +75,6 @@ class ImageController extends Controller
         $project->images()->find($image->id)->delete();
         $image->delete();
 
-        return redirect(route('project.gallery', [$project->id]))->with('alert', "L'image a été supprimée avec succès !");
+        return redirect(route('project.gallery', [$project->id, $type]))->with('alert', "L'image a été supprimée avec succès !");
     }
 }
