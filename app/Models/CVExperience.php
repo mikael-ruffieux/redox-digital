@@ -11,5 +11,5 @@ class CVExperience extends Model
 
     public $timestamps = false;
 
-    protected $fillable=['job','period', 'company', 'company_url', 'place', 'desc'];
+    protected $fillable=['job','period', 'company', 'company_url', 'place', 'desc', 'filters'];
 }

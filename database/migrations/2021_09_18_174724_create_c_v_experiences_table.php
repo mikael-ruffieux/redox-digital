@@ -21,6 +21,7 @@ class CreateCvexperiencesTable extends Migration
             $table->string('company_url')->nullable();
             $table->string('place');
             $table->text('desc');
+            $table->string('filters');
         });
     }
 

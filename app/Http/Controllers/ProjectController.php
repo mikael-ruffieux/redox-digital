@@ -30,7 +30,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        $clients = Client::all();
+        $clients = Client::orderBy('name', 'asc')->get();
         $categories = Service::all();
 
         return view('admin.projects.create', compact('clients', 'categories'));

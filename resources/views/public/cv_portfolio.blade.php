@@ -33,7 +33,7 @@ Portfolio |
 
                 <p>{!! $project->desc !!}</p>
                 @if (!empty($project->project_url))
-                <a class="btn btn-outline-black" href="{{$project->project_url}}">Découvrir le projet entier</a>
+                <a class="btn btn-outline-black" href="{{$project->project_url}}" target="_blank">Découvrir le projet entier</a>
                 @endif
             </div>
             <div class="col-lg-5 col-md-6 col-12">
@@ -46,9 +46,11 @@ Portfolio |
 
     </div>
 </section>
-
 <section id="cta">
-    @include('layouts.curves.curve-small-top-right', ['color' => '#ffffff'])
+    @include('layouts.curves.curve-small-top-right', ['color' => isset($curve_color) ? $curve_color : "#ffffff"])
+    <div id="particles-cta-cache"></div>
+    <div id="particles-js-cta"></div>
+
     <div class="cta-content container">
         <h2>Vous souhaitez me contacter ?</h2>
         <h3>Ne soyez pas timide</h3>

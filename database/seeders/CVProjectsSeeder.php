@@ -64,7 +64,7 @@ class CVProjectsSeeder extends Seeder
             "date" => "01.07.2021",
             "client_id" => 7,
             "title" => "Vidéo d'animation pour le raclette MAZOT",
-            "project_url" => "",
+            "project_url" => "https://drive.google.com/file/d/1FFpIqq756UyDtw_RTMLCrdIi0HZHlk-e/view?usp=sharing",
             "categories" => "Vidéo / Motion-Design",
             "desc" => "Afin de promouvoir les nouveaux emballages de leur fromage à raclette MAZOT, Cremo SA m'a mandaté pour la réalisation d'une série d'animations présentant leurs nouveaux emballages.",
             
@@ -93,11 +93,9 @@ class CVProjectsSeeder extends Seeder
             "title" => "Conception & création du site internet",
             "project_url" => "https://redoxdigital.ch",
             "categories" => "Développement web / web-design",
-            "desc" => "Comme le dit notre actuelle page d'accueil, les cordonniers sont les plus mal chaussés.<br/><br/>
-            Malgré sa fondation au mois de mars 2021, il a fallut attendre environ 6 mois pour que le site web de l'entreprise voit le jour.<br/><br/>
+            "desc" => "Malgré sa fondation au mois de mars 2021, il a fallut attendre environ 6 mois pour que le site web de l'entreprise voit le jour.<br/><br/>
             Ce projet, qui est toujours 'in progress', est le résultat d'un travail de planification, de conception et de programmation de plusieurs mois.<br/><br/>
-            En effet, même sans notre site, les projets digitaux sont rapidement arrivés, et la création du site internet est vite passé en second plan.<br/><br/>
-            Mais si vous lisez ces lignes, c'est que le site, ou en tout cas une de ses premières versions, est déjà en ligne !",
+            En effet, même sans notre site, les projets digitaux sont rapidement arrivés, et la création du site internet est vite passé en second plan.",
             
         ],
         [
@@ -113,9 +111,9 @@ class CVProjectsSeeder extends Seeder
             "date" => "01.11.2020",
             "client_id" => 15,
             "title" => "Intégration du nouveau design mobile",
-            "project_url" => "",
+            "project_url" => "https://www.pet-alert-01.fr/",
             "categories" => "Développement web",
-            "desc" => "",
+            "desc" => "Afin de remettre le design au goût du jour, on m'a chargé d'adapter le site internet initial à son nouveau design. Une vingtaine de pages ont été ainsi refondées, et remises au goût du jour.",
             
         ],
         [
@@ -148,10 +146,10 @@ class CVProjectsSeeder extends Seeder
         [
             "date" => "18.04.2020",
             "client_id" => 19,
-            "title" => "Vidéo didactique",
+            "title" => "Vidéo didactique - Le processus d'achat",
             "project_url" => "https://www.youtube.com/watch?v=hc9fAKjfzmQ",
             "categories" => "Vidéo",
-            "desc" => "",
+            "desc" => "Cette vidéo a été réalisée dans le cadre du cours d'analyse de marché et stratégie marketing, enseigné par Mme. Saskia Faulk, à la HEIG-VD, filière d'ingénierie des médias.<br><br>Le défi de ce projet a été de réaliser cette vidéo au début des restrictions sanitaires liées au COVID-19.<br><br>Ainsi, les 4 membres du groupe ne se sont jamais vu 'en vrai' durant ce projet.",
             
         ],
         [
@@ -201,7 +199,7 @@ class CVProjectsSeeder extends Seeder
             "title" => "Déli'Vrac",
             "project_url" => "https://vimeo.com/502942135",
             "categories" => "Vidéo",
-            "desc" => "",
+            "desc" => "Vidéo réalisée dans le cadre du cours de production de contenu médias, enseigné par Mme. Marcelle Brücher, à la HEIG-VD, filière ingénierie des médias. Cette vidéo s'ancrait dans une proposition de mandat à l'entreprise 'Déli'vrac', afin de compléter leurs efforts de communication.",
             
         ],
         [
@@ -210,7 +208,7 @@ class CVProjectsSeeder extends Seeder
             "title" => "\"Les p'tits jobs\"",
             "project_url" => "https://vimeo.com/386443904",
             "categories" => "Vidéo",
-            "desc" => "\"Le service \"\"Ptits Jobs\"\" est une mesure mise en place par le Service de la Jeunesse de la Ville de Bulle (SJB) proposant un soutien professionnel aux jeunes désirant rejoindre le monde du travail. Le projet a été initié par Mme. Pamela Rey.<br/><br/>
+            "desc" => "Le service \"Ptits Jobs\" est une mesure mise en place par le Service de la Jeunesse de la Ville de Bulle (SJB) proposant un soutien professionnel aux jeunes désirant rejoindre le monde du travail. Le projet a été initié par Mme. Pamela Rey.<br/><br/>
             À sa demande, j'ai réalisé une vidéo présentant la mesure, et mettant en scène trois jeunes qui ont pu suivre ce programme, afin de mieux connaître le monde du travail.",
             
         ],
@@ -218,7 +216,7 @@ class CVProjectsSeeder extends Seeder
             "date" => "22.02.2021",
             "client_id" => 1,
             "title" => "Conférence sur l'enfant et la violence conjugale",
-            "project_url" => "",
+            "project_url" => "https://www.youtube.com/watch?v=fJB7mV7kzHU",
             "categories" => "Vidéo / captation live",
             "desc" => "La conférence aurait dûe avoir lieu durant la semaine sur la sensibilisation contre les violences faites aux femmes.<br/><br/>
             Malheureusement, COVID oblige, cette semaine thématique n'a pas pu avoir lieu. Le SJB a donc mis en place cette conférence rediffusée en direct sur les réseaux sociaux, afin que tou.te.s les intéressé.e.s puissent suivre le séminaire, et poser leurs questions en direct.<br/><br/>

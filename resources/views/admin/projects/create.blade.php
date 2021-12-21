@@ -26,7 +26,7 @@
                     <label for="client_id" class="required">Client</label>
                     <select name="client_id" class="form-control" required>
                     @foreach ($clients as $client)
-                        <option value="{{$client->id}}">{{$client->id}} - {{$client->name}}</option>
+                        <option value="{{$client->id}}">{{$client->name}} - id : {{$client->id}}</option>
                     @endforeach
                 </select>
                 {!! $errors->first('client_id', '<small class="help-block text-danger">:message</small>') !!}

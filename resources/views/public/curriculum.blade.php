@@ -249,9 +249,38 @@ Mikaël Ruffieux |
             </div>
         </div>
 
+        <div id="cv-filters" class="filters-group">
+            <div class="filter">
+                <input type="checkbox" name="all" id="all">
+                <label for="all">Toutes</label>
+            </div>
+
+            <div class="filter">
+                <input type="checkbox" name="management" id="management">
+                <label for="management">Gestion</label>
+            </div>
+
+            <div class="filter">
+                <input type="checkbox" name="creation" id="creation">
+                <label for="creation">Créatif</label>
+            </div>
+
+            <div class="filter">
+                <input type="checkbox" name="it" id="it">
+                <label for="it">Développement web</label>
+            </div>
+
+            <div class="filter">
+                <input type="checkbox" name="student" id="student">
+                <label for="student">Travail d'étudiant</label>
+            </div>
+        </div>
+
+
+
         <div id="work-history">
             @foreach ($experiences as $exp)
-            <div class="row">
+            <div class="row experience" data-filters="{{$exp->filters}}">
                 <div class="col-4 exp-period">
                     <h3 class="all-caps">{!! $exp->period !!}</h3>
                     <!--<i class="fad fa-2x fa-circle"></i>-->
@@ -278,7 +307,7 @@ Mikaël Ruffieux |
     </div>
 </section>
 
-@include('layouts.curves.curve-medium-bottom-right', ['color' => '#2b2323'])
+@include('layouts.curves.curve-small-bottom-right', ['color' => '#2b2323'])
 
 <section id="references" class="bg-dark">
     <div class="container">
@@ -402,7 +431,10 @@ Mikaël Ruffieux |
 </section>
 
 <section id="cta">
-    @include('layouts.curves.curve-small-top-right', ['color' => '#2b2323'])
+    @include('layouts.curves.curve-small-top-right', ['color' => isset($curve_color) ? $curve_color : "#2b2323"])
+    <div id="particles-cta-cache"></div>
+    <div id="particles-js-cta"></div>
+
     <div class="cta-content container">
         <h2>Vous souhaitez me contacter ?</h2>
         <h3>Ne soyez pas timide</h3>
@@ -410,6 +442,88 @@ Mikaël Ruffieux |
     </div>
 </section>
 </div>
+
+<script type="text/javascript">
+    /*
+    Returns an array with the node's filters.
+    */
+    function getCat(node) {
+        return node.dataset.filters.split(',');
+    }
+
+    function isInFilters(xp, filters) {
+        let shown = false;
+        getCat(xp).forEach(cat => {
+            if(!filters.includes(cat) && !shown) {
+                console.log("should be hidden");
+            } else {
+                shown = true;
+            }
+        });
+        return shown;
+    }
+
+    function showAll(experiences) {
+        experiences.forEach(xp => {xp.style.display = "flex"});
+    }
+
+    /*
+    Hide or show the experiences, according to the filters
+    */
+    function updateDisplay(filters, experiences) {
+        if(filters.length == 0) {
+            check(false, cbs);
+            checkedFilters = [];
+            showAll(exps);
+        } else {
+            experiences.forEach(xp => {
+                isInFilters(xp, filters) ? xp.style.display = "flex" : xp.style.display = "none";
+            });
+        }
+    }
+
+    /*
+     * Set every checkboxes to 'checked', except 'all' to !'checked'
+     */
+    function check(checked = true, cbs) {
+        cbs.forEach((cb) => {
+            cb.children[0].checked = checked;
+        });
+    
+        document.getElementById("all").checked = true;
+    }
+
+    const cbs = document.querySelectorAll('.filter');
+    const exps = document.querySelectorAll('.experience');
+
+    let checkedFilters = [];
+    
+    // Setting the checkboxes : only 'all' checked
+    check(false, cbs);
+    
+    /*  watch event : on click, either uncheck all but 'all', 
+        or uncheck 'all' and checked clicked ones */
+    cbs.forEach(cb => cb.addEventListener('change', (evt) => {
+        if(cb.children[0].id == "all") {
+            check(false, cbs);
+            checkedFilters = [];
+            showAll(exps);
+        } else {
+            document.getElementById("all").checked = false;
+            // Si un élément est sélectionné, on l'ajoute à l'array
+            if(cb.children[0].checked) {
+                checkedFilters.push(cb.children[0].id);
+            } 
+
+            // Si un élément est désélectionné, on doit l'enlever de l'array
+            else {
+                let index = checkedFilters.indexOf(cb.children[0].id);
+                index !== -1 ? checkedFilters.splice(index, 1) : '';
+            }
+            updateDisplay(checkedFilters, exps);
+        }
+    }));
+    </script>
 @endsection
 
 

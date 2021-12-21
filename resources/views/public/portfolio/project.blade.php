@@ -14,14 +14,12 @@
             <h1 class="red-dot">{{$project->title}}</h1>
 
             <div class="categories">
-                @foreach ($project->services as $service)
-                <a href="{{route('portfolio')}}" class="category">{{$service->title}}</a>
-                @endforeach
+                @foreach ($project->services as $service)<a href="{{route('portfolio')}}" class="category">{{$service->title}}</a>@endforeach
             </div>
         </div>
-        @if($project->external_link)
+        @if($project->external_url)
         <div class="col-12">
-            <a href="{{$project->external_link}}" target="_blank" class="btn btn-outline-red">voir le projet</a>
+            <a href="{{$project->external_url}}" target="_blank" class="btn btn-outline-red">voir le projet</a>
         </div>
         @endif
     </div>
@@ -34,7 +32,7 @@
         <div class="row">
             <div class="col-8">
                 <h3 class="all-caps section-title"><span class="number">0{{$section}}</span> - {{ ($project->context_title ?: "Contexte")}}</h3>
-                <p>{{$project->context_desc}}</p>
+                <p class="my-5">{{$project->context_desc}}</p>
             </div>
         </div>
 
@@ -62,12 +60,14 @@
 <section id="project-design" class="project-section {{$section%2 ? 'bg-white' : 'bg-dark'}}">
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-8">
                 <h3 class="all-caps"><span class="number">0{{$section}}</span> - Design</h3>
 
-                <p>{{$project->design_desc}}</p>
+                <p class="my-5">{{$project->design_desc}}</p>
+            </div>
+            <div class="col-12">
                 @foreach ($images as $image)
-                    <img src="{{asset($image->url)}}" alt="{{$project->title}}">
+                    <img src="{{asset($image->url)}}" alt="{{$project->title}}" class="big-image">
                 @endforeach
             </div>
         </div>
@@ -83,13 +83,13 @@
             <div class="col">
                 <h3 class="all-caps"><span class="number">0{{$section}}</span> - {{$project->solution_title ?: "Solutions proposées"}}</h3>
 
-                <p>{{$project->solution_desc}}</p>
+                <p class="my-5">{{$project->solution_desc}}</p>
 
                 <div class="gallery">
-                    GALERIE
-
                     @foreach ($gallery as $image)
+                    <div class="gallery-item">
                         <img src="{{asset($image->url)}}" alt="{{$project->title}}">
+                    </div>
                     @endforeach
                 </div>
             </div>

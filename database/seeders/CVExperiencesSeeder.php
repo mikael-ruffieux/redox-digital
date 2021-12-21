@@ -14,6 +14,7 @@ class CVExperiencesSeeder extends Seeder
             'company' => 'Redox Digital SNC',
             'company_url' => 'https://redoxdigital.ch',
             'place' => 'Epagny (FR)',
+            'filters' => 'creation,it,management',
             'desc' => 'Création et gestion de campagne de communication en ligne, développement et maintenance web, réalisations vidéographiques, photographie. Emploi à temps partiel en parallèle de mes études.'
         ],
         [
@@ -22,6 +23,7 @@ class CVExperiencesSeeder extends Seeder
             'company' => 'FutureKids',
             'company_url' => 'https://futurekids.io',
             'place' => 'Lausanne (VD)',
+            'filters' => 'student',
             'desc' => 'Création et/ou préparation de cours dans le domaine de la technologie pour des jeunes âgés entre 9 et 17 ans. Il s\'agit de cours hebdomadaires, ou de cours d\'une semaine durant les vacances scolaires.'
         ],
         [
@@ -30,6 +32,7 @@ class CVExperiencesSeeder extends Seeder
             'company' => 'Kesako Sàrl',
             'company_url' => 'https://kesako.net/',
             'place' => 'Bussigny (VD)',
+            'filters' => 'creation,it',
             'desc' => 'Stage pré-HES, puis assistant au développement web front- et back-end sur des projets ponctuels.'
         ],
         [
@@ -37,6 +40,7 @@ class CVExperiencesSeeder extends Seeder
             'period' => '2016 - à ce jour',
             'company' => 'École de cadres',
             'place' => 'Armée suisse',
+            'filters' => 'management',
             'desc' => 'Responsable logistique et RH d’une compagnie de 130 hommes durant 4 mois, en région alémanique. Je continue à tenir cette fonction en cours de répétition.'
         ],
         [
@@ -44,6 +48,7 @@ class CVExperiencesSeeder extends Seeder
             'period' => '2016 - 2021',
             'company' => 'Redox Prod (Raison individuelle)',
             'place' => 'Epagny (FR)',
+            'filters' => 'creation,it',
             'desc' => 'Réalisation de mandats freelance en parallèle de mes études et projets professionnels, comme développeur web et vidéaste.'
         ],
         [
@@ -52,6 +57,7 @@ class CVExperiencesSeeder extends Seeder
             'company' => 'Evolys SA',
             'company_url' => 'https://evolys.ch',
             'place' => 'Villars-sur-Glâne (FR)',
+            'filters' => 'creation,it',
             'desc' => 'Chargé de création de contenus visuels pour les réseaux sociaux de l’entreprise.'
         ],
         [
@@ -60,6 +66,7 @@ class CVExperiencesSeeder extends Seeder
             'company' => 'Restaurant Ô Colombettes',
             'company_url' => 'https://www.lescolombettes.ch/',
             'place' => 'Vuadens (FR)',
+            'filters' => 'student',
             'desc' => 'Assistance aux cuisiniers, et responsable de l\'entretien du bâtiment.'
         ],
         [
@@ -68,6 +75,7 @@ class CVExperiencesSeeder extends Seeder
             'company' => 'Fondation Clos Fleuri',
             'company_url' => 'https://www.clos-fleuri.ch',
             'place' => 'Bulle (FR)',
+            'filters' => 'student',
             'desc' => 'Travail avec des personnes en situation de handicap, pour assurer leurs déplacements, et livraisons diverses au sein de la fondation.'
         ],
         [
@@ -76,6 +84,7 @@ class CVExperiencesSeeder extends Seeder
             'company' => 'Cinemotion Sàrl',
             'company_url' => 'https://cinemotion.ch',
             'place' => 'Bulle (FR)',
+            'filters' => 'student',
             'desc' => 'Dès 2013 en tant que placeur/chargé d’accueil, puis caissier, et projectionniste (travail d’étudiant).'
         ],
     ];

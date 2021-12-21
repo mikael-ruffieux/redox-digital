@@ -30,3 +30,38 @@
     padding-top: 15vh;
     padding-bottom: 15vh;
 }
+
+#project-header .categories > .category + .category::before {
+    content: ", ";
+}
+
+#project-context {
+
+}
+
+#project-design .big-image {
+    max-width: 100%;
+}
+
+#project-solution .gallery {
+    display: flex;
+    margin: 10px auto;
+    max-width: 100%;
+    position: relative;
+    padding-top: 66.66666%;
+}
+
+#project-solution .gallery .gallery-item {
+    max-width: 100%;
+}
+
+#project-solution .gallery .gallery-item img {
+    height: 100%;
+    max-height: 200px;
+    width: auto;
+
+}
+
+#similar-projects {
+
+}

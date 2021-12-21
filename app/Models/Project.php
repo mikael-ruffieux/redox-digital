@@ -18,7 +18,7 @@ class Project extends Model
         'archived',
         'date',
         'custom_summary',
-        'external_link',
+        'external_url',
 
         'context_title',
         'context_desc',

@@ -87,6 +87,10 @@
     margin-bottom: 3vh;
 }
 
+#cv #particles-js-cta {
+    height: 50%;
+}
+
 #cv #hobbies i {
     color: var(--true-white);
     padding-bottom: 2vh;
@@ -150,6 +154,10 @@
     margin-top: 5vh;
 }
 
+#work {
+    margin-bottom: 15vh;
+}
+
 #work-history h3 {
     margin-top : 0;
 }
@@ -209,10 +217,6 @@
     margin: 10vh 0;
 }
 
-#cv #cta {
-    background: #AE0000!important;
-}
-
 @media (max-width: 991px) {
     #cv #intro .row {
         flex-direction: column-reverse;
@@ -268,6 +272,8 @@
     }
 }
 
+
+
 @media print {
     #cv-nav, .curve, #cta, #portfolio, #intro p, #intro span, #intro a, #particles-cache, #particles-js {
         display: none!important;
@@ -299,4 +305,37 @@
         padding-bottom: 0!important;
     }
 
+}
+
+.filters-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5vh 0;
+}
+
+.filters-group .filter {
+    display: flex;
+}
+
+.filters-group .filter > input {
+    position: relative!important;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.filters-group .filter > label {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 0px 10px;
+    margin: 5px 10px;
+    border-radius: 25px;
+}
+
+
+.filters-group .filter >input:checked + label {
+    background-color: var(--primary-black);
+    color: var(--true-white);
 }

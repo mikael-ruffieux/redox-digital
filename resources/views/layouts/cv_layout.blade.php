@@ -33,7 +33,7 @@
     <!-- Main menu -->
     <nav id="cv-nav">
         <div class="container">
-            <a href="#intro" class="logo">
+            <a href="{{route('cv.mikael')}}" class="logo">
                 <h2 class="red-dot">CV</h2>
             </a>
             <!-- Menu -->
