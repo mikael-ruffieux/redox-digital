@@ -23,7 +23,7 @@ class ProjectsTableSeeder extends Seeder
     {
         DB::table('projects')->delete();
 
-        for ($i=1; $i <= 9; $i++) {
+        for ($i=1; $i <= 15; $i++) {
             DB::table('projects')->insert([
                 'title' => 'Projet '. $i,
                 'client_id' => rand(1, 10),

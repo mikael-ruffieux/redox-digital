@@ -10,12 +10,11 @@ use App\Models\Service;
 
 class PublicPagesController extends Controller
 {
-    /*
-    public function __construct(){
-        $this->middleware('auth');
-    }
-    */
 
+    /**
+     * Displays the home page, with the 3 last projects.
+     * The services are used as filters buttons
+     */
     public function home() {
         // taking the 3 last active projects
         $projects = Project::where('archived', 0)->orderBy('date', 'desc')->take(3)->get();
@@ -24,11 +23,18 @@ class PublicPagesController extends Controller
         return view("public.home", compact('projects', 'tags'));
     }
 
+    /**
+     * Displays the about page.
+     * The clients logos are randomly placed
+     */
     public function about() {
         $clients = Client::all();
         return view('public.about', compact('clients'));
     }
     
+    /**
+     * Displays the services pages
+     */
     public function services($type) {
         if($type == "creation-de-contenus-digitaux") {
             $parent = Service::find(2);
@@ -46,6 +52,10 @@ class PublicPagesController extends Controller
         return view("public.services", compact('parent', 'services', 'other'));
     }
 
+    /**
+     * Displays the portfolio page, with all projects
+     * The services are used as filters buttons
+     */
     public function portfolio() {
         $projects = Project::where('archived', 0)->orderBy('date', 'desc')->get();
         $services = Service::where('isChild', 1)->get();

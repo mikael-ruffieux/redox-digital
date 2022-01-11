@@ -1,4 +1,4 @@
-<div class="row project">
+<div class="row project" data-filters="{{implode(',', $project->categoriesId())}}">
     <div class="col-6">
         <h5>{{$project->client->name}}</h5>
         <h3>{{$project->title}}</h3>
