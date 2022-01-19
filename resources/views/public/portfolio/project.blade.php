@@ -9,13 +9,19 @@
 
 <section class="hero-section container" id="project-header">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 my-5">
             <h3 class="all-caps color-red">{{$project->client->name}}</h3>
             <h1 class="red-dot">{{$project->title}}</h1>
 
             <div class="categories">
                 @foreach ($project->services as $service)<a href="{{route('portfolio')}}" class="category">{{$service->title}}</a>@endforeach
             </div>
+        </div>
+        <div class="col-md-8 col-12">
+            <h3 class="all-caps section-title"><span class="number">0{{$section}}</span> - {{ ($project->context_title ?: "Contexte")}}</h3>
+            <p class="my-5">{{$project->context_desc}}</p>
+        </div>
+
         </div>
         @if($project->external_url)
         <div class="col-12">
@@ -29,17 +35,11 @@
 <!-- Context section -->
 <section id="project-context" class="project-section {{$section%2 ? 'bg-white' : 'bg-dark'}}">
     <div class="container">
-        <div class="row">
-            <div class="col-8">
-                <h3 class="all-caps section-title"><span class="number">0{{$section}}</span> - {{ ($project->context_title ?: "Contexte")}}</h3>
-                <p class="my-5">{{$project->context_desc}}</p>
-            </div>
-        </div>
 
         <!-- Video -->
         @if($project->video_url)
         <div class="row project-video">
-            <div class="col">
+            <div class="iframe-container">
                 <iframe
                     src="{{$project->video_url}}"
                     title="{{$project->title}}" 
@@ -53,6 +53,8 @@
     </div>
 </section>
 
+@include('layouts.curves.curve-small-top-right', ['color' => '#ffffff'])
+
 <?php $section++; ?> 
 
 @if ($project->design_desc)
@@ -65,7 +67,7 @@
 
                 <p class="my-5">{{$project->design_desc}}</p>
             </div>
-            <div class="col-12">
+            <div class="col-12 my-5" id="big-images-container">
                 @foreach ($images as $image)
                     <img src="{{asset($image->url)}}" alt="{{$project->title}}" class="big-image">
                 @endforeach
@@ -75,6 +77,8 @@
 </section>
 <?php $section++; ?> 
 @endif
+
+@include('layouts.curves.curve-small-bottom-left', ['color' => '#ffffff'])
 
 <!-- Solution section -->
 <section id="project-solution" class="project-section {{$section%2 ? 'bg-white' : 'bg-dark'}}">
@@ -98,21 +102,27 @@
 </section>
 <?php $section++; ?>
 
+@include('layouts.curves.curve-small-bottom-right', ['color' => '#2B2323'])
+
 <!-- Similar projects section -->
-<section id="similar-projects" class="project-section {{$section%2 ? 'bg-white' : 'bg-dark'}}">
+<section id="similar-projects" class="portfolio project-section {{$section%2 ? 'bg-white' : 'bg-dark'}}">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <h3 class="all-caps"><span class="number">0{{$section}}</span> - Projets similaires</h3>
             </div>
-
+            {{--
             @foreach ($similar_projects as $project)
             <div class="col-4">
                 <h3>{{$project->title}}</h3>
                 <a href="{{route('portfolio.project', [$project->id])}}">Découvrir le projet</a>
             </div>
-            @endforeach
+            @endforeach --}}
         </div>
+
+        @foreach ($similar_projects as $project)
+            @include('components.include_project_preview', compact('project'))
+        @endforeach
     </div>
 </section>
 

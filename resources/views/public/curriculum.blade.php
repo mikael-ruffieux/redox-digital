@@ -369,7 +369,7 @@ Mikaël Ruffieux |
 
                 <p>{!! $project->desc !!}</p>
                 @if (!empty($project->project_url))
-                <a class="btn btn-outline-black" href="{{$project->project_url}}">Découvrir le projet entier</a>
+                <a class="btn btn-outline-black" target="_blank" href="{{$project->project_url}}">Découvrir le projet entier</a>
                 @endif
             </div>
             <div class="col-md-5 col-12">

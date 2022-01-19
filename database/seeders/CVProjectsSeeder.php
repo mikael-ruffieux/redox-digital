@@ -25,7 +25,7 @@ class CVProjectsSeeder extends Seeder
             "title" => "Application web de tracking pour le tour de Romandie (concept)",
             "project_url" => "",
             "categories" => "Développement web / web-design",
-            "desc" => "",
+            "desc" => "Dans le cadre du Hackathon organisé par la RTS, nous avons développé, en équipe de 3, un prototype d'application pour le suivi des coureurs cyclistes lors du Tour de Romandie.",
             
         ],
         [
@@ -47,7 +47,6 @@ class CVProjectsSeeder extends Seeder
             "project_url" => "https://vimeo.com/267380360",
             "categories" => "Vidéo",
             "desc" => "Vidéo rétrospective de l'année 2017. Cette vidéo était l'élément principal de mon dossier de candidature à l'ERACOM, l'école que je voulais rejoindre avant de découvrir la filière d'Ingénierie des Médias de la HEIG-VD.",
-            "image" => ""
         ],
         [
             "date" => "01.06.2021",
@@ -83,7 +82,7 @@ class CVProjectsSeeder extends Seeder
             "title" => "Campagne \"MOVE\" 2018",
             "project_url" => "https://www.youtube.com/embed/8RPvu0kHCwY",
             "categories" => "Vidéo",
-            "desc" => "« Les aventuriers de la vidéo » : c'est le nom du projet lancé par Groupe E.<br/><br/>
+            "desc" => "« Les aventuriers de la vidéo » : c'est le nom du projet lancé par Groupe E.<br/><br/>
             Durant une semaine, accompagné de Tania Biland, j'ai eu l'occasion de parcourir la Suisse pour réaliser une série de 10 vidéos faisant la promotion du réseau Groupe E de bornes pour véhicules électriques.",
             
         ],
