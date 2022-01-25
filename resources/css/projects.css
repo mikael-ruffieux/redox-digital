@@ -42,25 +42,103 @@
 #project-design .big-image {
     width: 100%;
 }
+/*
+#project-solution {
+    --max-img-width: 600px;
+    --max-img-height: 400px;
+
+
+}
+
+@media screen and (min-width: var(--max-img-width)) {
+        #project-solution .gallery {
+        padding-top: var(--max-img-height);
+    }
+}
 
 #project-solution .gallery {
     display: flex;
     margin: 10px auto;
-    max-width: 100%;
+    max-width: var(--max-img-width);
     position: relative;
-    padding-top: 66.66666%;
+    padding-top: calc(600px/400px * 100%);
+}
+
+#project-solution .gallery img {
+    max-width: 100%;
+    vertical-align: top;
 }
 
 #project-solution .gallery .gallery-item {
     max-width: 100%;
 }
 
-#project-solution .gallery .gallery-item img {
-    height: 100%;
-    max-height: 200px;
-    width: auto;
-
+#project-solution .gallery .gallery-item .gallery_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
+
+#project-solution .gallery .gallery-item .gallery_thumb {
+    padding-top: 6px;
+    margin: 6px;
+    display: block;
+}
+
+#project-solution .gallery .gallery-item .gallery_selector {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#project-solution .gallery .gallery-item .gallery_selector:checked +.gallery_img {
+    opacity: 1;
+}
+
+#project-solution .gallery .gallery-item .gallery_selector:checked ~ .gallery_thumb > img {
+    box-shadow: 0 0 0 3px #0be2f6;
+}
+*/
+
+#project-solution .gallery {
+    display: flex;
+	transition: .3s;
+}
+
+#project-solution .gallery:hover .gallery_image {
+    filter: grayscale(1);
+}
+
+#project-solution .gallery .gallery_column {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+#project-solution .gallery .gallery_thumb {
+    position: relative;
+}
+
+#project-solution .gallery .gallery_image {
+    display: block;
+    width: 100%;
+    transition: .3s;
+}
+
+#project-solution .gallery .gallery_image:hover {
+    transform: scale(1.1);
+}
+
+#project-solution .gallery .gallery_link {
+	overflow: hidden;
+}
+
+#project-solution .gallery .gallery_link:hover .gallery_image {
+    filter: grayscale(0);
+}
+
 
 #similar-projects {
 

@@ -39,9 +39,7 @@
                 <li><a href="{{route('portfolio')}}">Portfolio</a></li>
             @endif
                 <li><a href="{{route('about')}}">À propos</a></li>
-            @if(Auth::check())
                 <li><a href="{{route('contact')}}">Contact</a></li>
-            @endif
                 <li>
                     <div class="menu-cta">
                         <a class="btn btn-black" href="{{route('contact.intro')}}">Un projet en tête ?</a>

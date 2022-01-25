@@ -62,7 +62,7 @@ Nous contacter |
     let map = L.map('map', {zoomControl: false}).setView([46.8123, 6.9832], 10);
 
     let redoxIcon = L.icon({
-        iconUrl: 'http://127.0.0.1:8000/storage/assets/img/layout/favicon.svg',
+        iconUrl: 'https://redoxdigital.ch/storage/assets/img/layout/favicon.svg',
         iconSize:     [40, 40], // size of the icon
         iconAnchor:   [20, 20], // point of the icon which will correspond to marker's location
         popupAnchor:  [0, -20] // point from which the popup should open relative to the iconAnchor
@@ -73,7 +73,7 @@ Nous contacter |
     markerFR.bindPopup("<b>Notre siège: </b><br>Rte de Duvillard 23<br>1663 Epagny").openPopup();
 
     let markerNE = L.marker([46.98326, 6.90264], {icon: redoxIcon}).addTo(map);
-    markerNE.bindPopup("<b>Notre agence: </b><br>Rte des Usines 22<br>2034 Serrière").openPopup();
+    markerNE.bindPopup("<b>Notre agence: </b><br>Rue des Usines 25<br>2034 Serrière").openPopup();
 
 
     let tileURL = darkTheme ? 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png' : 'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png';
