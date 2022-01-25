@@ -1,14 +1,34 @@
 #map-container {
     width: 100vw;
-    height: 700px;
+    height: 650px;
+    margin-top: 10vh;
+    margin-bottom: 15vh;
 }
 
 #map {
-    width: 100vw;
-    height: 700px;
-    z-index: -10;
+    width: 100%;
+    height: 650px;
+    border-radius: 50px;
+    z-index: 10;
 }
 
 .leaflet-control-attribution a {
     font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    #map-container {
+        height: 550px;
+        margin-top: 8vh;
+        margin-bottom: 12vh;
+    }
+    
+    #map {
+        height: 550px;
+        border-radius: 30px;
+    }
+    
+    .leaflet-control-attribution a {
+        font-size: 10px;
+    }
 }

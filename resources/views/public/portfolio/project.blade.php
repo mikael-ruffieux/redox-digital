@@ -5,7 +5,36 @@
 @endsection
 
 @section("content")
-<?php $section = 1;?>
+<?php 
+
+/**
+ * @param $colNb : how many columns do you want
+ * @param $imgNb : how many images must be distributed
+ * @return array The columns disposition.
+ */
+function getColFillage($colNb, $imgNb) {
+    $colFillage = [];
+
+    $imgPerCol = intdiv($imgNb, $colNb);
+    $moreImg = $imgNb % $colNb;
+
+    for ($i=0; $i < $colNb; $i++) { 
+        array_push($colFillage, $imgPerCol);
+    }
+
+    $y = 0;
+    while ($moreImg > 0) {
+        $colFillage[$y]++;
+        $y++;
+        $moreImg --;
+    }
+
+    return $colFillage;
+}
+
+$section = 1;
+
+?>
 
 <section class="hero-section container" id="project-header">
     <div class="row">
@@ -90,11 +119,23 @@
                 <p class="my-5">{{$project->solution_desc}}</p>
 
                 <div class="gallery">
-                    @foreach ($gallery as $image)
-                    <div class="gallery-item">
-                        <img src="{{asset($image->url)}}" alt="{{$project->title}}">
+                    <?php 
+                        $imgDisposition = getColFillage(4, sizeof($gallery));
+                        $counter = 1;
+                    ?>
+
+                    @for ($col = 0; $col < sizeof($imgDisposition); $col++)
+                    <div class="gallery_column">
+                        @for ($row = 1; $row <= $imgDisposition[$col]; $row++)
+                        <a href="#" class="gallery_link">
+                            <figure class="gallery_thumb">
+                                <img src="{{asset($gallery[$counter]->url)}}" alt="{{$project->title}}" class="gallery_image">
+                            </figure>
+                        </a>
+                        <?php $counter ++; ?>
+                        @endfor
                     </div>
-                    @endforeach
+                    @endfor
                 </div>
             </div>
         </div>

@@ -23,7 +23,6 @@
     letter-spacing: 0.1em;
 }
 
-
 #contact h2 {
     font-family: futura-pt, 'Poppins', sans-serif;
     font-weight: 400;
@@ -315,3 +314,24 @@
         margin-bottom: 15px;
     } 
 }
+
+/* Contact page (not form) */
+#contact-desc p {
+    margin-bottom: 5vh;
+}
+/*
+.bg-image-contact {
+    background-image: url('/storage/assets/img/layout/bg-contact-light.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+*/
+
+/*
+@media (prefers-color-scheme: dark) {
+    .bg-image-contact {
+        background-image: url('/storage/assets/img/layout/bg-contact-dark.jpg');
+    }
+}
+*/
