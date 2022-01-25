@@ -165,13 +165,12 @@ Agence digitale, créatrice d'expériences web & vidéo |
 
 <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 <script type="text/javascript">
-    
         new Typewriter('#typewriter', {
         strings: ['web', 'vidéo'],
         autoStart: true,
         loop: true,
         });
-    
+
 </script>
 
 @endsection
