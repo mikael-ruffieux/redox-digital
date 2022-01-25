@@ -6,61 +6,81 @@ Nous contacter |
 
 
 @section("content")
-<section class="maintenance-page" id="maintenance-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h1 id="maintenance-title" class="red-dot">Comment nous contacter</h1>
-            </div>
+<section class="hero-section container bg-image-contact" id="portfolio-header">
+    <div class="row">
+        <div class="col-12">
+            <h3 class="all-caps color-red">Des questions ? Un projet en tête ?</h3>
+            <h1 class="red-dot">Contactez-nous</h1>
         </div>
     </div>
 </section>
 
-@include('layouts.curves.curve-medium-bottom-right', ['color' => '#fafafa', 'class' => 'enters-from-right'])
+@include('layouts.curves.curve-medium-bottom-right', ['color' => '#ffffff', 'class' => 'enters-from-right'])
 
-<section class="maintenance-page" id="maintenance-desc">
+<section class="contact-page bg-white pt-5" id="contact-desc">
     <div class="container">
         <div class="row">
             <div class="col-md-7 col-12">
-                <h3 class="mt-0">Notre site est actuellement en construction.</h3>
+                <h2 class="mt-0">Travaillons ensemble</h2>
 
-                <p>Votre projet passe en priorité sur la création de notre site internet.</p>
-                <p>Vous avez un projet en tête&nbsp;? Ou vous souhaitez en découvrir plus sur notre entreprise&nbsp;?</p>
-                <p>N’hésitez pas à nous contacter à notre adresse e-mail, ou via notre formulaire de contact, nous sommes en permanence à la recherche de nouveaux défis&nbsp;!</p>
-                <p><b>- L'équipe Redox Digital</b></p>
+                <p>Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous. Nous sommes en permanence à la recherche de nouvelles expériences.</p>
 
                 <div class="buttons d-none d-md-block">
-                    {{--<a class="btn btn-outline-black" href="{{route('services', ['web-digital'])}}">Découvrez nos services</a>--}}
-                    <a class="btn btn-outline-black" href="{{route('contact.intro')}}">Nous contacter</a>
+                    <a class="btn btn-primary" href="{{route('services', ['web-digital'])}}">Découvrez nos services</a>
+                    <a class="btn btn-primary ml-3" href="{{route('contact.intro')}}">Nous contacter</a>
                 </div>
             </div>
+
 
             <div class="col-md-1 col-0"><!-- spacer --></div>
 
             <div class="col-md-4 col-12">
-                <h3>Adresse</h3>
+                <h3 class="color-red">Adresse</h3>
+                <p>Redox s’installera bientôt dans des bureaux à Neuchâtel et se réjouit de vous y accueillir.</p>
+
+                <h3 class="color-red">Siège</h3>
                 <p>Rte de Duvillard 23, 1663 Epagny</p>
 
-                <h3>E-mail</h3>
+                <h3 class="color-red">E-mail</h3>
                 <p><a href="mailto:info@redoxdigital.ch"><span id="mail-info"></span></a></p>
             </div>
-
-            <div class="buttons d-block d-md-none col-12">
-                <a class="btn btn-outline-black" href="{{route('services', ['web-digital'])}}">Découvrez nos services</a>
-                <a class="btn btn-outline-black" href="{{route('contact.intro')}}">Nous contacter</a>
+        </div>
+        <div class="row">
+            <div class="col" id="map-container">
+                <div id="map"></div>
             </div>
         </div>
     </div>
 </section>
+<script>
+    let darkTheme = false;
 
-<section id="cta">
-    @include('layouts.curves.curve-small-top-right', ['color' => '#fafafa'])
-    <div class="cta-content container">
-        <h2>Parlons maintenant de votre projet</h2>
-        <h3>Ne soyez pas timide</h3>
-        <a href="{{route('contact.intro')}}" class="btn btn-outline-white"><i class="fas fa-arrow-right"></i></a>
-    </div>
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        darkTheme = true; 
+    }
+    
+    let map = L.map('map', {zoomControl: false}).setView([46.8123, 6.9832], 10);
 
-    @include('layouts.curves.curve-small-bottom-left', ['color' => '#2b2323'])
-</section>
+    let redoxIcon = L.icon({
+        iconUrl: 'http://127.0.0.1:8000/storage/assets/img/layout/favicon.svg',
+        iconSize:     [40, 40], // size of the icon
+        iconAnchor:   [20, 20], // point of the icon which will correspond to marker's location
+        popupAnchor:  [0, -20] // point from which the popup should open relative to the iconAnchor
+    });
+
+    // Markers
+    let markerFR = L.marker([46.58967, 7.08284], {icon: redoxIcon}).addTo(map);
+    markerFR.bindPopup("<b>Notre siège: </b><br>Rte de Duvillard 23<br>1663 Epagny").openPopup();
+
+    let markerNE = L.marker([46.98326, 6.90264], {icon: redoxIcon}).addTo(map);
+    markerNE.bindPopup("<b>Notre agence: </b><br>Rte des Usines 22<br>2034 Serrière").openPopup();
+
+
+    let tileURL = darkTheme ? 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png' : 'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png';
+
+    L.tileLayer(tileURL, {
+        maxZoom: 20,
+        attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    }).addTo(map);
+</script>
 @endsection

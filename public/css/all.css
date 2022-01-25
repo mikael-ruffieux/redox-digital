@@ -1225,7 +1225,6 @@ nav .sub-menu .sub-menu-title>a {
     letter-spacing: 0.1em;
 }
 
-
 #contact h2 {
     font-family: futura-pt, 'Poppins', sans-serif;
     font-weight: 400;
@@ -1517,19 +1516,60 @@ nav .sub-menu .sub-menu-title>a {
         margin-bottom: 15px;
     } 
 }
+
+/* Contact page (not form) */
+#contact-desc p {
+    margin-bottom: 5vh;
+}
+/*
+.bg-image-contact {
+    background-image: url('/storage/assets/img/layout/bg-contact-light.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+*/
+
+/*
+@media (prefers-color-scheme: dark) {
+    .bg-image-contact {
+        background-image: url('/storage/assets/img/layout/bg-contact-dark.jpg');
+    }
+}
+*/
 #map-container {
     width: 100vw;
-    height: 700px;
+    height: 650px;
+    margin-top: 10vh;
+    margin-bottom: 15vh;
 }
 
 #map {
-    width: 100vw;
-    height: 700px;
-    z-index: -10;
+    width: 100%;
+    height: 650px;
+    border-radius: 50px;
+    z-index: 10;
 }
 
 .leaflet-control-attribution a {
     font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    #map-container {
+        height: 550px;
+        margin-top: 8vh;
+        margin-bottom: 12vh;
+    }
+    
+    #map {
+        height: 550px;
+        border-radius: 30px;
+    }
+    
+    .leaflet-control-attribution a {
+        font-size: 10px;
+    }
 }
 .maintenance-page h2 {
     font-family: futura-pt, 'Poppins', sans-serif;

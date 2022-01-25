@@ -167,7 +167,7 @@ Agence digitale, créatrice d'expériences web & vidéo |
 <script type="text/javascript">
     
         new Typewriter('#typewriter', {
-        strings: ['web', 'vidéo'],
+        strings: ['web', 'visuelles'],
         autoStart: true,
         loop: true,
         });
