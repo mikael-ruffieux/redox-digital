@@ -19,6 +19,7 @@ class Project extends Model
         'date',
         'custom_summary',
         'external_url',
+        'img_preview_url',
 
         'context_title',
         'context_desc',

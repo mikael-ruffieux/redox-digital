@@ -113,6 +113,16 @@
                 </div>
             </div>
             @endif
+
+            @if($project->img_preview_url)
+            <div class="col-sm-6 col-12">
+                <b>Image d'aperçu</b><br>
+                <small>Uniquement affichée sur le portfolio, ou la page d'accueil.</small>
+                <div class="bg-white p-3 mt-3 rounded shadow">
+                    <img src="{{asset($project->img_preview_url)}}" style="width: 100%; height: auto;">
+                </div>
+            </div>         
+            @endif
         </div>
 
         <hr>
@@ -181,18 +191,15 @@
                 <div class="form-group">
                     <label for="design_desc">Description de la section "Design"</label>
                     <textarea name="design_desc" id="design_desc" rows="6" class="form-control" disabled>{{$project->design_desc}}</textarea>
-                    <small>Si ce champ de description n'est pas rempli, <b>les grandes images ne seront pas affichées</b>. Il est toutefois nécessaire de mettre une image comme aperçu du projet.</small>
+                    <small>Si ce champ de description n'est pas rempli, <b>les grandes images ne seront pas affichées</b>.</small>
                 </div>
             </div>
             @endif
 
             <!-- Big images -->
             <div class="col-12">
-                <h4 class="required">Grandes images</h4>
-                <p>Ces images seront affichées en pleine largeur dans la section "Design".
-                    <b class="text-danger">Il est nécessaire d'ajouter au moins une image dans le projet.</b>
-                    <i>(1ère image = image d'aperçu)</i>
-                </p>
+                <h4>Grandes images</h4>
+                <p>Ces images seront affichées en pleine largeur dans la section "Design".</p>
             </div>
             @if (sizeof($images) == 0)
             <div class="col-12"><i>Ce projet n'a pas de grandes images.</i></div>

@@ -120,7 +120,7 @@ $section = 1;
 
                 <div class="gallery">
                     <?php 
-                        $imgDisposition = getColFillage(4, sizeof($gallery));
+                        $imgDisposition = getColFillage(3, sizeof($gallery));
                         $counter = 1;
                     ?>
 
@@ -129,7 +129,7 @@ $section = 1;
                         @for ($row = 1; $row <= $imgDisposition[$col]; $row++)
                         <a href="#" class="gallery_link">
                             <figure class="gallery_thumb">
-                                <img src="{{asset($gallery[$counter]->url)}}" alt="{{$project->title}}" class="gallery_image">
+                                <img src="{{asset($gallery[$counter]->url)}}" alt="{{$project->title}}" class="gallery_image" data-img-preview="{{$counter}}">
                             </figure>
                         </a>
                         <?php $counter ++; ?>
@@ -150,22 +150,30 @@ $section = 1;
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h3 class="all-caps"><span class="number">0{{$section}}</span> - Projets similaires</h3>
+                <h3 class="all-caps color-white"><span class="number">0{{$section}}</span> - Projets similaires</h3>
             </div>
-            {{--
+        </div>
+        <div class="carousel">
             @foreach ($similar_projects as $project)
-            <div class="col-4">
-                <h3>{{$project->title}}</h3>
-                <a href="{{route('portfolio.project', [$project->id])}}">Découvrir le projet</a>
+            <div class="carousel-cell">
+                @include('components.include_project_preview', [compact('project'), "bg_dark" => $section%2 ? null : true])
             </div>
-            @endforeach --}}
+            @endforeach
         </div>
 
-        @foreach ($similar_projects as $project)
-            @include('components.include_project_preview', compact('project'))
-        @endforeach
+        
     </div>
 </section>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+<script>
+var flkty = new Flickity( '.carousel', {
+  //wrapAround: true
+
+  // advance cells every 3 seconds
+  //autoPlay: 3000
+});
+</script>
 
 <?php $curve_color = ($section%2 ? '#ffffff' : '#2b2323'); ?>
 

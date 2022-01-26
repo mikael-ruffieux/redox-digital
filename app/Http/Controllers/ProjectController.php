@@ -68,6 +68,17 @@ class ProjectController extends Controller
             "solution_desc" => $request->solution_desc,
         ];
 
+        $statement = DB::table('projects')->where('id', \DB::raw("(select max(`id`) from projects)"))->get();
+        $project_id = $statement[0]->id+1;
+
+        if(null !== $request->file('preview_img')) {
+            $name = "preview.".$request->file('preview_img')->getClientOriginalExtension();
+            $destinationPath = public_path('storage/projects/'.$project_id);
+            $request->file('preview_img')->move($destinationPath, $name);
+
+            $newProject['img_preview_url'] = 'storage/projects/' . $project_id . '/'. $name;
+        }
+
         // Saving the new project
         $project = Project::create($newProject);
 
@@ -181,6 +192,15 @@ class ProjectController extends Controller
             "solution_title" => $request->solution_title,
             "solution_desc" => $request->solution_desc,
         ];
+
+        if(null !== $request->file('preview_img')) {
+            $name = "preview.".$request->file('preview_img')->getClientOriginalExtension();
+            $destinationPath = public_path('storage/projects/'.$project->id);
+            $request->file('preview_img')->move($destinationPath, $name);
+
+            $newProject['img_preview_url'] = 'storage/projects/' . $project->id . '/'. $name;
+        }
+
 
         // Updating categories
         $newCats = $request->categories;

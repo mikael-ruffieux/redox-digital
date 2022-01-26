@@ -120,6 +120,16 @@
                     <small>Laisser vide pour utiliser la première partie du contexte.</small>
                 </div>
             </div>
+
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="preview_img"><b>Image d'aperçu</b></label>
+                    <small>Uniquement affichée sur le portfolio, ou la page d'accueil.</small><br>
+
+                    <input required type="file" id="preview_img" name="preview_img" accept="image/png, image/jpeg" multiple>
+                    {!! $errors->first('preview_img', '<small class="help-block text-danger">:message</small>') !!}
+                </div>
+            </div>
         </div>
 
         <hr>
@@ -181,22 +191,18 @@
                     <label for="design_desc">Description de la section "Design"</label>
                     <textarea name="design_desc" id="design_desc" rows="6" class="form-control">{{old('design_desc')}}</textarea>
                     {!! $errors->first('design_desc', '<small class="help-block text-danger">:message</small>') !!}
-                    <small>Si ce champ de description n'est pas rempli, <b>les grandes images ne seront pas affichées</b>. Il est toutefois nécessaire de mettre une image comme aperçu du projet.</small>
                 </div>
             </div>
 
             <!-- Big images -->
             <div class="col-12">
-                <h4 class="required">Grandes images</h4>
-                <p>Ces images seront affichées en pleine largeur dans la section "Design".
-                    <b class="text-danger">Il est nécessaire d'ajouter au moins une image dans le projet.</b>
-                    <i>(1ère image = image d'aperçu)</i>
-                </p>
+                <h4>Grandes images</h4>
+                <p>Ces images seront affichées en pleine largeur dans la section "Design".</p>
             </div>
             <div class="col-12">
                 <div class="form-group">
                     <label for="images">Ajouter des photos</label><br>
-                    <input required type="file" id="images" name="images[]" accept="image/png, image/jpeg" multiple>
+                    <input type="file" id="images" name="images[]" accept="image/png, image/jpeg" multiple>
                     {!! $errors->first('images', '<small class="help-block text-danger">:message</small>') !!}
                 </div>
             </div>

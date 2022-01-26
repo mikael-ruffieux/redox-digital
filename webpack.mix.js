@@ -16,7 +16,7 @@ const mix = require('laravel-mix');
     'resources/css/normalize.css',
     'resources/css/fonts.css',
     'resources/css/components.css',
-    'resources/css/dashboard.css',
+    //'resources/css/dashboard.css',
     'resources/css/footer.css',
     'resources/css/menu.css',
     'resources/css/contact.css',

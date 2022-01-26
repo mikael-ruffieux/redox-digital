@@ -122,7 +122,26 @@
                     <small>Laisser vide pour automatiquement utiliser la première partie du contexte.</small>
                 </div>
             </div>
+
+            <!-- Preview Image -->
+            <div class="col-sm-6 col-12">
+                <div class="form-group">
+                    <label for="preview_img"><b>Image d'aperçu</b></label>
+                    <small>Uniquement affichée sur le portfolio, ou la page d'accueil.</small><br>
+
+                    <input required type="file" id="preview_img" name="preview_img" accept="image/png, image/jpeg" multiple>
+                    {!! $errors->first('preview_img', '<small class="help-block text-danger">:message</small>') !!}
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-12">
+                <div class="bg-white p-3 mt-3 rounded shadow">
+                    <img src="{{asset($project->img_preview_url)}}" style="width: 100%; height: auto;">
+                </div>
+            </div>
         </div>
+
+        <hr>
 
         <div class="row">
             <div class="col-12">
@@ -187,11 +206,8 @@
 
             <!-- Big images -->
             <div class="col-12">
-                <h4 class="required">Grandes images</h4>
-                <p>Ces images seront affichées en pleine largeur dans la section "Design".
-                    <b class="text-danger">Il est nécessaire d'ajouter au moins une image dans le projet.</b>
-                    <i>(1ère image = image d'aperçu)</i>
-                </p>
+                <h4>Grandes images</h4>
+                <p>Ces images seront affichées en pleine largeur dans la section "Design".</p>
             </div>
 
             @if (sizeof($images) == 0)

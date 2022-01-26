@@ -28,6 +28,7 @@ class CreateProjectsTable extends Migration
             $table->text('custom_summary')->nullable();
             $table->text('external_url')->nullable();
             $table->date('date'); //
+            $table->string('img_preview_url');
 
             $table->text('context_title')->nullable();
             $table->text('context_desc'); //

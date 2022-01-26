@@ -59,6 +59,10 @@ body {
     color: var(--true-white)!important;
 }
 
+.color-secondary-black {
+    color: var(--secondary-black)!important;
+}
+
 
 .bg-dark {
     background-color: var(--primary-black)!important;

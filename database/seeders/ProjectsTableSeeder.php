@@ -31,6 +31,7 @@ class ProjectsTableSeeder extends Seeder
                 'custom_summary' => "Résumé $i, lorem ipsum dolor sit amet, consectetur adipisicing elit.",
                 'external_url' => null,
                 'date' => $this->randDate(),
+                'img_preview_url' => "storage/projects/$i/preview.jpg",
 
                 'context_title' => "Contexte customisé",
                 'context_desc' => "Contexte Description $i, lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque tempore porro ducimus laboriosam, rem dolores non neque, reiciendis quibusdam labore voluptate, pariatur sed molestiae. Incidunt necessitatibus consequuntur delectus officiis sunt!",
