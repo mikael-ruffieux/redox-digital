@@ -1,6 +1,6 @@
 #project-header {
     padding-top: 10vh;
-    padding-bottom: 20vh;
+    padding-bottom: 10vh;
 }
 
 #project-header h1, #project-header .categories, #project-header p, #project-header .section-title {
@@ -35,109 +35,98 @@
     content: ", ";
 }
 
-#project-context {
-
-}
-
 #project-design .big-image {
     width: 100%;
 }
-/*
-#project-solution {
-    --max-img-width: 600px;
-    --max-img-height: 400px;
 
-
+/* --------- Gallery ----------- */
+#gallery {
+    margin-bottom: 10vh;
 }
 
-@media screen and (min-width: var(--max-img-width)) {
-        #project-solution .gallery {
-        padding-top: var(--max-img-height);
-    }
-}
-
-#project-solution .gallery {
-    display: flex;
-    margin: 10px auto;
-    max-width: var(--max-img-width);
-    position: relative;
-    padding-top: calc(600px/400px * 100%);
-}
-
-#project-solution .gallery img {
-    max-width: 100%;
-    vertical-align: top;
-}
-
-#project-solution .gallery .gallery-item {
-    max-width: 100%;
-}
-
-#project-solution .gallery .gallery-item .gallery_img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-#project-solution .gallery .gallery-item .gallery_thumb {
-    padding-top: 6px;
-    margin: 6px;
-    display: block;
-}
-
-#project-solution .gallery .gallery-item .gallery_selector {
-    position: absolute;
-    opacity: 0;
-    visibility: hidden;
-}
-
-#project-solution .gallery .gallery-item .gallery_selector:checked +.gallery_img {
-    opacity: 1;
-}
-
-#project-solution .gallery .gallery-item .gallery_selector:checked ~ .gallery_thumb > img {
-    box-shadow: 0 0 0 3px #0be2f6;
-}
-*/
-
-#project-solution .gallery {
-    display: flex;
-	transition: .3s;
-}
-
-#project-solution .gallery:hover .gallery_image {
-    filter: grayscale(1);
-}
-
-#project-solution .gallery .gallery_column {
-    display: flex;
-    flex-direction: column;
-    width: 33.3333333%;
-}
-
-#project-solution .gallery .gallery_thumb {
-    position: relative;
-}
-
-#project-solution .gallery .gallery_image {
-    display: block;
-    width: 100%;
+#gallery .gallery-img-container {
+    height: 0;
+    padding-bottom: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(0);
     transition: .3s;
 }
 
-#project-solution .gallery .gallery_image:hover {
+
+#gallery .gallery-img-container:hover {
     transform: scale(1.1);
-}
-
-#project-solution .gallery .gallery_link {
-	overflow: hidden;
-}
-
-#project-solution .gallery .gallery_link:hover .gallery_image {
     filter: grayscale(0);
+    cursor: pointer;
 }
+
+#gallery .full-size-img-container {
+    position: fixed;
+    z-index: 101;
+    background-color: rgba(0,0,0,.5);
+    height: 100vh;
+    left: 0;
+    width: 100vw;
+    top: 0;
+    transition: .3s;
+}
+
+#gallery .full-size-img {
+    opacity: 1;
+    z-index: 102;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    width: 100px;
+    left: 0;
+    right: 0;
+    padding-top: 5%;
+    height: 90%;
+    width: auto;
+    transition: .3s;
+}
+
+#prev-btn, #next-btn, #close-btn {
+    background: none;
+    border: none;
+    font-size: 5rem;
+    color: var(--true-white);
+    position: absolute;
+    transition: .3s;
+}
+
+#prev-btn:hover, #next-btn:hover, #close-btn:hover {
+    color: var(--primary-red);
+    transition: .3s;
+}
+
+#prev-btn:active, #next-btn:active, #close-btn:active,
+#prev-btn:focus, #next-btn:focus, #close-btn:focus
+{
+    color: var(--secondary-black);
+    border: none;
+}
+
+
+#prev-btn {
+    top: 50%;
+    left: 10px;
+}
+
+#next-btn {
+    top: 50%;
+    right: 10px;
+}
+
+#close-btn {
+    top: 10px;
+    right: 10px;
+    font-size: 3.5rem;
+}
+
+/* ----------------------- */
 
 .iframe-container {
     position: relative;
@@ -202,10 +191,22 @@
 /* no circle */
 .flickity-button {
     background: transparent;
+    
+}
+
+.flickity-button path {
+    fill: var(--true-white);
+    transition: .3s;
 }
 
 .flickity-button:hover {
-    background: var(--primary-red);
+    background: transparent;
+}
+
+
+.flickity-button:hover path {
+    fill: var(--primary-red);
+    transition: .3s;
 }
 /* big previous & next buttons */
 .flickity-prev-next-button {

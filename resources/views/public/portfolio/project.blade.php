@@ -6,36 +6,9 @@
 
 @section("content")
 <?php 
-
-/**
- * @param $colNb : how many columns do you want
- * @param $imgNb : how many images must be distributed
- * @return array The columns disposition.
- */
-function getColFillage($colNb, $imgNb) {
-    $colFillage = [];
-
-    $imgPerCol = intdiv($imgNb, $colNb);
-    $moreImg = $imgNb % $colNb;
-
-    for ($i=0; $i < $colNb; $i++) { 
-        array_push($colFillage, $imgPerCol);
-    }
-
-    $y = 0;
-    while ($moreImg > 0) {
-        $colFillage[$y]++;
-        $y++;
-        $moreImg --;
-    }
-
-    return $colFillage;
-}
-
-$section = 1;
-
-?>
-
+$section = 1; 
+$images_id = [];
+?> 
 <section class="hero-section container" id="project-header">
     <div class="row">
         <div class="col-12 my-5">
@@ -45,10 +18,6 @@ $section = 1;
             <div class="categories">
                 @foreach ($project->services as $service)<a href="{{route('portfolio')}}" class="category">{{$service->title}}</a>@endforeach
             </div>
-        </div>
-        <div class="col-md-8 col-12">
-            <h3 class="all-caps section-title"><span class="number">0{{$section}}</span> - {{ ($project->context_title ?: "Contexte")}}</h3>
-            <p class="my-5">{{$project->context_desc}}</p>
         </div>
 
         </div>
@@ -64,6 +33,10 @@ $section = 1;
 <!-- Context section -->
 <section id="project-context" class="project-section {{$section%2 ? 'bg-white' : 'bg-dark'}}">
     <div class="container">
+        <div class="col-md-8 col-12">
+            <h3 class="all-caps section-title"><span class="number">0{{$section}}</span> - {{ ($project->context_title ?: "Contexte")}}</h3>
+            <p class="my-5">{{$project->context_desc}}</p>
+        </div>
 
         <!-- Video -->
         @if($project->video_url)
@@ -117,29 +90,27 @@ $section = 1;
                 <h3 class="all-caps"><span class="number">0{{$section}}</span> - {{$project->solution_title ?: "Solutions proposées"}}</h3>
 
                 <p class="my-5">{{$project->solution_desc}}</p>
-
-                <div class="gallery">
-                    <?php 
-                        $imgDisposition = getColFillage(3, sizeof($gallery));
-                        $counter = 1;
-                    ?>
-
-                    @for ($col = 0; $col < sizeof($imgDisposition); $col++)
-                    <div class="gallery_column">
-                        @for ($row = 1; $row <= $imgDisposition[$col]; $row++)
-                        <a href="#" class="gallery_link">
-                            <figure class="gallery_thumb">
-                                <img src="{{asset($gallery[$counter]->url)}}" alt="{{$project->title}}" class="gallery_image" data-img-preview="{{$counter}}">
-                            </figure>
-                        </a>
-                        <?php $counter ++; ?>
-                        @endfor
-                    </div>
-                    @endfor
-                </div>
             </div>
         </div>
+
+        <div class="row" id="gallery">
+            @foreach ($gallery as $image)
+                <div class="col-12 col-sm-6 col-md-4 pb-4"> <!--  gallery-img-container-->
+                    <div class="gallery-img-container" style="background-image: url({{asset($image->url)}})" onclick="displayImg({{$image->id}})"></div>
+                    <div class="full-size-img-container" data-img-full="{{$image->id}}" style="display: none;">
+                        <img src="{{asset($image->url)}}" alt="{{$project->title}}" class="full-size-img">
+                        <button id="prev-btn" onclick="prevImg({{$image->id}})"><i class="fal fa-angle-left"></i></button>
+                        <button id="next-btn" onclick="nextImg({{$image->id}})"><i class="fal fa-angle-right"></i></button>
+                        <button id="close-btn" onclick="closeImg({{$image->id}})"><i class="fal fa-times"></i></button>
+                        <?php array_push($images_id, $image->id);?> 
+                    </div>
+                </div>
+            @endforeach
+        </div>
     </div>
+
+    
+
 </section>
 <?php $section++; ?>
 
@@ -160,22 +131,51 @@ $section = 1;
             </div>
             @endforeach
         </div>
-
-        
     </div>
 </section>
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-
-<script>
-var flkty = new Flickity( '.carousel', {
-  //wrapAround: true
-
-  // advance cells every 3 seconds
-  //autoPlay: 3000
-});
-</script>
 
 <?php $curve_color = ($section%2 ? '#ffffff' : '#2b2323'); ?>
 
 @include('layouts.cta-section', ['curve_color', $curve_color])
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script>
+var flkty = new Flickity( '.carousel', {
+  //wrapAround: true
+  // advance cells every 3 seconds
+  //autoPlay: 3000
+});
+
+const imgKeys = <?php echo json_encode($images_id); ?>;
+
+console.log(imgKeys);
+
+function displayImg(id) {
+    document.querySelector(`[data-img-full='${id}']`).style.display="block";
+    document.getElementsByTagName("body")[0].style.overflow ="hidden";
+}
+
+function prevImg(id) {
+    closeImg(id);
+    if(id === imgKeys[0]) {
+        displayImg(imgKeys[imgKeys.length-1]);
+    } else {
+        displayImg(imgKeys[imgKeys.indexOf(id)-1]);
+    }
+}
+
+function nextImg(id) {
+    closeImg(id);
+    if(id === imgKeys[imgKeys.length-1]) {
+        displayImg(imgKeys[0]);
+    } else {
+        displayImg(imgKeys[imgKeys.indexOf(id)+1]);
+    }
+}
+
+function closeImg(id) {
+    document.querySelector(`[data-img-full='${id}']`).style.display="none";
+    document.getElementsByTagName("body")[0].style.overflow ="visible";
+}
+</script>
 @endsection

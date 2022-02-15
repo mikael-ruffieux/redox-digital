@@ -64,7 +64,7 @@ class PublicPagesController extends Controller
     }
 
     /**
-     * Display 1 project.
+     * Displays 1 project.
      */
     public function portfolio_project($id) {
         $project = Project::findOrFail($id);
