@@ -194,11 +194,12 @@ class ProjectController extends Controller
         ];
 
         if(null !== $request->file('preview_img')) {
-            $name = "preview.".$request->file('preview_img')->getClientOriginalExtension();
+            
+            $name = "preview." . $request->file('preview_img')->getClientOriginalExtension();
             $destinationPath = public_path('storage/projects/'.$project->id);
             $request->file('preview_img')->move($destinationPath, $name);
 
-            $newProject['img_preview_url'] = 'storage/projects/' . $project->id . '/'. $name;
+            $updatedProject['img_preview_url'] = 'storage/projects/' . $project->id . '/'. $name;
         }
 
 
