@@ -11,7 +11,7 @@
         @if($project->custom_summary)
         <p>{{$project->custom_summary}}</p>
         @endif
-        <a class="btn {{isset($bg_dark) ? 'btn-white' : 'btn-outline-dark'}}" href="{{route('portfolio.project', [$project->id])}}">En savoir plus</a>
+        <a class="btn {{isset($bg_dark) ? 'btn-white' : 'btn-outline-black'}}" href="{{route('portfolio.project', [$project->id])}}">En savoir plus</a>
     </div>
     <div class="col-4">
         @if(isset($project->img_preview_url))

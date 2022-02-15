@@ -258,7 +258,7 @@
 
 .btn-outline-black:hover, .btn-outline-black:focus, .btn-outline-black:active {
     background: rgb(var(--rgb-primary-red));
-    color: var(--true-white);
+    color: var(--true-white)!important;
     border: solid 1px var(--primary-red);
     transition: all 0.2s ease-in-out;
 }
