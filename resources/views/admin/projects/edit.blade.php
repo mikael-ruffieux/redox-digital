@@ -129,7 +129,7 @@
                     <label for="preview_img"><b>Image d'aperçu</b></label>
                     <small>Uniquement affichée sur le portfolio, ou la page d'accueil.</small><br>
 
-                    <input required type="file" id="preview_img" name="preview_img" accept="image/png, image/jpeg" multiple>
+                    <input type="file" id="preview_img" name="preview_img" accept="image/png, image/jpeg" multiple>
                     {!! $errors->first('preview_img', '<small class="help-block text-danger">:message</small>') !!}
                 </div>
             </div>
