@@ -69,7 +69,12 @@ class ProjectController extends Controller
         ];
 
         $statement = DB::table('projects')->where('id', \DB::raw("(select max(`id`) from projects)"))->get();
-        $project_id = $statement[0]->id+1;
+        if(empty($statement[0])) {
+            $project_id = 1;
+        } else {
+            $project_id = $statement[0]->id+1;
+        }
+       
 
         if(null !== $request->file('preview_img')) {
             $name = "preview.".$request->file('preview_img')->getClientOriginalExtension();
@@ -84,7 +89,12 @@ class ProjectController extends Controller
 
         // Big images
         $statement = DB::table('images')->where('id', \DB::raw("(select max(`id`) from images)"))->get();
-        $nextId = $statement[0]->id+1;
+
+        if(empty($statement[0])) {
+            $nextId = 1;
+        } else {
+            $nextId = $statement[0]->id+1;
+        }
 
         if(null !== $request->file('images')) {
             foreach ($request->file('images') as $image) {
@@ -105,7 +115,11 @@ class ProjectController extends Controller
         // Gallery
         if(null !== $request->file('gallery')) {
             $statement = DB::table('images')->where('id', \DB::raw("(select max(`id`) from images)"))->get();
-            $nextId = $statement[0]->id+1;
+            if(empty($statement[0])) {
+                $nextId = 1;
+            } else {
+                $nextId = $statement[0]->id+1;
+            }
     
             foreach ($request->file('gallery') as $image) {
                 $name = "$nextId.".$image->getClientOriginalExtension();
