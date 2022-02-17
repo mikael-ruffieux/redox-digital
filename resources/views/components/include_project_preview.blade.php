@@ -9,7 +9,7 @@
             @endforeach
         </div>
         @if($project->custom_summary)
-        <p>{{$project->custom_summary}}</p>
+        <p>{!!$project->custom_summary!!}</p>
         @endif
         <a class="btn {{isset($bg_dark) ? 'btn-white' : 'btn-outline-black'}}" href="{{route('portfolio.project', [$project->id])}}">En savoir plus</a>
     </div>

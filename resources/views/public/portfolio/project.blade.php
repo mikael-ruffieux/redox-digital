@@ -35,7 +35,7 @@ $images_id = [];
     <div class="container">
         <div class="col-md-8 col-12">
             <h3 class="all-caps section-title"><span class="number">0{{$section}}</span> - {{ ($project->context_title ?: "Contexte")}}</h3>
-            <p class="my-5">{{$project->context_desc}}</p>
+            <p class="my-5">{!!$project->context_desc!!}</p>
         </div>
 
         <!-- Video -->
@@ -67,7 +67,7 @@ $images_id = [];
             <div class="col-8">
                 <h3 class="all-caps"><span class="number">0{{$section}}</span> - Design</h3>
 
-                <p class="my-5">{{$project->design_desc}}</p>
+                <p class="my-5">{!!$project->design_desc!!}</p>
             </div>
             <div class="col-12 my-5" id="big-images-container">
                 @foreach ($images as $image)
@@ -89,7 +89,7 @@ $images_id = [];
             <div class="col">
                 <h3 class="all-caps"><span class="number">0{{$section}}</span> - {{$project->solution_title ?: "Solutions proposées"}}</h3>
 
-                <p class="my-5">{{$project->solution_desc}}</p>
+                <p class="my-5">{!!$project->solution_desc!!}</p>
             </div>
         </div>
 
