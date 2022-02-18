@@ -8,13 +8,12 @@
         </div>
     </div>
 
+    <hr>
+
     <form method="POST" action="{{route('projects.store')}}" accept-charset="UTF-8" enctype="multipart/form-data">
         @csrf
 
         <div class="row">
-            <div class="col-12 mb-3">
-                <a class="btn btn-secondary" href="{{route('projects.index')}}">Retour</a>
-            </div>
 
             <div class="col-12">
                 <h3>Données globales</h3>
@@ -250,7 +249,12 @@
 
 
         <hr>
-        <input type="submit" value="Créer le projet" class="btn btn-primary">
+        <div class="save-container">
+            <div class="container">
+                <a class="btn btn-secondary" href="{{route('projects.index')}}">Retour</a>
+                <input type="submit" value="Créer le projet" class="btn btn-primary">
+            </div>
+        </div>
     </form>
 </div>
 @endsection

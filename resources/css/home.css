@@ -160,6 +160,30 @@
     border-radius: 20px;
 }
 
+@media (max-width: 991px) {
+    .portfolio .project h3 {
+        font-weight: 500;
+        font-size: 26px;
+        text-transform: none;
+        line-height: 120%;
+        margin: 3vh 0!important;
+    }
+
+    .portfolio .categories > .category, .portfolio h5 {
+        font-size: 14px;
+    }
+
+    .portfolio .project img {
+        margin: 5vh 0;
+        max-height: 60vh;
+        width: auto;
+    }
+
+    .portfolio .categories {
+        margin-bottom: 3vh;
+    }
+}
+
 /* Masonry */
 .home-masonry img {
     width: 100%;
@@ -168,8 +192,4 @@
 .home-masonry .two-pics {
     display: flex;
     align-items: flex-end;
-}
-
-.home-masonry .one-pic {
-    
 }

@@ -1,22 +1,20 @@
 @extends('admin.template')
 
 @section('contenu')
-<div class="container pt-5">
+<div class="container pt-5 pb-3">
     <div class="row pt-3">
         <div class="col-12">
             <h1>Modifier <b>{{$project->title}}</b></h1>
         </div>
     </div>
 
+    <hr>
+
     <form method="POST" action="{{route('projects.update', [$project->id])}}" accept-charset="UTF-8" enctype="multipart/form-data">
         @method("PUT")
         @csrf
 
         <div class="row">
-            <div class="col-12 mb-3">
-                <a class="btn btn-secondary" href="{{route('projects.index')}}">Retour</a>
-            </div>
-
             <div class="col-12">
                 <h3>Données globales</h3>
             </div>
@@ -276,8 +274,12 @@
         </div>
 
         <hr>
-
-        <input type="submit" value="Enregistrer les modifications" class="btn btn-primary">
+        <div class="save-container">
+            <div class="container">
+                <a class="btn btn-secondary" href="{{route('projects.index')}}">Retour</a>
+                <input type="submit" value="Enregistrer les modifications" class="btn btn-primary">
+            </div>
+        </div>
     </form>
     <form method="POST" class="my-3" action="{{route('projects.destroy', [$project->id])}}" accept-charset="UTF-8">
         @csrf

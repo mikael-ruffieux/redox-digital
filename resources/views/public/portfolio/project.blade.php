@@ -125,7 +125,7 @@ $images_id = [];
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h3 class="all-caps color-white"><span class="number">0{{$section}}</span> - Projets similaires</h3>
+                <h3 class="all-caps {{$section%2 ? '' : 'color-white'}}"><span class="number">0{{$section}}</span> - Projets similaires</h3>
             </div>
         </div>
         <div class="carousel">

@@ -122,6 +122,7 @@ nav .menu-cta > a{
 #menu>li>a:hover, #menu>li>a:active {
     color: var(--primary-red);
     text-decoration: none;
+    transition : all .3s;
 }
 
 /* Sub-menu */
