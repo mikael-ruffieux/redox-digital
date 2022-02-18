@@ -35,7 +35,11 @@ class ImageController extends Controller
 
         // Gallery
         $statement = DB::table('images')->where('id', \DB::raw("(select max(`id`) from images)"))->get();
-        $nextId = $statement[0]->id+1;
+        if(empty($statement[0])) {
+            $nextId = 1;
+        } else {
+            $nextId = $statement[0]->id+1;
+        }
 
         foreach ($request->file('images') as $image) {
             $name = "$nextId.".$image->getClientOriginalExtension();
