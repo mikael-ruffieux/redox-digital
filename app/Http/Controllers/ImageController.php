@@ -41,19 +41,23 @@ class ImageController extends Controller
             $nextId = $statement[0]->id+1;
         }
 
-        foreach ($request->file('images') as $image) {
-            $name = "$nextId.".$image->getClientOriginalExtension();
-            $destinationPath = public_path('storage/projects/'.$project->id);
-            $image->move($destinationPath, $name);
-
-            // Saving object
-            Image::create([
-                'project_id' => $project->id,
-                'url' => "storage/projects/".$project->id."/" . $name,
-                'type' => $request->type,
-            ]);
-            $nextId ++;
+        if(null !== $request->file('images')) {
+            foreach ($request->file('images') as $image) {
+                $name = "$nextId.".$image->getClientOriginalExtension();
+                $destinationPath = public_path('storage/projects/'.$project->id);
+                $image->move($destinationPath, $name);
+    
+                // Saving object
+                Image::create([
+                    'project_id' => $project->id,
+                    'url' => "storage/projects/".$project->id."/" . $name,
+                    'type' => $request->type,
+                ]);
+                $nextId ++;
+            }
         }
+
+        
 
         return redirect(route('project.gallery', [$project->id, $request->type]))->with('alert', "Les images ont été ajoutées avec succès !");
     }

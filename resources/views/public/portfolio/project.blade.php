@@ -118,7 +118,7 @@ $images_id = [];
 </section>
 <?php $section++; ?>
 
-@include('layouts.curves.curve-small-bottom-right', ['color' => $section ? '#ffffff' : '#2B2323'])
+@include('layouts.curves.curve-small-bottom-right', ['color' => $section%2 ? '#ffffff' : '#2B2323'])
 
 <!-- Similar projects section -->
 <section id="similar-projects" class="portfolio project-section {{$section%2 ? 'bg-white' : 'bg-dark'}}">
