@@ -173,16 +173,24 @@
     bottom: 0px;
 }
 /* white circles */
+.bg-white .flickity-page-dots .dot {
+    border: 2px solid var(--primary-black);;
+}
+
 .flickity-page-dots .dot {
     width: 12px;
     height: 12px;
     opacity: 1;
     background: transparent;
-    border: 2px solid white;
+    border: 2px solid var(--true-white);
 }
 /* fill-in selected dot */
+.bg-white .flickity-page-dots .dot.is-selected {
+    background: var(--primary-black);
+}
+
 .flickity-page-dots .dot.is-selected {
-    background: white;
+    background: var(--true-white);
 }
 
 
@@ -192,6 +200,11 @@
 .flickity-button {
     background: transparent;
     
+}
+
+.bg-white .flickity-button path {
+    fill: var(--primary-black);
+    transition: .3s;
 }
 
 .flickity-button path {
@@ -214,8 +227,12 @@
     height: 50px;
 }
 /* icon color */
+.bg-white .flickity-button-icon {
+    fill: var(--primary-black);
+}
+
 .flickity-button-icon {
-    fill: white;
+    fill: var(--true-white);
 }
 /* hide disabled button */
 .flickity-button:disabled {

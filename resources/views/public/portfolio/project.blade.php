@@ -33,22 +33,26 @@ $images_id = [];
 <!-- Context section -->
 <section id="project-context" class="project-section {{$section%2 ? 'bg-white' : 'bg-dark'}}">
     <div class="container">
-        <div class="col-md-8 col-12">
-            <h3 class="all-caps section-title"><span class="number">0{{$section}}</span> - {{ ($project->context_title ?: "Contexte")}}</h3>
-            <p class="my-5">{!!$project->context_desc!!}</p>
+        <div class="row">
+            <div class="col-md-8 col-12">
+                <h3 class="all-caps section-title"><span class="number">0{{$section}}</span> - {{ ($project->context_title ?: "Contexte")}}</h3>
+                <p class="my-5">{!!$project->context_desc!!}</p>
+            </div>
         </div>
 
         <!-- Video -->
         @if($project->video_url)
         <div class="row project-video">
-            <div class="iframe-container">
-                <iframe
-                    src="{{$project->video_url}}"
-                    title="{{$project->title}}" 
-                    frameborder="0" 
-                    allow="autoplay; fullscreen; clipboard-write; encrypted-media; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
+            <div class="col-12">
+                <div class="iframe-container">
+                    <iframe
+                        src="{{$project->video_url}}"
+                        title="{{$project->title}}" 
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; clipboard-write; encrypted-media; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
             </div>
         </div>
         @endif
@@ -114,7 +118,7 @@ $images_id = [];
 </section>
 <?php $section++; ?>
 
-@include('layouts.curves.curve-small-bottom-right', ['color' => '#2B2323'])
+@include('layouts.curves.curve-small-bottom-right', ['color' => $section ? '#ffffff' : '#2B2323'])
 
 <!-- Similar projects section -->
 <section id="similar-projects" class="portfolio project-section {{$section%2 ? 'bg-white' : 'bg-dark'}}">
