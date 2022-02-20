@@ -152,10 +152,9 @@ var flkty = new Flickity( '.carousel', {
 
 const imgKeys = <?php echo json_encode($images_id); ?>;
 
-console.log(imgKeys);
-
 function displayImg(id) {
-    document.querySelector(`[data-img-full='${id}']`).style.display="block";
+    document.querySelector(`[data-img-full='${id}']`).classList.add("active-full-image");
+    document.querySelector(`[data-img-full='${id}']`).style.display="flex";
     document.getElementsByTagName("body")[0].style.overflow ="hidden";
 }
 
@@ -178,8 +177,32 @@ function nextImg(id) {
 }
 
 function closeImg(id) {
+    document.querySelector(`[data-img-full='${id}']`).classList.remove("active-full-image");
     document.querySelector(`[data-img-full='${id}']`).style.display="none";
     document.getElementsByTagName("body")[0].style.overflow ="visible";
 }
+
+// Handeling key presses
+function logEvent(event) {
+    let id = document.getElementsByClassName("active-full-image")[0]?.dataset.imgFull;
+    switch (event.keyCode) {
+        /*
+        // Left Arrow
+        case 37:
+            prevImg(id);
+            break;
+        // Right Arrow
+        case 39:
+            nextImg(id);
+            break;
+        // Escape
+        */
+        case 27:
+            closeImg(id);
+            break;
+    }
+}
+
+document.addEventListener('keydown', logEvent);
 </script>
 @endsection

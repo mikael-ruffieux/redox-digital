@@ -28,18 +28,6 @@
                 </ul>
             </div>
 
-            {{-- Uniquement pour la v 1.0
-            <div class="col-12 col-md-3">
-                <h4>Administration</h4>
-                <ul>
-                    @if(Auth::check())
-                    <li><a href="{{route('admin.home')}}">Dashboard</a></li>
-                    @else
-                    <li><a href="{{route('login')}}">Login</a></li>
-                    @endif
-                </ul>
-            </div>--}}
-
             <div class="col-12 col-md-3">
                 <h4>Services</h4>
                 <ul>
@@ -91,21 +79,9 @@
                     <li><a href="{{route('portfolio')}}">Portfolio</a></li>
                 @endif
                     <li><a href="{{route('about')}}">À propos</a></li>
-                @if(Auth::check())
                     <li><a href="{{route('contact')}}">Contact</a></li>
-                @endif
                     <li><a href="{{route('cg')}}">Conditions générales</a></li>
                 </ul>
-
-                {{-- Uniquement pour la v 1.0
-                <h4>Administration</h4>
-                <ul>
-                    @if(Auth::check())
-                    <li><a href="{{route('admin.home')}}">Dashboard</a></li>
-                    @else
-                    <li><a href="{{route('login')}}">Login</a></li>
-                    @endif
-                </ul>--}}
 
                 <h4>Services</h4>
                 <ul>
