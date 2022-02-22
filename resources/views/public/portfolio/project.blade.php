@@ -19,8 +19,6 @@ $images_id = [];
                 @foreach ($project->services as $service)<a href="{{route('portfolio')}}" class="category">{{$service->title}}</a>@endforeach
             </div>
         </div>
-
-        </div>
         @if($project->external_url)
         <div class="col-12">
             <a href="{{$project->external_url}}" target="_blank" class="btn btn-outline-red">voir le projet</a>
@@ -68,7 +66,7 @@ $images_id = [];
 <section id="project-design" class="project-section {{$section%2 ? 'bg-white' : 'bg-dark'}}">
     <div class="container">
         <div class="row">
-            <div class="col-8">
+            <div class="col-md-8 col-12">
                 <h3 class="all-caps"><span class="number">0{{$section}}</span> - Design</h3>
 
                 <p class="my-5">{!!$project->design_desc!!}</p>
@@ -96,7 +94,7 @@ $images_id = [];
                 <p class="my-5">{!!$project->solution_desc!!}</p>
             </div>
         </div>
-
+    @if(sizeof($gallery))
         <div class="row" id="gallery">
             @foreach ($gallery as $image)
                 <div class="col-12 col-sm-6 col-md-4 pb-4"> <!--  gallery-img-container-->
@@ -111,6 +109,7 @@ $images_id = [];
                 </div>
             @endforeach
         </div>
+    @endif
     </div>
 
     

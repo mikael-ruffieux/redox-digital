@@ -30,8 +30,6 @@ Agence digitale, créatrice d'expériences web & vidéo |
             </div>
             
             <div class="col-lg-6 col-12">
-                {{--<a href="{{route('about')}}" class="btn btn-outline-black btn-100">En savoir plus</a>--}}
-
                 <a href="#home-services" id="bouncing-arrow"><i class="fal fa-arrow-down"></i></a>
             </div>
         </div>
@@ -94,7 +92,6 @@ Agence digitale, créatrice d'expériences web & vidéo |
                 <h2 class="red-dot">Nos réalisations</h2>
             </div>
         </div>
-        @if(Auth::check())
         @foreach ($projects as $project)
             @include('components.include_project_preview', compact('project'))
         @endforeach
@@ -104,14 +101,6 @@ Agence digitale, créatrice d'expériences web & vidéo |
                 <a href="{{route('portfolio')}}" class="btn btn-outline-red btn-100">Parcourez notre portfolio</a>
             </div>
         </div>
-        @else
-        <div class="row">
-            <div class="col">
-                <i>Notre portfolio sera disponible prochainement.</i>
-            </div>
-        </div>
-        @endif
-
     </div>
 </section>
 
@@ -141,16 +130,16 @@ Agence digitale, créatrice d'expériences web & vidéo |
 
         <div class="home-masonry">
             <div class="row two-pics">
-                <div class="col-7 mt-5">
+                <div class="col-7 mt-4">
                     <img src="{{asset('storage/home/home-1.jpg')}}" alt="L'équipe de Redox Digital">
                 </div>
-                <div class="col-5 mt-5">
+                <div class="col-5 mt-4">
                     <img src="{{asset('storage/home/home-2.jpg')}}" alt="L'équipe de Redox Digital">
                 </div>
             </div>
 
             <div class="row one-pic">
-                <div class="col-12 mt-5">
+                <div class="col-12 mt-4">
                     <img src="{{asset('storage/home/home-3.jpg')}}" alt="L'équipe de Redox Digital">
                 </div>
             </div>

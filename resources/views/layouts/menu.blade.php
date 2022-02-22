@@ -35,9 +35,7 @@
                         </div>
                     </div>
                 </li>
-            @if(Auth::check())
                 <li><a href="{{route('portfolio')}}">Portfolio</a></li>
-            @endif
                 <li><a href="{{route('about')}}">À propos</a></li>
                 <li><a href="{{route('contact')}}">Contact</a></li>
                 <li>

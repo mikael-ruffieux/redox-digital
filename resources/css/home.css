@@ -187,6 +187,7 @@
 /* Masonry */
 .home-masonry img {
     width: 100%;
+    border-radius: 10px;
 }
 
 .home-masonry .two-pics {

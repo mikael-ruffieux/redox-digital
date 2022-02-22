@@ -37,7 +37,6 @@ Route::get('cg', function() {
 Route::prefix('portfolio')->group(function () {
     Route::get('/', [PublicPagesController::class, 'portfolio'])->name('portfolio');
     Route::get('{id}', [PublicPagesController::class, 'portfolio_project'])->name('portfolio.project');
-
 });
 
 // à voir si on garde ce système, ou si on fait 2 chemins & méthodes
