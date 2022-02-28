@@ -35,8 +35,8 @@ Nous contacter |
             <div class="col-md-1 col-0"><!-- spacer --></div>
 
             <div class="col-md-4 col-12">
-                <h3 class="color-red">Adresse</h3>
-                <p>Redox s’installera bientôt dans des bureaux à Neuchâtel et se réjouit de vous y accueillir.</p>
+                <h3 class="color-red">Nos bureaux</h3>
+                <p>Rue des Usines 25, 2000 Neuchâtel</p>
 
                 <h3 class="color-red">Siège</h3>
                 <p>Rte de Duvillard 23, 1663 Epagny</p>
@@ -73,7 +73,7 @@ Nous contacter |
     markerFR.bindPopup("<b>Notre siège: </b><br>Rte de Duvillard 23<br>1663 Epagny").openPopup();
 
     let markerNE = L.marker([46.98326, 6.90264], {icon: redoxIcon}).addTo(map);
-    markerNE.bindPopup("<b>Notre agence: </b><br>Rue des Usines 25<br>2034 Serrière").openPopup();
+    markerNE.bindPopup("<b>Notre agence: </b><br>Rue des Usines 25<br>2000 Neuchâtel").openPopup();
 
 
     let tileURL = darkTheme ? 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png' : 'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png';
