@@ -10,7 +10,7 @@
                 <h4>Contact</h4>
                 <ul>
                     <li>Redox Digital SNC</li>
-                    <li>Neuchâtel - La Gruyère</li>
+                    <li>Neuchâtel - Fribourg</li>
                     <li><a href="mailto:info@redoxdigital.ch"><span id="mail-info"></span></a></li>
                 </ul>
                 <a href="{{route('contact.intro')}}" class="btn btn-sm btn-outline-white mt-3">Un projet en tête ?</a>
@@ -53,7 +53,7 @@
         <div id="footer-top" class="row">
             <div class="col-4">
                 <img src="{{asset('storage/assets/img/logo/Redox-Digital_Logotype-pictogramme-blanc-rouge.svg')}}" alt="Redox Digital">
-                
+
                 <ul id="footer-icons-list">
                     <li><a href="https://www.facebook.com/redoxdigital.ch/" target="_blank"><i class="fab fa-facebook"></i></a></li>
                     <li><a href="https://www.instagram.com/redoxdigital.ch/" target="_blank"><i class="fab fa-instagram"></i></a></li>
@@ -66,7 +66,7 @@
                 <h4>Contact</h4>
                 <ul>
                     <li class="org">Redox Digital SNC</li>
-                    <li class="adr">Neuchâtel - La Gruyère</li>
+                    <li class="adr">Neuchâtel - Fribourg</li>
                     <li class="email"><a href="mailto:info@redoxdigital.ch"><span id="mail-info"></span></a></li>
                 </ul>
 
