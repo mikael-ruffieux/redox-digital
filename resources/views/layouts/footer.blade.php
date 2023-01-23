@@ -9,7 +9,7 @@
             <div class="col-8 col-md-4">
                 <h4>Contact</h4>
                 <ul>
-                    <li>Redox Digital SNC</li>
+                    <li>Redox Digital Sàrl</li>
                     <li>Neuchâtel - Fribourg</li>
                     <li><a href="mailto:info@redoxdigital.ch"><span id="mail-info"></span></a></li>
                 </ul>

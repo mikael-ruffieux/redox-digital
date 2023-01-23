@@ -3,7 +3,7 @@
 
 ## À propos du site
 
-Pour mettre à jour le site, il suffit de se connecter en accès SSH au serveur distant `0807j.ftp.infomaniak.com`, et de réaliser les opérations suivantes : 
+Pour mettre à jour le site, il suffit de se connecter en accès SSH au serveur distant et de réaliser les opérations suivantes : 
 
 - Se déplacer dans le dossier du site : `cd nom-du-dossier`
 - Passer le site offline : `php artisan down`
