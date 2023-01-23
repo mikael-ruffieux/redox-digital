@@ -28,6 +28,12 @@ Pour mettre à jour le site, il suffit de se connecter en accès SSH au serveur 
 
 - Remettre le site en ligne : `php artisan up`
 
+## Développement
+
+Pour lancer le site web dans un environnement de développement, assurez-vous d'avoir un serveur de base de données en ligne.
+
+Lancez le site web avec : `php artisan serve`
+
 
 ## Licenses
 

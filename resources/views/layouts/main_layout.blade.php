@@ -33,6 +33,8 @@
     <link rel="icon" type="image/svg" href="{{ asset('storage/assets/img/layout/favicon.svg') }}">
 
     <title>@yield("title") Redox Digital</title>
+
+    @stack('head')
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->

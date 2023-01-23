@@ -1,8 +1,12 @@
 @extends('layouts.main_layout')
 
 @section('title')
-Nos services | 
+Nos services |
 @endsection
+
+@push('head')
+<script src="{{ asset('js/accordion.js')}}"></script>
+@endpush
 
 @section("content")
 <section class="hero-section container" id="service-header">
@@ -14,7 +18,7 @@ Nos services |
             <p>{!! $parent->description!!}</p>
 
             <p>
-                Pour découvrir nos autres prestations, consultez la page <a href="{{route('services', [$other->getSlug()])}}" class="color-red">{{Illuminate\Support\Str::lower($other->title)}}</a>. 
+                Pour découvrir nos autres prestations, consultez la page <a href="{{route('services', [$other->getSlug()])}}" class="color-red">{{Illuminate\Support\Str::lower($other->title)}}</a>.
             </p>
 
             <a href="#{{$services->first()->getSlug()}}" id="bouncing-arrow"><i class="fal fa-arrow-down"></i></a>
@@ -58,19 +62,19 @@ Nos services |
         <div class="col-12 col-md-7">
             <h2 class="red-dot">{{$service->title}}</h2>
             <p>{!!$service->description!!}</p>
-        
+
             @if(sizeof($service->accordions))
             <div class="accordion-list" id="accordion{{$service->id}}">
                 @foreach ($service->accordions as $accordion)
-                <div class="accordion">
+                <div class="accordion" id="accordion-{{$accordion->id}}">
                     <h3 class="accordion-title all-caps" id="accordion-title-{{$accordion->id}}">
-                        <button data-toggle="collapse" data-target="#accordion-content-{{$accordion->id}}" aria-expanded="false" aria-controls="accordion-content-{{$accordion->id}}">
+                        <button data-toggle="collapse" data-target="#accordion-content-{{$accordion->id}}" aria-expanded="false" aria-controls="accordion-content-{{$accordion->id}}" onclick="toggle({{$accordion->id}})">
                             {{$accordion->title}}<span class="plus-sign"></span>
                         </button>
                     </h3>
-                
+
                     <div id="accordion-content-{{$accordion->id}}" class="collapse" aria-labelledby="accordion-title-{{$accordion->id}}" data-parent="#accordion{{$service->id}}">
-                        <p class="accordion-content">{!!$accordion->description!!}</p>  
+                        <p class="accordion-content">{!!$accordion->description!!}</p>
                     </div>
                 </div>
                 @endforeach
@@ -88,7 +92,7 @@ Nos services |
     <div class="col-0 col-md-4"><!-- spacer --></div>
     <div class="col-md-8 col-12">
         <a class="btn btn-100 btn-primary" href="{{route('services', [$other->getSlug()])}}">
-            voir les services de {{Illuminate\Support\Str::lower($other->title)}}
+            Voir les services de {{Illuminate\Support\Str::lower($other->title)}}
         </a>
     </div>
 </div>
