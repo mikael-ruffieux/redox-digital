@@ -34,8 +34,3 @@ Pour mettre à jour le site, il suffit de se connecter en accès SSH au serveur 
 Le site [redoxdigital.ch](https://redoxdigital.ch) est protégé par [la Loi sur le droit d’auteur (LDA) du 9 octobre 1992](https://www.fedlex.admin.ch/eli/cc/1993/1798_1798_1798/fr).
 
 Le framework utilisé est le framework Laravel. C'est un programme open-source sous la [license MIT](https://opensource.org/licenses/MIT).
-
-
----
-
-Testing Discord Webhooks.
