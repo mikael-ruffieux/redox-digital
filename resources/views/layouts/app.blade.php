@@ -7,7 +7,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    
+
     <!-- light/dark mode switcher-->
     <meta name="color-scheme" content="dark light">
 
@@ -20,7 +20,6 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     <link rel="stylesheet" type="text/css" href="{{ asset('css/contact.css') }}">
-
 </head>
 <body>
     <div class="bg-contact2" style="background-image: url('{{ asset('storage/assets/img/layout/bg-contact.jpg') }}');">
@@ -28,8 +27,8 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <picture style="height: auto; width: 200px; display:inline-block;">
-                        <source 
-                            srcset="{{ asset('storage/assets/img/logo/Redox-Digital_Logotype-final_Redox-Digital_Logotype-slogan-blanc-rouge.svg') }}" 
+                        <source
+                            srcset="{{ asset('storage/assets/img/logo/Redox-Digital_Logotype-final_Redox-Digital_Logotype-slogan-blanc-rouge.svg') }}"
                             media="(prefers-color-scheme: dark)">
                         <img src="{{ asset('storage/assets/img/logo/Redox-Digital_Logotype-final_Redox-Digital_Logotype-slogan-noir-rouge.svg') }}"
                             alt="Redox Digital"/>

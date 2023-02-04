@@ -1,7 +1,7 @@
 @extends('layouts.main_layout')
 
 @section('title')
-Conditions générales | 
+Conditions générales |
 @endsection
 
 @section("content")
@@ -13,13 +13,13 @@ Conditions générales |
                     <h1 class="red-dot">Conditions générales</h1>
                 </div>
             </div>
-    
+
             <div class="row">
                 <div class="col-lg-8 col-12">
-                    <p>Les conditions générales ont pour but de préciser certains aspects de la collaboration entre <b>Redox Digital</b> et ses mandants, ci-après « <b>le Client</b> », afin d’éviter toute incompréhension ou conflit d’intérêt. Ces conditions s’appliquent par défaut à chaque contrat engageant Redox Digital en tant que mandataire, quelle que soit la forme du contrat convenu, écrite ou orale.</p>
-                    <p>Vous trouverez sur chaque devis et facture une description sommaire des conditions fixées par Redox Digital SNC. Vous trouverez ci-dessous une version plus détaillée de ces conditions.</p> 
+                    <p>Les conditions générales ont pour but de préciser certains aspects de la collaboration entre <b>Redox Digital</b> et ses mandants, ci-après « <b>le Client</b> », afin d'éviter toute incompréhension ou conflit d'intérêt. Ces conditions s'appliquent par défaut à chaque contrat engageant Redox Digital en tant que mandataire, quelle que soit la forme du contrat convenu, écrite ou orale.</p>
+                    <p>Vous trouverez sur chaque devis et facture une description sommaire des conditions fixées par Redox Digital SNC. Vous trouverez ci-dessous une version plus détaillée de ces conditions.</p>
                 </div>
-                <div class="col-lg-6 col-12">    
+                <div class="col-lg-6 col-12">
                     <a href="#cg-content" id="bouncing-arrow"><i class="fal fa-arrow-down color-white"></i></a>
                 </div>
             </div>
@@ -34,16 +34,16 @@ Conditions générales |
             <div class="row">
                 <div class="col">
                     <h2 class="red-dot" id="1">Implication des parties</h2>
-                    <p>Dans chaque mandat, le Client et Redox Digital s’engagent à collaborer activement afin d’atteindre les buts fixés par le contrat. Chacun se doit de communiquer les éventuelles difficultés rencontrées au fur et à mesure du projet pour permettre à l’autre d’agir en conséquence.</p>
-                    
+                    <p>Dans chaque mandat, le Client et Redox Digital s'engagent à collaborer activement afin d'atteindre les buts fixés par le contrat. Chacun se doit de communiquer les éventuelles difficultés rencontrées au fur et à mesure du projet pour permettre à l'autre d'agir en conséquence.</p>
+
                     <h3>Redox Digital</h3>
-                    <p>Afin d’assurer une solution à la demande du Client, Redox Digital s’engage à :</p>
+                    <p>Afin d'assurer une solution à la demande du Client, Redox Digital s'engage à :</p>
                     <ul>
-                        <li>Informer le Client de manière régulière et efficace sur l’avancée du projet, notamment au travers des validations présentées ;</li>
-                        <li>Respecter la confidentialité du Client durant et à terme du mandat, que se soit sous la forme d’informations ou de documents obtenues dans le cadre du mandat pouvant porter préjudice au Client.</li>
+                        <li>Informer le Client de manière régulière et efficace sur l'avancée du projet, notamment au travers des validations présentées ;</li>
+                        <li>Respecter la confidentialité du Client durant et à terme du mandat, que se soit sous la forme d'informations ou de documents obtenues dans le cadre du mandat pouvant porter préjudice au Client.</li>
                     </ul>
                     <h3>Le client</h3>
-                    <p>Pour une réalisation optimale de la mission de Redox Digital, le Client s’engage à :</p>
+                    <p>Pour une réalisation optimale de la mission de Redox Digital, le Client s'engage à :</p>
                     <ul>
                         <li>Établir un cahier des charges du projet, ou valider la proposition
                             d'offre proposée par Redox Digital. Une fois l'offre établie et approuvée par les deux
@@ -99,7 +99,7 @@ Conditions générales |
                     <p>En cas de non-paiement à 60 jours, Redox Digital se
                         réserve le droit de facturer comme frais de rappel 1% du montant total de la facture pour tous les 3
                         jours de retard, en se basant sur la date d'échéance de la facture initiale.</p>
-                    <h3>Interruption d’un mandat en cours</h3>
+                    <h3>Interruption d'un mandat en cours</h3>
                     <p>Une interruption du mandat est en tout temps possible
                         sur accord des deux parties.</p>
                     <p>En cas d'interruption du mandat avant son terme
@@ -112,7 +112,7 @@ Conditions générales |
                     <p>Les documents originaux créés et utilisés par Redox
                         Digital ne peuvent être revendiqués par le Client sans une contribution financière (<a href="#3.3">c.f. point 3.3</a>).</p>
                     <hr/>
-                    <h2 class="red-dot" id="3">Livrables, propriété intellectuelle & droits d’auteur</h2>
+                    <h2 class="red-dot" id="3">Livrables, propriété intellectuelle & droits d'auteur</h2>
                     <p>Conformément aux prescriptions légales suisses, tout
                         élément créé dans le cadre d'un mandat <i>(stratégies, créations graphiques ou digitales, fichiers
                         sources, livrables etc.)</i> et transmis au Client restent la propriété de Redox Digital. Toutes
@@ -122,25 +122,25 @@ Conditions générales |
                     <p>Redox Digital fournit au Client un document final <i>(= livrable)</i> « prêt à l'emploi ». Redox Digital n'est pas tenu de fournir les données sources
                         ayant permis la conception et réalisation dudit livrable.</p>
                     <p>Sauf mention contraire explicite du Client, Redox
-                        Digital se réserve la possibilité d’inclure dans la réalisation une mention discrète indiquant
+                        Digital se réserve la possibilité d'inclure dans la réalisation une mention discrète indiquant
                         clairement sa contribution ou celle de ses partenaires.</p>
                     <h3 id="3.2">Droits d'utilisation &amp; droits
                         d'auteurs</h3>
                     <p>Pour toute prestation de service réalisée, Redox
-                        Digital détient les droits d’auteur conformément aux prescriptions légales. Par cette clause, le Client
-                        ne peut pas utiliser les livrables obtenus lors d’un mandat pour un autre usage que celui prévu dans le
+                        Digital détient les droits d'auteur conformément aux prescriptions légales. Par cette clause, le Client
+                        ne peut pas utiliser les livrables obtenus lors d'un mandat pour un autre usage que celui prévu dans le
                         cadre du devis. Ceci comporte toutes modifications, tous traitements ou toutes utilisations ultérieures
-                        dans un autre contexte <i>(par exemple lors d’un changement de prestataire de services)</i>. </p>
+                        dans un autre contexte <i>(par exemple lors d'un changement de prestataire de services)</i>. </p>
                     <p>Une extension de ces droits d'utilisation est
                         toutefois possible sur accord écrit de Redox Digital. Des frais supplémentaires peuvent alors découler
                         de cette extension.</p>
                     <p>Lors d'une participation à un concours, les
-                        droits d’auteurs sur les documents ainsi que sur les conseils et stratégies développés, restent la
+                        droits d'auteurs sur les documents ainsi que sur les conseils et stratégies développés, restent la
                         propriété exclusive de Redox Digital.</p>
                     <h3 id="3.3">Fichiers sources</h3>
-                    <p>Redox Digital peut céder les droits d’auteur et
-                        transmettre les fichiers sources — contre une éventuelle rémunération si ce point n’a pas été prévu dans
-                        la demande d’offre liée au mandat — sur demande du Client, dans un délai de 6 mois après la fin du
+                    <p>Redox Digital peut céder les droits d'auteur et
+                        transmettre les fichiers sources — contre une éventuelle rémunération si ce point n'a pas été prévu dans
+                        la demande d'offre liée au mandat — sur demande du Client, dans un délai de 6 mois après la fin du
                         mandat.</p>
                     <p>Si la cession des fichiers sources n'a pas été
                         prévue à la signature du mandat, Redox Digital ne peut pas assurer la qualité et la réutilisabilité des
@@ -151,14 +151,14 @@ Conditions générales |
                         cas être tenue responsable de tout type de violation ou d'expiration de licences.</p>
                     <hr>
                     <h2 class="red-dot" id="4">Droit applicable et for juridique</h2>
-                    <p>Au sein de l’agence Redox Digital SNC, nous
+                    <p>Au sein de l'agence Redox Digital SNC, nous
                         privilégions avant tout des valeurs telles que le bon sens, la bonne foi, le dialogue et la sincérité.
-                        Nous espérons qu’il en est de même de la part de tous nos clients, partenaires et fournisseurs.</p>
+                        Nous espérons qu'il en est de même de la part de tous nos clients, partenaires et fournisseurs.</p>
                     <p>Les Conditions Générales, les devis et contrats liant
                         les deux parties sont soumis au droit suisse.</p>
-                    <p>La déclaration de nullité de l’une des clauses des
-                        présentes conditions générales n’affecte en rien la validité des autres clauses (<a href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr#art_20" target="_blank">CO Art. 20 al. 2</a>).</p>
-                    <p>La commande, l’acceptation d’un devis et le paiement
+                    <p>La déclaration de nullité de l'une des clauses des
+                        présentes conditions générales n'affecte en rien la validité des autres clauses (<a href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr#art_20" target="_blank">CO Art. 20 al. 2</a>).</p>
+                    <p>La commande, l'acceptation d'un devis et le paiement
                         de la facture impliquent la reconnaissance par le Client des présentes conditions générales.</p>
                     <p>Le for juridique est Fribourg.</p>
                     <hr>
@@ -166,13 +166,13 @@ Conditions générales |
                     <p>Pour toutes question, demande ou réclamation, nous
                         vous prions de bien vouloir nous contacter via <a href="{{route('contact.intro')}}">notre formulaire de contact</a>, ou à l'adresse suivante : </p>
                     <blockquote>
-                        <b>Redox Digital SNC</b><br>
-                        Rte de Duvillard 23<br>
-                        1663 Epagny<br>
+                        <b>Redox Digital Sàrl</b><br>
+                        Rue des Usines 25<br>
+                        2000 Neuchâtel<br>
                         Suisse</blockquote>
                     <p>Les Conditions Générales entrent en vigueur le
                         25.03.2021.</p>
-                    <p>Dernière mise à jour : 28.10.2021.</p>
+                    <p>Dernière mise à jour : 23.01.2023.</p>
 
                 </div>
             </div>

@@ -21,6 +21,25 @@
                     {!! $errors->first('titre', '<small class="help-block text-danger">:message</small>') !!}
                 </div>
             </div>
+            <!-- Public ? -->
+            <div class="col-12">
+                <div class="form-group">
+                    <label class="required">Public ?</label>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="public" id="public_true" value="true" checked>
+                                <label class="form-check-label" for="public_true">Public</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="public" id="public_false" value="false">
+                                <label class="form-check-label" for="public_false">Privé</label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
             <div class="col-12">
                 <div class="form-group">
                     <label for="name">Lien vers le site du client</label>
@@ -35,7 +54,7 @@
                     <label for="logo">Logo</label><br>
 
                     <input type="file" id="logo" name="logo" accept="image/png, image/jpeg">
-            
+
                     {!! $errors->first('logo', '<small class="help-block">:message</small>') !!}
                 </div>
             </div>

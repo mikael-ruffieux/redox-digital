@@ -61,6 +61,7 @@ class ClientController extends Controller
             'name' => $request->name,
             'link' => $request->link,
             'logo' => "storage/clients/" . $name,
+            'public' => $request->public == "true"
         ];
 
         $client = Client::create($newClient);
@@ -90,6 +91,7 @@ class ClientController extends Controller
         $updatedData = [
             'name' => $request->name,
             'link' => $request->link,
+            'public' => $request->public == "true"
         ];
 
         // If new file is uploaded

@@ -38,9 +38,6 @@ Nous contacter |
                 <h3 class="color-red">Nos bureaux</h3>
                 <p>Rue des Usines 25, 2000 Neuchâtel</p>
 
-                <h3 class="color-red">Siège</h3>
-                <p>Rte de Duvillard 23, 1663 Epagny</p>
-
                 <h3 class="color-red">E-mail</h3>
                 <p><a href="mailto:info@redoxdigital.ch"><span id="mail-info"></span></a></p>
             </div>
@@ -56,10 +53,10 @@ Nous contacter |
     let darkTheme = false;
 
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        darkTheme = true; 
+        darkTheme = true;
     }
-    
-    let map = L.map('map', {zoomControl: false}).setView([46.8123, 6.9832], 10);
+
+    let map = L.map('map', {zoomControl: false}).setView([46.98288, 6.90298], 12);
 
     let redoxIcon = L.icon({
         iconUrl: 'https://redoxdigital.ch/storage/assets/img/layout/favicon.svg',
@@ -69,11 +66,14 @@ Nous contacter |
     });
 
     // Markers
+    /*
     let markerFR = L.marker([46.58967, 7.08284], {icon: redoxIcon}).addTo(map);
     markerFR.bindPopup("<b>Notre siège: </b><br>Rte de Duvillard 23<br>1663 Epagny").openPopup();
+    */
 
     let markerNE = L.marker([46.98326, 6.90264], {icon: redoxIcon}).addTo(map);
     markerNE.bindPopup("<b>Notre agence: </b><br>Rue des Usines 25<br>2000 Neuchâtel").openPopup();
+
 
 
     let tileURL = darkTheme ? 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png' : 'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png';
