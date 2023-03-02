@@ -5,6 +5,7 @@ Agence digitale, créatrice d'expériences web & visuelles |
 @endsection
 
 @section('meta-description')
+Chez Redox Digital, nous concevons votre communication digitale de A à Z en créant des produits digitaux qui vous démarquent.
 @endsection
 
 @section("content")
