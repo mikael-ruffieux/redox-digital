@@ -11,7 +11,7 @@ class CVExperiencesSeeder extends Seeder
         [
             'job' => 'Cofondateur, Chef de projet digital',
             'period' => '2021 - à ce jour',
-            'company' => 'Redox Digital SNC',
+            'company' => 'Redox Digital Sàrl',
             'company_url' => 'https://redoxdigital.ch',
             'place' => 'Epagny (FR)',
             'filters' => 'creation,it,management',

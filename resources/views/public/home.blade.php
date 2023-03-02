@@ -1,11 +1,10 @@
 @extends('layouts.main_layout')
 
 @section('title')
-Agence digitale, créatrice d'expériences web & vidéo | 
+Agence digitale, créatrice d'expériences web & visuelles |
 @endsection
 
 @section('meta-description')
-
 @endsection
 
 @section("content")
@@ -28,7 +27,7 @@ Agence digitale, créatrice d'expériences web & vidéo |
                 <span class="dash-black"></span>
                 <p>Chez Redox Digital, nous concevons votre communication digitale de A à Z en créant des produits digitaux qui vous démarquent.</p>
             </div>
-            
+
             <div class="col-lg-6 col-12">
                 <a href="#home-services" id="bouncing-arrow"><i class="fal fa-arrow-down"></i></a>
             </div>
@@ -49,7 +48,7 @@ Agence digitale, créatrice d'expériences web & vidéo |
         <div class="row">
             <div class="col-lg-8 col-12">
                 <p>La différenciation entre le <b>contenu</b> et le <b>contenant</b>, le <b>fond</b> et la <b>forme</b>, est pour nous très importante. C’est pourquoi nous avons séparé nos services en deux parties.</p>
-                
+
                 <p>Les services de <b>Web digital</b> ont pour but de mettre en avant votre contenu et les services de <b>Création de contenus digitaux</b> ont pour but de vous créer un contenu de qualité.</p>
             </div>
         </div>
@@ -115,10 +114,10 @@ Agence digitale, créatrice d'expériences web & vidéo |
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-8 col-12">   
+            <div class="col-lg-8 col-12">
                 <p>Redox Digital est une agence dynamique qui regroupe deux jeunes entrepreneurs aux compétences variées et complémentaires.</p>
 
-                <p>Issue du terroir neuchâtelois et fribourgeois, mais ayant grandi dans un monde en constante évolution digitale, l'équipe de Redox Digital se positionne dans une communication traditionnelle, mais qui sait s'affranchir des codes pour créer les siens, tout en profitant des dernières nouveautés du monde numérique.</p>             
+                <p>Issue du terroir neuchâtelois et fribourgeois, mais ayant grandi dans un monde en constante évolution digitale, l'équipe de Redox Digital se positionne dans une communication traditionnelle, mais qui sait s'affranchir des codes pour créer les siens, tout en profitant des dernières nouveautés du monde numérique.</p>
             </div>
         </div>
 

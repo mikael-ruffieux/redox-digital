@@ -39,10 +39,10 @@
             <div class="col-12 col-sm-7">
             <h4>Suivez-nous</h4>
                 <ul id="footer-icons-list">
-                    <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="https://www.instagram.com/redoxdigital.ch/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="https://www.linkedin.com/company/redox-digital" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="#" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/redoxdigital.ch/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/redox-digital" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="#" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
                 </ul>
             </div>
             <div class="col-12 col-sm-3"><p>© Redox Digital {{date("Y")}}</p></div>
@@ -55,17 +55,17 @@
                 <img src="{{asset('storage/assets/img/logo/Redox-Digital_Logotype-pictogramme-blanc-rouge.svg')}}" alt="Redox Digital">
 
                 <ul id="footer-icons-list">
-                    <li><a href="https://www.facebook.com/redoxdigital.ch/" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="https://www.instagram.com/redoxdigital.ch/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="https://www.linkedin.com/company/redox-digital" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="https://www.youtube.com/channel/UCVdloB3aP5I2c03IHIOll3g/" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="https://www.facebook.com/redoxdigital.ch/" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/redoxdigital.ch/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/redox-digital" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCVdloB3aP5I2c03IHIOll3g/" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
                 </ul>
             </div>
 
             <div class="col-8">
                 <h4>Contact</h4>
                 <ul>
-                    <li class="org">Redox Digital SNC</li>
+                    <li class="org">Redox Digital Sàrl</li>
                     <li class="adr">Neuchâtel - Fribourg</li>
                     <li class="email"><a href="mailto:info@redoxdigital.ch"><span id="mail-info"></span></a></li>
                 </ul>

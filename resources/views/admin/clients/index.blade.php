@@ -21,7 +21,7 @@
                     </tr>
                 </thead>
                 <tbody>
-        
+
                     @foreach ($clients as $client)
                         <tr>
                             <td>
@@ -38,7 +38,7 @@
                             <td>
                                 <a href="{{ $client->link }}" target="_blank" rel="noopener noreferrer">{{ $client->link }}</a>
                             </td>
-        
+
                             <td>
                                 <a href="{{ route('clients.show', [$client->id]) }}" class="btn-sm btn btn-success"
                                     title="Afficher"><i class="far fa-info-circle"></i></a>
@@ -47,7 +47,7 @@
                             </td>
                         </tr>
                     @endforeach
-        
+
                 </tbody>
             </table>
         </div>

@@ -1,7 +1,7 @@
 @extends('layouts.cv_layout')
 
 @section('title')
-Mikaël Ruffieux | 
+Mikaël Ruffieux |
 @endsection
 
 @section("content")
@@ -21,7 +21,7 @@ Mikaël Ruffieux |
                 <p>Vous trouverez sur cette page mes <b>informations personnelles</b>, un aperçu de mon <b>parcours étudiant</b> et <b>professionnel</b>, ainsi que mes <b>réalisations</b> dans le domaine du digital.</p>
                 <p>Bonne lecture, et n’hésitez pas à me contacter en cas de questions !</p>
 
-                <a class="btn btn-outline-red" target="_blank" href="{{asset('storage/assets/docs/CV_MikaelRuffieux_2021.pdf')}}">Imprimer ce CV</a>
+                <a class="btn btn-outline-red" target="_blank" rel="noopener" href="{{asset('storage/assets/docs/CV_MikaelRuffieux_2021.pdf')}}">Imprimer ce CV</a>
 
                 {{--<a href="#about-me" id="bouncing-arrow"><i class="fal fa-arrow-down"></i></a>--}}
             </div>
@@ -90,7 +90,7 @@ Mikaël Ruffieux |
                 <div class="progress-bg">
                     <div class="progress-bar" style="width: 66%;"><small>B2</small></div>
                 </div>
-                
+
             </div>
 
             <div class="col-md-6 col-12 mb-5" id="office">
@@ -105,7 +105,7 @@ Mikaël Ruffieux |
                         <p>Microsoft Office</p>
                     </div>
                 </div>
-                
+
             </div>
 
             <div class="col-md-6 col-12 mb-5">
@@ -145,12 +145,12 @@ Mikaël Ruffieux |
                         <i class="fad fa-circle"></i>
                     </div>
                 </div>
-                
+
             </div>
 
             <div class="col-md-6 col-12 mb-5">
                 <h3 class="all-caps"><span class="number">04</span> - Informatique</h3>
-                
+
                 <div class="row bullet-list">
                     <div class="col-6">
                         <p>HTML / CSS / PHP</p>
@@ -291,7 +291,7 @@ Mikaël Ruffieux |
 
                     <p class="mt-3">
                         @if ($exp->company_url)
-                            <a href="{{$exp->company_url}}" target="_blank">
+                            <a href="{{$exp->company_url}}" target="_blank" rel="noopener">
                         @endif
                             <span class="color-red">{{$exp->company}} - </span>
                         @if ($exp->company_url)
@@ -369,7 +369,7 @@ Mikaël Ruffieux |
 
                 <p>{!! $project->desc !!}</p>
                 @if (!empty($project->project_url))
-                <a class="btn btn-outline-black" target="_blank" href="{{$project->project_url}}">Découvrir le projet entier</a>
+                <a class="btn btn-outline-black" target="_blank" rel="noopener" href="{{$project->project_url}}">Découvrir le projet entier</a>
                 @endif
             </div>
             <div class="col-md-5 col-12">
@@ -380,13 +380,13 @@ Mikaël Ruffieux |
         </div>
         @endforeach
 
-        
+
         <div class="row my-5">
             <div class="col-md-6 col-12">
                 <a href="{{route('cv.mikael.portfolio')}}" class="btn btn-outline-red btn-100">Parcourez toutes mes réalisations</a>
             </div>
         </div>
-        
+
 
     </div>
 </section>
@@ -489,7 +489,7 @@ Mikaël Ruffieux |
         cbs.forEach((cb) => {
             cb.children[0].checked = checked;
         });
-    
+
         document.getElementById("all").checked = true;
     }
 
@@ -497,11 +497,11 @@ Mikaël Ruffieux |
     const exps = document.querySelectorAll('.experience');
 
     let checkedFilters = [];
-    
+
     // Setting the checkboxes : only 'all' checked
     check(false, cbs);
-    
-    /*  watch event : on click, either uncheck all but 'all', 
+
+    /*  watch event : on click, either uncheck all but 'all',
         or uncheck 'all' and checked clicked ones */
     cbs.forEach(cb => cb.addEventListener('change', (evt) => {
         if(cb.children[0].id == "all") {
@@ -513,7 +513,7 @@ Mikaël Ruffieux |
             // Si un élément est sélectionné, on l'ajoute à l'array
             if(cb.children[0].checked) {
                 checkedFilters.push(cb.children[0].id);
-            } 
+            }
 
             // Si un élément est désélectionné, on doit l'enlever de l'array
             else {

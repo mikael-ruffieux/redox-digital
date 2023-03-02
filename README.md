@@ -1,4 +1,4 @@
-<p align="center"><a href="https://redoxdigital.ch" target="_blank"><img src="https://redoxdigital.ch/assets/img/logo/Redox-Digital_Logotype-slogan-blanc-rouge.png" width="400" alt="Redox Digital"></a></p>
+<p align="center"><a href="https://redoxdigital.ch" target="_blank" rel="noopener"><img src="https://redoxdigital.ch/assets/img/logo/Redox-Digital_Logotype-slogan-blanc-rouge.png" width="400" alt="Redox Digital"></a></p>
 
 ## À propos du site
 

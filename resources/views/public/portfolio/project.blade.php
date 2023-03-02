@@ -5,10 +5,10 @@
 @endsection
 
 @section("content")
-<?php 
-$section = 1; 
+<?php
+$section = 1;
 $images_id = [];
-?> 
+?>
 <section class="hero-section container" id="project-header">
     <div class="row">
         <div class="col-12 my-5">
@@ -21,7 +21,7 @@ $images_id = [];
         </div>
         @if($project->external_url)
         <div class="col-12">
-            <a href="{{$project->external_url}}" target="_blank" class="btn btn-outline-red">voir le projet</a>
+            <a href="{{$project->external_url}}" target="_blank" rel="noopener" class="btn btn-outline-red">voir le projet</a>
         </div>
         @endif
     </div>
@@ -45,9 +45,9 @@ $images_id = [];
                 <div class="iframe-container">
                     <iframe
                         src="{{$project->video_url}}"
-                        title="{{$project->title}}" 
-                        frameborder="0" 
-                        allow="autoplay; fullscreen; clipboard-write; encrypted-media; picture-in-picture" 
+                        title="{{$project->title}}"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; clipboard-write; encrypted-media; picture-in-picture"
                         allowfullscreen>
                     </iframe>
                 </div>
@@ -59,7 +59,7 @@ $images_id = [];
 
 @include('layouts.curves.curve-small-top-right', ['color' => '#ffffff'])
 
-<?php $section++; ?> 
+<?php $section++; ?>
 
 @if ($project->design_desc)
 <!-- Design section -->
@@ -79,7 +79,7 @@ $images_id = [];
         </div>
     </div>
 </section>
-<?php $section++; ?> 
+<?php $section++; ?>
 @endif
 
 @include('layouts.curves.curve-small-bottom-left', ['color' => '#ffffff'])
@@ -104,7 +104,7 @@ $images_id = [];
                         <button id="prev-btn" onclick="prevImg({{$image->id}})"><i class="fal fa-angle-left"></i></button>
                         <button id="next-btn" onclick="nextImg({{$image->id}})"><i class="fal fa-angle-right"></i></button>
                         <button id="close-btn" onclick="closeImg({{$image->id}})"><i class="fal fa-times"></i></button>
-                        <?php array_push($images_id, $image->id);?> 
+                        <?php array_push($images_id, $image->id);?>
                     </div>
                 </div>
             @endforeach
@@ -112,7 +112,7 @@ $images_id = [];
     @endif
     </div>
 
-    
+
 
 </section>
 <?php $section++; ?>

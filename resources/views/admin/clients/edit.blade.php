@@ -46,7 +46,7 @@
                     <label for="name">Lien vers le site du client</label>
                     <input type="text" class="form-control mb-3" name="link" value="{{$client->link}}">
                     {!! $errors->first('link', '<small class="help-block text-danger">:message</small>') !!}
-                    <small>Le lien doit débuter par "https://..."<br><a href="{{$client->link}}" target="_blank" rel="noopener noreferrer">Vers le site</a></small>
+                    <small>Le lien doit débuter par "https://..."<br><a href="{{$client->link}}" target="_blank"  rel="noopener noreferrer">Vers le site</a></small>
                 </div>
             </div>
 

@@ -33,7 +33,7 @@ Portfolio |
 
                 <p>{!! $project->desc !!}</p>
                 @if (!empty($project->project_url))
-                <a class="btn btn-outline-black" href="{{$project->project_url}}" target="_blank">Découvrir le projet entier</a>
+                <a class="btn btn-outline-black" href="{{$project->project_url}}" target="_blank" rel="noopener">Découvrir le projet entier</a>
                 @endif
             </div>
             <div class="col-lg-5 col-md-6 col-12">

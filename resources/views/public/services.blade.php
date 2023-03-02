@@ -4,6 +4,10 @@
 Nos services |
 @endsection
 
+@section('meta-description')
+Découvrez nos services de {!! $parent->description !!}. N'hésitez pas à nous contacter pour plus d'informations.
+@endsection
+
 @push('head')
 <script src="{{ asset('js/accordion.js')}}"></script>
 @endpush

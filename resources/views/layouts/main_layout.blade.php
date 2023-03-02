@@ -11,12 +11,36 @@
     </script>
     <!-- End UA -->
 
+    <!-- Microdata -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Redox Digital",
+        "alternateName": "Redox Digital Sàrl",
+        "url": "https://redoxdigital.ch",
+        "logo": "https://redoxdigital.ch/storage/meta/logo.png",
+        "sameAs": [
+            "https://www.instagram.com/redoxdigital.ch/",
+            "https://www.linkedin.com/company/redox-digital/",
+            "https://www.facebook.com/redoxdigital.ch"
+        ]
+    }
+    </script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chez Redox Digital, nous concevons votre communication digitale de A à Z en créant des produits digitaux qui vous démarquent.">
+    <meta name="description" content="@yield('meta-description' ,'Chez Redox Digital, nous concevons votre communication digitale de A à Z en créant des produits digitaux qui vous démarquent.')">
     <meta name="keywords" content="réalisation vidéo, création de site web, marketing digital, agence digitale, neuchatel, fribourg, gruyère">
-    <meta name="author" content="Redox Digital SNC">
+    <meta name="author" content="Redox Digital Sàrl">
+
+    <!--  Socials Meta Tags -->
+    <meta property="og:title" content="Redox Digital, agence créatrice d'expériences web & visuelles" />
+    <meta property="og:description" content="@yield('meta-description' ,'Pour votre communication digitale de A à Z, avec des produits digitaux qui vous démarquent.')" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="{{ asset('storage/meta/meta-rd.png') }}" />
+    <meta property="og:url" content="https://redoxdigital.ch" />
 
     <!-- Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />

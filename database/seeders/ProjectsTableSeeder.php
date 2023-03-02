@@ -14,7 +14,7 @@ class ProjectsTableSeeder extends Seeder
           'client_id' => 1,
           'archived' => 0, 'custom_summary' => 'Afin de promouvoir la féminité en général, le Service de la Jeunesse de la Ville de Bulle organise depuis 2 ans la semaine “Rebelles". Cette année, le projecteur est mis sur le cinquantième anniversaire du droit de vote des femmes.',
           'external_url' => null,
-         
+
           'img_preview_url' => 'storage/projects/1/preview.jpg',
           'context_title' => null,
           'context_desc' => 'Déjà organisée en 2020, la semaine Rebelles n\'avait pas eu lieu comme initialement prévue. En effet, mesures sanitaires obligent, le Service de la Jeunesse de la Ville de Bulle (SJB) avait dû revoir le déroulement de la semaine à la baisse, et s\'avait finalement opté pour une conférence en ligne.<br><br>Mais l\'année 2021 était la bonne ! 4 jours d\'activités sur le thème du droit de vote des femmes, la semaine Rebelles met en scène différents acteurs de la ville dans les domaines de la culture, du social et de la politique.',
@@ -29,7 +29,7 @@ class ProjectsTableSeeder extends Seeder
           'client_id' => 6,
           'archived' => 0, 'custom_summary' => 'Deathless est un groupe de hard rock gruérien, et regroupe à la base une bande de copains depuis les années 80. Le groupe a souhaité immortaliser en images l\'arrivée de Sabrina, la nouvelle chanteuse.',
           'external_url' => null,
-         
+
           'img_preview_url' => 'storage/projects/2/preview.jpg',
           'context_title' => null,
           'context_desc' => 'Deathless est un groupe de hard rock gruérien amateur, qui regroupe une bande de copains depuis les années 80.<br><br>Habitués à tout faire eux-mêmes, ils décident finalement, pour fêter l\'arrivée de leur nouvelle chanteuse, Sabrina, de s\'offrir un shooting photo dans un cadre plutôt original, celui de l\'abri PC qu\'ils utilisent pour leur répétition.',
@@ -44,13 +44,13 @@ class ProjectsTableSeeder extends Seeder
           'client_id' => 8,
           'archived' => 0, 'custom_summary' => 'Profitant de la fermeture du magasin imposée par la situation sanitaire du COVID-19, la boutique de mode Bullshop nous a mandaté pour une refonte de son site web existant.',
           'external_url' => 'https://bullshop.ch',
-          
+
           'img_preview_url' => 'storage/projects/3/preview.jpg',
           'context_title' => null,
           'context_desc' => 'Bullshop SA est une entreprise bulloise active depuis 1977, regroupant aujourd\'hui les deux boutiques de mode Bullshop et Relax.<br><br>Se retrouvant bien malgré elle sur le banc de touche, Bullshop décide de nous mandater pour une refonte de son site web.<br><br>Nouveau design, nouvelles fonctionnalités, le seul élément qui reste sera l\'utilisation du <abbr title="Content Management System, système de gestion de contenu">CMS</abbr> WordPress, qui permettra d\'une part à Redox Digital de proposer un projet financièrement attrayant, et d\'autre part, qui permet à Bullshop de garder une entière liberté sur la publication des contenus et sur la gestion du site internet.',
           'video_source' => null,
           'video_url' => null,
-          'design_desc' => 'Pour le design, nous avons utilisé comme base le thème Wordpress <a href="[kloe.qodeinteractive.com/landing-page](http://kloe.qodeinteractive.com/landing-page)" target="_blank">Kloe</a>. <br><br>Ce thème a ensuite été adapté au besoin de Bullshop SA, notamment au niveau des couleurs de l\'entreprise, et la disposition des pages a été planifié de concert afin de répondre parfaitement aux besoins de la boutique.',
+          'design_desc' => 'Pour le design, nous avons utilisé comme base le thème Wordpress <a href="[kloe.qodeinteractive.com/landing-page](http://kloe.qodeinteractive.com/landing-page)" target="_blank" rel="noopener">Kloe</a>. <br><br>Ce thème a ensuite été adapté au besoin de Bullshop SA, notamment au niveau des couleurs de l\'entreprise, et la disposition des pages a été planifié de concert afin de répondre parfaitement aux besoins de la boutique.',
           'solution_title' => null,
           'solution_desc' => 'Après 2 mois de collaboration, le nouveau site web [bullshop.ch](http://bullshop.ch) voit gentiment le jour. <br><br>Les nouveautés ? Hormis une nouvelle esthétique, le site propose maintenant différentes sections, dont une section présentant les nouvelles collections mensuelles, et une section catalogue, permettant de parcourir l\'entier des articles vendus par Bullshop.<br><br>Si le site internet fonctionne comme un site de vente en ligne, il a été décidé de ne pas rendre possible l\'achat en ligne, car la boutique préfère proposer un service de conseils de qualité directement sur place, et éviter l\'achat en ligne sans avoir pu essayer les articles à la boutique.',
         ],
@@ -59,7 +59,7 @@ class ProjectsTableSeeder extends Seeder
           'client_id' => 1,
           'archived' => 0, 'custom_summary' => 'Le service “P\'tits Jobs" est une mesure mise en place par le Service de la Jeunesse de la Ville de Bulle (SJB) proposant un soutien professionnel aux jeunes désirant rejoindre le monde du travail. Nous avons réalisé une vidéo permettant de faire découvrir ce programme auprès des jeunes, et de leurs parents.',
           'external_url' => null,
-         
+
           'img_preview_url' => 'storage/projects/4/preview.jpg',
           'context_title' => null,
           'context_desc' => 'Dans le cadre de son travail de brevêt, Mme. Pamela Rey a mis en place le service “P\'tits Jobs", qui permet aux jeunes de la ville de Bulle souhaitant (ré)intégrer le monde du travail d\'obtenir un encadrement professionnel et personnalisé.<br><br>Le Service de la Jeunesse de la Ville de Bulle (SJB) propose dans ce cadre une aide dans la création d\'un CV, une préparation aux entretiens d\'embauche, et l\'opportunité pour les jeunes de réaliser un stage professionnel au sein des entreprises partenaires du SJB.<br><br>Initialement, Mme. Rey nous avait demandé de réaliser une vidéo à titre privé, qui servirait d\'introduction pour la défense de son travail de brevêt. Finalement, nous avons adapté cette vidéo pour créer une version promotionnelle, qui permettait de présenter en quelques mots le programme “P\'tits Jobs" auprès des jeunes et de leurs parents.',

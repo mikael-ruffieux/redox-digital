@@ -17,7 +17,7 @@ Conditions générales |
             <div class="row">
                 <div class="col-lg-8 col-12">
                     <p>Les conditions générales ont pour but de préciser certains aspects de la collaboration entre <b>Redox Digital</b> et ses mandants, ci-après « <b>le Client</b> », afin d'éviter toute incompréhension ou conflit d'intérêt. Ces conditions s'appliquent par défaut à chaque contrat engageant Redox Digital en tant que mandataire, quelle que soit la forme du contrat convenu, écrite ou orale.</p>
-                    <p>Vous trouverez sur chaque devis et facture une description sommaire des conditions fixées par Redox Digital SNC. Vous trouverez ci-dessous une version plus détaillée de ces conditions.</p>
+                    <p>Vous trouverez sur chaque devis et facture une description sommaire des conditions fixées par Redox Digital Sàrl. Vous trouverez ci-dessous une version plus détaillée de ces conditions.</p>
                 </div>
                 <div class="col-lg-6 col-12">
                     <a href="#cg-content" id="bouncing-arrow"><i class="fal fa-arrow-down color-white"></i></a>
@@ -151,16 +151,16 @@ Conditions générales |
                         cas être tenue responsable de tout type de violation ou d'expiration de licences.</p>
                     <hr>
                     <h2 class="red-dot" id="4">Droit applicable et for juridique</h2>
-                    <p>Au sein de l'agence Redox Digital SNC, nous
+                    <p>Au sein de l'agence Redox Digital Sàrl, nous
                         privilégions avant tout des valeurs telles que le bon sens, la bonne foi, le dialogue et la sincérité.
                         Nous espérons qu'il en est de même de la part de tous nos clients, partenaires et fournisseurs.</p>
                     <p>Les Conditions Générales, les devis et contrats liant
                         les deux parties sont soumis au droit suisse.</p>
                     <p>La déclaration de nullité de l'une des clauses des
-                        présentes conditions générales n'affecte en rien la validité des autres clauses (<a href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr#art_20" target="_blank">CO Art. 20 al. 2</a>).</p>
+                        présentes conditions générales n'affecte en rien la validité des autres clauses (<a href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr#art_20" target="_blank" rel="noopener">CO Art. 20 al. 2</a>).</p>
                     <p>La commande, l'acceptation d'un devis et le paiement
                         de la facture impliquent la reconnaissance par le Client des présentes conditions générales.</p>
-                    <p>Le for juridique est Fribourg.</p>
+                    <p>Le for juridique est Neuchâtel.</p>
                     <hr>
                     <h2 class="red-dot" id="5">Renseignements &amp; contact</h2>
                     <p>Pour toutes question, demande ou réclamation, nous

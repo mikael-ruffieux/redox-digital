@@ -44,28 +44,28 @@
                     </div>
                 </li>
                 <div id="socials">
-                    <a href="https://www.facebook.com/redoxdigital.ch/" target="_blank">
+                    <a href="https://www.facebook.com/redoxdigital.ch/" target="_blank" rel="noopener">
                         <div class="social-text-container"><small>Visitez notre page Facebook</small></div>
                         <span class="fa-stack">
                             <i class="fas fa-circle fa-stack-2x"></i>
                             <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
                         </span>
                     </a>
-                    <a href="https://www.instagram.com/redoxdigital.ch/" target="_blank">
+                    <a href="https://www.instagram.com/redoxdigital.ch/" target="_blank" rel="noopener">
                          <div class="social-text-container"><small>Suivez-nous sur Insta'</small></div>
                         <span class="fa-stack">
                             <i class="fas fa-circle fa-stack-2x"></i>
                             <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
                         </span>
                     </a>
-                    <a href="https://www.linkedin.com/company/redox-digital" target="_blank">
+                    <a href="https://www.linkedin.com/company/redox-digital" target="_blank" rel="noopener">
                          <div class="social-text-container"><small>Notre entreprise sur LinkedIn</small></div>
                         <span class="fa-stack">
                             <i class="fas fa-circle fa-stack-2x"></i>
                             <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
                         </span>
                     </a>
-                    <a href="https://www.youtube.com/channel/UCVdloB3aP5I2c03IHIOll3g/" target="_blank">
+                    <a href="https://www.youtube.com/channel/UCVdloB3aP5I2c03IHIOll3g/" target="_blank" rel="noopener">
                          <div class="social-text-container"><small>Allez, lâchez un pouce bleu</small></div>
                         <span class="fa-stack">
                             <i class="fas fa-circle fa-stack-2x"></i>
