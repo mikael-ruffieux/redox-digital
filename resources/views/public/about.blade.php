@@ -82,15 +82,18 @@ Redox Digital est une entreprise active dans la communication digitale, proposan
                 <div class="col-md-6">
                     <img src="{{asset('storage/about/redox-digital-fondateur-etienne.jpg')}}" alt="L'équipe Redox Digital : Etienne Wildi">
                     <h3 class="name red-dot">Etienne Wildi</h3>
-                    <p>Cofondateur - Digital Project Manager<!--<br><a href="mailto:etienne@redoxdigital.ch"><span id="mail-etienne"></span></a>--></p>
+                    <p>Cofondateur - Digital Project Manager</p>
                 </div>
                 <div class="col-md-6">
                     <img src="{{asset('storage/about/redox-digital-fondateur-mikael.jpg')}}" alt="L'équipe Redox Digital : Mikaël Ruffieux">
                     <h3 class="name red-dot">Mikaël Ruffieux</h3>
-                    <p>Cofondateur - Ingénieur des Médias<!--<br/>
-                    <a href="mailto:mikael@redoxdigital.ch"><span id="mail-mikael"></span></a>--></p>
+                    <p>Cofondateur - Ingénieur des Médias</p>
+                </div>
 
-                    <!--<a href="{{route('cv.mikael')}}" class="btn btn-outline-red">CV</a>-->
+                <div class="col-md-6">
+                    <img src="{{asset('storage/about/redox-digital-nathan.jpg')}}" alt="L'équipe Redox Digital : Nathan Fourel">
+                    <h3 class="name red-dot">Nathan Fourel</h3>
+                    <p>Ingénieur des Médias</p>
                 </div>
             </div>
         </div>
