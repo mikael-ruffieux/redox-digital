@@ -28,7 +28,7 @@ class PublicPagesController extends Controller
      * The clients logos are randomly placed
      */
     public function about() {
-        $clients = Client::all();
+        $clients = Client::take(18);
         return view('public.about', compact('clients'));
     }
     

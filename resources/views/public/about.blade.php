@@ -72,25 +72,25 @@ Redox Digital est une entreprise active dans la communication digitale, proposan
 
             <div class="row">
                 <div class="col-md-8 col-12 my-5">
-                    <p>Les 2 cofondateurs, Mikael Ruffieux & Etienne Wildi se sont rencontrés pendant leurs études d’Ingénieur des Médias à la <a href="https://heig-vd.ch" target="_blank" title="Haute École d'Ingénierie et de Gestion du Canton de Vaud" rel="noopener">HEIG-VD</a>.</p>
+                    <p>Les 2 cofondateurs, Mikaël Ruffieux & Etienne Wildi se sont rencontrés pendant leurs études d’Ingénieur des Médias à la <a href="https://heig-vd.ch" target="_blank" title="Haute École d'Ingénierie et de Gestion du Canton de Vaud" rel="noopener">HEIG-VD</a>.</p>
 
-                    <p>Les deux étudiants, passionnés par le domaine du digital et travaillant comme indépendant depuis plusieurs années, ont décidé de s’associer et de créer l’entreprise Redox Digital.</p>
+                    <p>Ppassionnés par le domaine du digital et travaillant comme indépendants depuis plusieurs années, ils décident de s’associer et de créer l’entreprise Redox Digital.</p>
 
-                    <p>Plus fort à deux, cette association leur permet de travailler sur de plus gros projets digitaux et de se professionnaliser dans ce domaine.</p>
+                    <!-- <p>Plus fort à deux, cette association leur permet de travailler sur de plus gros projets digitaux et de se professionnaliser dans ce domaine.</p> -->
 
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-5 col-6">
                     <img src="{{asset('storage/about/redox-digital-fondateur-etienne.jpg')}}" alt="L'équipe Redox Digital : Etienne Wildi">
                     <h3 class="name red-dot">Etienne Wildi</h3>
                     <p>Cofondateur - Digital Project Manager</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-5 col-6">
                     <img src="{{asset('storage/about/redox-digital-fondateur-mikael.jpg')}}" alt="L'équipe Redox Digital : Mikaël Ruffieux">
                     <h3 class="name red-dot">Mikaël Ruffieux</h3>
                     <p>Cofondateur - Ingénieur des Médias</p>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-5 col-6">
                     <img src="{{asset('storage/about/redox-digital-nathan.jpg')}}" alt="L'équipe Redox Digital : Nathan Fourel">
                     <h3 class="name red-dot">Nathan Fourel</h3>
                     <p>Ingénieur des Médias</p>
