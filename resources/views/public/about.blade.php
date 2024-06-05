@@ -21,8 +21,8 @@ Redox Digital est une entreprise active dans la communication digitale, proposan
 
             <div class="row">
                 <div class="col-lg-8 col-12">
-                    <p>Redox Digital est une entreprise active dans la communication digitale, proposant des services dans les domaines du développement web et de la création de contenus vidéo, photographique et graphique.</p>
-                    <p>L’agence exerce son activité dans le canton de <b>Fribourg</b> et de <b>Neuchâtel</b>.</p>
+                    <p>Redox Digital est une agence de communication digitale située à <b>Neuchâtel</b>. Nous accompagnons les PME et les Institutions dans leur stratégie de communication en proposant des services dans les domaines du développement web, des réseaux sociaux, de la création de contenus vidéo, photographique et graphique.</p>
+                    <p>Chez Redox, créer des visuels et des supports aussi pertinents que percutants en accord avec <b>vos valeurs</b> et objectifs est un enjeu essentiel.</p>
                 </div>
             </div>
         </div>
@@ -74,7 +74,7 @@ Redox Digital est une entreprise active dans la communication digitale, proposan
                 <div class="col-md-8 col-12 my-5">
                     <p>Les 2 cofondateurs, Mikaël Ruffieux & Etienne Wildi se sont rencontrés pendant leurs études d’Ingénieur des Médias à la <a href="https://heig-vd.ch" target="_blank" title="Haute École d'Ingénierie et de Gestion du Canton de Vaud" rel="noopener">HEIG-VD</a>.</p>
 
-                    <p>Ppassionnés par le domaine du digital et travaillant comme indépendants depuis plusieurs années, ils décident de s’associer et de créer l’entreprise Redox Digital.</p>
+                    <p>Passionnés par le domaine du digital et travaillant comme indépendants depuis plusieurs années, ils décident de s’associer et de créer l’entreprise Redox Digital.</p>
 
                     <!-- <p>Plus fort à deux, cette association leur permet de travailler sur de plus gros projets digitaux et de se professionnaliser dans ce domaine.</p> -->
 

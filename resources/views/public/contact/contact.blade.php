@@ -35,11 +35,11 @@ Nous contacter |
             <div class="col-md-1 col-0"><!-- spacer --></div>
 
             <div class="col-md-4 col-12">
-                <h3 class="color-red">Nos bureaux</h3>
-                <p>Rue des Usines 25, 2000 Neuchâtel</p>
+                <h3 class="color-red">Neuchâtel</h3>
+                <p>Rue des Usines 25<br/>2000 Neuchâtel</p>
 
-                <h3 class="color-red">E-mail</h3>
-                <p><a href="mailto:info@redoxdigital.ch"><span id="mail-info"></span></a></p>
+                <h3 class="color-red">Fribourg</h3>
+                <p>Rte de la Petite-Fin 5<br/>1752 Villars-sur-Glâne</p>
             </div>
         </div>
         <div class="row">
@@ -72,7 +72,7 @@ Nous contacter |
     */
 
     let markerNE = L.marker([46.98326, 6.90264], {icon: redoxIcon}).addTo(map);
-    markerNE.bindPopup("<b>Notre agence: </b><br>Rue des Usines 25<br>2000 Neuchâtel").openPopup();
+    markerNE.bindPopup("<b>Nos bureaux: </b><br>Rue des Usines 25<br>2000 Neuchâtel").openPopup();
 
 
 

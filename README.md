@@ -33,6 +33,17 @@ Pour lancer le site web dans un environnement de développement, assurez-vous d'
 
 Lancez le site web avec : `php artisan serve`
 
+### Premier lancement
+
+Nécessaire à l'exécution du site : NPM, Composer, PHP 8.0, MAMP (ou équivalent)
+
+1. `npm i`
+2. `composer install`
+3. `php artisan key:generate`
+4. `php artisan migrate`
+5. `php artisan seed`
+6. `php artisan serve`
+
 ## Licenses
 
 Le site [redoxdigital.ch](https://redoxdigital.ch) est protégé par [la Loi sur le droit d’auteur (LDA) du 9 octobre 1992](https://www.fedlex.admin.ch/eli/cc/1993/1798_1798_1798/fr).

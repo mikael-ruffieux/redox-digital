@@ -10,7 +10,8 @@
                 <h4>Contact</h4>
                 <ul>
                     <li>Redox Digital Sàrl</li>
-                    <li>Neuchâtel - Fribourg</li>
+                    <li>Rue des Usines 25</li>
+                    <li>2000 Neuchâtel</li>
                     <li><a href="mailto:info@redoxdigital.ch"><span id="mail-info"></span></a></li>
                 </ul>
                 <a href="{{route('contact.intro')}}" class="btn btn-sm btn-outline-white mt-3">Un projet en tête ?</a>
